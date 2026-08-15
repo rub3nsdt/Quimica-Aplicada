@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3: Disoluciones. Propiedades Coligativas - Resumen Completo</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #059669;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #7c3aed;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+
+        sub, sup {
+            font-size: 0.75em;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+        sup {
+            top: -0.45em;
+        }
+        sub {
+            bottom: -0.25em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #0369a1 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #7dd3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 850px;
+        }
+
+        .meta-info {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
+            color: #94a3b8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 1.55rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 22px 0 12px 0;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 14px 0 8px 0;
+            color: #334155;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        .hl-def {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-exo {
+            background-color: #dcfce7;
+            color: #15803d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-endo {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-law {
+            background-color: #fef3c7;
+            color: #b45309;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-purple {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-teal {
+            background-color: #ccfbf1;
+            color: #0f766e;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .math-box {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 1.15rem;
+            text-align: center;
+            margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2px;
+        }
+
+        .math-box .var {
+            font-style: italic;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .math-inline {
+            font-family: 'Cambria', 'Georgia', serif;
+            font-style: italic;
+            font-weight: 600;
+            color: #0f172a;
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        .frac {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 0.95em;
+            padding: 0 2px;
+            line-height: 1.15;
+            font-family: 'Cambria', 'Georgia', serif;
+        }
+
+        .frac .num {
+            display: block;
+            border-bottom: 1.5px solid currentColor;
+            padding: 0 2px 2px 2px;
+            font-style: italic;
+        }
+
+        .frac .den {
+            display: block;
+            padding: 2px 2px 0 2px;
+            font-style: italic;
+        }
+
+        .math-box .frac .num {
+            border-bottom-color: #38bdf8;
+        }
+
+        .callout {
+            border-left: 4px solid;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 18px 0;
+            background-color: #f8fafc;
+        }
+
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+        .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+
+        ul, ol {
+            margin: 12px 0 16px 24px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .badge-card {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            background: #ffffff;
+            border-top: 4px solid var(--primary);
+        }
+
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .exercise-card {
+            background-color: #fffde7;
+            border: 1px solid #fef08a;
+            border-left: 5px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .exercise-title {
+            font-weight: 700;
+            color: #854d0e;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .solution-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 16px 20px;
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        .solution-tag {
+            display: inline-block;
+            background-color: #dcfce7;
+            color: #166534;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .calc-box {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-left: 4px solid var(--accent-blue);
+            color: #0f172a;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 1.05rem;
+            text-align: center;
+            margin: 12px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2px;
+        }
+
+        .calc-box .var {
+            font-style: italic;
+            font-weight: bold;
+            color: #0284c7;
+        }
+
+        .calc-box .frac .num {
+            border-bottom-color: #0f172a;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            .section-card { padding: 20px; }
+            .grid-2col { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 3: Disoluciones. Propiedades Coligativas</h1>
+        <p>Resumen integral, exhaustivo y visual de todos los apartados teóricos, leyes, ecuaciones con fracciones en formato vertical y soluciones paso a paso de la autoevaluación.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Mª José Caselles Pomares, Mariano Molero Meneses, et al.</span>
+            <span>📍 <strong>Capítulo:</strong> Unidad Didáctica 3 (pp. 123-150)</span>
+        </div>
+    </header>
+
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos de Aprendizaje</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>1. Concentración & Solubilidad:</strong> Calcular concentraciones en diversas unidades (porcentaje en masa, ppm, fracción molar, molalidad, molaridad) y predecir la solubilidad según interacciones soluto-disolvente.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>2. Presión, Temperatura & Extracción:</strong> Conocer los efectos de la temperatura y la presión (Ley de Henry), el proceso de solvatación/hidratación iónica y el principio de reparto o extracción.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>3. Propiedades Coligativas:</strong> Definir y calcular la disminución de la presión de vapor (Ley de Raoult), el ascenso ebulloscópico, el descenso crioscópico y la presión osmótica.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-pink);">
+                <strong>4. Pesos Moleculares & Disoluciones Iónicas:</strong> Determinar masas molares mediante crioscopía/ebulloscopía/ósmosis e incorporar el factor <i>i</i> de Van 't Hoff y pares iónicos en electrolitos.
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2 class="section-title t-teal">📋 Resumen General del Tema</h2>
+        <p>Las <strong>soluciones (o disoluciones)</strong> son mezclas homogéneas de dos o más sustancias que pueden ser sólidas, líquidas o gaseosas. El <span class="hl-def">soluto</span> es el componente minoritario y el <span class="hl-def">disolvente</span> el mayoritario (o aquel que mantiene su estado de agregación).</p>
+        <p>Una solución en la que se alcanza el equilibrio dinámico entre el soluto no disuelto y su solución se denomina <span class="hl-teal">solución saturada</span> (la velocidad de disolución iguala a la de cristalización). La máxima cantidad de soluto disuelto en equilibrio es la <strong>solubilidad</strong>.</p>
+        <ul>
+            <li>En sólidos iónicos, la solubilidad generalmente <em>aumenta con la temperatura</em>, dependiendo del balance entre la <strong>energía reticular</strong> y la <strong>energía de hidratación</strong>.</li>
+            <li>En gases, la solubilidad <em>disminuye al aumentar la temperatura</em> y <em>aumenta al aumentar la presión</em> (<span class="hl-law">Ley de Henry</span>).</li>
+        </ul>
+        <p>Las <span class="hl-purple">propiedades coligativas</span> dependen <strong>exclusivamente de la concentración de partículas de soluto</strong> y no de su naturaleza química. Incluyen: disminución de la presión de vapor, elevación ebulloscópica, descenso crioscópico y presión osmótica. En electrolitos, el efecto se amplifica por la ionización, requiriendo la introducción del <span class="hl-purple">factor i de Van 't Hoff</span> y la consideración de los <i>pares iónicos</i> (Debye-Hückel).</p>
+    </section>
+
+    <section class="section-card">
+        <h2 class="section-title t-blue">3.1. Tipos de Disoluciones y Forma de Expresar su Concentración</h2>
+        <p>Una <strong>solución</strong> tiene lugar cuando las moléculas o iones de una sustancia se dispersan uniformemente en otra. Una solución formada por solo dos componentes se denomina <span class="hl-def">solución binaria</span>. A diferencia de una solución, un <strong>coloide</strong> muestra heterogeneidad microscópica y sus propiedades no son uniformes en todos los puntos.</p>
+
+        <div class="callout callout-info">
+            <div class="callout-title">📌 Reglas de Identificación de Componentes:</div>
+            <ul>
+                <li>Si los componentes están en el mismo estado: el <strong>disolvente</strong> es el componente mayoritario. (En soluciones al 50% debe especificarse).</li>
+                <li>Si están en distinto estado de agregación: el <strong>disolvente</strong> es el componente que conserva su estado original.</li>
+            </ul>
+        </div>
+
+        <h3>Tabla 3.1: Clasificación de los Tipos de Soluciones</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Estado de la Solución</th>
+                    <th>Estado del Disolvente</th>
+                    <th>Estado del Soluto</th>
+                    <th>Ejemplos Característicos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Gas</td><td>Gas</td><td>Gas</td><td>Aire (Nitrógeno, Oxígeno, CO₂, etc.)</td></tr>
+                <tr><td>Líquido</td><td>Líquido</td><td>Gas</td><td>Agua carbónica (CO₂ en agua)</td></tr>
+                <tr><td>Líquido</td><td>Líquido</td><td>Líquido</td><td>Gasolina (mezcla de hidrocarburos), alcohol en agua</td></tr>
+                <tr><td>Líquido</td><td>Líquido</td><td>Sólido</td><td>Salmueras (sal en agua), azúcar en agua</td></tr>
+                <tr><td>Sólido</td><td>Sólido</td><td>Gas</td><td>Hidrógeno en paladio</td></tr>
+                <tr><td>Sólido</td><td>Sólido</td><td>Líquido</td><td>Amalgama (Mercurio en plata)</td></tr>
+                <tr><td>Sólido</td><td>Sólido</td><td>Sólido</td><td>Aleaciones metálicas (Acero: carbono en hierro, bronce)</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Formas de Expresar la Concentración</h3>
+        <p>Cualitativamente se usan los términos <i>diluida</i> o <i>concentrada</i>. Cuantitativamente se agrupan en tres clases: masa-masa, masa-volumen y volumen-volumen.</p>
+
+        <h4>1. Porcentaje en Masa (% en masa)</h4>
+        <p>Masa de un componente en gramos contenida en 100 g de solución.</p>
+        <div class="math-box">
+            % en masa de un componente = 
+            <span class="frac">
+                <span class="num">masa de un componente</span>
+                <span class="den">masa total de la solución</span>
+            </span>
+            × 100
+        </div>
+
+        <h4>2. Partes por Millón (ppm) y Partes por Billón (ppb)</h4>
+        <p>Utilizado para soluciones muy diluidas. 1 ppm indica 1 gramo de soluto por cada millón (10⁶) de gramos de solución (equivalente a <span class="math-inline">1 mg/kg</span>). En soluciones acuosas diluidas (densidad ≈ 1 g/mL), <span class="math-inline">1 ppm = 1 mg/L</span>. Para disoluciones extremas se usan ppb (fracciones de 10⁹).</p>
+
+        <h4>3. Fracción Molar (<span class="math-inline">χ<sub>A</sub></span>)</h4>
+        <p>Cociente entre el número de moles de dicho componente y el número total de moles de la solución. Es una cantidad adimensional.</p>
+        <div class="math-box">
+            <span class="var">χ</span><sub>A</sub> = 
+            <span class="frac">
+                <span class="num">moles de A</span>
+                <span class="den">moles totales de todos los componentes</span>
+            </span>
+            <span style="margin:0 4px;">|</span>
+            ∑ <span class="var">χ</span><sub>i</sub> = 1
+        </div>
+
+        <h4>4. Molalidad (<span class="math-inline">m</span>)</h4>
+        <p>Número de moles de soluto por kilogramo de disolvente. Expresada en mol/kg. <strong>No varía con la temperatura</strong> porque la masa no depende de la temperatura.</p>
+        <div class="math-box">
+            Molalidad (<span class="var">m</span>) = 
+            <span class="frac">
+                <span class="num">moles de soluto</span>
+                <span class="den">kilogramos de disolvente</span>
+            </span>
+        </div>
+
+        <h4>5. Molaridad (<span class="math-inline">M</span>)</h4>
+        <p>Número de moles de soluto por litro de disolución. Es la unidad más frecuente en química. <strong>Sí varía con la temperatura</strong> debido a la dilatación o contracción térmica del volumen de la disolución.</p>
+        <div class="math-box">
+            Molaridad (<span class="var">M</span>) = 
+            <span class="frac">
+                <span class="num">moles de soluto</span>
+                <span class="den">litros de disolución</span>
+            </span>
+        </div>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">🔄 Interconversión Molaridad ↔ Molalidad:</div>
+            <p>Para convertir entre Molaridad y Molalidad es <strong>imprescindible conocer la densidad de la solución</strong>.</p>
+            <p style="text-align: center; font-weight: 600; color: var(--primary);">
+                Masa Solución = Volumen Solución × Densidad &nbsp;|&nbsp; Masa Disolvente = Masa Solución - Masa Soluto
+            </p>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2 class="section-title t-green">3.2. Solubilidad. Soluciones Saturadas</h2>
+        <p>Al disolver un soluto en un líquido, las partículas disueltas chocan con la superficie del sólido no disuelto, provocando que algunas recristalicen. Se alcanza un <span class="hl-def">equilibrio dinámico</span> cuando la velocidad de disolución iguala la velocidad de cristalización:</p>
+
+        <div class="math-box" style="border-left-color: var(--accent-green);">
+            Soluto + Disolvente
+            <span style="margin:0 4px;">⇌</span>
+            <span class="frac">
+                <span class="num">disolución ⎯⎯⎯⎯⎯⎯→</span>
+                <span class="den">←⎯⎯⎯⎯⎯⎯ cristalización</span>
+            </span>
+            Solución
+        </div>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <h4>🟢 Solución Saturada</h4>
+                <p>Solución en equilibrio dinámico con soluto no disuelto. No admite más soluto a esa temperatura. La cantidad máxima disuelta se conoce como <strong>solubilidad</strong> (ej. NaCl a 20 °C: 36 g NaCl / 100 mL H₂O).</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4>🔵 Solución Insaturada</h4>
+                <p>Contiene una cantidad de soluto menor a la necesaria para alcanzar el equilibrio de saturación. Puede disolver más soluto.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <h4>🟡 Solución Sobresaturada</h4>
+                <p>Contiene más soluto del necesario para formar una solución saturada. Es <strong>metaestable e inestable</strong>. Se prepara enfriando lentamente una solución saturada en caliente. Al agitar o añadir un microcristal "semilla", el exceso precipita rápidamente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2 class="section-title t-amber">3.3. Factores que Afectan a la Solubilidad</h2>
+
+        <h3>3.3.1. Interacciones Soluto-Disolvente</h3>
+        <p>Para disolver una sustancia, deben vencerse las fuerzas de atracción Soluto-Soluto (S-S) y Disolvente-Disolvente (D-D), formándose nuevas atracciones Soluto-Disolvente (S-D). Las fuerzas intermoleculares (dipolo-dipolo, dispersión de London, puentes de H e ión-dipolo) rigen el proceso bajo el principio clásico: <span class="hl-law">«Semejante disuelve a semejante»</span>.</p>
+
+        <div class="grid-2col">
+            <div class="callout callout-info">
+                <div class="callout-title"> Balance de Fuerzas de Atracción:</div>
+                <ol>
+                    <li><strong>S-D > S-S y D-D:</strong> Ocurre disolución con liberación de energía (exotérmica).</li>
+                    <li><strong>S-D ≈ S-S y D-D:</strong> Ocurre disolución sin variación térmica (<strong>solución ideal</strong>).</li>
+                    <li><strong>S-D &lt; S-S y D-D:</strong> Ocurre disolución absorbiendo energía (endotérmica).</li>
+                    <li><strong>Magnitudes muy distintas:</strong> <i>No hay disolución</i> (inmiscibles).</li>
+                </ol>
+            </div>
+            <div class="callout callout-purple">
+                <div class="callout-title"> Entropía y Miscibilidad:</div>
+                <p>La <span class="hl-purple">entropía (S)</span> es la tendencia natural al desorden. Al mezclar sustancias, el aumento entrópico (<span class="math-inline">ΔS > 0</span>) favorece la disolución espontánea. Por ello, los gases son siempre miscibles entre sí en todas proporciones.</p>
+                <p><i>Alcoholes:</i> La solubilidad en agua disminuye al aumentar la cadena hidrocarbonada (predominan fuerzas de London no polares sobre los puentes de H).</p>
+            </div>
+        </div>
+
+        <h3>3.3.2. Soluciones Iónicas y Entalpía de Disolución</h3>
+        <p>Los compuestos iónicos poseen alta energía reticular. Se disuelven en disolventes muy polares como el agua gracias a las atracciones <span class="hl-def">ión-dipolo</span>. Las moléculas de agua orientan sus polos rodeando los iones, proceso conocido como <span class="hl-teal">hidratación</span> (o solvatación si no es agua), el cual es exotérmico.</p>
+        
+        <p>La <strong>Entalpía Molar de Disolución (<span class="math-inline">ΔH<sub>disolución</sub></span>)</strong> es el calor absorbido o desprendido al disolver 1 mol de soluto y se descompone en tres pasos:</p>
+
+        <div class="math-box">
+            Δ<span class="var">H</span><sub>disolución</sub> = Δ<span class="var">H</span><sub>1</sub> + Δ<span class="var">H</span><sub>2</sub> + Δ<span class="var">H</span><sub>3</sub>
+        </div>
+        <ul>
+            <li><span class="math-inline">ΔH<sub>1</sub> > 0</span> (Endotérmico): Separación de los iones de la red cristalina (vencer Energía Reticular).</li>
+            <li><span class="math-inline">ΔH<sub>2</sub> > 0</span> (Endotérmico): Separación de las moléculas del disolvente para crear huecos.</li>
+            <li><span class="math-inline">ΔH<sub>3</sub> &lt; 0</span> (Exotérmico): Atracción e hidratación de iones por las moléculas de agua.</li>
+        </ul>
+
+        <div class="grid-2col">
+            <div class="callout callout-success">
+                <div class="callout-title">Proceso Exotérmico (ej. NaOH)</div>
+                <p>La energía de hidratación es mucho mayor que la energía reticular (<span class="math-inline">|ΔH₃| > ΔH₁ + ΔH₂</span>). <span class="hl-exo">ΔH<sub>disol</sub> = -44,5 kJ/mol</span>. La temperatura de la solución se eleva fuertemente.</p>
+            </div>
+            <div class="callout callout-danger">
+                <div class="callout-title">Proceso Endotérmico (ej. NH₄NO₃)</div>
+                <p>La energía reticular supera la energía de hidratación. <span class="hl-endo">ΔH<sub>disol</sub> = +26,4 kJ/mol</span>. Transcurre espontáneamente impulsado por el gran incremento entrópico (<span class="math-inline">ΔS > 0</span>).</p>
+            </div>
+        </div>
+
+        <h3>3.3.3. Efecto de la Temperatura</h3>
+        <p>Aplicando el <span class="hl-law">Principio de Le Chatelier</span> al equilibrio de disolución:</p>
+        <ul>
+            <li><strong>Proceso Endotérmico (<span class="math-inline">ΔH > 0</span>):</strong> Soluto + Disolvente + Calor ⇌ Disolución. Al aumentar la temperatura, la solubilidad <strong>aumenta</strong> (ej. KNO₃, NaNO₃).</li>
+            <li><strong>Proceso Exotérmico (<span class="math-inline">ΔH &lt; 0</span>):</strong> Soluto + Disolvente ⇌ Disolución + Calor. Al aumentar la temperatura, la solubilidad <strong>disminuye</strong> (ej. Ce₂(SO₄)₃, Ca(OH)₂).</li>
+            <li><strong>Caso Na₂SO₄:</strong> A T &lt; 32,4 °C la forma estable es el decahidrato <span class="math-inline">Na₂SO₄·10H₂O</span> (endotérmico, aumenta solubilidad). A T > 32,4 °C la sal se deshidrata a <span class="math-inline">Na₂SO₄</span> anhidro (exotérmico, disminuye solubilidad).</li>
+            <li><strong>Solubilidad de Gases:</strong> La solubilidad de los gases en agua siempre <strong>disminuye al aumentar la temperatura</strong>.</li>
+        </ul>
+
+        <div class="callout callout-teal">
+            <div class="callout-title">🧪 Purificación por Cristalización Fraccionada:</div>
+            <p>Se disuelve el sólido impuro en la mínima cantidad de disolvente en caliente. Se filtra en caliente para retirar impurezas insolubles y se deja enfriar lentamente. Al bajar T, la sustancia deseada cristaliza pura mientras las impurezas solubles permanecen disueltas.</p>
+        </div>
+
+        <h3>3.3.4. Efecto de la Presión (Ley de Henry)</h3>
+        <p>La presión apenas afecta a sólidos y líquidos, pero tiene una profunda influencia en la solubilidad de gases en líquidos. Al aumentar la presión sobre un gas, aumenta la frecuencia de choques contra la superficie líquida, incrementando el número de moléculas disueltas.</p>
+
+        <div class="math-box" style="border-left-color: var(--accent-amber);">
+            <span class="var">S</span> = <span class="var">K</span><sub>H</sub> · <span class="var">P</span><sub>g</sub>
+        </div>
+        <p>Donde <span class="math-inline">S</span> es la solubilidad molar del gas, <span class="math-inline">P<sub>g</sub></span> es la presión parcial del gas y <span class="math-inline">K<sub>H</sub></span> es la constante de Henry (específica para cada par gas-líquido a una T dada).</p>
+        <p><i>Aplicaciones:</i> Embotellado de bebidas carbonatadas a alta P de CO₂; <strong>Enfermedad del buzo</strong> (al bucear a gran profundidad, la elevada P disuelve N₂ en la sangre; si se asciende rápidamente, la descompresión brusca genera burbujas gaseosas mortales en los vasos sanguíneos).</p>
+
+        <h3>3.3.5. Ley de Distribución o Reparto (Extracción)</h3>
+        <p>Cuando se añade un soluto soluble a un sistema de dos líquidos inmiscibles (ej. agua y disolvente orgánico), el soluto se distribuye entre ambas fases hasta alcanzar el equilibrio:</p>
+
+        <div class="math-box">
+            <span class="var">K</span> = 
+            <span class="frac">
+                <span class="num">C<sub>2</sub></span>
+                <span class="den">C<sub>1</sub></span>
+            </span>
+            = 
+            <span class="frac">
+                <span class="num">
+                    <span class="frac"><span class="num">X<sub>2</sub></span><span class="den">V<sub>disolvente</sub></span></span>
+                </span>
+                <span class="den">
+                    <span class="frac"><span class="num">X<sub>1</sub> - X<sub>2</sub></span><span class="den">V<sub>agua</sub></span></span>
+                </span>
+            </span>
+        </div>
+        <p>El <span class="hl-def">coeficiente de reparto (K)</span> es constante a una temperatura dada. <strong>Demostración Práctica:</strong> Resulta siempre más eficiente realizar una <i>extracción múltiple</i> (fraccionando el volumen de disolvente orgánico en varias etapas) que una <i>extracción simple</i> utilizando todo el volumen de una sola vez.</p>
+    </section>
+
+    <section class="section-card">
+        <h2 class="section-title t-purple">3.4. Propiedades Coligativas de las Disoluciones</h2>
+        <p>Las <span class="hl-purple">propiedades coligativas</span> son aquellas propiedades físicas de las disoluciones que dependen <strong>exclusivamente del número de partículas de soluto disueltas</strong> (concentración) y no de su naturaleza o identidad química.</p>
+
+        <h3>3.4.1. Presión de Vapor y Ley de Raoult</h3>
+        <p>La adición de un soluto no volátil aumenta el desorden (entropía) del líquido, dificultando la evaporación de las moléculas de disolvente y provocando un descenso en la presión de vapor en equilibrio.</p>
+
+        <div class="math-box">
+            <span class="var">P</span> = <span class="var">χ</span><sub>d</sub> · <span class="var">P</span><sub>d</sub>°
+            <span style="margin:0 4px;">|</span>
+            Δ<span class="var">P</span> = <span class="var">P</span><sub>d</sub>° - <span class="var">P</span> = <span class="var">P</span><sub>d</sub>° · <span class="var">χ</span><sub>s</sub>
+        </div>
+        <p>Para soluciones muy diluidas (<span class="math-inline">n<sub>d</sub> ≫ n<sub>s</sub></span>), la fracción molar del soluto es proporcional a la molalidad (<span class="math-inline">χ<sub>s</sub> ≈ 
+        <span class="frac"><span class="num">M<sub>d</sub> · m</span><span class="den">1000</span></span></span>), por lo que: <span class="math-inline">ΔP = k · m</span>.</p>
+
+        <h4>Soluciones con Dos Componentes Volátiles</h4>
+        <p>Para una mezcla ideal de dos líquidos volátiles A y B:</p>
+        <div class="math-box">
+            <span class="var">P</span><sub>total</sub> = <span class="var">P</span><sub>A</sub>° · <span class="var">χ</span><sub>A</sub> + <span class="var">P</span><sub>B</sub>° · <span class="var">χ</span><sub>B</sub>
+        </div>
+        <p class="callout callout-info">
+            <strong>Regla de Enriquecimiento del Vapor:</strong> El vapor en equilibrio con una mezcla líquida es siempre <strong>más rico en el componente más volátil</strong> (aquel con mayor presión de vapor pura <span class="math-inline">P°</span>).
+        </p>
+
+        <h4>Destilación Fraccionada vs Mezclas Azeotrópicas</h4>
+        <ul>
+            <li><strong>Destilación Fraccionada:</strong> Proceso industrial (petroquímica) de evaporaciones y condensaciones sucesivas mediante columnas de fraccionamiento que permite separar completamente componentes volátiles.</li>
+            <li><strong>Mezclas Azeotrópicas (Azeótropos):</strong> Disoluciones no ideales que presentan desviaciones de la Ley de Raoult. Hierven a temperatura constante con la misma composición en la fase líquida y de vapor, comportándose como sustancias puras. (Ej. Etanol-Agua al 95,5% en peso hierve a 78,1 °C).</li>
+        </ul>
+
+        <h3>3.4.2. Elevación del Punto de Ebullición (Ebulloscopía)</h3>
+        <p>Al descender la presión de vapor por la presencia del soluto no volátil, se requiere calentar a mayor temperatura para que la presión de vapor iguale la presión atmosférica (1 atm).</p>
+
+        <div class="math-box">
+            Δ<span class="var">T</span><sub>e</sub> = <span class="var">T</span><sub>e</sub> - <span class="var">T</span><sub>e</sub>° = <span class="var">K</span><sub>e</sub> · <span class="var">m</span>
+        </div>
+        <p>Donde <span class="math-inline">K<sub>e</sub></span> es la constante ebulloscópica molal del disolvente (para agua <span class="math-inline">K<sub>e</sub> = 0,512 °C/m</span>).</p>
+        <p><strong>Cálculo de Masa Molar (<span class="math-inline">M<sub>s</sub></span>):</strong></p>
+        <div class="math-box">
+            <span class="var">M</span><sub>s</sub> = <span class="var">K</span><sub>e</sub> · 
+            <span class="frac">
+                <span class="num">g<sub>soluto</sub></span>
+                <span class="den">Δ<span class="var">T</span><sub>e</sub> · kg<sub>disolvente</sub></span>
+            </span>
+        </div>
+
+        <h3>3.4.3. Descenso del Punto de Congelación (Crioscopía)</h3>
+        <p>El punto de congelación de una disolución es siempre menor que el del disolvente puro.</p>
+
+        <div class="math-box">
+            Δ<span class="var">T</span><sub>c</sub> = <span class="var">T</span><sub>c</sub>° - <span class="var">T</span><sub>c</sub> = <span class="var">K</span><sub>c</sub> · <span class="var">m</span>
+        </div>
+        <p>Donde <span class="math-inline">K<sub>c</sub></span> es la constante crioscópica molal (para agua <span class="math-inline">K<sub>c</sub> = 1,86 °C/m</span>). La <strong>crioscopía</strong> es experimentalmente más precisa que la ebulloscopía porque los valores de <span class="math-inline">K<sub>c</sub></span> son mayores y las temperaturas se mantienen más estables.</p>
+        <p><i>Aplicaciones Prácticas:</i> Anticongelantes en radiadores (etilenglicol, glicerina); esparcido de sales (NaCl, CaCl₂) para derretir la nieve en carreteras; mezclas frigoríficas.</p>
+
+        <h3>3.4.4. Presión Osmótica (Ósmosis)</h3>
+        <p>La <span class="hl-def">ósmosis</span> es el flujo espontáneo de disolvente a través de una membrana semipermeable desde la solución más diluida (hipotónica) hacia la más concentrada (hipertónica). La <span class="hl-purple">presión osmótica (π)</span> es la presión exacta que se debe aplicar sobre la solución concentrada para detener dicho flujo.</p>
+
+        <div class="math-box" style="border-left-color: var(--accent-pink);">
+            <span class="var">π</span> = <span class="var">c</span> · <span class="var">R</span> · <span class="var">T</span>
+            <span style="margin:0 4px;">⇒</span>
+            <span class="var">π</span> = 
+            <span class="frac">
+                <span class="num"><span class="var">n</span></span>
+                <span class="den"><span class="var">V</span></span>
+            </span> · <span class="var">R</span> · <span class="var">T</span>
+        </div>
+
+        <div class="grid-2col">
+            <div class="callout callout-info">
+                <div class="callout-title">🩸 Soluciones Fisiológicas e Isotónicas:</div>
+                <p>Las células sanguíneas (glóbulos rojos) son isotónicas con una solución de NaCl al <strong>0,9% m/v</strong>. En agua pura (hipotónica) sufren <i>hemólisis</i> (hinchamiento y estallido). En suero salino concentrado (hipertónico) sufren <i>crenación</i> (arrugamiento por pérdida de agua).</p>
+            </div>
+            <div class="callout callout-teal">
+                <div class="callout-title">🌊 Ósmosis Inversa:</div>
+                <p>Si se aplica una presión <strong>superior a la presión osmótica</strong> (<span class="math-inline">P > 24,8 atm</span> en agua de mar), el disolvente se obliga a fluir desde la solución salina concentrada hacia el agua pura. Es la base tecnológica de la desalinización de agua de mar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2 class="section-title t-red">3.5. Propiedades Coligativas de las Soluciones Iónicas</h2>
+        <p>Los electrolitos (ácidos, bases y sales) se disocian en agua produciendo un número total de partículas superior al número de moles de fórmula disueltos. Jacobus van 't Hoff introdujo el factor de corrección <span class="hl-purple">i</span>:</p>
+
+        <div class="math-box" style="border-left-color: var(--accent-red);">
+            Δ<span class="var">T</span><sub>e</sub> = <span class="var">i</span> · <span class="var">K</span><sub>e</sub> · <span class="var">m</span>
+            <span style="margin:0 4px;">|</span>
+            Δ<span class="var">T</span><sub>c</sub> = <span class="var">i</span> · <span class="var">K</span><sub>c</sub> · <span class="var">m</span>
+            <span style="margin:0 4px;">|</span>
+            <span class="var">π</span> = <span class="var">i</span> · <span class="var">c</span> · <span class="var">R</span> · <span class="var">T</span>
+        </div>
+
+        <div class="math-box">
+            <span class="var">i</span> = 
+            <span class="frac">
+                <span class="num">Valor medido experimental de la propiedad coligativa</span>
+                <span class="den">Valor calculado suponiendo no electrolito (i = 1)</span>
+            </span>
+        </div>
+
+        <h3>Teoría de Debye-Hückel y Pares Iónicos (1923)</h3>
+        <p>El valor ideal de <span class="math-inline">i</span> coincide con el número teórico de iones por fórmula (ej. NaCl → 2 iones, <span class="math-inline"><i>i</i><sub>ideal</sub> = 2</span>; Na₂SO₄ → 3 iones, <span class="math-inline"><i>i</i><sub>ideal</sub> = 3</span>). Sin embargo, en disoluciones reales los valores medidos de <span class="math-inline">i</span> son ligeramente menores.</p>
+        
+        <div class="callout callout-warning">
+            <div class="callout-title">⚡ Explicación del Fenómeno:</div>
+            <p>Debye y Hückel demostraron que, aunque el electrolito esté 100% ionizado, la atracciones electrostáticas de cargas opuestas provocan la formación temporal de <strong>pares iónicos</strong>. El par iónico se comporta físicamente como una sola partícula, reduciendo la cantidad efectiva de partículas independientes en solución. Al diluir la disolución, las partículas se alejan y el valor de <span class="math-inline">i</span> se aproxima a su valor ideal.</p>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2 class="section-title t-amber">📝 Solución de Ejercicios de Autoevaluación</h2>
+
+        <div class="exercise-card">
+            <div class="exercise-title">📌 Ejercicio 1</div>
+            <p>Calcular la molalidad de una solución que es 1 M de Pb(NO₃)₂. Densidad de la solución: 1,250 g/mL.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. Tomamos como base de cálculo 1 Litro (1000 mL) de disolución:</p>
+                <p style="text-align: center;">Masa de la solución = 1,250 g/mL × 1000 mL = 1250 g</p>
+                <p>2. Calculamos la masa de 1 mol de Pb(NO₃)₂ (<span class="math-inline">M<sub>s</sub> = 331,2 g/mol</span>):</p>
+                <p style="text-align: center;">Masa de soluto = 1 mol × 331,2 g/mol = 331,2 g</p>
+                <p>3. Restamos para obtener la masa de disolvente (agua):</p>
+                <p style="text-align: center;">Masa de agua = 1250 g - 331,2 g = 918,8 g = 0,9188 kg</p>
+                <p>4. Calculamos la molalidad (<span class="math-inline">m</span>):</p>
+                <div class="calc-box">
+                    <span class="var">m</span> = 
+                    <span class="frac">
+                        <span class="num">1 mol Pb(NO₃)₂</span>
+                        <span class="den">0,9188 kg H₂O</span>
+                    </span>
+                    = <strong>1,088 m</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">📌 Ejercicio 2</div>
+            <p>Calcular la fracción molar del hipoclorito sódico (NaClO) en una solución que contiene: a) 56 g de hipoclorito en 1 litro de agua; b) un 4% en masa de NaClO en agua.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>Masa molar del NaClO = 23 + 35,5 + 16 = 74,5 g/mol. Masa molar del H₂O = 18 g/mol.</p>
+                <p><strong>a) 56 g de NaClO en 1000 g de H₂O:</strong></p>
+                <p style="text-align: center;">
+                    Moles de agua = 
+                    <span class="frac"><span class="num">1000 g</span><span class="den">18 g/mol</span></span> = 55,55 mol
+                    <span style="margin:0 6px;">|</span>
+                    Moles de NaClO = 
+                    <span class="frac"><span class="num">56 g</span><span class="den">74,5 g/mol</span></span> = 0,752 mol
+                </p>
+                <div class="calc-box">
+                    <span class="var">χ</span><sub>NaClO</sub> = 
+                    <span class="frac">
+                        <span class="num">0,752 mol NaClO</span>
+                        <span class="den">55,55 mol H₂O + 0,752 mol NaClO</span>
+                    </span>
+                    = <strong>0,013</strong>
+                </div>
+                <p><strong>b) 4% en masa de NaClO en agua (40 g NaClO en 960 g H₂O por kg de solución):</strong></p>
+                <p style="text-align: center;">
+                    Moles de NaClO = 
+                    <span class="frac"><span class="num">40 g</span><span class="den">74,5 g/mol</span></span> = 0,537 mol
+                    <span style="margin:0 6px;">|</span>
+                    Moles de H₂O = 
+                    <span class="frac"><span class="num">960 g</span><span class="den">18 g/mol</span></span> = 53,33 mol
+                </p>
+                <div class="calc-box">
+                    <span class="var">χ</span><sub>NaClO</sub> = 
+                    <span class="frac">
+                        <span class="num">0,537 mol NaClO</span>
+                        <span class="den">53,33 mol H₂O + 0,537 mol NaClO</span>
+                    </span>
+                    = <strong>0,0099</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">📌 Ejercicio 3</div>
+            <p>De las sustancias siguientes, indicar cuál será más soluble en agua: a) Glicerol (CH₂OHCHOHCH₂OH) o benceno (C₆H₆); b) Tetracloruro de carbono (CCl₄) o nitrato potásico (KNO₃).</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p><strong>a) Glicerol vs Benceno:</strong> El <strong>glicerol</strong> es infinitamente más soluble en agua porque posee tres grupos alcohol (-OH) capaces de formar enlaces por <i>puentes de hidrógeno</i> intensos con las moléculas de agua. El benceno es una molécula aromática apolar inmiscible.</p>
+                <p><strong>b) CCl₄ vs KNO₃:</strong> El <strong>KNO₃</strong> es mucho más soluble. Es un compuesto iónico soluble en disolventes muy polares como el agua mediante atracciones ión-dipolo. El CCl₄ es apolar e insoluble en agua.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">📌 Ejercicio 4</div>
+            <p>Calcular la concentración de N₂ en la sangre de un submarinista a 2 atm. K<sub>H</sub> para N₂ en suero = 6,08 · 10⁻⁴ mol L⁻¹ atm⁻¹ y concentración de N₂ en aire = 78%. ¿Solubilidad a 1 atm?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. Presión parcial de N₂ a 2 atm de presión total: <span class="math-inline">P<sub>N₂</sub> = 0,78 × 2 atm = 1,56 atm</span>.</p>
+                <p>2. Aplicando la Ley de Henry:</p>
+                <div class="calc-box">
+                    <span class="var">S</span> = (6,08 · 10⁻⁴ mol L⁻¹ atm⁻¹) × (0,78 × 2 atm) = <strong>9,48 · 10⁻⁴ mol/L</strong>
+                </div>
+                <p>3. A presión atmosférica normal (1 atm): <span class="math-inline">P<sub>N₂</sub> = 0,78 × 1 atm = 0,78 atm</span>.</p>
+                <div class="calc-box">
+                    <span class="var">S</span> = (6,08 · 10⁻⁴ mol L⁻¹ atm⁻¹) × (0,78 × 1 atm) = <strong>4,74 · 10⁻⁴ mol/L</strong>
+                </div>
+                <p><i>Conclusión:</i> Al reducir la presión a la mitad, la solubilidad del gas se reduce exactamente en la misma proporción.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">📌 Ejercicio 5</div>
+            <p>El coeficiente de reparto del yodo en CS₂/agua es 400. De 0,05 g de yodo en 1 L de agua, calcular la cantidad extraída con 60 mL de CS₂ en una extracción simple vs dos extracciones sucesivas de 30 mL.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p><strong>1. Extracción Simple (60 mL de CS₂):</strong></p>
+                <div class="calc-box">
+                    <span class="var">K</span> = 400 = 
+                    <span class="frac">
+                        <span class="num">
+                            <span class="frac"><span class="num">X₂</span><span class="den">60 mL</span></span>
+                        </span>
+                        <span class="den">
+                            <span class="frac"><span class="num">0,05 - X₂</span><span class="den">1000 mL</span></span>
+                        </span>
+                    </span>
+                    <span style="margin:0 4px;">⇒</span> X₂ = <strong>0,048 g extraídos</strong>
+                </div>
+                <p><strong>2. Extracción Doble (2 veces 30 mL de CS₂):</strong></p>
+                <p>• 1ª Extracción (30 mL):</p>
+                <div class="calc-box">
+                    400 = 
+                    <span class="frac">
+                        <span class="num">
+                            <span class="frac"><span class="num">X'₂</span><span class="den">30 mL</span></span>
+                        </span>
+                        <span class="den">
+                            <span class="frac"><span class="num">0,05 - X'₂</span><span class="den">1000 mL</span></span>
+                        </span>
+                    </span>
+                    <span style="margin:0 4px;">⇒</span> X'₂ = 0,046 g. Quedan sin extraer: 0,00385 g.
+                </div>
+                <p>• 2ª Extracción (30 mL sobre el residuo de 0,00385 g):</p>
+                <div class="calc-box">
+                    400 = 
+                    <span class="frac">
+                        <span class="num">
+                            <span class="frac"><span class="num">X''₂</span><span class="den">30 mL</span></span>
+                        </span>
+                        <span class="den">
+                            <span class="frac"><span class="num">3,85·10⁻³ - X''₂</span><span class="den">1000 mL</span></span>
+                        </span>
+                    </span>
+                    <span style="margin:0 4px;">⇒</span> X''₂ = 0,00355 g
+                </div>
+                <p>Masa total extraída en 2 etapas = 0,046 g + 0,00355 g = <strong>0,049 g</strong>. (Se logra extraer 0,001 g más de sustancia que en la extracción simple).</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">📌 Ejercicio 6</div>
+            <p>El antraceno tiene fórmula empírica C₇H₅. Al disolver 0,845 g de antraceno en 50 g de benceno, ΔT<sub>e</sub> = 0,24 °C. K<sub>e</sub>(benceno) = 2,53 °C kg/mol. Indicar su fórmula molecular.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. Calculamos la masa molar del soluto (<span class="math-inline">M<sub>s</sub></span>):</p>
+                <div class="calc-box">
+                    <span class="var">M</span><sub>s</sub> = <span class="var">K</span><sub>e</sub> · 
+                    <span class="frac">
+                        <span class="num">g<sub>soluto</sub></span>
+                        <span class="den">Δ<span class="var">T</span><sub>e</sub> · kg<sub>disolvente</sub></span>
+                    </span>
+                    = 2,53 · 
+                    <span class="frac">
+                        <span class="num">0,845 g</span>
+                        <span class="den">(0,24 °C) × (0,050 kg)</span>
+                    </span>
+                    = <strong>178,15 g/mol</strong>
+                </div>
+                <p>2. Masa de la fórmula empírica C₇H₅ = (12 × 7) + (1 × 5) = 89 g/mol.</p>
+                <p>3. Relación de subíndices: <span class="math-inline">n = 
+                <span class="frac"><span class="num">178,15</span><span class="den">89</span></span> = 2</span>.</p>
+                <p>Fórmula molecular: (C₇H₅)₂ = <strong>C₁₄H₁₀</strong>.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">📌 Ejercicio 7</div>
+            <p>Para proteger un depósito con 5 L de agua se añaden 1 kg de etilenglicol (C₂H₆O₂). ¿Será suficiente si la temperatura desciende de -20 °C? K<sub>c</sub>(agua) = 1,86 °C kg/mol.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. Moles de etilenglicol (Masa molar = 62 g/mol): <span class="math-inline">
+                <span class="frac"><span class="num">1000 g</span><span class="den">62 g/mol</span></span> = 16,13 mol</span>.</p>
+                <p>2. Molalidad en 5 kg de agua: <span class="math-inline">m = 
+                <span class="frac"><span class="num">16,13 mol</span><span class="den">5 kg</span></span> = 3,225 m</span>.</p>
+                <p>3. Descenso del punto de congelación:</p>
+                <div class="calc-box">
+                    Δ<span class="var">T</span><sub>c</sub> = 1,86 °C kg/mol × 
+                    <span class="frac">
+                        <span class="num">1000 g / 62 g mol⁻¹</span>
+                        <span class="den">5 kg</span>
+                    </span>
+                    = <strong>6,00 °C</strong>
+                </div>
+                <p>Nuevo punto de congelación = 0 °C - 6,00 °C = <strong>-6 °C</strong>.</p>
+                <p><i>Conclusión:</i> <strong>NO será suficiente</strong>, ya que el agua se congelará a los -6 °C y no resistirá temperaturas inferiores a -20 °C.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">📌 Ejercicio 8</div>
+            <p>Punto de congelación de una solución acuosa con 0,471 g de CaCl₂ en 500 g de agua. Masas: Ca=40, Cl=35,5. K<sub>c</sub> = 1,86 °C kg/mol.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. El CaCl₂ se disocia completamente: <span class="math-inline">CaCl₂ → Ca²⁺ + 2Cl⁻</span> ⇒ Factor de Van 't Hoff <span class="hl-purple">i = 3</span>.</p>
+                <p>2. Masa molar de CaCl₂ = 40 + (2 × 35,5) = 111 g/mol.</p>
+                <p>3. Calculamos la variación de temperatura:</p>
+                <div class="calc-box">
+                    Δ<span class="var">T</span><sub>c</sub> = <span class="var">i</span> · <span class="var">K</span><sub>c</sub> · <span class="var">m</span> = 3 × 1,86 × 
+                    <span class="frac">
+                        <span class="num">0,471 g / 111 g mol⁻¹</span>
+                        <span class="den">0,500 kg</span>
+                    </span>
+                    = <strong>0,047 °C</strong>
+                </div>
+                <p>Punto de congelación de la solución = 0 - 0,047 °C = <strong>-0,047 °C</strong>.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">📌 Ejercicio 9</div>
+            <p>Ordenar las siguientes soluciones acuosas de mayor a menor punto de ebullición: etilenglicol 0,40 m; CaCl₂ 0,10 m; KBr 0,20 m; sacarosa 0,10 m.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>El punto de ebullición aumenta según la molalidad real efectiva de partículas (<span class="math-inline">i · m</span>):</p>
+                <ul>
+                    <li><strong>Etilenglicol (0,40 m):</strong> No electrolito (<span class="math-inline">i = 1</span>) ⇒ <span class="math-inline">1 × 0,40 = 0,40 m</span></li>
+                    <li><strong>KBr (0,20 m):</strong> Electrolito fuerte (K⁺ + Br⁻, <span class="math-inline">i = 2</span>) ⇒ <span class="math-inline">2 × 0,20 = 0,40 m</span></li>
+                    <li><strong>CaCl₂ (0,10 m):</strong> Electrolito fuerte (Ca²⁺ + 2Cl⁻, <span class="math-inline">i = 3</span>) ⇒ <span class="math-inline">3 × 0,10 = 0,30 m</span></li>
+                    <li><strong>Sacarosa (0,10 m):</strong> No electrolito (<span class="math-inline">i = 1</span>) ⇒ <span class="math-inline">1 × 0,10 = 0,10 m</span></li>
+                </ul>
+                <div class="callout callout-success" style="text-align: center; font-weight: bold;">
+                    Orden de mayor a menor punto de ebullición: Etilenglicol (0,40 m) = KBr (0,40 m) > CaCl₂ (0,30 m) > Sacarosa (0,10 m)
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">📌 Ejercicio 10</div>
+            <p>¿Cuál es la presión osmótica de una solución preparada con 0,800 g de almidón (C₆H₁₀O₅)<sub>n</sub> en 500 mL de solución a 298 K? Valor medio de n = 200.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. Masa molar del almidón = <span class="math-inline">200 × [(6×12) + (10×1) + (5×16)] = 200 × 162 = 32.400 g/mol</span>.</p>
+                <p>2. Moles de almidón: <span class="math-inline">
+                <span class="frac"><span class="num">0,800 g</span><span class="den">32.400 g/mol</span></span> = 2,47 · 10⁻⁵ mol</span>.</p>
+                <p>3. Molaridad de la solución: <span class="math-inline">M = 
+                <span class="frac"><span class="num">2,47 · 10⁻⁵ mol</span><span class="den">0,500 L</span></span> = 4,94 · 10⁻⁵ mol/L</span>.</p>
+                <p>4. Presión osmótica (π = c R T):</p>
+                <div class="calc-box">
+                    <span class="var">π</span> = (4,94 · 10⁻⁵ mol/L) × (0,082 atm L / K mol) × (298 K) = <strong>1,20 · 10⁻³ atm</strong>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

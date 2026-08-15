@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 7: Electroquímica - Resumen Completo</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #7c3aed;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Vertical Fractions Styling */
+        .frac {
+            display: inline-flex;
+            flex-direction: column;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 0.9em;
+            margin: 0 0.2em;
+        }
+        .frac > span:first-child {
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 1px;
+        }
+        .frac > span:last-child {
+            padding-top: 1px;
+        }
+
+        /* Banner Header */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #0369a1 50%, #0d9488 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .header-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #38bdf8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #e0f2fe;
+            max-width: 850px;
+        }
+
+        .meta-info {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
+            color: #bae6fd;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 22px 0 12px 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 14px 0 8px 0;
+            color: var(--primary-light);
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* Color Concepts & Highlights */
+        .hl-def {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-ox {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-red {
+            background-color: #dcfce7;
+            color: #15803d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-amber {
+            background-color: #fef3c7;
+            color: #b45309;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-purple {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Math & Formulas */
+        .math-box {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 16px 24px;
+            border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 1.15rem;
+            text-align: center;
+            margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8;
+        }
+
+        .math-box .var {
+            font-style: italic;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .math-box .unit {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-family: sans-serif;
+        }
+
+        .math-inline {
+            font-family: 'Cambria', 'Georgia', serif;
+            font-style: italic;
+            font-weight: 600;
+            color: #0f172a;
+            background: #f1f5f9;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        /* Callout Cards */
+        .callout {
+            border-left: 4px solid;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 18px 0;
+            background-color: #f8fafc;
+        }
+
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 12px 0 16px 24px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Badge Grid */
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .badge-card {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            background: #ffffff;
+            border-top: 4px solid var(--primary);
+        }
+
+        /* Comparison Grids */
+        .sign-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .sign-box-pos {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .sign-box-neg {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        /* Scheme Box */
+        .scheme-container {
+            background: #f1f5f9;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .scheme-flow {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .scheme-node {
+            background: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 1px solid #94a3b8;
+            font-weight: bold;
+            color: var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .scheme-arrow {
+            font-size: 1.4rem;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        /* Autoevaluacion Solutions */
+        .exercise-card {
+            background-color: #fefce8;
+            border: 1px solid #fef08a;
+            border-left: 5px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .exercise-title {
+            font-weight: 700;
+            color: #854d0e;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .solution-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        .solution-tag {
+            display: inline-block;
+            background-color: #dcfce7;
+            color: #166534;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            .section-card { padding: 20px; }
+            .sign-grid { grid-template-columns: 1fr; }
+            .scheme-flow { flex-direction: column; }
+            .scheme-arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 7: Electroquímica</h1>
+        <p>Resumen exhaustivo, bonito y estructurado de todos los conceptos, pilas galvánicas, celdas electrolíticas, ecuación de Nernst y ejercicios de autoevaluación resueltos paso a paso.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Mª José Caselles, Mariano Molero, Mª Isabel Gómez, et al.</span>
+            <span>📍 <strong>Capítulo:</strong> Unidad Didáctica - Tema 7</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS DEL TEMA -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Reacciones Redox:</strong> Identificar y ajustar reacciones de oxidación-reducción mediante el método del ion-electrón.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>Pilas Galvánicas:</strong> Describir y esquematizar el funcionamiento de una celda voltaica y manejar la notación de celdas.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>Potenciales Estándar:</strong> Utilizar el Electrodo Normal de Hidrógeno (SHE) y calcular la fem estándar (<span class="math-inline">E°<sub>cel</sub></span>).
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>Termodinámica Redox:</strong> Predecir la espontaneidad, calcular <span class="math-inline">ΔG°</span> y la constante de equilibrio (<span class="math-inline">K</span>).
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-pink);">
+                <strong>Ecuación de Nernst:</strong> Calcular la fem de celdas en condiciones no estándar y determinar el pH.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <strong>Electrólisis & Leyes de Faraday:</strong> Diferenciar procesos galvánicos y electrolíticos y realizar cálculos cuantitativos.
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN GENERAL -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">📌 Resumen General</h2>
+        <p>La <span class="hl-def">Electroquímica</span> es la parte de la química que estudia la relación entre la electricidad y las reacciones químicas, las cuales son fundamentalmente reacciones de <strong>oxidación-reducción (redox)</strong>.</p>
+        
+        <div class="sign-grid">
+            <div class="sign-box-pos">
+                <h4 style="color: #15803d;">🔋 Celdas Galvánicas (Voltaicas)</h4>
+                <p>Aprovechan una reacción química <strong>espontánea</strong> (<span class="math-inline">ΔG &lt; 0</span>, <span class="math-inline">E > 0</span>) para generar corriente eléctrica.</p>
+                <p>Los electrones fluyen a través de un circuito externo del <strong>ánodo (-)</strong> al <strong>cátodo (+)</strong>.</p>
+            </div>
+            <div class="sign-box-neg">
+                <h4 style="color: #b91c1c;">⚡ Celdas Electrolíticas</h4>
+                <p>Utilizan un voltaje externo para forzar una reacción química <strong>no espontánea</strong> (<span class="math-inline">ΔG > 0</span>, <span class="math-inline">E &lt; 0</span>).</p>
+                <p>El medio conductor puede ser una sal fundida o una solución acuosa electrolítica.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7.1 REACCIONES DE OXIDACIÓN-REDUCCIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">7.1. Reacciones de Oxidación-Reducción</h2>
+        <p>A diferencia de las reacciones ácido-base (transferencia de protones), las reacciones redox transcurren con <strong>transferencia de electrones</strong> entre especies químicas.</p>
+
+        <div class="callout callout-info">
+            <div class="callout-title">💡 Número o Estado de Oxidación:</div>
+            <p>Es la carga hipotética asignada a un átomo en una sustancia para determinar si los electrones se han transferido de un átomo a otro.</p>
+        </div>
+
+        <h3>Reglas para Determinar Números de Oxidación:</h3>
+        <ol>
+            <li><strong>Elemento libre:</strong> Un átomo en estado elemental no combinado tiene número de oxidación <strong>cero</strong> (ej. <span class="math-inline">O<sub>2</sub></span>, <span class="math-inline">P<sub>4</sub></span>, <span class="math-inline">Fe<sub>(s)</sub></span>).</li>
+            <li><strong>Iones monoatómicos:</strong> Es igual a su carga (ej. <span class="math-inline">Ca<sup>2+</sup> = +2</span>, <span class="math-inline">Cl<sup>-</sup> = -1</span>).</li>
+            <li><strong>Valores fijos en compuestos:</strong>
+                <ul>
+                    <li><strong>Hidrógeno (H):</strong> tiene número de oxidación <strong>+1</strong>, excepto en hidruros metálicos donde es <strong>-1</strong>.</li>
+                    <li><strong>Oxígeno (O):</strong> tiene número de oxidación <strong>-2</strong>, excepto en peróxidos (<span class="math-inline">H<sub>2</sub>O<sub>2</sub></span>) donde es <strong>-1</strong>.</li>
+                    <li><strong>Flúor (F):</strong> tiene número de oxidación <strong>-1</strong> en todos sus compuestos.</li>
+                </ul>
+            </li>
+            <li><strong>Suma algebraica:</strong> En un compuesto neutro la suma de los números de oxidación es <strong>cero</strong>. En un ion poliatómico es igual a la <strong>carga del ion</strong>.
+                <br><em>Ejemplo 1:</em> En <span class="math-inline">SO<sub>2</sub></span>, O es -2 (total -4), luego S debe ser <strong>+4</strong>.
+                <br><em>Ejemplo 2:</em> En <span class="math-inline">SO<sub>4</sub><sup>2-</sup></span>, O es -2 (total -8) y la carga total es -2, luego S debe ser <strong>+6</strong> [<span class="math-inline">+6 + 4(-2) = -2</span>].</li>
+        </ol>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">🔍 Agentes Oxidantes y Reductores:</div>
+            <ul>
+                <li><span class="hl-ox">Oxidante (se reduce):</span> Quita electrones a otra sustancia. Disminuye su número de oxidación (gana electrones).</li>
+                <li><span class="hl-red">Reductor (se oxida):</span> Cede electrones al oxidante. Aumenta su número de oxidación (pierde electrones).</li>
+            </ul>
+        </div>
+
+        <p><strong>Ejemplo de Reacción Redox:</strong></p>
+        <div class="math-box">
+            H<sub>2</sub>SO<sub>4 (ac)</sub> + Fe <sub>(s)</sub> ⇄ FeSO<sub>4 (ac)</sub> + H<sub>2 (g)</sub>
+        </div>
+        <p>El Hierro cambia de <span class="hl-red">0 a +2</span> (se oxida, agente reductor). El Hidrógeno cambia de <span class="hl-ox">+1 a 0</span> (se reduce, agente oxidante).</p>
+
+        <h3>Método del Ion-Electrón:</h3>
+        <p>Consiste en dividir la reacción en dos semirreacciones (oxidación y reducción), ajustarlas separadamente por masa y carga, e igualar el número de electrones intercambiados antes de sumarlas.</p>
+    </section>
+
+    <!-- 7.2 PILAS GALVÁNICAS -->
+    <section class="section-card">
+        <h2 class="section-title t-green">7.2. Pilas Galvánicas (Voltaicas)</h2>
+        <p>Dispositivo que genera corriente eléctrica continua a partir de una reacción redox espontánea. Consta de dos semiceldas conectadas mediante un circuito externo y un puente salino.</p>
+
+        <h3>Ejemplo Clásico: La Pila de Daniell</h3>
+        <p>Si introducimos una tira de Zinc en una solución de <span class="math-inline">CuSO<sub>4</sub></span>, el Zn se disuelve y el Cu metálico se deposita sobre la tira liberando calor. Para aprovechar esa energía eléctricamente, separaremos ambas semiceldas:</p>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <h4>🔴 Ánodo (Electrodo Negativo -)</h4>
+                <p>Lugar donde ocurre la <strong>OXIDACIÓN</strong> (pérdida de e<sup>-</sup>).</p>
+                <div class="math-box" style="font-size: 0.95rem; padding: 8px;">
+                    Zn<sub>(s)</sub> → Zn<sup>2+</sup><sub>(ac)</sub> + 2e<sup>-</sup>
+                </div>
+                <p>El electrodo pierde masa con el tiempo.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <h4>🟢 Cátodo (Electrodo Positivo +)</h4>
+                <p>Lugar donde ocurre la <strong>REDUCCIÓN</strong> (ganancia de e<sup>-</sup>).</p>
+                <div class="math-box" style="font-size: 0.95rem; padding: 8px;">
+                    Cu<sup>2+</sup><sub>(ac)</sub> + 2e<sup>-</sup> → Cu<sub>(s)</sub>
+                </div>
+                <p>El electrodo gana masa (depósito de Cu).</p>
+            </div>
+        </div>
+
+        <div class="callout callout-purple">
+            <div class="callout-title">🌉 El Puente Salino:</div>
+            <p>Es un tubo en U que contiene un gel inerte con un electrolito (ej. <span class="math-inline">KCl</span>, <span class="math-inline">KNO<sub>3</sub></span> o <span class="math-inline">NaNO<sub>3</sub></span>). Su función es mantener la <strong>neutralidad eléctrica</strong> de las soluciones e impedir su mezcla directa:</p>
+            <ul>
+                <li>Los <strong>Aniones</strong> del puente salino migran hacia el <strong>Ánodo</strong>.</li>
+                <li>Los <strong>Cationes</strong> del puente salino migran hacia el <strong>Cátodo</strong>.</li>
+            </ul>
+        </div>
+
+        <h3>Notación Convencional de una Celda Galvánica:</h3>
+        <p>El ánodo siempre se escribe a la <strong>izquierda</strong> y el cátodo a la <strong>derecha</strong>. Las líneas verticales individuales representas cambios de fase y las dos líneas verticales <span class="math-inline">||</span> representan el puente salino.</p>
+
+        <div class="math-box" style="border-left-color: var(--accent-teal);">
+            Zn<sub>(s)</sub> | Zn<sup>2+</sup><sub>(ac)</sub> (1 M) || Cu<sup>2+</sup><sub>(ac)</sub> (1 M) | Cu<sub>(s)</sub>
+        </div>
+    </section>
+
+    <!-- 7.3 FUERZA ELECTROMOTRIZ -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">7.3. Fuerza Electromotriz (fem)</h2>
+        <p>Los electrones fluyen espontáneamente desde el ánodo (mayor potencial de energía) hacia el cátodo (menor potencial). Esta diferencia de potencial se mide en <strong>Voltios (V)</strong> y se denomina <span class="hl-def">Fuerza Electromotriz (fem, E)</span> o voltaje de la pila.</p>
+
+        <div class="math-box">
+            <span class="var">Trabajo eléctrico (W)</span> = <span class="var">Carga total</span> × <span class="var">Diferencia de potencial (V)</span>
+        </div>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">⚡ Constante de Faraday (F):</div>
+            <p>Es la carga eléctrica que transporta <strong>1 mol de electrones</strong>:</p>
+            <div class="math-box" style="margin: 5px 0; background: #78350f;">
+                <strong>1 F = 96.485 C/mol e<sup>-</sup> ≈ 96.500 C/mol e<sup>-</sup></strong>
+            </div>
+        </div>
+
+        <p>Por tanto, el trabajo eléctrico ejercido por una pila viene dado por:</p>
+        <div class="math-box" style="border-left-color: var(--accent-amber);">
+            <span class="var">W</span> = <span class="var">n</span> · <span class="var">F</span> · <span class="var">V</span>
+        </div>
+        <p>donde <span class="math-inline">n</span> es el número de moles de electrones transferidos en la reacción balanceada.</p>
+    </section>
+
+    <!-- 7.4 POTENCIALES ESTÁNDAR -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">7.4. Potenciales Estándar</h2>
+        <p>El potencial de una celda en condiciones estándar (concentración de solutos <strong>1 M</strong>, presión de gases <strong>1 atm</strong>, temperatura habitual <strong>25 °C</strong>) se denota como <span class="math-inline">E°<sub>celda</sub></span>.</p>
+
+        <div class="math-box">
+            <span class="var">E°<sub>celda</sub></span> = <span class="var">E°<sub>cátodo</sub></span> - <span class="var">E°<sub>ánodo</sub></span> &nbsp;&nbsp;&nbsp;&nbsp; o bien &nbsp;&nbsp;&nbsp;&nbsp; <span class="var">E°<sub>celda</sub></span> = <span class="var">E°<sub>red</sub>(cátodo)</span> + <span class="var">E°<sub>ox</sub>(ánodo)</span>
+        </div>
+
+        <p>Como sólo se puede medir diferencias de potencial, se define un electrodo de referencia internacional:</p>
+
+        <div class="callout callout-info">
+            <div class="callout-title">🧪 Electrodo Normal / Estándar de Hidrógeno (SHE):</div>
+            <p>Consiste en una lámina de platino recubierta de negro de platino sumergida en una solución <span class="math-inline">1 M</span> de <span class="math-inline">H<sup>+</sup></span> por la que burbujea <span class="math-inline">H<sub>2</sub></span> a <span class="math-inline">1 atm</span>. Se le asigna por convenio un potencial de reducción nulo:</p>
+            <div class="math-box" style="font-size: 1rem; padding: 8px;">
+                2H<sup>+</sup><sub>(ac)</sub> (1 M) + 2e<sup>-</sup> ⇄ H<sub>2 (g)</sub> (1 atm) &nbsp;&nbsp;&nbsp;&nbsp; <strong>E° = 0,00 V</strong>
+            </div>
+        </div>
+
+        <h3>Determinación de Potenciales de Electrodo:</h3>
+        <ul>
+            <li><strong>Celda Zn / SHE:</strong> El electrodo de Zn se oxida (ánodo). Se mide <span class="math-inline">E°<sub>celda</sub> = 0,76 V</span> <span class="math-inline">⇒ E°<sub>red</sub>(Zn<sup>2+</sup>/Zn) = -0,76 V</span>.</li>
+            <li><strong>Celda Cu / SHE:</strong> El electrodo de Cu se reduce (cátodo). Se mide <span class="math-inline">E°<sub>celda</sub> = 0,34 V</span> <span class="math-inline">⇒ E°<sub>red</sub>(Cu<sup>2+</sup>/Cu) = +0,34 V</span>.</li>
+            <li><strong>Pila de Daniell estándar:</strong> <span class="math-inline">E°<sub>celda</sub> = 0,34 - (-0,76) = 1,10 V</span>.</li>
+        </ul>
+
+        <div class="callout callout-success">
+            <div class="callout-title">📈 Propiedades e Interpretación de E°red:</div>
+            <ul>
+                <li>Es una <strong>propiedad intensiva</strong>: Multiplicar una semirreacción por un factor estequiométrico <em>NO altera</em> el valor de <span class="math-inline">E°</span>.</li>
+                <li>Cuanto más <strong>positivo</strong> es <span class="math-inline">E°<sub>red</sub></span>, mayor es la tendencia de la especie a reducirse (agente <strong>oxidante fuerte</strong>, ej. <span class="math-inline">F<sub>2</sub></span>).</li>
+                <li>Cuanto más <strong>negativo</strong> es <span class="math-inline">E°<sub>red</sub></span>, mayor es la capacidad del producto para oxidarse (agente <strong>reductor fuerte</strong>, ej. <span class="math-inline">Li</span> metálico).</li>
+                <li>Una reacción redox es <strong>espontánea</strong> en la dirección escrita si <span class="math-inline">E°<sub>celda</sub> > 0</span>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 7.5 CONSTANTE DE EQUILIBRIO Y FEM -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">7.5. Constante de Equilibrio y Fuerza Electromotriz</h2>
+        <p>Existe una relación termodinámica directa entre la variación de Energía Libre de Gibbs (<span class="math-inline">ΔG</span>), la fuerza electromotriz (<span class="math-inline">E</span>) y la constante de equilibrio (<span class="math-inline">K</span>).</p>
+
+        <p>Dado que el trabajo máximo extraíble es <span class="math-inline">W<sub>máx</sub> = -ΔG</span> y <span class="math-inline">W<sub>eléctrico</sub> = nFE</span>:</p>
+
+        <div class="math-box">
+            Δ<span class="var">G</span> = -<span class="var">n</span>·<span class="var">F</span>·<span class="var">E<sub>celda</sub></span> &nbsp;&nbsp;&nbsp;&nbsp; ⇒ &nbsp;&nbsp;&nbsp;&nbsp; Δ<span class="var">G°</span> = -<span class="var">n</span>·<span class="var">F</span>·<span class="var">E°<sub>celda</sub></span>
+        </div>
+
+        <p>Igualando con la expresión termodinámica <span class="math-inline">ΔG° = -RT \ln K</span> a 25 °C (298,15 K):</p>
+
+        <div class="math-box" style="border-left-color: var(--accent-pink);">
+            <span class="var">E°<sub>celda</sub></span> = <span class="frac"><span><span class="var">RT</span></span><span><span class="var">nF</span></span></span> · ln <span class="var">K</span> = <span class="frac"><span>0,0592</span><span><span class="var">n</span></span></span> · log <span class="var">K</span>
+        </div>
+
+        <!-- Scheme Box -->
+        <div class="scheme-container">
+            <h4 style="margin-bottom: 15px; color: var(--primary);">Triángulo de Interconexión Termodinámica</h4>
+            <div class="scheme-flow">
+                <div class="scheme-node">ΔG°</div>
+                <div class="scheme-arrow">⇄</div>
+                <div class="scheme-node">E°<sub>celda</sub></div>
+                <div class="scheme-arrow">⇄</div>
+                <div class="scheme-node">K</div>
+            </div>
+            <p style="margin-top: 15px; font-size: 0.9rem; text-align: center;">
+                <span class="math-inline">ΔG° = -nFE°</span> &nbsp;|&nbsp; <span class="math-inline">ΔG° = -RT ln K</span> &nbsp;|&nbsp; <span class="math-inline">E° = <span class="frac"><span>0,0592</span><span>n</span></span> log K</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- 7.6 EFECTO DE LA CONCENTRACIÓN Y ECUACIÓN DE NERNST -->
+    <section class="section-card">
+        <h2 class="section-title t-red">7.6. Efecto de la Concentración sobre la fem</h2>
+        <p>A medida que una pila funciona, los reactivos se consumen y los productos aumentan. Según el principio de Le Chatelier, esto hace que el potencial disminuya progresivamente hasta que alcanza el equilibrio (<span class="math-inline">E = 0</span>, pila "agotada").</p>
+
+        <h3>7.6.1. Ecuación de Nernst</h3>
+        <p>Deducida por Walter Nernst en 1899, relaciona cuantitativamente la fem en condiciones no estándar con las concentraciones de los reactivos y productos:</p>
+
+        <div class="math-box" style="border-left-color: var(--accent-red);">
+            <span class="var">E</span> = <span class="var">E°</span> - <span class="frac"><span>0,0592</span><span><span class="var">n</span></span></span> · log <span class="var">Q</span> &nbsp;&nbsp;&nbsp;&nbsp; <span class="unit">(a 25 °C)</span>
+        </div>
+
+        <p>donde <span class="math-inline">Q</span> es el cociente de reacción. Para la Pila de Daniell <span class="math-inline">Zn<sub>(s)</sub> + Cu<sup>2+</sup><sub>(ac)</sub> → Zn<sup>2+</sup><sub>(ac)</sub> + Cu<sub>(s)</sub></span>:</p>
+
+        <div class="math-box">
+            <span class="var">E</span> = 1,10 - <span class="frac"><span>0,0592</span><span>2</span></span> · log ( <span class="frac"><span>[Zn<sup>2+</sup>]</span><span>[Cu<sup>2+</sup>]</span></span> )
+        </div>
+
+        <h3>7.6.2. Medida del pH</h3>
+        <p>Conectando un electrodo de prueba de hidrógeno a un electrodo estándar de cobre, la fem resulta directamente proporcional al pH:</p>
+        <div class="math-box">
+            <span class="var">E</span> = <span class="var">E°</span> - 0,0592 · <span class="var">pH</span>
+        </div>
+        <p>En la práctica moderna, se utilizan <strong>pH-metros</strong> con electrodos de vidrio (membranas de ion selectivo con hilo de <span class="math-inline">Ag/AgCl</span> en <span class="math-inline">HCl</span>).</p>
+    </section>
+
+    <!-- 7.7 CELDAS VOLTAICAS COMERCIALES -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">7.7. Celdas Voltáicas Comerciales (Baterías)</h2>
+        
+        <h3>1. Baterías Primarias (No recargables)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Anodo / Cátodo</th>
+                    <th>Voltaje</th>
+                    <th>Características y Reacciones Principales</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Pila Seca de Leclanché</strong></td>
+                    <td>Ánodo: Zn (recipiente)<br>Cátodo: Grafito</td>
+                    <td>1,5 V</td>
+                    <td>Electrolito: pasta húmeda de <span class="math-inline">MnO<sub>2</sub>, NH<sub>4</sub>Cl, ZnCl<sub>2</sub></span> y carbón. Se forma el complejo <span class="math-inline">[Zn(NH<sub>3</sub>)<sub>2</sub>]<sup>2+</sup></span>. No recargable.</td>
+                </tr>
+                <tr>
+                    <td><strong>Pila Seca Alcalina</strong></td>
+                    <td>Ánodo: Zn<br>Cátodo: Grafito</td>
+                    <td>1,5 V</td>
+                    <td>Sustituye <span class="math-inline">NH<sub>4</sub>Cl</span> por <span class="math-inline">KOH</span>. No genera gases, mantiene voltaje constante durante más tiempo.</td>
+                </tr>
+                <tr>
+                    <td><strong>Batería de Mercurio</strong></td>
+                    <td>Ánodo: Zn<br>Cátodo: HgO</td>
+                    <td>1,35 V</td>
+                    <td>Muy pequeña (relojes, calculadoras). <span class="math-inline">HgO + H<sub>2</sub>O + 2e<sup>-</sup> → Hg + 2OH<sup>-</sup></span>. Inconveniente: toxicidad del Hg.</td>
+                </tr>
+                <tr>
+                    <td><strong>Batería de Litio</strong></td>
+                    <td>Ánodo: Li metálico<br>Cátodo: I<sub>2</sub> (complejo) / MnO<sub>2</sub></td>
+                    <td>Variable</td>
+                    <td>Usada en marcapasos. Muy ligera (baja densidad del Li) y de larga duración (hasta 10 años).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2. Baterías Secundarias (Recargables / Acumuladores)</h3>
+        <ul>
+            <li><strong>Níquel-Cadmio (NiCad):</strong> Ánodo de Cadmio, Cátodo de <span class="math-inline">NiO(OH)</span> y electrolito de <span class="math-inline">KOH</span>. Los hidróxidos insolubles formados permanecen sobre los electrodos permitiendo la recarga. Cadmio tóxico.</li>
+            <li><strong>Ion Litio:</strong> Gran densidad de energía por unidad de peso. Muy usada en telefonía y ordenadores portátiles.</li>
+            <li><strong>Acumulador de Plomo (Automóviles):</strong> Consta de 6 celdas de 2 V conectadas en serie (Total <strong>12 V</strong>).
+                <ul>
+                    <li><strong>Ánodo:</strong> Plomo poroso (<span class="math-inline">Pb</span>).</li>
+                    <li><strong>Cátodo:</strong> Dióxido de plomo (<span class="math-inline">PbO<sub>2</sub></span>).</li>
+                    <li><strong>Electrolito:</strong> Ácido sulfúrico (<span class="math-inline">H<sub>2</sub>SO<sub>4</sub></span>).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="math-box">
+            <span class="var">Descarga:</span> PbO<sub>2 (s)</sub> + Pb <sub>(s)</sub> + 4H<sup>+</sup> <sub>(ac)</sub> + 2SO<sub>4</sub><sup>2-</sup> <sub>(ac)</sub> → 2PbSO<sub>4 (s)</sub> + 2H<sub>2</sub>O <sub>(l)</sub> &nbsp;&nbsp; <span class="unit">(E° = 2,04 V)</span>
+        </div>
+
+        <h3>3. Celdas de Combustible</h3>
+        <p>Son celdas abiertas que reciben un <strong>suministro continuo de reactivos</strong> desde el exterior. La más común es la celda de <strong>Hidrógeno-Oxígeno</strong>:</p>
+        <div class="math-box" style="border-left-color: var(--accent-green);">
+            <span class="var">Ánodo:</span> 2H<sub>2 (g)</sub> + 4OH<sup>-</sup> <sub>(ac)</sub> → 4H<sub>2</sub>O <sub>(l)</sub> + 4e<sup>-</sup><br>
+            <span class="var">Cátodo:</span> O<sub>2 (g)</sub> + 2H<sub>2</sub>O <sub>(l)</sub> + 4e<sup>-</sup> → 4OH<sup>-</sup> <sub>(ac)</sub><br>
+            <span class="var">Global:</span> 2H<sub>2 (g)</sub> + O<sub>2 (g)</sub> → 2H<sub>2</sub>O <sub>(l)</sub>
+        </div>
+    </section>
+
+    <!-- 7.8 CELDAS ELECTROLÍTICAS -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">7.8. Celdas Electrolíticas</h2>
+        <p>En una <span class="hl-def">Celda Electrolítica</span> se consume energía eléctrica de una fuente externa continua para forzar una reacción redox no espontánea.</p>
+
+        <div class="callout callout-danger">
+            <div class="callout-title">⚠️ Polaridad de Electrodos: Galvánica vs Electrolítica</div>
+            <p>Tanto en pilas galvánicas como en celdas electrolíticas, la <strong>OXIDACIÓN ocurre siempre en el ÁNODO</strong> y la <strong>REDUCCIÓN en el CÁTODO</strong>.</p>
+            <ul>
+                <li><strong>Pila Galvánica:</strong> Ánodo es <strong>(-)</strong> | Cátodo es <strong>(+)</strong>.</li>
+                <li><strong>Celda Electrolítica:</strong> Ánodo es <strong>(+)</strong> | Cátodo es <strong>(-)</strong>.</li>
+            </ul>
+        </div>
+
+        <h3>7.8.1. Electrólisis de Sales Fundidas</h3>
+        <p><em>Ejemplo:</em> Electrólisis de <span class="math-inline">NaCl</span> fundido (a más de 800 °C):</p>
+        <ul>
+            <li><strong>Ánodo (+):</strong> <span class="math-inline">2Cl<sup>-</sup><sub>(l)</sub> → Cl<sub>2 (g)</sub> + 2e<sup>-</sup></span></li>
+            <li><strong>Cátodo (-):</strong> <span class="math-inline">2Na<sup>+</sup><sub>(l)</sub> + 2e<sup>-</sup> → 2Na <sub>(l)</sub></span></li>
+            <li><strong>Reacción Global:</strong> <span class="math-inline">2NaCl <sub>(l)</sub> → 2Na <sub>(l)</sub> + Cl<sub>2 (g)</sub></span> &nbsp;&nbsp;&nbsp;&nbsp; (<span class="math-inline">E° = -4,07 V</span>)</li>
+        </ul>
+
+        <h3>7.8.2. Electrólisis Acuosa</h3>
+        <p>En soluciones acuosas, el agua puede competir en los electrodos reductores y oxidantes:</p>
+        <ul>
+            <li><strong>Oxidación del Agua (Ánodo):</strong> <span class="math-inline">2H<sub>2</sub>O <sub>(l)</sub> → O<sub>2 (g)</sub> + 4H<sup>+</sup> <sub>(ac)</sub> + 4e<sup>-</sup> &nbsp;&nbsp; (E° = -1,23 V)</span></li>
+            <li><strong>Reducción del Agua (Cátodo):</strong> <span class="math-inline">2H<sub>2</sub>O <sub>(l)</sub> + 2e<sup>-</sup> → H<sub>2 (g)</sub> + 2OH<sup>-</sup> <sub>(ac)</sub> &nbsp;&nbsp; (E° = -0,83 V)</span></li>
+        </ul>
+
+        <p><strong>Electrólisis de disolución acuosa de NaCl:</strong></p>
+        <p>En el cátodo se reduce preferentemente el agua frente al <span class="math-inline">Na<sup>+</sup></span> produciendo <span class="math-inline">H<sub>2</sub></span>. En el ánodo, debido al fenómeno del <em>sobrevoltaje</em>, se oxida el <span class="math-inline">Cl<sup>-</sup></span> si la solución es concentrada:</p>
+        <div class="math-box">
+            2H<sub>2</sub>O <sub>(l)</sub> + 2NaCl <sub>(ac)</sub> → Cl<sub>2 (g)</sub> + H<sub>2 (g)</sub> + 2NaOH <sub>(ac)</sub>
+        </div>
+
+        <h3>7.8.3. Aspectos Cuantitativos de la Electrólisis (Leyes de Faraday)</h3>
+        <ol>
+            <li><strong>1ª Ley:</strong> La masa de sustancia liberada en un electrodo es directamente proporcional a la cantidad de carga eléctrica (<span class="math-inline">Q = I · t</span>) que atraviesa la celda.</li>
+            <li><strong>2ª Ley:</strong> Para una misma cantidad de carga, las masas de distintas sustancias depositadas son proporcionales a sus pesos equivalentes.</li>
+        </ol>
+
+        <div class="scheme-container">
+            <h4 style="margin-bottom: 12px;">Esquema de Cálculo Cuantitativo de Faraday</h4>
+            <div class="scheme-flow">
+                <div class="scheme-node">Corriente (A) × Tiempo (s)</div>
+                <div class="scheme-arrow">→</div>
+                <div class="scheme-node">Carga eléctrica Q (C)</div>
+                <div class="scheme-arrow">→</div>
+                <div class="scheme-node">Moles de e<sup>-</sup> (Faradays)</div>
+                <div class="scheme-arrow">→</div>
+                <div class="scheme-node">Moles de Sustancia</div>
+                <div class="scheme-arrow">→</div>
+                <div class="scheme-node">Gramos o Litros</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">📝 Ejercicios de Autoevaluación Resueltos</h2>
+
+        <!-- EXERCICE 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Ajuste redox por ion-electrón en medio ácido</div>
+            <p>Ajustar la reacción de oxidación del ion <span class="math-inline">Fe<sup>2+</sup></span> por el permanganato potásico (<span class="math-inline">KMnO<sub>4</sub></span>) en medio ácido a ion <span class="math-inline">Fe<sup>3+</sup></span> y <span class="math-inline">Mn<sup>2+</sup></span>.</p>
+
+            <div class="solution-box">
+                <span class="solution-tag">Solución paso a paso</span>
+                <ol>
+                    <li><strong>Ecuación iónica sin ajustar:</strong> <span class="math-inline">Fe<sup>2+</sup> + MnO<sub>4</sub><sup>-</sup> → Fe<sup>3+</sup> + Mn<sup>2+</sup></span></li>
+                    <li><strong>Semirreacción de oxidación:</strong> <span class="math-inline">Fe<sup>2+</sup> → Fe<sup>3+</sup> + e<sup>-</sup></span></li>
+                    <li><strong>Semirreacción de reducción:</strong> <span class="math-inline">MnO<sub>4</sub><sup>-</sup> + 8H<sup>+</sup> + 5e<sup>-</sup> → Mn<sup>2+</sup> + 4H<sub>2</sub>O</span></li>
+                    <li><strong>Igualar electrones (multiplicar oxidación por 5):</strong>
+                        <br><span class="math-inline">5Fe<sup>2+</sup> → 5Fe<sup>3+</sup> + 5e<sup>-</sup></span>
+                        <br><span class="math-inline">MnO<sub>4</sub><sup>-</sup> + 8H<sup>+</sup> + 5e<sup>-</sup> → Mn<sup>2+</sup> + 4H<sub>2</sub>O</span>
+                    </li>
+                    <li><strong>Ecuación global ajustada:</strong></li>
+                </ol>
+                <div class="math-box" style="margin: 8px 0; font-size: 1rem;">
+                    <strong>5Fe<sup>2+</sup><sub>(ac)</sub> + MnO<sub>4</sub><sup>-</sup><sub>(ac)</sub> + 8H<sup>+</sup><sub>(ac)</sub> → 5Fe<sup>3+</sup><sub>(ac)</sub> + Mn<sup>2+</sup><sub>(ac)</sub> + 4H<sub>2</sub>O <sub>(l)</sub></strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXERCICE 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: Ajuste redox por ion-electrón en medio básico</div>
+            <p>Completar y ajustar la siguiente reacción en medio básico: <span class="math-inline">MnO<sub>4</sub><sup>-</sup><sub>(ac)</sub> + SO<sub>3</sub><sup>2-</sup><sub>(ac)</sub> → MnO<sub>2 (s)</sub> + SO<sub>4</sub><sup>2-</sup><sub>(ac)</sub></span>.</p>
+
+            <div class="solution-box">
+                <span class="solution-tag">Solución paso a paso</span>
+                <ol>
+                    <li><strong>Ajuste inicial en medio ácido:</strong>
+                        <br>Reducción: <span class="math-inline">2MnO<sub>4</sub><sup>-</sup> + 8H<sup>+</sup> + 6e<sup>-</sup> → 2MnO<sub>2</sub> + 4H<sub>2</sub>O</span>
+                        <br>Oxidación: <span class="math-inline">3SO<sub>3</sub><sup>2-</sup> + 3H<sub>2</sub>O → 3SO<sub>4</sub><sup>2-</sup> + 6H<sup>+</sup> + 6e<sup>-</sup></span>
+                        <br>Suma ácida: <span class="math-inline">2MnO<sub>4</sub><sup>-</sup> + 3SO<sub>3</sub><sup>2-</sup> + 2H<sup>+</sup> → 2MnO<sub>2</sub> + 3SO<sub>4</sub><sup>2-</sup> + H<sub>2</sub>O</span>
+                    </li>
+                    <li><strong>Pasar a medio básico añadiendo 2 OH<sup>-</sup> a ambos lados:</strong>
+                        <br><span class="math-inline">2H<sup>+</sup> + 2OH<sup>-</sup> → 2H<sub>2</sub>O</span> en el lado izquierdo.
+                    </li>
+                    <li><strong>Simplificar agua:</strong></li>
+                </ol>
+                <div class="math-box" style="margin: 8px 0; font-size: 1rem;">
+                    <strong>2MnO<sub>4</sub><sup>-</sup><sub>(ac)</sub> + 3SO<sub>3</sub><sup>2-</sup><sub>(ac)</sub> + H<sub>2</sub>O <sub>(l)</sub> → 2MnO<sub>2 (s)</sub> + 3SO<sub>4</sub><sup>2-</sup><sub>(ac)</sub> + 2OH<sup>-</sup><sub>(ac)</sub></strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXERCICE 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Esquema e identificación de Celda Galvánica Ni/Cd</div>
+            <p>Para la reacción neta: <span class="math-inline">Ni<sup>2+</sup><sub>(ac)</sub> + Cd<sub>(s)</sub> → Ni<sub>(s)</sub> + Cd<sup>2+</sup><sub>(ac)</sub></span>, identifique ánodo, cátodo, semirreacciones, sentido de electrones e iones, y escriba la notación.</p>
+
+            <div class="solution-box">
+                <span class="solution-tag">Solución paso a paso</span>
+                <ul>
+                    <li><strong>Ánodo (Oxidación):</strong> Cadmio (<span class="math-inline">Cd</span>). Semirreacción: <span class="math-inline">Cd<sub>(s)</sub> → Cd<sup>2+</sup><sub>(ac)</sub> + 2e<sup>-</sup></span></li>
+                    <li><strong>Cátodo (Reducción):</strong> Níquel (<span class="math-inline">Ni</span>). Semirreacción: <span class="math-inline">Ni<sup>2+</sup><sub>(ac)</sub> + 2e<sup>-</sup> → Ni<sub>(s)</sub></span></li>
+                    <li><strong>Flujo de electrones:</strong> Del electrodo de Cadmio al electrodo de Níquel por el cable externo.</li>
+                    <li><strong>Flujo de iones en puente salino (NaNO<sub>3</sub>):</strong>
+                        <ul>
+                            <li>Cationes (<span class="math-inline">Na<sup>+</sup></span>) migran al <strong>Cátodo</strong> (para compensar el consumo de <span class="math-inline">Ni<sup>2+</sup></span>).</li>
+                            <li>Aniones (<span class="math-inline">NO<sub>3</sub><sup>-</sup></span>) migran al <strong>Ánodo</strong> (para neutralizar el exceso de <span class="math-inline">Cd<sup>2+</sup></span>).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Notación de la celda:</strong> <span class="math-inline">Cd<sub>(s)</sub> | Cd<sup>2+</sup><sub>(ac)</sub> || Ni<sup>2+</sup><sub>(ac)</sub> | Ni<sub>(s)</sub></span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EXERCICE 4 & 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicios 4 y 5: Cálculo de ΔG° y fem estándar (E°)</div>
+            <p>Calcular la variación de energía libre estándar (<span class="math-inline">ΔG°</span>) y la fem estándar (<span class="math-inline">E°</span>) a 25 °C para la reacción: <span class="math-inline">2I<sup>-</sup><sub>(ac)</sub> + Cl<sub>2 (g)</sub> → I<sub>2 (s)</sub> + 2Cl<sup>-</sup><sub>(ac)</sub></span>.</p>
+
+            <div class="solution-box">
+                <span class="solution-tag">Solución paso a paso</span>
+                <p><strong>Cálculo a partir de potenciales de reducción:</strong></p>
+                <ul>
+                    <li>Oxidación (Ánodo): <span class="math-inline">2I<sup>-</sup> → I<sub>2</sub> + 2e<sup>-</sup></span> &nbsp;&nbsp; (<span class="math-inline">E°<sub>ox</sub> = -0,54 V</span>)</li>
+                    <li>Reducción (Cátodo): <span class="math-inline">Cl<sub>2</sub> + 2e<sup>-</sup> → 2Cl<sup>-</sup></span> &nbsp;&nbsp; (<span class="math-inline">E°<sub>red</sub> = +1,36 V</span>)</li>
+                    <li><span class="math-inline">E°<sub>celda</sub> = 1,36 - 0,54 = <strong>0,82 V</strong></span></li>
+                    <li><span class="math-inline">n = 2</span> moles de e<sup>-</sup>.</li>
+                    <li><span class="math-inline">ΔG° = -nFE° = -2 · 96.500 C · 0,82 V = -158.260 J = <strong>-158 kJ</strong></span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EXERCICE 6 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 6: Constante de equilibrio para la Pila de Daniell</div>
+            <p>Calcular el valor de la constante de equilibrio (<span class="math-inline">K</span>) a 25 °C para la reacción global de la pila de Daniell (<span class="math-inline">E° = 1,10 V</span>, <span class="math-inline">n = 2</span>).</p>
+
+            <div class="solution-box">
+                <span class="solution-tag">Solución paso a paso</span>
+                <p>Aplicando la relación: <span class="math-inline">E°<sub>celda</sub> = <span class="frac"><span>0,0592</span><span>n</span></span> · log K</span></p>
+                <p><span class="math-inline">1,10 = <span class="frac"><span>0,0592</span><span>2</span></span> · log K &nbsp;⇒&nbsp; log K = <span class="frac"><span>1,10 · 2</span><span>0,0592</span></span> = 37,16</span></p>
+                <div class="math-box" style="margin: 8px 0; font-size: 1rem;">
+                    <strong>K = 10<sup>37,16</sup> = 1,45 × 10<sup>37</sup></strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXERCICE 7 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 7: Aplicación de la Ecuación de Nernst</div>
+            <p>Dada la pila <span class="math-inline">Cd<sub>(s)</sub> | Cd<sup>2+</sup><sub>(ac)</sub> (0,004 M) || Ni<sup>2+</sup><sub>(ac)</sub> | Ni<sub>(s)</sub></span> con una fem de <span class="math-inline">0,240 V</span> a 25 °C y <span class="math-inline">E°<sub>celda</sub> = 0,170 V</span>. Calcular la concentración de <span class="math-inline">Ni<sup>2+</sup></span>.</p>
+
+            <div class="solution-box">
+                <span class="solution-tag">Solución paso a paso</span>
+                <ol>
+                    <li>Reacción global (<span class="math-inline">n = 2</span>): <span class="math-inline">Ni<sup>2+</sup><sub>(ac)</sub> + Cd<sub>(s)</sub> → Ni<sub>(s)</sub> + Cd<sup>2+</sup><sub>(ac)</sub></span></li>
+                    <li>Cociente de reacción: <span class="math-inline">Q = <span class="frac"><span>[Cd<sup>2+</sup>]</span><span>[Ni<sup>2+</sup>]</span></span></span></li>
+                    <li>Ecuación de Nernst: <span class="math-inline">E = E° - <span class="frac"><span>0,0592</span><span>2</span></span> · log Q</span>
+                        <br><span class="math-inline">0,240 = 0,170 - 0,0296 · log Q</span>
+                        <br><span class="math-inline">log Q = <span class="frac"><span>0,170 - 0,240</span><span>0,0296</span></span> = -2,3648</span>
+                        <br><span class="math-inline">Q = 10<sup>-2,3648</sup> = 4,31 × 10<sup>-3</sup></span>
+                    </li>
+                    <li>Despejar concentración de <span class="math-inline">Ni<sup>2+</sup></span>:
+                        <br><span class="math-inline">[Ni<sup>2+</sup>] = <span class="frac"><span>[Cd<sup>2+</sup>]</span><span>Q</span></span> = <span class="frac"><span>0,004</span><span>4,31 × 10<sup>-3</sup></span></span> = <strong>0,925 M</strong></span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- EXERCICE 8 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 8: Electrólisis cuantitativa de NaCl acuoso</div>
+            <p>Se pasa una corriente de <span class="math-inline">5 A</span> durante <span class="math-inline">1 hora</span> en la electrólisis de <span class="math-inline">NaCl</span> acuoso. ¿Cuántos litros de <span class="math-inline">Cl<sub>2 (g)</sub></span> en C.N. y cuántos moles de <span class="math-inline">NaOH</span> se forman?</p>
+
+            <div class="solution-box">
+                <span class="solution-tag">Solución paso a paso</span>
+                <ol>
+                    <li><strong>Carga eléctrica total (Q):</strong> <span class="math-inline">Q = I · t = 5 A × 3600 s = 18.000 C</span></li>
+                    <li><strong>Moles de electrones:</strong> <span class="math-inline">moles e<sup>-</sup> = <span class="frac"><span>18.000 C</span><span>96.500 C/mol</span></span> = 0,1865 mol e<sup>-</sup></span></li>
+                    <li><strong>Producción de Cl<sub>2</sub> (2 e<sup>-</sup> por mol de Cl<sub>2</sub>):</strong>
+                        <br><span class="math-inline">moles Cl<sub>2</sub> = <span class="frac"><span>0,1865</span><span>2</span></span> = 0,0933 mol Cl<sub>2</sub></span>
+                        <br><span class="math-inline">Volumen Cl<sub>2</sub> (C.N.) = 0,0933 mol × 22,4 L/mol = <strong>2,09 L de Cl<sub>2</sub></strong></span>
+                    </li>
+                    <li><strong>Producción de NaOH:</strong>
+                        <br>Según la estequiometría (<span class="math-inline">2H<sub>2</sub>O + 2NaCl → Cl<sub>2</sub> + H<sub>2</sub> + 2NaOH</span>), se forman 2 moles de <span class="math-inline">NaOH</span> por cada mol de <span class="math-inline">Cl<sub>2</sub></span>:
+                        <br><span class="math-inline">moles NaOH = 2 × 0,0933 = <strong>0,186 moles de NaOH</strong></span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- EXERCICE 9 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 9: Cálculo de intensidad de corriente en electrodeposición</div>
+            <p>Al pasar una corriente constante durante <span class="math-inline">1 hora</span> en la electrólisis de una disolución de sulfato de cobre, se depositan <span class="math-inline">1,18 g</span> de Cu. Calcular la intensidad de corriente (<span class="math-inline">Cu<sup>2+</sup> + 2e<sup>-</sup> → Cu</span>; <span class="math-inline">M<sub>Cu</sub> = 63,55 g/mol</span>).</p>
+
+            <div class="solution-box">
+                <span class="solution-tag">Solución paso a paso</span>
+                <ol>
+                    <li><strong>Moles de Cu depositados:</strong> <span class="math-inline"><span class="frac"><span>1,18 g</span><span>63,55 g/mol</span></span> = 0,01857 mol Cu</span></li>
+                    <li><strong>Moles de e<sup>-</sup> requeridos:</strong> <span class="math-inline">2 × 0,01857 = 0,03713 mol e<sup>-</sup></span></li>
+                    <li><strong>Carga eléctrica (Q):</strong> <span class="math-inline">Q = 0,03713 mol e<sup>-</sup> × 96.500 C/mol = 3.583 C</span></li>
+                    <li><strong>Intensidad de corriente (I):</strong>
+                        <br><span class="math-inline">I = <span class="frac"><span>Q</span><span>t</span></span> = <span class="frac"><span>3.583 C</span><span>3600 s</span></span> = <strong>0,995 A ≈ 1,00 A</strong></span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

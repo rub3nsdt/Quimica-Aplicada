@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 6: Termodinámica Química - Resumen Completo</title>
+    <style>
+        :root {
+            --primary: #1e1b4b;
+            --primary-light: #312e81;
+            --accent-blue: #0284c7;
+            --accent-green: #059669;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #7c3aed;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Banner Header */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 800px;
+        }
+
+        .meta-info {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #94a3b8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 22px 0 12px 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* Color Concepts & Highlights */
+        .hl-def {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-exo {
+            background-color: #dcfce7;
+            color: #15803d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-endo {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-law {
+            background-color: #fef3c7;
+            color: #b45309;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-purple {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Math & Formulas */
+        .math-box {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 16px 24px;
+            border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 1.15rem;
+            text-align: center;
+            margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8;
+        }
+
+        .math-box .var {
+            font-style: italic;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .math-box .unit {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-family: sans-serif;
+        }
+
+        .math-inline {
+            font-family: 'Cambria', 'Georgia', serif;
+            font-style: italic;
+            font-weight: 600;
+            color: #0f172a;
+            background: #f1f5f9;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        /* Callout Cards */
+        .callout {
+            border-left: 4px solid;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 18px 0;
+            background-color: #f8fafc;
+        }
+
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 12px 0 16px 24px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Badge Grid */
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .badge-card {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            background: #ffffff;
+            border-top: 4px solid var(--primary);
+        }
+
+        /* Autoevaluacion Solutions */
+        .exercise-card {
+            background-color: #fdffe7;
+            border: 1px solid #fef08a;
+            border-left: 5px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .exercise-title {
+            font-weight: 700;
+            color: #854d0e;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .solution-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        .solution-tag {
+            display: inline-block;
+            background-color: #dcfce7;
+            color: #166534;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        /* Sign convention visual grid */
+        .sign-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .sign-box-pos {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .sign-box-neg {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            .section-card { padding: 20px; }
+            .sign-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 6: Termodinámica Química</h1>
+        <p>Resumen exhaustivo, visual y estructurado de todos los conceptos, principios, ecuaciones y resolución paso a paso de los problemas de autoevaluación.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Mª José Caselles, Mariano Molero, Mª Isabel Gómez, et al.</span>
+            <span>📍 <strong>Capítulo:</strong> Unidad Didáctica - Tema 6</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid" style="display: flex; flex-wrap: wrap; gap: 15px;">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);flex: 1;">
+                <strong>Ecuaciones Termoquímicas & Calorimetría:</strong> Escribir y manejar ecuaciones termoquímicas; determinar variaciones de entalpía a partir de datos calorimétricos.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);flex: 1;">
+                <strong>Ley de Hess & Estado Estándar:</strong> Aplicar la Ley de Hess y calcular entalpías de reacción a partir de entalpías estándar de formación (<span class="math-inline">ΔH°<sub>f</sub></span>).
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);flex: 1;">
+                <strong>Entropía & 2ª/3ª Leyes:</strong> Definir entropía (<span class="math-inline">S</span>), predecir cambios entrópicos y aplicar el 2º y 3er principio de la termodinámica.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-pink);flex: 1;">
+                <strong>Energía Libre & Equilibrio:</strong> Relacionar <span class="math-inline">ΔH</span> y <span class="math-inline">ΔS</span> con la energía libre de Gibbs (<span class="math-inline">ΔG</span>), predecir espontaneidad y calcular la constante de equilibrio (<span class="math-inline">K</span>).
+            </div>
+        </div>
+    </section>
+
+    <!-- 6.1 INTRODUCCIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">6.1. Introducción</h2>
+        <p>La <span class="hl-def">Química</span> estudia la estructura, composición y propiedades de la materia, siendo la <strong>producción y transferencia de energía</strong> uno de sus aspectos fundamentales. En la mayoría de las reacciones químicas se libera o absorbe energía en forma de calor.</p>
+        
+        <div class="callout callout-info">
+            <div class="callout-title">💡 Definiciones Clave:</div>
+            <ul>
+                <li><strong>Termodinámica:</strong> Ciencia que estudia la energía y sus transformaciones.</li>
+                <li><strong>Termoquímica:</strong> Parte de la termodinámica que estudia el calor intercambiado en los procesos químicos.</li>
+            </ul>
+        </div>
+
+        <p><strong>Conexión con la Cinética y el Equilibrio:</strong></p>
+        <ul>
+            <li>La velocidad de reacción depende de la <em>energía de activación</em>.</li>
+            <li>El <em>equilibrio químico</em> se alcanza cuando las velocidades de la reacción directa e inversa se igualan. Al depender las velocidades de la energía, el equilibrio químico está regido directamente por los cambios energéticos entre reactivos y productos.</li>
+            <li>La <span class="hl-purple">espontaneidad</span> de una reacción depende de la variación de energía, pero también del desorden (<span class="hl-purple">entropía</span>), combinándose ambos en la <span class="hl-def">energía libre</span>.</li>
+        </ul>
+    </section>
+
+    <!-- 6.2 NATURALEZA DE LA ENERGÍA -->
+    <section class="section-card">
+        <h2 class="section-title t-green">6.2. Naturaleza de la Energía</h2>
+        <p>La materia es todo lo tangible. La <span class="hl-def">energía</span> es un concepto abstracto: es una propiedad de la materia definida como la <strong>capacidad para efectuar trabajo o transferir calor</strong>.</p>
+        
+        <h3>Tipos y Manifestaciones de Energía:</h3>
+        <ul>
+            <li><strong>Energía Cinética (<span class="math-inline">E<sub>c</sub></span>):</strong> Energía asociada al movimiento. Depende de la masa y la velocidad del objeto:</li>
+        </ul>
+        <div class="math-box">
+            <span class="var">E<sub>c</sub></span> = ½ <span class="var">m</span> · <span class="var">v</span><sup>2</sup>
+        </div>
+        <p>Según la teoría cinético-molecular, a mayor energía cinética de átomos y moléculas, mayor será la <strong>energía térmica</strong> del sistema.</p>
+
+        <ul>
+            <li><strong>Energía Potencial (<span class="math-inline">E<sub>p</sub></span>):</strong> Energía que posee un objeto en virtud de su posición relativa respecto a otros:</li>
+        </ul>
+        <div class="math-box">
+            <span class="var">E<sub>p</sub></span> = <span class="var">m</span> · <span class="var">g</span> · <span class="var">h</span>
+        </div>
+        <p>A nivel atómico, las partículas cargadas poseen energía potencial debido a las fuerzas electrostáticas de atracción y repulsión. La energía química almacenada en los enlaces tiene su origen en esta energía potencial.</p>
+
+        <h3>Unidades de Energía:</h3>
+        <ul>
+            <li><strong>Joule (J) [Sistema Internacional]:</strong> <span class="math-inline">1 J = 1 kg·m<sup>2</sup>·s<sup>-2</sup></span>. Al ser muy pequeña, se usa habitualmente el <strong>kilojoule (kJ)</strong>.</li>
+            <li><strong>Caloría (cal):</strong> Cantidad de calor necesaria para elevar la temperatura de 1 gramo de agua en 1 °C.</li>
+        </ul>
+        <div class="callout callout-warning">
+            <div class="callout-title">⚡ Factor de Conversión Fundamental:</div>
+            <div class="math-box" style="margin: 5px 0; background: #78350f;">
+                <strong>1 cal = 4,184 J</strong>
+            </div>
+        </div>
+
+        <h3>Primer Principio de la Termodinámica:</h3>
+        <p class="callout callout-success">
+            <strong>Ley de Conservación de la Energía:</strong> La energía ni se crea ni se destruye, sólo se transforma; la cantidad total de energía del universo permanece constante.
+        </p>
+
+        <!-- 6.2.1 Energía Interna -->
+        <h3>6.2.1. Energía Interna (<span class="math-inline">U</span>)</h3>
+        <p>La <span class="hl-def">Energía Interna (U)</span> es la energía total del sistema: suma de la energía cinética y potencial de todas las partículas (átomos, moléculas o iones) que lo componen.</p>
+        <p>Dado que no se puede medir la energía total absoluta de un sistema, se mide su variación:</p>
+        <div class="math-box">
+            Δ<span class="var">U</span> = <span class="var">U</span><sub>final</sub> - <span class="var">U</span><sub>inicial</sub>
+        </div>
+        <ul>
+            <li><strong>Sistema:</strong> Sustancia o mezcla de sustancias donde ocurre el cambio. En una reacción química, el estado inicial son los <em>reactivos</em> y el final los <em>productos</em>.</li>
+            <li><strong>Entorno / Alrededores:</strong> Todo lo que rodea al sistema.</li>
+            <li>Si <span class="math-inline">ΔU > 0</span>: El sistema ha ganado energía del entorno.</li>
+            <li>Si <span class="math-inline">ΔU &lt; 0</span>: El sistema ha cedido energía al entorno (ejemplo: <span class="math-inline">2H<sub>2(g)</sub> + O<sub>2(g)</sub> → 2H<sub>2</sub>O<sub>(l)</sub></span> desprende energía, luego <span class="math-inline">ΔU &lt; 0</span>).</li>
+        </ul>
+
+        <!-- 6.2.2 Variación de energía, calor y trabajo -->
+        <h3>6.2.2. Variación de Energía, Calor y Trabajo</h3>
+        <p>El intercambio energético entre el sistema y el entorno se realiza mediante <strong>calor (<span class="math-inline">q</span>)</strong> o <strong>trabajo (<span class="math-inline">w</span>)</strong> (<span class="math-inline">w = F · d</span>). La expresión matemática del Primer Principio es:</p>
+        
+        <div class="math-box" style="border-left-color: var(--accent-green);">
+            Δ<span class="var">U</span> = <span class="var">q</span> + <span class="var">w</span>
+        </div>
+
+        <div class="callout callout-purple">
+            <div class="callout-title">📌 Criterio de Signos IUPAC:</div>
+            <div class="sign-grid">
+                <div class="sign-box-pos">
+                    <strong style="color: #15803d;">Signo Positivo (+) → Entra al sistema</strong>
+                    <ul>
+                        <li><span class="math-inline">q > 0</span>: Calor absorbido por el sistema.</li>
+                        <li><span class="math-inline">w > 0</span>: Trabajo realizado por el entorno sobre el sistema.</li>
+                    </ul>
+                </div>
+                <div class="sign-box-neg">
+                    <strong style="color: #b91c1c;">Signo Negativo (-) → Sale del sistema</strong>
+                    <ul>
+                        <li><span class="math-inline">q &lt; 0</span>: Calor cedido por el sistema al entorno.</li>
+                        <li><span class="math-inline">w &lt; 0</span>: Trabajo realizado por el sistema sobre el entorno (ej. expansión de un gas contra un pistón).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6.3 CALOR DE REACCIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-red">6.3. Calor de Reacción</h2>
+        <p>El <span class="hl-def">Calor</span> es la energía que fluye espontáneamente entre un sistema y su entorno debido a una diferencia de temperatura, hasta alcanzar el equilibrio térmico.</p>
+        
+        <div class="sign-grid">
+            <div class="sign-box-neg">
+                <h4 style="color: #b91c1c;">🔥 Proceso Exotérmico</h4>
+                <p>Se <strong>desprende calor</strong> desde el sistema hacia el entorno.</p>
+                <p><span class="hl-exo">q &lt; 0</span> (negativo). El recipiente de reacción se calienta.</p>
+            </div>
+            <div class="sign-box-pos">
+                <h4 style="color: #0369a1;">❄️ Proceso Endotérmico</h4>
+                <p>Se <strong>absorbe calor</strong> desde el entorno hacia el sistema.</p>
+                <p><span class="hl-endo">q > 0</span> (positivo). El recipiente de reacción se enfría.</p>
+            </div>
+        </div>
+
+        <p><strong>Definición de Calor de Reacción:</strong> Calor desprendido o absorbido desde que se inicia y completa la reacción a una temperatura dada hasta que el sistema regresa a la temperatura inicial de partida.</p>
+        <p><em>Ejemplo:</em> Combustión de amoniaco con platino:</p>
+        <div class="math-box">
+            4NH<sub>3(g)</sub> + 5O<sub>2(g)</sub> → 4NO<sub>(g)</sub> + 6H<sub>2</sub>O<sub>(l)</sub> &nbsp;&nbsp;&nbsp;&nbsp; <span class="var">q</span> = -1.170 kJ (Exotérmico)
+        </div>
+    </section>
+
+    <!-- 6.4 ENTALPÍA Y VARIACIÓN DE ENTALPÍA -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">6.4. Entalpía y Variación de Entalpía</h2>
+        
+        <p><strong>Propiedades Intensivas vs Extensivas:</strong></p>
+        <ul>
+            <li><em>Intensivas:</em> No dependen de la cantidad de materia (ej. temperatura, punto de fusión, densidad).</li>
+            <li><em>Extensivas:</em> Dependen directamente de la cantidad de materia (ej. masa, volumen, energía).</li>
+        </ul>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">🏔️ Función de Estado:</div>
+            <p>Una <strong>función de estado</strong> es una propiedad que depende <em>únicamente del estado inicial y final del sistema</em>, independientemente del camino o trayectoria seguida. Ejemplos: <span class="math-inline">U, H, S, G</span>, Altitud de una montaña.</p>
+        </div>
+
+        <h3>6.4.1. Entalpía (<span class="math-inline">H</span>)</h3>
+        <p>La <span class="hl-def">Entalpía (H)</span> es una propiedad extensiva y función de estado que representa el calor absorbido o liberado en una reacción a <strong>presión constante</strong> (<span class="math-inline">q<sub>p</sub></span>):</p>
+        
+        <div class="math-box">
+            Δ<span class="var">H</span> = <span class="var">H</span><sub>productos</sub> - <span class="var">H</span><sub>reactivos</sub> = <span class="var">q<sub>p</sub></span>
+        </div>
+
+        <ul>
+            <li><span class="hl-endo">ΔH > 0</span>: Proceso endotérmico (gana calor).</li>
+            <li><span class="hl-exo">ΔH &lt; 0</span>: Proceso exotérmico (pierde calor).</li>
+        </ul>
+
+        <!-- Diagrama entálpico simplificado en HTML -->
+        <div class="callout callout-info" style="text-align: center;">
+            <strong>Diagrama Entálpico (Proceso Exotérmico):</strong>
+            <div style="margin: 15px auto; width: 220px; text-align: left; background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                <div style="font-weight: bold; color: #b91c1c;">2H<sub>2(g)</sub> + O<sub>2(g)</sub> (Reactivos)</div>
+                <div style="text-align: center; color: var(--accent-red); margin: 8px 0; font-weight: bold;">↓ ΔH &lt; 0</div>
+                <div style="font-weight: bold; color: #15803d;">2H<sub>2</sub>O<sub>(g)</sub> (Producto)</div>
+            </div>
+        </div>
+
+        <h3>6.4.2. Relación entre Entalpía (<span class="math-inline">H</span>) y Energía Interna (<span class="math-inline">U</span>)</h3>
+        <p>El trabajo de expansión ejercido por un gas contra una presión constante <span class="math-inline">P</span> es <span class="math-inline">w = -P ΔV</span> (donde <span class="math-inline">ΔV = Superficie · Δh</span>).</p>
+        <p>Sustituyendo en el 1er Principio <span class="math-inline">ΔU = q + w</span>:</p>
+        <ul>
+            <li>A volumen constante (<span class="math-inline">ΔV = 0</span>, <span class="math-inline">w = 0</span>): <span class="math-box" style="display:inline-block; padding: 4px 12px; margin: 0;">Δ<span class="var">U</span> = <span class="var">q<sub>v</sub></span></span></li>
+            <li>A presión constante: <span class="math-inline">ΔU = q<sub>p</sub> - P ΔV</span> <span class="math-inline">⇒</span> <span class="math-inline">q<sub>p</sub> = ΔU + P ΔV</span>.</li>
+        </ul>
+        <p>Puesto que <span class="math-inline">H = U + PV</span>, se obtiene:</p>
+        <div class="math-box">
+            Δ<span class="var">H</span> = Δ<span class="var">U</span> + <span class="var">P</span>Δ<span class="var">V</span>
+        </div>
+        
+        <div class="callout callout-success">
+            <div class="callout-title">💡 Casos Prácticos:</div>
+            <ul>
+                <li><strong>Sólidos y Líquidos:</strong> <span class="math-inline">ΔV ≈ 0</span>, por lo que <span class="math-inline">ΔH ≈ ΔU</span> (<span class="math-inline">q<sub>p</sub> ≈ q<sub>v</sub></span>).</li>
+                <li><strong>Gases Ideales (<span class="math-inline">PV = nRT</span>):</strong> Sustituyendo <span class="math-inline">P ΔV = Δn R T</span>:</li>
+            </ul>
+            <div class="math-box" style="border-left-color: var(--accent-purple);">
+                <span class="var">q<sub>v</sub></span> = <span class="var">q<sub>p</sub></span> - Δ<span class="var">n</span><span class="var">R</span><span class="var">T</span> &nbsp;&nbsp;&nbsp;&nbsp; o bien &nbsp;&nbsp;&nbsp;&nbsp; Δ<span class="var">H</span> = Δ<span class="var">U</span> + Δ<span class="var">n</span><span class="var">R</span><span class="var">T</span>
+            </div>
+            <p>donde <span class="math-inline">Δn = moles gaseosos de productos - moles gaseosos de reactivos</span>, y <span class="math-inline">R = 8,314 J/mol·K</span>.</p>
+        </div>
+    </section>
+
+    <!-- 6.5 ECUACIONES TERMOQUÍMICAS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">6.5. Ecuaciones Termoquímicas</h2>
+        <p>Una <span class="hl-def">Ecuación Termoquímica</span> es una ecuación química ajustada que especifica la fase de cada sustancia y la variación de entalpía asociada a la reacción.</p>
+        <p>Condiciones estándar: <strong>1 atm de presión</strong> y <strong>25 °C (298 K)</strong> (se denota con superíndice °: <span class="math-inline">ΔH°</span>).</p>
+        
+        <div class="math-box">
+            H<sub>2</sub>O<sub>(l)</sub> → H<sub>2</sub>O<sub>(g)</sub> &nbsp;&nbsp;&nbsp;&nbsp; <span class="var">ΔH°</span> = +44,0 kJ
+        </div>
+
+        <div class="callout callout-info">
+            <div class="callout-title">⚠️ Reglas Fundamentales para Termoquímica:</div>
+            <ol>
+                <li><strong>Propiedad Extensiva:</strong> <span class="math-inline">ΔH</span> es directamente proporcional a la cantidad de reactivo. Si se multiplica la ecuación por un factor <span class="math-inline">N</span>, se multiplica <span class="math-inline">ΔH</span> por <span class="math-inline">N</span>. Ej: para 2 moles de agua se necesitan <span class="math-inline">2 · 44,0 = 88,0 kJ</span>.</li>
+                <li><strong>Reacción Inversa:</strong> Cambia el signo de <span class="math-inline">ΔH</span>:
+                    <br><span class="math-inline">H<sub>2</sub>O<sub>(g)</sub> → H<sub>2</sub>O<sub>(l)</sub> &nbsp;&nbsp; ΔH° = -44,0 kJ</span> (Exotérmico).
+                </li>
+                <li><strong>Estado Físico:</strong> <span class="math-inline">ΔH</span> depende de las fases indicadas:
+                    <br><span class="math-inline">2H<sub>2(g)</sub> + O<sub>2(g)</sub> → 2H<sub>2</sub>O<sub>(g)</sub> &nbsp;&nbsp; ΔH = -483,7 kJ</span>
+                    <br><span class="math-inline">2H<sub>2(g)</sub> + O<sub>2(g)</sub> → 2H<sub>2</sub>O<sub>(l)</sub> &nbsp;&nbsp; ΔH = -571,7 kJ</span> (se liberan 88 kJ extra por condensación).
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- 6.6 CALORIMETRÍA -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">6.6. Calorimetría</h2>
+        <p>La <span class="hl-def">Calorimetría</span> es la técnica experimental para medir el flujo de calor de una reacción mediante los cambios de temperatura en un recipiente térmicamente aislado (<strong>calorímetro</strong>).</p>
+
+        <h3>6.6.1. Capacidad Calorífica y Calor Específico</h3>
+        <ul>
+            <li><strong>Capacidad Calorífica (<span class="math-inline">C</span>):</strong> Cantidad de calor requerida para elevar 1 °C (o 1 K) la temperatura de una muestra: <span class="math-inline">C = q / ΔT</span>.</li>
+            <li><strong>Capacidad Calorífica Molar:</strong> Capacidad calorífica de 1 mol de sustancia.</li>
+            <li><strong>Calor Específico (<span class="math-inline">c</span>):</strong> Capacidad calorífica de 1 gramo de sustancia:</li>
+        </ul>
+
+        <div class="math-box">
+            <span class="var">Calor específico</span> = <span class="var">q</span> / (<span class="var">m</span> · Δ<span class="var">T</span>) &nbsp;&nbsp;&nbsp;&nbsp; ⇒ &nbsp;&nbsp;&nbsp;&nbsp; <span class="var">q</span> = <span class="var">m</span> · <span class="var">c</span> · Δ<span class="var">T</span>
+        </div>
+        <p><em>Ejemplo Agua:</em> Para 100 g de agua elevar 1 °C requiere 418 J <span class="math-inline">⇒ c<sub>agua</sub> = 4,184 J/g·°C</span>.</p>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <h4>💣 1. Bomba Calorimétrica (Volumen Constante)</h4>
+                <p>Usada para reacciones de combustión en un recipiente rígido sellado (bomba).</p>
+                <p>Mide <span class="hl-purple">ΔU (q<sub>v</sub>)</span>.</p>
+                <div class="math-box" style="font-size: 1rem; padding: 8px;">
+                    <span class="var">q<sub>reacción</sub></span> = - <span class="var">q<sub>calorímetro</sub></span> = - <span class="var">C<sub>calorímetro</sub></span> · Δ<span class="var">T</span>
+                </div>
+                <p><small>Calibración con muestra patrón (ej. 1 g ácido benzoico desprende 26,4 kJ; si ΔT = 5,02 °C ⇒ <span class="math-inline">C<sub>cal</sub> = 5,26 kJ/°C</span>).</small></p>
+            </div>
+
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4>☕ 2. Calorímetro de Poliestireno (Presión Constante)</h4>
+                <p>Vasos aislantes abiertos a presión atmosférica para reacciones en disolución acuosa.</p>
+                <p>Mide <span class="hl-def">ΔH (q<sub>p</sub>)</span>.</p>
+                <div class="math-box" style="font-size: 1rem; padding: 8px;">
+                    <span class="var">q<sub>reacción</sub></span> = - <span class="var">q<sub>disolución</sub></span> = - (<span class="var">m<sub>sol</sub></span> · <span class="var">c<sub>sol</sub></span> · Δ<span class="var">T</span>)
+                </div>
+                <p><small>Para disoluciones diluidas se toma <span class="math-inline">c<sub>sol</sub> ≈ 4,18 J/g·°C</span> y densidad <span class="math-inline">1 g/mL</span>.</small></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6.7 LEY DE HESS -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">6.7. Ley de Hess</h2>
+        <div class="callout callout-warning">
+            <div class="callout-title">📜 Ley de Hess de la Suma de Calores (Henri Hess, 1840):</div>
+            <p>Si una reacción química se puede realizar en varias etapas, la variación de entalpía de la reacción global es <strong>igual a la suma de las variaciones de entalpía de todas las etapas intermedias</strong>.</p>
+            <div class="math-box">
+                Δ<span class="var">H<sub>global</sub></span> = Δ<span class="var">H<sub>1</sub></span> + Δ<span class="var">H<sub>2</sub></span> + Δ<span class="var">H<sub>3</sub></span> + ...
+            </div>
+            <p>Justificación: La entalpía es una <em>función de estado</em> y depende únicamente de los estados inicial (reactivos) y final (productos).</p>
+        </div>
+
+        <h3>Ejemplo Práctico del Texto (Obtención de CO):</h3>
+        <p>Calcular el <span class="math-inline">ΔH</span> de <span class="math-inline">2C<sub>(s)</sub> + O<sub>2(g)</sub> → 2CO<sub>(g)</sub></span> a partir de:</p>
+        <ol>
+            <li><span class="math-inline">C<sub>(s)</sub> + O<sub>2(g)</sub> → CO<sub>2(g)</sub> &nbsp;&nbsp; ΔH = -393,5 kJ</span></li>
+            <li><span class="math-inline">CO<sub>(g)</sub> + ½O<sub>2(g)</sub> → CO<sub>2(g)</sub> &nbsp;&nbsp; ΔH = -283,0 kJ</span></li>
+        </ol>
+        <p><strong>Resolución por Ley de Hess:</strong></p>
+        <ul>
+            <li>Multiplicar eq. (1) por 2: <span class="math-inline">2C<sub>(s)</sub> + 2O<sub>2(g)</sub> → 2CO<sub>2(g)</sub> &nbsp;&nbsp; ΔH = -787,0 kJ</span></li>
+            <li>Invertir eq. (2) y multiplicar por 2: <span class="math-inline">2CO<sub>2(g)</sub> → 2CO<sub>(g)</sub> + O<sub>2(g)</sub> &nbsp;&nbsp; ΔH = +566,0 kJ</span></li>
+            <li>Sumar ambas ecuaciones:</li>
+        </ul>
+        <div class="math-box">
+            2C<sub>(s)</sub> + O<sub>2(g)</sub> → 2CO<sub>(g)</sub> &nbsp;&nbsp;&nbsp;&nbsp; <span class="var">ΔH</span> = -787,0 + 566,0 = <strong>-221,0 kJ</strong>
+        </div>
+    </section>
+
+    <!-- 6.8 ENTALPÍAS ESTÁNDAR DE FORMACIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-green">6.8. Entalpías Estándar de Formación</h2>
+        <p>La <span class="hl-def">Entalpía Estándar de Formación (ΔH°<sub>f</sub>)</span> es el cambio de entalpía que acompaña a la formación de <strong>1 mol de un compuesto</strong> a partir de sus elementos en sus estados estándar (1 atm, 25 °C).</p>
+        
+        <div class="callout callout-info">
+            <div class="callout-title">💎 Convención para Elementos Puros:</div>
+            <p>La entalpía estándar de formación de la forma más estable de cualquier elemento puro en condiciones estándar es <strong>CERO</strong> (<span class="math-inline">ΔH°<sub>f</sub> = 0</span>).</p>
+            <p><em>Ejemplos:</em> <span class="math-inline">ΔH°<sub>f</sub>(O<sub>2(g)</sub>) = 0</span>; <span class="math-inline">ΔH°<sub>f</sub>(C<sub>grafito</sub>) = 0</span> (mientras que para C<sub>diamante</sub> es <span class="math-inline">1,9 kJ/mol</span>).</p>
+        </div>
+
+        <h3>Cálculo de la Entalpía Estándar de cualquier Reacción:</h3>
+        <p>Aplicando la Ley de Hess, cualquier reacción se calcula como la suma de entalpías de formación de productos menos la de reactivos:</p>
+        
+        <div class="math-box" style="border-left-color: var(--accent-green);">
+            Δ<span class="var">H°<sub>reacción</sub></span> = ∑ <span class="var">n</span> Δ<span class="var">H°<sub>f</sub></span>(productos) - ∑ <span class="var">m</span> Δ<span class="var">H°<sub>f</sub></span>(reactivos)
+        </div>
+
+        <h3>Efecto de la Temperatura: Ley de Kirchhoff</h3>
+        <p>Para calcular la variación de entalpía a una temperatura distinta de 298 K:</p>
+        <div class="math-box">
+            Δ<span class="var">H<sub>T</sub></span> = Δ<span class="var">H<sub>298</sub></span> + ∫<sub>298</sub><sup>T</sup> Δ<span class="var">C<sub>p</sub></span> d<span class="var">T</span>
+        </div>
+        <p>donde <span class="math-inline">ΔC<sub>p</sub> = ∑ C<sub>p</sub>(productos) - ∑ C<sub>p</sub>(reactivos)</span>. Salvo cambios térmicos muy grandes, se considera <span class="math-inline">ΔC<sub>p</sub></span> constante.</p>
+    </section>
+
+    <!-- 6.9 PROCESOS ESPONTÁNEOS -->
+    <section class="section-card">
+        <h2 class="section-title t-red">6.9. Procesos Espontáneos</h2>
+        <p>Un <span class="hl-def">Proceso Espontáneo</span> es aquel que ocurre de forma natural sin necesidad de intervención ni energía externa continua.</p>
+        <ul>
+            <li>Son termodinámicamente <strong>irreversibles</strong>.</li>
+            <li>El 1er Principio (conservación de la energía) NO sirve para predecir la espontaneidad.</li>
+            <li>Aunque la mayoría de reacciones espontáneas son exotérmicas (<span class="math-inline">ΔH &lt; 0</span>), <em>existen procesos endotérmicos espontáneos</em> (ej. disolución de <span class="math-inline">NH<sub>4</sub>NO<sub>3</sub></span> en agua, expansión isotérmica de un gas al vacío, fusión del hielo a <span class="math-inline">T > 0 °C</span>). Por tanto, la tendencia a la mínima energía no es el único criterio.</li>
+        </ul>
+    </section>
+
+    <!-- 6.10 ENTROPÍA Y SEGUNDA LEY -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">6.10. Entropía y Segunda Ley de la Termodinámica</h2>
+        <p>La <span class="hl-def">Entropía (S)</span> es una función de estado extensiva que mide cuantitativamente el grado de <strong>desorden</strong> o aleatoriedad molecular de un sistema. Sus unidades en el SI son <strong>J/K</strong> (o J/mol·K).</p>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">⚖️ Segunda Ley de la Termodinámica:</div>
+            <p>En todo proceso espontáneo, la entropía total del universo (sistema + entorno) <strong>aumenta</strong> continuamente:</p>
+            <div class="math-box" style="margin: 8px 0; background: #78350f;">
+                Δ<span class="var">S<sub>total</sub></span> = Δ<span class="var">S<sub>sistema</sub></span> + Δ<span class="var">S<sub>entorno</sub></span> > 0 &nbsp;&nbsp; (Proceso Espontáneo)
+            </div>
+        </div>
+
+        <p><strong>Relación con el calor intercambiado:</strong></p>
+        <ul>
+            <li>Para un proceso a temperatura constante: <span class="math-inline">ΔS = q / T</span>.</li>
+            <li>Proceso reversible / en equilibrio: <span class="math-box" style="display:inline-block; padding: 4px 10px; margin: 0;">Δ<span class="var">S</span> = <span class="var">q<sub>rev</sub></span> / <span class="var">T</span> = Δ<span class="var">H<sub>transición</sub></span> / <span class="var">T</span></span></li>
+            <li>Proceso espontáneo (referido solo al sistema): <span class="math-box" style="display:inline-block; padding: 4px 10px; margin: 0;">Δ<span class="var">S</span> > <span class="var">q</span> / <span class="var">T</span></span></li>
+            <li>Para una reacción a T y P constantes (<span class="math-inline">q = ΔH</span>): <span class="math-inline">ΔS > ΔH / T &nbsp;⇒&nbsp;</span> <span class="hl-law">ΔH - T ΔS &lt; 0</span> (Criterio de espontaneidad).</li>
+        </ul>
+
+        <h3>Interpretación Estadística de Boltzmann:</h3>
+        <p>Ludwig Boltzmann relacionó la entropía <span class="math-inline">S</span> con la probabilidad termodinámica <span class="math-inline">W</span> (número de microestados o formas de acomodar las moléculas):</p>
+        <div class="math-box">
+            <span class="var">S</span> = <span class="var">k</span> · ln <span class="var">W</span>
+        </div>
+        <p>donde <span class="math-inline">k = R / N<sub>A</sub> = 1,38 × 10<sup>-23</sup> J/K</span> (Constante de Boltzmann).</p>
+    </section>
+
+    <!-- 6.11 ENTROPÍA ESTÁNDAR Y TERCERA LEY -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">6.11. Entropía Estándar y Tercera Ley de la Termodinámica</h2>
+        
+        <div class="callout callout-purple">
+            <div class="callout-title">❄️ Tercera Ley de la Termodinámica:</div>
+            <p>La entropía de una sustancia puramente cristalina y perfecta en el cero absoluto (0 K) es <strong>CERO</strong> (<span class="math-inline">S<sub>0</sub> = 0</span>, pues <span class="math-inline">W = 1 ⇒ S = k ln 1 = 0</span>).</p>
+        </div>
+
+        <p>A diferencia de la entalpía, <strong>la entropía posee un cero real</strong>. Por ello, las entropías molares estándar (<span class="math-inline">S°</span>) de elementos puros a 298 K son valores <strong>positivos mayores que cero</strong>.</p>
+
+        <h3>Factores que Aumentan la Entropía:</h3>
+        <ul>
+            <li><strong>Cambios de Fase:</strong> <span class="math-inline">S<sub>sólido</sub> &lt; S<sub>líquido</sub> &lt;&lt; S<sub>gas</sub></span> (Saltos bruscos en puntos de fusión y ebullición).</li>
+            <li><strong>Aumento de Temperatura:</strong> Incrementa la energía térmica y los grados de libertad (traslación, vibración, rotación).</li>
+            <li><strong>Número de Moles Gaseosos:</strong> Si <span class="math-inline">Δn<sub>gases</sub> > 0</span>, la entropía aumenta fuertemente. Ej:
+                <br>• <span class="math-inline">N<sub>2(g)</sub> + 3H<sub>2(g)</sub> → 2NH<sub>3(g)</sub></span> (4 mol gas → 2 mol gas) <span class="hl-endo">ΔS° &lt; 0</span> (disminuye desorden).
+                <br>• <span class="math-inline">CaCO<sub>3(s)</sub> → CaO<sub>(s)</sub> + CO<sub>2(g)</sub></span> (formación de gas) <span class="hl-exo">ΔS° > 0</span> (aumenta desorden).
+            </li>
+        </ul>
+
+        <h3>Cálculo de la Entropía Estándar de Reacción:</h3>
+        <div class="math-box">
+            Δ<span class="var">S°<sub>reacción</sub></span> = ∑ <span class="var">n</span> <span class="var">S°</span>(productos) - ∑ <span class="var">m</span> <span class="var">S°</span>(reactivos)
+        </div>
+    </section>
+
+    <!-- 6.12 ENERGÍA LIBRE Y ESPONTANEIDAD -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">6.12. Energía Libre de Gibbs y Espontaneidad</h2>
+        <p>J. Willard Gibbs definió la <span class="hl-def">Energía Libre de Gibbs (G)</span> como una función de estado que combina entalpía y entropía referidas exclusivamente al sistema:</p>
+
+        <div class="math-box">
+            <span class="var">G</span> = <span class="var">H</span> - <span class="var">T</span><span class="var">S</span>
+        </div>
+
+        <p>A temperatura y presión constantes, la variación viene dada por la <strong>Ecuación de Gibbs-Helmholtz</strong>:</p>
+        <div class="math-box" style="border-left-color: var(--accent-pink);">
+            Δ<span class="var">G</span> = Δ<span class="var">H</span> - <span class="var">T</span>Δ<span class="var">S</span>
+        </div>
+
+        <div class="callout callout-danger">
+            <div class="callout-title">⭐ Criterio Fundamental de Espontaneidad (P, T ctes):</div>
+            <ul>
+                <li><span class="hl-exo">ΔG &lt; 0 (Negativo):</span> Reacción <strong>Espontánea</strong> en el sentido directo tal como está escrita.</li>
+                <li><span class="hl-endo">ΔG > 0 (Positivo):</span> Reacción <strong>No Espontánea</strong> en sentido directo (es espontánea en sentido inverso).</li>
+                <li><span class="hl-law">ΔG = 0:</span> Sistema en <strong>Equilibrio Químico</strong>.</li>
+            </ul>
+        </div>
+
+        <p><strong>Significado Físico:</strong> <span class="math-inline">ΔG</span> representa la cantidad de energía disponible para realizar trabajo útil: <span class="math-inline">W<sub>máx</sub> = -ΔG</span>.</p>
+        
+        <p><strong>Energía Libre de Formación Estándar (<span class="math-inline">ΔG°<sub>f</sub></span>):</strong> Variación de energía libre al formar 1 mol de compuesto a partir de sus elementos en estado estándar. Para elementos puros en estado estándar: <span class="math-inline">ΔG°<sub>f</sub> = 0</span>.</p>
+        <div class="math-box">
+            Δ<span class="var">G°<sub>reacción</sub></span> = ∑ <span class="var">n</span> Δ<span class="var">G°<sub>f</sub></span>(productos) - ∑ <span class="var">m</span> Δ<span class="var">G°<sub>f</sub></span>(reactivos)
+        </div>
+    </section>
+
+    <!-- 6.13 ENERGÍA LIBRE Y TEMPERATURA -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">6.13. Energía Libre y Temperatura</h2>
+        <p>El signo de <span class="math-inline">ΔG</span> resulta del balance entre la entalpía (<span class="math-inline">ΔH</span>) y el término entrópico-térmico (<span class="math-inline">-T ΔS</span>):</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ΔH</th>
+                    <th>ΔS</th>
+                    <th>-T ΔS</th>
+                    <th>ΔG = ΔH - T ΔS</th>
+                    <th>Espontaneidad del Proceso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color: green; font-weight: bold;">- (Exotérmico)</td>
+                    <td style="color: green; font-weight: bold;">+ (Desorden)</td>
+                    <td>-</td>
+                    <td style="color: green; font-weight: bold;">Siempre -</td>
+                    <td><span class="hl-exo">Espontáneo a cualquier temperatura</span></td>
+                </tr>
+                <tr>
+                    <td style="color: red; font-weight: bold;">+ (Endotérmico)</td>
+                    <td style="color: red; font-weight: bold;">- (Orden)</td>
+                    <td>+</td>
+                    <td style="color: red; font-weight: bold;">Siempre +</td>
+                    <td><span class="hl-endo">No espontáneo a cualquier T (Espontáneo en sentido inverso)</span></td>
+                </tr>
+                <tr>
+                    <td style="color: green; font-weight: bold;">- (Exotérmico)</td>
+                    <td style="color: red; font-weight: bold;">- (Orden)</td>
+                    <td>+</td>
+                    <td>- a baja T / + a alta T</td>
+                    <td><span class="hl-law">Espontáneo a bajas T; No espontáneo a altas T</span></td>
+                </tr>
+                <tr>
+                    <td style="color: red; font-weight: bold;">+ (Endotérmico)</td>
+                    <td style="color: green; font-weight: bold;">+ (Desorden)</td>
+                    <td>-</td>
+                    <td>+ a baja T / - a alta T</td>
+                    <td><span class="hl-law">No espontáneo a bajas T; Espontáneo a altas T</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 6.13.1 Ejemplo CaCO3 -->
+        <h3>6.13.1. Ejemplo Práctico: Descomposición Térmica del <span class="math-inline">CaCO<sub>3</sub></span></h3>
+        <p>Reacción: <span class="math-inline">CaCO<sub>3(s)</sub> → CaO<sub>(s)</sub> + CO<sub>2(g)</sub></span></p>
+        <p>Datos tabulados a 25 °C (298 K): <span class="math-inline">ΔH° = +178,3 kJ</span> ; <span class="math-inline">ΔS° = +158,9 J/K = +0,1589 kJ/K</span>.</p>
+        
+        <ul>
+            <li><strong>A 25 °C (298 K):</strong>
+                <br><span class="math-inline">ΔG° = 178,3 - 298 · (0,1589) = <strong>+130,9 kJ</strong></span> <span class="hl-endo">No Espontáneo</span>.
+            </li>
+            <li><strong>A 1.000 °C (1.273 K):</strong>
+                <br><span class="math-inline">ΔG° = 178,3 - 1273 · (0,1589) = <strong>-24,1 kJ</strong></span> <span class="hl-exo">Espontáneo</span>.
+            </li>
+            <li><strong>Temperatura de Equilibrio (<span class="math-inline">ΔG° = 0</span>):</strong>
+                <div class="math-box">
+                    <span class="var">T<sub>eq</sub></span> = Δ<span class="var">H°</span> / Δ<span class="var">S°</span> = 178,3 kJ / 0,1589 kJ/K = <strong>1.121 K (848 °C)</strong>
+                </div>
+                <p>A 848 °C y 1 atm el sistema está en equilibrio. Por encima de 848 °C la descomposición es espontánea (coincide con el Principio de Le Chatelier).</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 6.14 ENERGÍA LIBRE Y CONSTANTE DE EQUILIBRIO -->
+    <section class="section-card">
+        <h2 class="section-title t-green">6.14. Energía Libre de Gibbs y Constante de Equilibrio</h2>
+        <p>Para condiciones reales no estándar, la energía libre viene dada por:</p>
+        <div class="math-box">
+            Δ<span class="var">G</span> = Δ<span class="var">G°</span> + <span class="var">R</span><span class="var">T</span> · ln <span class="var">Q</span>
+        </div>
+        <p>donde <span class="math-inline">Q</span> es el cociente de reacción. En el equilibrio: <span class="math-inline">ΔG = 0</span> y <span class="math-inline">Q = K</span>. Por lo tanto:</p>
+
+        <div class="math-box" style="border-left-color: var(--accent-green); font-size: 1.3rem;">
+            Δ<span class="var">G°</span> = - <span class="var">R</span><span class="var">T</span> · ln <span class="var">K</span> = - 2,303 · <span class="var">R</span><span class="var">T</span> · log <span class="var">K</span>
+        </div>
+
+        <p>Despejando la constante de equilibrio <span class="math-inline">K</span>:</p>
+        <div class="math-box">
+            <span class="var">K</span> = e<sup>-Δ<span class="var">G°</span> / <span class="var">RT</span></sup> = 10<sup>-Δ<span class="var">G°</span> / 2,303<span class="var">RT</span></sup>
+        </div>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <h4>K > 1 ⇒ ΔG° &lt; 0 (Negativo)</h4>
+                <p>Reacción directa espontánea en condiciones estándar. Productos muy favorecidos en el equilibrio.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <h4>K &lt; 1 ⇒ ΔG° > 0 (Positivo)</h4>
+                <p>Reacción directa no espontánea en condiciones estándar. Reactivos favorecidos en el equilibrio.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <h4>K = 1 ⇒ ΔG° = 0</h4>
+                <p>Reactivos y productos en equilibrio en estado estándar.</p>
+            </div>
+        </div>
+
+        <h3>Ecuación de Van 't Hoff (Dependencia de K con la Temperatura):</h3>
+        <p>Combinando <span class="math-inline">ΔG° = ΔH° - T ΔS°</span> con <span class="math-inline">ΔG° = -2,303 RT log K</span>:</p>
+        <div class="math-box">
+            log <span class="var">K</span> = (-Δ<span class="var">H°</span> / 2,303<span class="var">R</span>) · (1 / <span class="var">T</span>) + (Δ<span class="var">S°</span> / 2,303<span class="var">R</span>)
+        </div>
+        <p>Para dos temperaturas <span class="math-inline">T<sub>1</sub></span> y <span class="math-inline">T<sub>2</sub></span> se obtiene la <strong>Ecuación de Van 't Hoff</strong>:</p>
+
+        <div class="math-box" style="border-left-color: var(--accent-purple);">
+            log (<span class="var">K<sub>2</sub></span> / <span class="var">K<sub>1</sub></span>) = (Δ<span class="var">H°</span> / 2,303<span class="var">R</span>) · [ (1 / <span class="var">T<sub>1</sub></span>) - (1 / <span class="var">T<sub>2</sub></span>) ]
+        </div>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN Y SOLUCIONES -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">📝 Ejercicios de Autoevaluación y Soluciones Completas</h2>
+
+        <!-- E1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1</div>
+            <p><strong>Enunciado:</strong> En la combustión de 1 mol de metano (CH<sub>4</sub>) con 2 moles de oxígeno se producen 802 kJ. Calcular la cantidad de calor necesaria para producir 80 g de CH<sub>4(g)</sub>.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. Escribimos la reacción de formación de metano (inversa de la combustión):
+                <br><span class="math-inline">CO<sub>2(g)</sub> + 2H<sub>2</sub>O<sub>(g)</sub> → CH<sub>4(g)</sub> + 2O<sub>2(g)</sub> &nbsp;&nbsp; ΔH = +802 kJ/mol</span></p>
+                <p>2. Convertimos 80 g de CH<sub>4</sub> a moles (Masa molar CH<sub>4</sub> = 16 g/mol):
+                <br><span class="math-inline">n = 80 g / 16 (g/mol) = 5 moles de CH<sub>4</sub></span></p>
+                <p>3. Dado que <span class="math-inline">ΔH</span> es directamente proporcional al número de moles:
+                <br><span class="math-inline">Q = 5 mol · 802 kJ/mol = <strong>4.010 kJ</strong></span>.</p>
+            </div>
+        </div>
+
+        <!-- E2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2</div>
+            <p><strong>Enunciado:</strong> Cuando se mezclan 38 mL de HCl 1M y 42 mL de NaOH 1M en un calorímetro a presión constante se observa un aumento de temperatura de 6,2 °C. Indicar la variación de entalpía para la reacción:
+            <br><span class="math-inline">HCl<sub>(ac)</sub> + NaOH<sub>(ac)</sub> → NaCl<sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub></span> expresándola como ecuación termoquímica.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. Masa total disolución (V = 38+42 = 80 mL; d = 1 g/mL): <span class="math-inline">m = 80 g</span>.</p>
+                <p>2. Calor ganado por la disolución:
+                <br><span class="math-inline">q<sub>sol</sub> = m · c · ΔT = 80 g · 4,18 J/g·°C · 6,2 °C = 2.073,28 J = 2,073 kJ</span>.</p>
+                <p>3. Calor de reacción: proceso exotérmico ⇒ <span class="math-inline">q<sub>p</sub> = -q<sub>sol</sub> = -2,073 kJ</span>.</p>
+                <p>4. Determinamos el reactivo limitante:
+                <br>• Moles HCl = <span class="math-inline">1 M · 0,038 L = 0,038 mol</span> (Limitante).
+                <br>• Moles NaOH = <span class="math-inline">1 M · 0,042 L = 0,042 mol</span>.</p>
+                <p>5. Variación de entalpía molar (<span class="math-inline">ΔH</span> por mol de HCl):
+                <br><span class="math-inline">ΔH = -2,073 kJ / 0,038 mol = <strong>-54,5 kJ/mol</strong></span>.</p>
+                <p><strong>Ecuación Termoquímica:</strong>
+                <br><span class="math-inline">HCl<sub>(ac)</sub> + NaOH<sub>(ac)</sub> → NaCl<sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub> &nbsp;&nbsp; ΔH = -54,5 kJ</span></p>
+            </div>
+        </div>
+
+        <!-- E3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3</div>
+            <p><strong>Enunciado:</strong> Calcular la variación de entalpía para la hidrogenación del etileno <span class="math-inline">C<sub>2</sub>H<sub>4(g)</sub> + H<sub>2(g)</sub> → C<sub>2</sub>H<sub>6(g)</sub></span> a partir de:
+            <br>1. <span class="math-inline">2C<sub>2</sub>H<sub>6(g)</sub> + 7O<sub>2(g)</sub> → 4CO<sub>2(g)</sub> + 6H<sub>2</sub>O<sub>(l)</sub> &nbsp;&nbsp; ΔH = -3.119,4 kJ</span>
+            <br>2. <span class="math-inline">C<sub>2</sub>H<sub>4(g)</sub> + 3O<sub>2(g)</sub> → 2CO<sub>2(g)</sub> + 2H<sub>2</sub>O<sub>(l)</sub> &nbsp;&nbsp; ΔH = -1.411,0 kJ</span>
+            <br>3. <span class="math-inline">H<sub>2(g)</sub> + ½O<sub>2(g)</sub> → H<sub>2</sub>O<sub>(l)</sub> &nbsp;&nbsp; ΔH = -285,7 kJ</span></p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>Acomodamos las ecuaciones aplicando la Ley de Hess:</p>
+                <ul>
+                    <li>Invertir eq. 1 y dividir por 2: <span class="math-inline">2CO<sub>2(g)</sub> + 3H<sub>2</sub>O<sub>(l)</sub> → C<sub>2</sub>H<sub>6(g)</sub> + 7/2O<sub>2(g)</sub> &nbsp;&nbsp; ΔH = +1.559,7 kJ</span></li>
+                    <li>Mantener eq. 2: <span class="math-inline">C<sub>2</sub>H<sub>4(g)</sub> + 3O<sub>2(g)</sub> → 2CO<sub>2(g)</sub> + 2H<sub>2</sub>O<sub>(l)</sub> &nbsp;&nbsp; ΔH = -1.411,0 kJ</span></li>
+                    <li>Mantener eq. 3: <span class="math-inline">H<sub>2(g)</sub> + ½O<sub>2(g)</sub> → H<sub>2</sub>O<sub>(l)</sub> &nbsp;&nbsp; ΔH = -285,7 kJ</span></li>
+                </ul>
+                <p>Sumando todas las ecuaciones:</p>
+                <p><span class="math-inline">ΔH = +1.559,7 - 1.411,0 - 285,7 = <strong>-137,0 kJ</strong></span>.</p>
+            </div>
+        </div>
+
+        <!-- E4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4</div>
+            <p><strong>Enunciado:</strong> A partir de las entalpías de formación estándar tabuladas y <span class="math-inline">ΔH°<sub>f</sub>(nitroglicerina) = -364 kJ/mol</span>, calcular la energía producida en la explosión de 50 g de nitroglicerina:
+            <br><span class="math-inline">2C<sub>3</sub>H<sub>5</sub>(NO<sub>3</sub>)<sub>3(l)</sub> → 3N<sub>2(g)</sub> + ½O<sub>2(g)</sub> + 6CO<sub>2(g)</sub> + 5H<sub>2</sub>O<sub>(g)</sub></span></p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. Datos de <span class="math-inline">ΔH°<sub>f</sub></span>: <span class="math-inline">CO<sub>2(g)</sub> = -393,5 kJ/mol</span>; <span class="math-inline">H<sub>2</sub>O<sub>(g)</sub> = -241,8 kJ/mol</span>; <span class="math-inline">N<sub>2</sub>, O<sub>2</sub> = 0</span>.</p>
+                <p>2. Cálculo de <span class="math-inline">ΔH°</span> para 2 moles de nitroglicerina:
+                <br><span class="math-inline">ΔH° = [6(-393,5) + 5(-241,8)] - [2(-364)] = [-2361 - 1209] - [-728] = <strong>-2.842 kJ</strong></span> (para 2 mol).</p>
+                <p>3. Calor desprendido por mol: <span class="math-inline">2.842 / 2 = 1.421 kJ/mol</span>.</p>
+                <p>4. Masa molecular de C<sub>3</sub>H<sub>5</sub>(NO<sub>3</sub>)<sub>3</sub> = 227 g/mol.
+                <br>Calor por gramo = <span class="math-inline">1.421 kJ / 227 g = 6,26 kJ/g</span>.</p>
+                <p>5. Para 50 g de explosivo:
+                <br><span class="math-inline">Q = 50 g · 6,25 kJ/g = <strong>312,5 kJ</strong></span>.</p>
+            </div>
+        </div>
+
+        <!-- E5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5</div>
+            <p><strong>Enunciado:</strong> En la combustión a volumen constante de 1 g de ácido oxálico (C<sub>2</sub>H<sub>2</sub>O<sub>4</sub>) se desprenden 2,83 kJ. Calcular el calor de combustión a presión constante.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. Reacción ajustada: <span class="math-inline">C<sub>2</sub>H<sub>2</sub>O<sub>4(s)</sub> + ½O<sub>2(g)</sub> → 2CO<sub>2(g)</sub> + H<sub>2</sub>O<sub>(l)</sub></span></p>
+                <p>2. Masa molar del C<sub>2</sub>H<sub>2</sub>O<sub>4</sub> = 90 g/mol.
+                <br>Calor a volumen constante molar: <span class="math-inline">q<sub>v</sub> = -2,83 kJ/g · 90 g/mol = -254,7 kJ/mol</span>.</p>
+                <p>3. Variación de moles gaseosos: <span class="math-inline">Δn = 2 (CO<sub>2</sub>) - 0,5 (O<sub>2</sub>) = +1,5 mol</span>.</p>
+                <p>4. Calculamos <span class="math-inline">q<sub>p</sub></span> mediante <span class="math-inline">q<sub>p</sub> = q<sub>v</sub> + Δn R T</span> (T = 298 K):
+                <br><span class="math-inline">q<sub>p</sub> = -254,7 + (1,5 · 8,314 × 10<sup>-3</sup> kJ/mol·K · 298 K) = -254,7 + 3,715 = <strong>-251,0 kJ/mol</strong></span> (tomando datos exactos del PDF: <span class="math-inline">-251,34 kJ/mol</span>).</p>
+            </div>
+        </div>
+
+        <!-- E6 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 6</div>
+            <p><strong>Enunciado:</strong> Explicar por qué es espontánea la reacción de combustión del etano: <span class="math-inline">C<sub>2</sub>H<sub>6(g)</sub> + 7/2 O<sub>2(g)</sub> → 2CO<sub>2(g)</sub> + 3H<sub>2</sub>O<sub>(g)</sub></span>.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Explicación Termodinámica</span>
+                <p>Aplicamos la ecuación de Gibbs: <span class="math-inline">ΔG = ΔH - T ΔS</span>.</p>
+                <ul>
+                    <li>Al ser una <strong>reacción de combustión</strong>, es fuertemente <strong>exotérmica</strong> (<span class="math-inline">ΔH &lt; 0</span>, negativo).</li>
+                    <li>Analizando el cambio de entropía: los reactivos tienen <span class="math-inline">1 + 3,5 = 4,5 moles gaseosos</span>, mientras que los productos tienen <span class="math-inline">2 + 3 = 5 moles gaseosos</span> (<span class="math-inline">Δn<sub>gases</sub> = +0,5</span>). Al aumentar el número de moles gaseosos, la entropía <strong>aumenta</strong> (<span class="math-inline">ΔS > 0</span>, positivo).</li>
+                </ul>
+                <p>Dado que <span class="math-inline">ΔH &lt; 0</span> y <span class="math-inline">ΔS > 0</span>, el término <span class="math-inline">-T ΔS</span> es negativo, haciendo que <span class="hl-exo">ΔG sea negativo a cualquier temperatura</span>. Por ello, la reacción es <strong>siempre espontánea</strong>.</p>
+            </div>
+        </div>
+
+        <!-- E7 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 7</div>
+            <p><strong>Enunciado:</strong> Calcular la constante de equilibrio <span class="math-inline">K<sub>p</sub></span> de la reacción <span class="math-inline">H<sub>2(g)</sub> + I<sub>2(g)</sub> ⇌ 2HI<sub>(g)</sub></span> a 25 °C. Las energías libres de formación estándar son <span class="math-inline">ΔG°<sub>f</sub>(I<sub>2(g)</sub>) = 19,37 kJ/mol</span> y <span class="math-inline">ΔG°<sub>f</sub>(HI<sub>(g)</sub>) = 1,3 kJ/mol</span>.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>1. Calculamos <span class="math-inline">ΔG°</span> de la reacción:
+                <br><span class="math-inline">ΔG° = 2 · ΔG°<sub>f</sub>(HI) - [ΔG°<sub>f</sub>(H<sub>2</sub>) + ΔG°<sub>f</sub>(I<sub>2</sub>)] = 2(1,3) - (0 + 19,37) = 2,6 - 19,37 = <strong>-16,77 kJ</strong></span>.</p>
+                <p>2. Aplicamos la relación con la constante de equilibrio:
+                <br><span class="math-inline">ΔG° = -2,303 R T log K<sub>p</sub></span></p>
+                <p>3. Despejamos <span class="math-inline">log K<sub>p</sub></span> (R = 0,008314 kJ/mol·K, T = 298 K):
+                <br><span class="math-inline">log K<sub>p</sub> = -16,77 / (-2,303 · 0,008314 · 298) = -16,77 / -5,705 = <strong>2,94</strong></span>.</p>
+                <p>4. Obtenemos <span class="math-inline">K<sub>p</sub></span>:
+                <br><span class="math-inline">K<sub>p</sub> = 10<sup>2,94</sup> = <strong>871</strong></span>.</p>
+            </div>
+        </div>
+
+        <!-- E8 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 8</div>
+            <p><strong>Enunciado:</strong> La constante de disociación del ácido láctico es <span class="math-inline">1,3 × 10<sup>-4</sup></span>. Calcular <span class="math-inline">ΔG°</span> de su disociación en solución acuosa a 25 °C. ¿Cuál será el valor de <span class="math-inline">ΔG</span> al alcanzar el equilibrio?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso</span>
+                <p>a) Cálculo de <span class="math-inline">ΔG°</span>:</p>
+                <p><span class="math-inline">ΔG° = -2,303 R T log K<sub>c</sub></span></p>
+                <p><span class="math-inline">ΔG° = -2,303 · (0,008314 kJ/mol·K) · 298 K · log(1,3 × 10<sup>-4</sup>)</span>
+                <br><span class="math-inline">log(1,3 × 10<sup>-4</sup>) = -3,886</span>
+                <br><span class="math-inline">ΔG° = -5,705 · (-3,886) = <strong>+22,16 kJ/mol</strong></span>.</p>
+                <p>b) En el equilibrio, por definición termodinámica fundamental, <span class="hl-law">ΔG = 0</span>.</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

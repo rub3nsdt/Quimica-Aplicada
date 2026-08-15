@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 15: Recursos Naturales en la Industria de la Química Orgánica - Resumen Completo</title>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0369a1 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%; right: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header p { font-size: 1.05rem; color: #cbd5e1; max-width: 850px; }
+        .meta-info {
+            margin-top: 20px; padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem; color: #94a3b8;
+            display: flex; flex-wrap: wrap; gap: 20px;
+        }
+        .meta-info span { display: flex; align-items: center; gap: 6px; }
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .section-card:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08); }
+        .section-title {
+            font-size: 1.55rem; font-weight: 700;
+            margin-bottom: 20px; padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+        h3 { font-size: 1.2rem; font-weight: 600; margin: 22px 0 12px 0; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+        h4 { font-size: 1.05rem; font-weight: 600; margin: 16px 0 8px 0; color: var(--primary-light); }
+        p { margin-bottom: 14px; color: #334155; text-align: justify; }
+        .hl-def { background-color: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-green { background-color: #dcfce7; color: #15803d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-red { background-color: #fee2e2; color: #b91c1c; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-amber { background-color: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-purple { background-color: #f3e8ff; color: #6b21a8; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-pink { background-color: #fce7f3; color: #9d174d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-teal { background-color: #ccfbf1; color: #0f766e; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.88em; line-height: 1.0; padding: 0 3px; font-family: 'Cambria', 'Georgia', serif; font-weight: bold; }
+        .frac .top { border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+        .frac .bottom { padding-top: 1px; }
+        .math-box {
+            background-color: #0f172a; color: #f8fafc;
+            padding: 16px 24px; border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif; font-size: 1.1rem;
+            text-align: center; margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8; overflow-x: auto;
+        }
+        .math-box .var { font-style: italic; color: #38bdf8; font-weight: bold; }
+        .math-inline { font-family: 'Cambria', 'Georgia', serif; font-style: italic; font-weight: 600; color: #0f172a; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+        .callout { border-left: 4px solid; padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 18px 0; background-color: #f8fafc; }
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+        .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+        .callout-pink { border-color: var(--accent-pink); background-color: #fdf2f8; }
+        .callout-title { font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .table-responsive { overflow-x: auto; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.92rem; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th { background-color: var(--primary); color: white; padding: 12px 14px; text-align: left; font-weight: 600; }
+        td { padding: 11px 14px; border-bottom: 1px solid var(--border-color); background-color: white; }
+        tr:nth-child(even) td { background-color: #f8fafc; }
+        tr:hover td { background-color: #f1f5f9; }
+        ul, ol { margin: 12px 0 16px 24px; color: #334155; }
+        li { margin-bottom: 8px; }
+        .badge-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 20px 0; }
+        .badge-card { flex:1 1 300px; max-width: 500px; border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; background: #ffffff; border-top: 4px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .exercise-card { background-color: #fefce8; border: 1px solid #fef08a; border-left: 5px solid var(--accent-amber); border-radius: 8px; padding: 20px; margin-bottom: 22px; }
+        .exercise-title { font-weight: 700; color: #854d0e; margin-bottom: 10px; font-size: 1.05rem; }
+        .solution-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px; margin-top: 12px; font-size: 0.95rem; }
+        .solution-tag { display: inline-block; background-color: #dcfce7; color: #166534; font-weight: 700; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; margin-bottom: 8px; }
+        .two-column-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .three-column-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .grid-box-1 { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 14px; }
+        .grid-box-2 { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px; }
+        .grid-box-3 { background: #fdf4ff; border: 1px solid #f0abfc; border-radius: 8px; padding: 14px; }
+        .diagram-box { background: #f1f5f9; border: 1px dashed #64748b; border-radius: 8px; padding: 15px; text-align: center; margin: 15px 0; font-weight: 600; }
+        .flow-steps { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+        .flow-step { background: white; border: 2px solid var(--accent-blue); color: var(--accent-blue); border-radius: 8px; padding: 8px 14px; font-weight: 700; font-size: 0.9rem; }
+        .flow-arrow { color: var(--text-muted); font-size: 1.2rem; font-weight: 900; }
+        figcaption { margin-top: 10px; font-weight: 400; font-size: 0.9rem; color: var(--text-muted); }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7rem; }
+            .section-card { padding: 18px; }
+            .two-column-grid { grid-template-columns: 1fr; }
+            .three-column-grid { grid-template-columns: 1fr; }
+            .badge-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 15: Recursos Naturales en la Industria de la Química Orgánica</h1>
+        <p>Resumen exhaustivo, visual y ordenado de la unidad didáctica: recursos fósiles (carbón, petróleo, gas natural, pizarras y arenas bituminosas) y recursos renovables (biomasa); sus orígenes, composición, tratamientos de conversión y las principales fracciones y productos obtenidos, incluyendo los biocombustibles. Incluye la resolución completa de la Autoevaluación.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Mª José Caselles Pomares, Mariano Molero Meneses, et al.</span>
+            <span>📍 <strong>Unidad Didáctica:</strong> Tema 15</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);"><strong>Clasificación:</strong> Recursos fósiles (no renovables) y renovables.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);"><strong>Recursos fósiles:</strong> Características fundamentales y composición.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);"><strong>Carbón:</strong> Tratamientos aplicados y desarrollo de la industria carboquímica.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);"><strong>Petróleo:</strong> Tecnologías para obtener productos energéticos y sintéticos.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);"><strong>Fracciones petrolíferas:</strong> Transformaciones y su idoneidad según el fin buscado.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);"><strong>Productos industriales:</strong> Mayor demanda y principales aplicaciones.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-pink);"><strong>Crisis del petróleo:</strong> Giro de los años setenta hacia tecnologías no dependientes del petróleo.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-blue);"><strong>Biomasa:</strong> Aprovechamiento como sustituto de los recursos fósiles.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);"><strong>Biocombustibles:</strong> Sustitutos de gasolinas y gasóleos.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);"><strong>Biodiésel:</strong> Interés y beneficios ambientales de su utilización.</div>
+        </div>
+    </section>
+
+    <!-- RESUMEN INTRODUCTORIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">📝 Resumen General de la Unidad</h2>
+        <p>Este capítulo describe los <span class="hl-def">recursos naturales</span> en los que se sustenta la Química Orgánica Industrial, diferenciando recursos <span class="hl-red">fósiles</span> (limitados) y <span class="hl-green">renovables</span>. Se estudia primero el <strong>carbón</strong>, con el que se inició la Química Orgánica Industrial, y sus tratamientos: <span class="hl-amber">pirólisis, extracción con disolventes, licuefacción y gasificación</span> (esta última genera el importantísimo <span class="hl-def">gas de síntesis</span>).</p>
+        <p>El <strong>petróleo</strong> desbancó al carbón por su facilidad de extracción y tecnología. Mediante el <span class="hl-teal">refinado</span> se obtienen fracciones petrolíferas, y con el <span class="hl-purple">reformado</span> se mejoran sus propiedades, aprovechando las fracciones pesadas. También se estudian el <strong>gas natural</strong> y sus procesos de conversión. En cuanto a recursos renovables, se estudia la <span class="hl-green">biomasa</span> y sus transformaciones para obtener los mismos productos industriales que los recursos fósiles.</p>
+    </section>
+
+    <!-- 15.1 RECURSOS NATURALES -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">15.1. Recursos Naturales</h2>
+        <p>Son los bienes procedentes de la Naturaleza que el hombre utiliza para obtener materias primas industriales, presentes en <strong>yacimientos, cultivos o explotaciones agropecuarias</strong>.</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-red);">No renovables (yacimientos):</strong> reservas limitadas, tendentes a agotarse. Origen fósil: <strong>carbón, petróleo y gas natural</strong>.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Renovables:</strong> proceden del reino <strong>vegetal</strong> (árboles, algodón, algas, cultivos) y <strong>animal</strong> (ganado, insectos, animales marinos).
+            </div>
+        </div>
+        <p>Los procesos industriales evolucionaron de la <strong>extracción</strong> a la <span class="hl-def">transformación tecnológica</span>, hoy predominante. Las materias primas orgánicas interesan tanto a la <strong>industria de transformación</strong> (productos de primera, segunda generación y terminales) como a la <strong>industria energética</strong>.</p>
+    </section>
+
+    <!-- 15.2 EL CARBON -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">15.2. El Carbón</h2>
+
+        <h3>15.2.1. Introducción</h3>
+        <p>Materia prima que impulsó la <strong>Industria Química del siglo XVIII</strong>, quedó relegada a mediados del s. XX por el petróleo, hasta que la <span class="hl-red">crisis del petróleo de los años 70</span> (junto al cuestionamiento de la energía nuclear) motivó su retorno tecnológico. El carbón representa la <strong>única alternativa formal frente al petróleo</strong>, aunque condicionada a su menor precio. Su importancia se asoció históricamente a la producción de <strong>coque</strong> (siderurgia) y <strong>gas del alumbrado</strong>, cubiertos ambos en el proceso de <span class="hl-def">coquización</span>.</p>
+
+        <h3>15.2.2. Origen del Carbón</h3>
+        <p>Teoría más aceptada: formación por <strong>descomposición de residuos de plantas</strong> en pantanos o deltas de ríos, por bacterias y hongos, dando <span class="hl-def">turba</span>. Ciclos de hundimiento, sedimentación y crecimiento de nuevas plantas originaron el recurso; al quedar enterrada, cesó la actividad biológica y comenzaron cambios químicos lentísimos que transformaron la turba en carbón, hace unos <strong>400 millones de años</strong>.</p>
+        <p>La velocidad de descomposición varía según el componente vegetal: <strong>alta en la celulosa</strong>, decreciendo en lignina, esporas, cutícula de hojas y resina. El factor que más influye en la formación es la <span class="hl-def">temperatura</span> (y en menor grado presión y tiempo): los carbones más profundos experimentaron mayores transformaciones.</p>
+
+        <h3>15.2.3. Reservas</h3>
+        <p>Representan el <strong>80%</strong> de las reservas fósiles totales del planeta, repartidas en 80 países. Transporte por <strong>barco y tren</strong>, y en algunas explotaciones por <span class="hl-def">carboductos</span> (carbón troceado en suspensión acuosa a presión, recuperado por decantación/filtrado).</p>
+
+        <h3>15.2.4. Estructura</h3>
+        <p>Estructura compleja formada por dos fracciones:</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-blue);">Fracción A:</strong> agrupaciones <span class="hl-def">aromáticas condensadas</span>.</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">Fracción B (bitumen):</strong> estructuras <span class="hl-def">parafínicas</span> que unen las agrupaciones aromáticas y sus ramificaciones; puede contener funciones carboxilo y fenólicas (carácter ácido, sobre todo en carbones jóvenes).</div>
+        </div>
+        <p>El carbón no es una mezcla bien definida como el petróleo; solo pueden diseñarse <strong>modelos estadísticos</strong>. A mayor antigüedad, mayor fracción aromática (y su condensación); a menor antigüedad, mayor fracción parafínica. Los <strong>carbones bituminosos</strong> tienen ~3 anillos aromáticos condensados de media: <strong>75%</strong> del carbono en estructuras aromáticas, <strong>20%</strong> en hidroaromáticas y el resto en alifáticas. Heteroátomos: O (hidroxilo, fenólico, éter), N y S (formas heterocíclicas).</p>
+
+        <h3>15.2.5. Tipos de Carbón</h3>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-purple);">Antracita:</strong> el más antiguo, mayor evolución; menor proporción de hidrógeno; estructuras aromáticas policondensadas orientadas: material duro y brillante.</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-blue);">Hulla:</strong> menor grado de condensación aromática; se distinguen <strong>magras, semimagras y ¾ grasas</strong>; predomina el componente B.</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-green);">Lignito</strong> (carbón graso): componente mayoritario B; carbón joven, poco evolucionado.</div>
+        </div>
+
+        <h3>15.2.6. Clasificación</h3>
+        <p>Se basa en el contenido en <span class="hl-def">sustancia orgánica pura</span> (el carbón contiene humedad, materia mineral y sustancia orgánica). Clasificación de <strong>Seyler (1899)</strong>, la más antigua. Los <strong>lignitos</strong> (más jóvenes) tienen mayor heteroátomos (sobre todo O) y menor carbono; durante la formación se eliminan H y O como metano y agua (el metano puede quedar atrapado formando gas natural). Las <strong>antracitas</strong> tienen mayor carbono y menos heteroátomos. El contenido de <strong>hidrógeno permanece casi constante (~5%)</strong> entre lignitos, subbituminosos y bituminosos; la diferencia está en los heteroátomos.</p>
+        <p>Clasificación de <strong>Lermusiaux (1961)</strong>: según contenido en volátiles y calidad del coque resultante, dato clave para elegir el carbón según su aplicación.</p>
+
+        <h3>15.2.7. Conversión del Carbón: Carboquímica</h3>
+        <p>La <span class="hl-def">carboquímica</span> (transformadora de la hulla) desarrolló, desde mediados del s. XIX y durante un siglo, la industria de colorantes, hasta ser desplazada por la <span class="hl-def">petroquímica</span> (más avanzada y barata). No obstante, dada la importancia histórica y que las reservas de carbón superan a las de petróleo, se estudian sus tres líneas de producción:</p>
+        <div class="callout callout-warning">
+            <div class="callout-title">🏭 Tres Líneas de Producción de la Carboquímica</div>
+            <ul>
+                <li>Preparación de <strong>gas de síntesis</strong>.</li>
+                <li>Obtención de productos de <strong>base aromática</strong>.</li>
+                <li>Producción de <strong>acetileno</strong>.</li>
+            </ul>
+            <p>Principales tratamientos: <strong>pirólisis</strong> (aromáticos), <strong>extracción con disolventes</strong>, <strong>licuefacción/hidrogenación</strong> y <strong>gasificación</strong> (gas de síntesis).</p>
+        </div>
+
+        <h4>15.2.7.1. Pirólisis</h4>
+        <p>Descomposición en recipiente cerrado, sin aire, a ~<strong>1.000 °C</strong>. Se obtienen gases, líquidos, alquitrán, y un residuo carbonoso llamado <span class="hl-def">coque</span> (bajo H, retiene la fracción mineral), de gran interés como <strong>reductor siderúrgico</strong>. Hoy la pirólisis se orienta casi exclusivamente a obtener coque. Las hullas <strong>¾ grasas</strong> dan el mejor coque metalúrgico; las antracitas dan coque pulverulento de escaso interés; las hullas semigrasas dan coque compacto para fines químicos.</p>
+        <p>El coque, además de uso siderúrgico, sirve para obtener <strong>acetileno</strong> en dos etapas:</p>
+        <div class="math-box">
+            C + CaO → CaC<sub>2</sub> + CO<br>
+            CaC<sub>2</sub> + H<sub>2</sub>O → C<sub>2</sub>H<sub>2</sub> + Ca(OH)<sub>2</sub>
+        </div>
+        <p>De la pirólisis de la hulla se obtienen: coque, alquitrán (con aceites ligeros, fenólicos, nafténicos, antraquinónicos y brea; derivados como benceno, tolueno, xilenos, fenol, cresol, naftaleno, antraceno), gas y aguas amoniacales.</p>
+
+        <h4>15.2.7.2. Extracción con Disolventes</h4>
+        <p>Permite separar sustancias orgánicas en muy baja proporción (~<strong>1%</strong>), poco rentable. Un tratamiento térmico previo de ruptura molecular mejora el rendimiento al facilitar la solubilidad.</p>
+
+        <h4>15.2.7.3. Hidrogenación (Licuefacción)</h4>
+        <p>Objetivo: pasar los componentes orgánicos a <span class="hl-def">estado líquido</span>, aumentando la relación H/C, transformando el carbón en un «petróleo no natural». Cambios necesarios:</p>
+        <ul>
+            <li>Fragmentar la estructura de alto peso molecular (pirólisis, hidrogenación, oxidación).</li>
+            <li>Incrementar el contenido de hidrógeno.</li>
+            <li>Reducir heteroátomos, por hidrogenación: <span class="math-inline">carbón + H₂ → H₂O + H₂S + H₃N</span>.</li>
+            <li>Eliminar la materia mineral.</li>
+        </ul>
+        <div class="callout callout-success">
+            <div class="callout-title">✅ Ventajas de la Hidrogenación del Carbón</div>
+            <p>Mayor manejabilidad (líquido); permite usar la tecnología del petróleo; disminuye la polución (menos heteroátomos); mayor control de la combustión.</p>
+        </div>
+        <div class="math-box">C<sub>n</sub> + mH<sub>2</sub> → C<sub>n</sub>H<sub>2m</sub></div>
+
+        <h4>15.2.7.4. Gasificación</h4>
+        <p>El proceso de conversión <strong>más versátil</strong>, con aplicaciones energéticas y sintéticas. Oxidación parcial del carbón con vapor de agua, dando <span class="hl-def">gas de síntesis</span> (CO + H<sub>2</sub>):</p>
+        <div class="math-box">C + H<sub>2</sub>O → CO + H<sub>2</sub></div>
+        <p>El gas resultante incluye también CO<sub>2</sub>, CH<sub>4</sub> y N<sub>2</sub>, según se use aire u oxígeno, temperatura y presión. <strong>Alta temperatura</strong> favorece CO + H<sub>2</sub>; <strong>alta presión</strong> favorece CH<sub>4</sub>.</p>
+
+        <h3>15.2.8. Aplicaciones del Gas de Síntesis</h3>
+        <p>Del gas de síntesis (CO + H<sub>2</sub>) derivan, entre otros, metanol, olefinas, aromáticos, amoniaco, hidrocarburos (nafta) y ácido acético, a través de dos procesos clave:</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Proceso Fischer-Tropsch (síntesis metilénica):</strong> síntesis directa de olefinas y aromáticos, con productos oxigenados secundarios (alcoholes):
+                <div class="math-box" style="font-size:0.9rem;">nCO + 2nH<sub>2</sub> → (CH<sub>2</sub>)<sub>n</sub> + nH<sub>2</sub>O</div>
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Proceso Mobil:</strong> a partir de metanol, sintetiza <strong>gasolinas de alto contenido en aromáticos</strong> (requiere tiempo de reacción suficiente). Interesante ante una eventual escasez de petróleo, ya que el gas de síntesis puede obtenerse de fuentes muy diversas.
+            </div>
+        </div>
+        <p>Aplicaciones de los componentes: <strong>H<sub>2</sub></strong> (procesos de hidrogenación, licuefacción del carbón, combustible de automoción, procesos de reducción); <strong>CO</strong> (obtención de fosgeno e isocianatos, proceso Fischer-Tropsch); <strong>CO+H<sub>2</sub></strong> (metanol, metano, amoniaco, otras síntesis).</p>
+    </section>
+
+    <!-- 15.3 EL PETROLEO -->
+    <section class="section-card">
+        <h2 class="section-title t-red">15.3. El Petróleo</h2>
+
+        <h3>15.3.1. Introducción</h3>
+        <p>Mezcla de hidrocarburos y derivados hidrocarbonados gaseosos, líquidos y sólidos en la corteza terrestre. Componentes <strong>gaseosos</strong> (metano principalmente) = <span class="hl-def">gas natural</span>; <strong>líquidos</strong> = hidrocarburos + compuestos con O, N, S y metales; <strong>semisólidos/sólidos</strong> = hidrocarburos de alto peso molecular, bituminosos y asfaltos. El término «petróleo» (aceite de roca) se documenta desde <strong>1546</strong>.</p>
+
+        <h3>15.3.2. Origen</h3>
+        <p>Se han propuesto varias teorías:</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong>Berthelot (1866):</strong> el acetileno como precursor: CaCO<sub>3</sub> → CaC<sub>2</sub> → HC≡CH → petróleo.</div>
+            <div class="grid-box-2"><strong>Mendeléiev:</strong> ácidos diluidos/agua caliente sobre carburos de Fe y Mn → hidrocarburos → petróleo.</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-green);">Engler (1912), la más aceptada:</strong> origen <span class="hl-def">orgánico</span>. Depósitos marinos de flora/fauna con sedimentos arenosos, bajo presión y por bacterias anaerobias, se descompusieron lentamente originando el petróleo.
+            </div>
+        </div>
+        <p>La teoría orgánica justifica que el petróleo esté acompañado de <strong>agua salada</strong> y contenga <strong>N y S</strong> (procedentes de proteínas de animales y vegetales).</p>
+
+        <h3>15.3.3. Reservas</h3>
+        <p>El consumo creció rápidamente en el s. XX, pero se encontraron nuevos yacimientos (Mar del Norte) y las reservas resultaron mayores de lo esperado: las reservas actuales coinciden con las de hace 30 años pese al consumo. Consecuencias positivas de la <span class="hl-red">crisis del petróleo (años 70)</span>: búsqueda de energías alternativas, motores más eficientes, investigación en otras fuentes, y mejores tecnologías de recuperación de crudo. Principales productores: <strong>Arabia Saudí, Irak, Kuwait, Irán y Venezuela</strong> (mitad de las reservas); <strong>6%</strong> en la antigua URSS y Europa Oriental.</p>
+
+        <h3>15.3.4. Composición</h3>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Elemento</th><th>% en el bruto</th></tr></thead>
+                <tbody>
+                    <tr><td>Carbono</td><td>84-87%</td></tr>
+                    <tr><td>Hidrógeno</td><td>12-14%</td></tr>
+                    <tr><td>Azufre</td><td>0-5%</td></tr>
+                    <tr><td>Nitrógeno</td><td>0-1%</td></tr>
+                    <tr><td>Oxígeno</td><td>0-1%</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Se admite que el crudo contiene <strong>cientos de miles</strong> de moléculas orgánicas distintas (solo se han identificado unas pocas centenas, sobre todo las fracciones ligeras). Ejemplo de complejidad: un hidrocarburo de 15 átomos de carbono tiene <strong>4.347 isómeros</strong> posibles; con 18 átomos, <strong>60.523</strong>.</p>
+        <p>Se identifican (salvo acetilénicos y olefinas, ausentes en el crudo): <strong>parafinas normales y ramificadas</strong>, <strong>hidrocarburos bencénicos</strong>, <strong>naftenos</strong> (cíclicos), compuestos de <strong>azufre</strong> (mercaptanos, sulfuros, disulfuros), <strong>nitrogenados</strong> (heterociclos aromáticos), <strong>oxigenados</strong> (ácidos, fenoles, cetonas), <strong>metales</strong> (Ni, V, Fe, Zn, Cu, Cr, Mn, Co) y <span class="hl-def">asfaltos-asfaltenos</span>.</p>
+        <div class="callout callout-purple">
+            <div class="callout-title">🧱 Los Asfaltenos</div>
+            <p>Depositados en el desasfaltado con disolventes; compuestos por <strong>aceites asfálticos</strong>, <strong>resinas</strong> (insolubles en propano, solubles en n-pentano) y <strong>asfaltenos</strong> (insolubles en n-pentano, solubles en benceno). Alto peso molecular, estructura compleja: <strong>compuestos aromáticos polisustituidos apilados en planos</strong> (4-6 núcleos aromáticos), agrupados en <span class="hl-def">micelas</span>.</p>
+        </div>
+        <p>Como la estructura molecular influye en densidad y P.eb., se usa la <span class="hl-def">graduación API</span> (American Petroleum Institute):</p>
+        <div class="math-box">°API = <span class="frac"><span class="top">141,5</span><span class="bottom">d</span></span> − 131,5</div>
+        <p>donde <em>d</em> es la densidad relativa a 60 °F respecto al agua. A <strong>mayor densidad, menor °API</strong>. Crudos ligeros (Arabia): 34-45° API; crudos pesados (Venezuela): ~10° API. La British Petroleum definió el factor <strong>K</strong>:</p>
+        <div class="math-box">K = <span class="frac"><span class="top">T<sup>1/3</sup></span><span class="bottom">d</span></span></div>
+        <p>donde T es la temperatura media de ebullición en grados Rankine (°F+460) y d la densidad específica a 60 °F. Se cumple: <strong>K<sub>aromáticos</sub> &lt; K<sub>naftenos</sub> &lt; K<sub>parafinas</sub></strong> (K<sub>benceno</sub>=9,78; K<sub>ciclohexano</sub>=12,04; K<sub>n-hexano</sub>=12,90). De forma simplificada, se habla de petróleos <strong>parafínicos, nafténicos o aromáticos</strong>.</p>
+
+        <h3>15.3.5. Fracciones Petrolíferas</h3>
+        <p>Dada la complejidad del crudo, se usan métodos físicos de separación para obtener <span class="hl-def">fracciones petrolíferas</span> (mezclas de estrecho intervalo de composición). Las plantas <strong>petroquímicas</strong> transforman químicamente estas fracciones en productos de base bien caracterizados (etileno, benceno = <strong>productos de 1.ª generación</strong>), materia prima de derivados de interés industrial (<strong>2.ª generación y terminales</strong>): detergentes, plásticos, cauchos, pinturas, abonos, fibras, fármacos.</p>
+        <div class="diagram-box">
+            <div class="flow-steps">
+                <div class="flow-step">Petróleo bruto</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Fracciones petrolíferas</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Bases petroquímicas</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-green);color:var(--accent-green);">Productos 1.ª gen.</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-amber);color:var(--accent-amber);">2.ª generación</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-red);color:var(--accent-red);">Producto terminal</div>
+            </div>
+            <figcaption>Figura 15.10-15.11. Ejemplo: Etileno + Benceno → Cumeno → Fenol → Resinas fenólicas.</figcaption>
+        </div>
+
+        <h3>15.3.6. Refino del Petróleo</h3>
+        <p>Se realiza en <span class="hl-def">refinerías</span>, con tres operaciones fundamentales:</p>
+        <ol>
+            <li><strong>Destilación</strong> del crudo para obtener fracciones de intervalos de ebullición definidos.</li>
+            <li><strong>Conversión</strong> de fracciones pesadas en fracciones menores más demandadas (craqueo).</li>
+            <li><strong>Reformado</strong>: modificación de la estructura de cadenas para mayor demanda como carburante.</li>
+        </ol>
+
+        <h4>15.3.6.1. Fraccionamiento del Crudo</h4>
+        <p>Destilación fraccionada a <strong>presión atmosférica</strong>; el residuo pasa a una columna a <strong>vacío</strong> o con <strong>arrastre de vapor</strong>, para evitar la descomposición térmica de los productos.</p>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Fracción</th><th>Compuesto</th><th>Carbonos</th><th>P.eb. (°C)</th><th>Uso principal</th></tr></thead>
+                <tbody>
+                    <tr><td rowspan="3"><strong>Ligera</strong></td><td>Gas de refinería</td><td>C₁-C₄</td><td>&lt;20</td><td>Combustible (fuel-gas)</td></tr>
+                    <tr><td>Nafta ligera</td><td>C₅-C₁₀</td><td>40-150</td><td>Carburante automóviles</td></tr>
+                    <tr><td>Nafta pesada</td><td>hasta C₁₂</td><td>150-200</td><td>Petroquímica</td></tr>
+                    <tr><td rowspan="2"><strong>Media</strong></td><td>Queroseno</td><td>C₁₂-C₁₆</td><td>170-250</td><td>Turborreactores</td></tr>
+                    <tr><td>Gasóleo</td><td>C₁₅-C₂₅</td><td>250-320</td><td>Motores Diesel, calefacción</td></tr>
+                    <tr><td rowspan="3"><strong>Pesada</strong></td><td>Fuel oil ligero</td><td>—</td><td>340-400</td><td>Carburante de buques</td></tr>
+                    <tr><td>Fuel oil pesado</td><td>—</td><td>400-500</td><td>Ceras, lubricantes, cremas</td></tr>
+                    <tr><td>Asfaltos</td><td>—</td><td>&gt;500</td><td>Pavimentos, impermeabilizantes</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Fracciones petrolíferas obtenidas en el fraccionamiento del crudo.</p>
+        </div>
+        <p>Los <strong>C<sub>3</sub> y C<sub>4</sub></strong> (propano/butano) forman los <span class="hl-def">gases licuados del petróleo (LPG)</span>, combustible doméstico. Las naftas requieren <strong>desulfuración</strong> previa (evitar corrosión y contaminación); su demanda como base petroquímica se disparó desde los años 60. El residuo final, <strong>coque de petróleo</strong> (coque verde), se usa como combustible en cementeras o (con pocas impurezas, ~90% C) en la fabricación de <strong>electrodos</strong>.</p>
+
+        <h3>15.3.7. Procesos de Conversión: Petroleoquímica</h3>
+
+        <h4>15.3.7.1. Craqueo</h4>
+        <p>Proceso <strong>térmico de ruptura</strong> de moléculas grandes en otras menores, con frecuentes reacciones de recombinación. Un fraccionamiento sencillo rinde ~16% gasolina y 57% gasóleo; con conversión intensa: <strong>32% gasolina</strong> y <strong>16% gasóleo</strong> (más nafta).</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-red);">Craqueo térmico:</strong> 500-900 °C, fase gaseosa, sin catalizador. Producto principal: <span class="hl-def">olefinas</span>.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Craqueo catalítico:</strong> temperaturas menores, catalizadores ácidos (sílice-alúmina, fosfatos de aluminio). Da gasolinas de <strong>mayor índice de octano</strong> (ricas en aromáticos y parafinas ramificadas), con isomerización, ciclación y deshidrogenación simultáneas.
+            </div>
+        </div>
+        <div class="callout callout-teal">
+            <div class="callout-title">🔷 Zeolitas</div>
+            <p>Desde 1962, catalizadores de <strong>silicatos alumínicos cristalizados con estructura de tamiz molecular</strong>. Catálisis heterogénea muy activa, fácilmente separables/recuperables; mejores resultados con poros pequeños.</p>
+        </div>
+        <p>Procedimiento <strong>Houdry (1934)</strong>, en lecho fijo, sustituido en <strong>1943</strong> por el lecho fluidizado, hoy conocido como <strong>FCC</strong> (Fluid Catalytic Cracking). El <span class="hl-def">hidrocraqueo</span> es craqueo en presencia de hidrógeno, obteniendo gasolinas, querosenos y fuel-óleos a partir de fracciones pesadas.</p>
+
+        <h4>15.3.7.2. Reformado Catalítico</h4>
+        <p>Aumenta el <span class="hl-def">índice de octano</span> de las gasolinas del refino (supercarburantes), a partir de la <strong>nafta</strong> (parafinas, isoparafinas, naftenos, aromáticos), incrementando la proporción de <strong>aromáticos</strong>:</p>
+        <div class="math-box">parafinas → (−H<sub>2</sub>) cicloparafinas → (−H<sub>2</sub>) aromáticos</div>
+        <p>Genera abundante <strong>hidrógeno</strong> (usado en hidrogenación/hidrodesulfuración) y aromáticos (benceno, tolueno, xilenos) de interés industrial.</p>
+
+        <h4>15.3.7.3. Reformado con Vapor</h4>
+        <p>A partir de fracciones ligeras y naftas, con vapor de agua, para obtener <span class="hl-def">gas de síntesis</span>:</p>
+        <div class="math-box">
+            C<sub>m</sub>H<sub>2n</sub> + mH<sub>2</sub>O → mCO + (m+n)H<sub>2</sub><br>
+            C<sub>m</sub>H<sub>2n</sub> + 2mH<sub>2</sub>O → mCO<sub>2</sub> + (2m+n)H<sub>2</sub> &nbsp;(si interesa maximizar H<sub>2</sub>)
+        </div>
+    </section>
+
+    <!-- 15.4 GAS NATURAL -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">15.4. Gas Natural</h2>
+        <p>Mezcla de gases de hasta <strong>cuatro átomos de carbono</strong>, con el <span class="hl-def">metano</span> como componente mayoritario, junto a H<sub>2</sub>S, CO<sub>2</sub>, N<sub>2</sub> y He.</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>Gas asociado</strong> a yacimientos de petróleo: metano &lt;70%.</div>
+            <div class="grid-box-2"><strong>Gas seco</strong>, de fermentación anaerobia reciente: metano ~90%.</div>
+        </div>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Denominación</th><th>Contenido</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>GN</strong> (gas natural)</td><td>C₁</td></tr>
+                    <tr><td><strong>GNL</strong> (gas natural licuado)</td><td>C₂</td></tr>
+                    <tr><td><strong>LPG</strong> (gases licuados del petróleo)</td><td>C₃ + C₄</td></tr>
+                    <tr><td><strong>Otros</strong></td><td>CO₂, He, H₂, H₂S, N₂</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Según componentes ácidos: <span class="hl-red">gas ácido</span> (con H<sub>2</sub>S y CO<sub>2</sub>) o <span class="hl-green">gas dulce</span> (sin ellos). Dos hipótesis de formación: bioquímica (gas de los pantanos, no justifica hidrocarburos &gt;C<sub>1</sub>) y de <strong>mismo origen que el petróleo</strong> (craqueo térmico de moléculas superiores). En los yacimientos, el gas suele ocupar la parte superior, el petróleo la media y el agua la inferior.</p>
+
+        <h3>15.4.1. Reservas</h3>
+        <p>Principalmente como gas asociado. Yacimientos importantes: <strong>Oriente Medio, Argelia, Rusia, Francia, EE.UU. y Bolivia</strong>. Reservas suficientes para ~<strong>50 años</strong> de consumo mundial.</p>
+
+        <h3>15.4.2. Tratamientos Previos</h3>
+        <p>Eliminación de <strong>H<sub>2</sub>S, CO<sub>2</sub> y agua</strong> (evitar condensaciones); según el uso, también N<sub>2</sub> y He. Resultado: gas de C<sub>1</sub> a C<sub>4</sub>.</p>
+
+        <h3>15.4.3. Utilización del Gas Natural</h3>
+        <p>Aplicaciones: obtención de <strong>NH<sub>3</sub></strong> (abonos), gas de síntesis (reformado con vapor) → proceso Fischer-Tropsch, formaldehído, ácido fórmico, proceso Mobil, metanol; obtención de <strong>acetileno</strong> (10% del total procede del CH<sub>4</sub>); negro de humo; clorometanos; nitrometanos. De la fracción C<sub>2</sub>-C<sub>4</sub>: etano→etileno, propano/butano→LPG, alquilación de gasolinas, MTBE, cauchos.</p>
+
+        <h3>15.4.4. Procesos de Conversión: Reformado con Vapor</h3>
+        <p>El oxígeno del agua actúa como oxidante:</p>
+        <div class="math-box">
+            CH<sub>4</sub> + H<sub>2</sub>O → CO + 3H<sub>2</sub><br>
+            CH<sub>4</sub> + 2H<sub>2</sub>O → CO<sub>2</sub> + 4H<sub>2</sub>
+        </div>
+    </section>
+
+    <!-- 15.5 PIZARRAS Y ARENAS BITUMINOSAS -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">15.5. Pizarras y Arenas Bituminosas</h2>
+
+        <h3>15.5.1. Pizarras Bituminosas</h3>
+        <p>No siempre son pizarras: a menudo son <strong>rocas sedimentarias impermeables</strong> con una sustancia orgánica llamada <span class="hl-def">querógeno</span>. Al someterlo a 400-500 °C sin aire, se descompone dando el <strong>crudo de pizarra</strong>.</p>
+        <p>El querógeno (P.M. &gt;3.000) contiene hidrocarburos alifáticos, cíclicos y aromáticos con N, O y S; su estructura recuerda más al <strong>carbón</strong> que al petróleo, y no se disuelve en disolventes habituales del petróleo (poco carácter de bitumen).</p>
+        <p>Reservas <strong>mayores que las del carbón</strong>, pero explotación costosa (capas profundas y estrechas, solo ~20% de materia orgánica). Yacimientos: <strong>EE.UU. (Green River), Escocia, Brasil y Estonia</strong> (aquí ~40% de materia orgánica, se usa con fines energéticos como el carbón; sus cenizas —60%— se usan en cemento).</p>
+
+        <h3>15.5.2. Arenas Bituminosas</h3>
+        <p>El bitumen recubre la <strong>arena húmeda</strong>. Recuperación: se calienta la arena (baja viscosidad, sin descomposición), se agita con agua para separar la fracción orgánica, se decanta en balsas, y se extrae con <strong>disolventes orgánicos</strong> recuperables.</p>
+    </section>
+
+    <!-- 15.6 BIOMASA -->
+    <section class="section-card">
+        <h2 class="section-title t-green">15.6. Biomasa</h2>
+
+        <h3>15.6.1. Introducción</h3>
+        <p>Toda sustancia orgánica <span class="hl-def">renovable</span> de origen vegetal o animal, y los residuos generados por seres vivos. La energía solar se transforma en compuestos orgánicos por <strong>fotosíntesis</strong>. Es <strong>totalmente renovable</strong>: una fuente inagotable de recursos.</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-blue);">Biomasa primaria:</strong> conversión directa de energía solar (espontánea o dirigida por cultivos). Compite con la alimentación.</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">Biomasa secundaria:</strong> residuos agrícolas y forestales.</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-purple);">Biomasa terciaria:</strong> residuos de animales, urbanos e industriales.</div>
+        </div>
+
+        <h3>15.6.2. Biomasa Vegetal</h3>
+        <p>La más utilizada históricamente. Componentes principales: en material <strong>leñoso</strong>, celulosa, hemicelulosa, lignina, resinas; en <strong>no leñoso</strong>, aceites, féculas, azúcares, proteínas. Condiciones para su viabilidad industrial: recursos suficientes, tecnologías fiables y precios competitivos.</p>
+
+        <h4>15.6.2.1. Transformaciones sobre la Biomasa</h4>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong>Procesos químicos:</strong> <strong>fermentación</strong> (→ etanol y otros hidroxilados) y <strong>digestión anaerobia</strong> (→ metano).
+            </div>
+            <div class="grid-box-2">
+                <strong>Procesos térmicos:</strong> <strong>pirólisis</strong>, <strong>gasificación</strong> y <strong>combustión</strong> (energía).
+            </div>
+        </div>
+        <div class="callout callout-info">
+            <div class="callout-title">🦠 Digestión Anaerobia (Fermentación Anaeróbia)</div>
+            <p>Realizada por bacterias sin O<sub>2</sub> sobre residuos agrícolas y la fracción orgánica de residuos domésticos. Ruta: <strong>lípidos, polisacáridos, proteínas y ácidos nucleicos</strong> se hidrolizan a ácidos grasos, monosacáridos, aminoácidos y bases púricas; bacterias <strong>acidogénicas</strong> generan ácidos carboxílicos C<sub>1</sub>-C<sub>5</sub>; bacterias <strong>metanogénicas</strong> producen <span class="hl-def">CH<sub>4</sub> + CO<sub>2</sub></span>.</p>
+        </div>
+        <p><strong>Pirólisis de la biomasa:</strong> produce gas (CO, CO<sub>2</sub>, H<sub>2</sub>, C<sub>n</sub>H<sub>m</sub>), líquido (metanol, ácido acético, fenol) y carbón vegetal, que a su vez puede gasificarse a gas de síntesis.</p>
+        <p><strong>Gasificación:</strong> convencional (→ gas de síntesis) o <strong>hidrogenante</strong> (→ gas de hidrocarburos, líquidos como fenoles/alicíclicos, y residuo sólido). <strong>Combustión:</strong> oxidación total a CO<sub>2</sub> y H<sub>2</sub>O con desprendimiento de energía.</p>
+
+        <h3>15.6.3. Cultivos Energéticos</h3>
+        <p>Cultivos de <span class="hl-def">rápido crecimiento</span> desarrollados específicamente para producir combustibles, en <strong>terrenos baldíos</strong> (sin competir con la alimentación). Se sitúan en riberas de ríos, lagos y zonas pantanosas, creando hábitat para fauna silvestre y mejorando la biodiversidad. Destaca el <strong>jacinto de agua</strong> (altísima productividad de biomasa, ~100 t/ha/año de materia seca) y algas microscópicas como <em>Botriococcus braunii</em>, que producen directamente hidrocarburos.</p>
+
+        <h3>15.6.4. Biocombustibles</h3>
+        <p>Los alcoholes de fermentación (remolacha, maíz, sorgo, caña de azúcar) y los aceites vegetales (soja, colza, girasol) son <span class="hl-def">biocombustibles</span>: los primeros (<strong>bioalcoholes</strong>) sustituyen a la gasolina; los segundos (<strong>biodiésel</strong>) sustituyen al diésel.</p>
+
+        <h4>15.6.4.1. Bioalcohol</h4>
+        <p>En Brasil, ~2 millones de vehículos usan etanol puro de caña de azúcar; en EE.UU., más de 8 millones usan mezcla etanol-gasolina. Henry Ford ya consideró el etanol de maíz (<em>gasohol</em>) para el modelo T (1908); una planta en Atkinson produjo 38.000 L/día en los años 30, cerrada en los 40 por el bajo precio del petróleo.</p>
+
+        <h4>15.6.4.2. Biodiésel</h4>
+        <p>Naturaleza de <span class="hl-def">éster</span>, obtenido de aceites de soja, colza, grasas animales/vegetales, o aceites usados de cocina (reciclado). Mediante <strong>transesterificación</strong>, los aceites/grasas se transforman en ésteres metílicos/etílicos de ácidos grasos, con <strong>glicerina</strong> como subproducto:</p>
+        <div class="math-box">
+            Aceite vegetal (triglicérido) + 3CH<sub>3</sub>OH → 3 Éster metílico + Glicerina<br>
+            <span style="font-size:0.85rem;">100 kg + 11 kg → 100 kg + 11 kg</span>
+        </div>
+        <p>Rudolf Diesel diseñó su motor a principios del s. XX usando <strong>aceite de cacahuete</strong> como combustible. La irrupción del diésel de petróleo (más barato) propició el abandono inicial del biodiésel.</p>
+        <div class="callout callout-success">
+            <div class="callout-title">🌱 Ventajas Medioambientales del Biodiésel</div>
+            <ul>
+                <li>No daña el medio ambiente; procede de materias primas <strong>renovables</strong>.</li>
+                <li>Prácticamente <strong>sin azufre</strong>; sin benceno ni aromáticos cancerígenos.</li>
+                <li><strong>Biodegradable</strong>: en caso de derrame no contamina suelos ni acuíferos.</li>
+                <li>Reduce emisiones de sólidos y gases; <strong>no es peligroso</strong> (punto de inflamación &gt;110 °C); no requiere almacenamiento especial.</li>
+            </ul>
+        </div>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Propiedad</th><th>Diésel</th><th>Biodiésel</th></tr></thead>
+                <tbody>
+                    <tr><td>Composición</td><td>C₁₀-C₂₁ HC</td><td>C₁₂-C₂₂ FAME</td></tr>
+                    <tr><td>Carbono % peso</td><td>87</td><td>77</td></tr>
+                    <tr><td>Hidrógeno % peso</td><td>13</td><td>12</td></tr>
+                    <tr><td>Oxígeno % peso</td><td>0</td><td>11</td></tr>
+                    <tr><td>Azufre % peso</td><td>0,05 máx.</td><td>0,0-0,0024</td></tr>
+                    <tr><td>Punto de inflamación (°C)</td><td>60-80</td><td>100-170</td></tr>
+                    <tr><td>Índice de cetano</td><td>35 a 15</td><td>15 a 10</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 15.1 (extracto). Propiedades comparativas biodiésel/diésel convencional.</p>
+        </div>
+        <p>Comparando emisiones de <strong>B100</strong> (100% biodiésel) y <strong>B50</strong> (50%-50% diésel) frente al diésel convencional, el biodiésel emite considerablemente menos <strong>CO<sub>2</sub>, hidrocarburos, partículas y NOx</strong>, y reduce sustancias tóxicas y mutagénicas.</p>
+        <p><strong>Inconveniente:</strong> coste de producción aproximadamente <span class="hl-red">el doble</span> que el diésel convencional. Se usa en transporte público, embarcaciones y donde los trabajadores están expuestos a gases de combustión diésel. También se investiga con aceites de cocina usados (planta piloto de 1.500 t/año).</p>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">🧪 Ejercicios de Autoevaluación Resueltos Paso a Paso</h2>
+
+        <!-- P1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 1: Destilación a Vacío o con Vapor de Agua</div>
+            <p><strong>Enunciado:</strong> ¿Por qué la destilación a vacío o en presencia de vapor de agua evita la descomposición térmica de los productos?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>La <strong>destilación a vacío</strong> trabaja a presión reducida (inferior a la atmosférica); en estas condiciones, una sustancia destila a <strong>menor temperatura</strong>, ya que alcanza antes la presión de vapor que iguala a la del equipo.</p>
+                <p>En la destilación con <strong>vapor de agua</strong>, al ser el agua insoluble con la fracción petrolífera, las <strong>tensiones de vapor</strong> de ambas se suman, alcanzando el conjunto la presión atmosférica a una <strong>temperatura inferior</strong> a la que necesitaría la fracción petrolífera por sí sola.</p>
+                <p>En ambos casos, el descenso de la temperatura de destilación <strong>favorece la estabilidad</strong> del producto, disminuyendo el riesgo de descomposición térmica.</p>
+            </div>
+        </div>
+
+        <!-- P2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 2: Ausencia de Olefinas en la Nafta</div>
+            <p><strong>Enunciado:</strong> ¿A qué es debido que en la composición de la nafta no existan olefinas?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Se debe a la <strong>gran reactividad</strong> que presentan las olefinas, por lo que se han transformado en <strong>parafinas</strong> o en otros compuestos funcionalizados durante la formación/procesado del crudo.</p>
+            </div>
+        </div>
+
+        <!-- EX 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Teorías sobre el Origen del Petróleo</div>
+            <p><strong>Enunciado:</strong> ¿Qué teorías justifican la formación del petróleo?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>La teoría más aceptada es la de <strong>Engler (1912)</strong>, de <span class="hl-def">origen orgánico</span>: los depósitos marinos de flora y fauna mezclados con sedimentos arenosos, bajo presión y por acción de bacterias anaerobias, experimentaron un lento proceso de descomposición que dio origen al petróleo. (También se mencionan históricamente las teorías de Berthelot, con el acetileno como precursor, y de Mendeléiev, a partir de carburos metálicos, hoy descartadas.)</p>
+            </div>
+        </div>
+
+        <!-- EX 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: Constituyentes y Estructura del Carbón</div>
+            <p><strong>Enunciado:</strong> ¿Cuáles son los principales constituyentes del carbón? Describa su estructura.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>El carbón está formado por <strong>agrupaciones aromáticas condensadas</strong> (fracción A) unidas por <strong>estructuras parafínicas</strong> (fracción B o bitumen), que forman la unión entre las agrupaciones aromáticas y las ramificaciones hidrocarbonadas. Contiene además heteroátomos (O, N, S) y grupos laterales de tipo alquilo, hidroxilo y carboxilo.</p>
+            </div>
+        </div>
+
+        <!-- EX 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Obtención de Gas de Síntesis</div>
+            <p><strong>Enunciado:</strong> Esquematice los procedimientos de obtención del gas de síntesis a partir de: carbón, reformado de gas natural, oxidación parcial del gas natural y biomasa.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p><strong>A partir del carbón</strong> (gasificación):</p>
+                <div class="math-box">C + H<sub>2</sub>O → CO + H<sub>2</sub></div>
+                <p><strong>Reformado con vapor del gas natural:</strong></p>
+                <div class="math-box">CH<sub>4</sub> + H<sub>2</sub>O → CO + 3H<sub>2</sub></div>
+                <p><strong>Oxidación parcial del gas natural:</strong></p>
+                <div class="math-box">CH<sub>4</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>O<sub>2</sub> → CO + 2H<sub>2</sub></div>
+                <p><strong>A partir de la biomasa:</strong> mediante <strong>pirólisis</strong> se obtiene carbón vegetal, que por posterior <strong>gasificación</strong> (proceso análogo al del carbón fósil) da lugar al gas de síntesis.</p>
+            </div>
+        </div>
+
+        <!-- EX 4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4: Función del Vapor de Agua en el Craqueo Térmico</div>
+            <p><strong>Enunciado:</strong> ¿Qué misión tiene el vapor de agua en el proceso de craqueo térmico?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>El vapor de agua tiene como misión <strong>rebajar la presión parcial</strong> de la mezcla de hidrocarburos, para <strong>facilitar la transformación a olefinas</strong>.</p>
+            </div>
+        </div>
+
+        <!-- EX 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5: Craqueo Catalítico vs. Craqueo Térmico para Gasolinas</div>
+            <p><strong>Enunciado:</strong> Para obtener gasolinas, ¿qué es más recomendable, aplicar el craqueo catalítico o el craqueo térmico?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Es más recomendable el <span class="hl-def">craqueo catalítico</span>, por favorecer la formación de <strong>parafinas ramificadas y aromáticos</strong>, componentes que confieren a la gasolina un <strong>mayor índice de octano</strong> que los productos obtenidos mediante craqueo térmico (mayoritariamente olefinas).</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

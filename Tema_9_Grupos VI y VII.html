@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 9: Elementos No Metálicos de los Grupos VII A y VI A - Resumen Completo</title>
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Banner Header */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0369a1 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            max-width: 850px;
+        }
+
+        .meta-info {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
+            color: #94a3b8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 1.55rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 22px 0 12px 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 16px 0 8px 0;
+            color: var(--primary-light);
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* Color Concepts & Highlights */
+        .hl-def {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-green {
+            background-color: #dcfce7;
+            color: #15803d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-red {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-amber {
+            background-color: #fef3c7;
+            color: #b45309;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-purple {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Vertical Fractions CSS */
+        .frac {
+            display: inline-flex;
+            flex-direction: column;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 0.88em;
+            line-height: 1.0;
+            padding: 0 3px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-weight: bold;
+        }
+
+        .frac .top {
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 1px;
+        }
+
+        .frac .bottom {
+            padding-top: 1px;
+        }
+
+        /* Math & Formulas Box */
+        .math-box {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 16px 24px;
+            border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8;
+            overflow-x: auto;
+        }
+
+        .math-box .var {
+            font-style: italic;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .math-inline {
+            font-family: 'Cambria', 'Georgia', serif;
+            font-style: italic;
+            font-weight: 600;
+            color: #0f172a;
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Callout Cards */
+        .callout {
+            border-left: 4px solid;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 18px 0;
+            background-color: #f8fafc;
+        }
+
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+        .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Tables */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 11px 14px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 12px 0 16px 24px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Badge Grid */
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .badge-card {
+            flex:1 1 300px;
+            max-width: 500px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            background: #ffffff;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Autoevaluación Solutions */
+        .exercise-card {
+            background-color: #fefce8;
+            border: 1px solid #fef08a;
+            border-left: 5px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 22px;
+        }
+
+        .exercise-title {
+            font-weight: 700;
+            color: #854d0e;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .solution-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        .solution-tag {
+            display: inline-block;
+            background-color: #dcfce7;
+            color: #166534;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        /* Visual Grids */
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .grid-box-1 {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .grid-box-2 {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        /* Diagram Box */
+        .diagram-box {
+            background: #f1f5f9;
+            border: 1px dashed #64748b;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7rem; }
+            .section-card { padding: 18px; }
+            .two-column-grid { grid-template-columns: 1fr; }
+            .badge-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 9: Elementos No Metálicos de los Grupos VII A y VI A</h1>
+        <p>Resumen exhaustivo, visual y ordenado de la unidad didáctica: Halógenos, Anfígenos, sus procesos industriales (Síntesis de Cloro, Ácido Clorhídrico, Ácido Sulfúrico), Química Ambiental y resolución completa de la Autoevaluación.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Mª José Caselles Pomares, Mariano Molero Meneses, et al.</span>
+            <span>📍 <strong>Unidad Didáctica:</strong> Tema 9</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Propiedades de Halógenos:</strong> Conocer características generales, fuentes, síntesis y aplicaciones en estado elemental de los halógenos.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>Industria del Cloro y HCl:</strong> Estudiar la electrólisis del NaCl (fundido y en disolución), aplicaciones de polímeros comerciales (PVC) y síntesis del HCl.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>Agentes Oxidantes del Cloro:</strong> Analizar óxidos, oxiácidos y oxisales del cloro como desinfectantes y agentes de blanqueo.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>Química del Oxígeno y Azufre:</strong> Estudiar la obtención industrial de O₂, reactividad del azufre, H₂S y la producción de Ácido Sulfúrico.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <strong>Impacto Ambiental y Control:</strong> Comprender el papel del ozono, la destrucción de la capa de ozono, emisiones de SOₓ y métodos de desulfuración.
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN INTRODUCTORIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">📝 Resumen General de la Unidad</h2>
+        <p>Este tema abarca el estudio de los elementos no metálicos del <span class="hl-def">Grupo VII A (Halógenos)</span> y del <span class="hl-def">Grupo VI A (Anfígenos)</span>, así como sus principales compuestos de proyección industrial.</p>
+        <p>Se estudian en profundidad las síntesis industriales de compuestos fundamentales como el <span class="hl-green">Cloro (Cl₂)</span>, el <span class="hl-green">Ácido Clorhídrico (HCl)</span> y de forma muy especial el <span class="hl-amber">Ácido Sulfúrico (H₂SO₄)</span>, considerado el compuesto reactivo más importante de toda la industria química. Finalmente, se analizan las implicaciones medioambientales derivadas de estos elementos (efecto de los CFCs en la capa de ozono, lluvia ácida por SOₓ) y las tecnologías empleadas para controlar sus emisiones a la atmósfera.</p>
+    </section>
+
+    <!-- 9.1 CARACTERÍSTICAS GENERALES DE LOS HALÓGENOS -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">9.1. Características Generales de los Halógenos</h2>
+        <p>Los halógenos (<span class="hl-def">Flúor, Cloro, Bromo, Yodo y Astato</span>) ocupan el Grupo VII A del Sistema Periódico. Todos son elementos electronegativos y extremadamente reactivos, por lo que <strong>nunca se encuentran libres en la naturaleza</strong>. El astato es radiactivo y carece de aplicaciones industriales notables.</p>
+        
+        <div class="callout callout-info">
+            <div class="callout-title">⚡ Propiedades Clave de Reactividad:</div>
+            <ul>
+                <li><strong>Flúor (F):</strong> Es el elemento más electronegativo conocido. Puede oxidar incluso al oxígeno. Actúa <em>exclusivamente</em> con número de oxidación <strong>-1</strong> en todos sus compuestos.</li>
+                <li><strong>Otros Halógenos (Cl, Br, I):</strong> Pueden actuar con estado de oxidación -1 y además con estados de oxidación positivos: <span class="hl-purple">+1, +3, +4, +5 y +7</span>.</li>
+                <li><strong>Estado Elemental:</strong> Formados por moléculas diatómicas covalentes (<span class="math-inline">F<sub>2</sub>, Cl<sub>2</sub>, Br<sub>2</sub>, I<sub>2</sub></span>).</li>
+                <li><strong>Poder Oxidante:</strong> Presentan potenciales normales de reducción positivos que disminuyen al descender en el grupo: el flúor es el oxidante más enérgico, mientras que el yodo es un oxidante débil.</li>
+            </ul>
+        </div>
+
+        <h3>Tabla 9.1. Propiedades Periódicas de los Halógenos</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Flúor (F)</th>
+                        <th>Cloro (Cl)</th>
+                        <th>Bromo (Br)</th>
+                        <th>Yodo (I)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Número atómico (Z)</strong></td><td>9</td><td>17</td><td>35</td><td>53</td></tr>
+                    <tr><td><strong>Configuración (capa valencia)</strong></td><td>2s² 2p⁵</td><td>3s² 3p⁵</td><td>4s² 4p⁵</td><td>5s² 5p⁵</td></tr>
+                    <tr><td><strong>Radio covalente (nm)</strong></td><td>0,072</td><td>0,099</td><td>0,114</td><td>0,133</td></tr>
+                    <tr><td><strong>Radio iónico X⁻¹ (nm)</strong></td><td>0,133</td><td>0,181</td><td>0,196</td><td>0,219</td></tr>
+                    <tr><td><strong>Potencial de ionización (kJ/mol)</strong></td><td>1.681</td><td>1.251</td><td>1.140</td><td>1.008</td></tr>
+                    <tr><td><strong>Afinidad electrónica (kJ/mol)</strong></td><td>332</td><td>349</td><td>323</td><td>295</td></tr>
+                    <tr><td><strong>Energía de enlace X-X (kJ/mol)</strong></td><td>158</td><td>243</td><td>192</td><td>151</td></tr>
+                    <tr><td><strong>Electronegatividad (Paulings)</strong></td><td>4,0</td><td>3,0</td><td>2,8</td><td>2,5</td></tr>
+                    <tr><td><strong>Punto de fusión (°C)</strong></td><td>-227</td><td>-102</td><td>-7</td><td>114</td></tr>
+                    <tr><td><strong>Punto de ebullición (°C)</strong></td><td>-187</td><td>-35</td><td>59</td><td>183</td></tr>
+                    <tr><td><strong>Densidad en el P.f. (g/mL)</strong></td><td>1,108</td><td>1,557</td><td>3,190</td><td>4,930</td></tr>
+                    <tr><td><strong>Potencial de reducción (E°, V)</strong></td><td>+2,87</td><td>+1,36</td><td>+1,08</td><td>+0,54</td></tr>
+                    <tr><td><strong>Color elemental</strong></td><td>Amarillo débil</td><td>Amarillo-verde</td><td>Pardo-rojo</td><td>Violeta</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 9.2 FUENTES, PREPARACIÓN Y PROPIEDADES -->
+    <section class="section-card">
+        <h2 class="section-title t-green">9.2. Fuentes, Preparación y Propiedades de los Halógenos</h2>
+        
+        <h3>1. Flúor</h3>
+        <p>Se encuentra en minerales como la <strong>Fluorita</strong> (<span class="math-inline">CaF<sub>2</sub></span>), la <strong>Criolita</strong> (<span class="math-inline">Na<sub>3</sub>AlF<sub>6</sub></span>) y el <strong>Fluorapatito</strong> (<span class="math-inline">Ca<sub>5</sub>(PO<sub>4</sub>)<sub>3</sub>F</span>), además de disuelto en agua de mar.</p>
+        <div class="callout callout-danger">
+            <div class="callout-title">⚠️ Síntesis Electrolítica del Flúor:</div>
+            <p>Al ser el oxidante más fuerte que existe, <strong>no se puede obtener por métodos químicos</strong> (oxida al agua dando O₂). Se obtiene por electrólisis de HF líquido disuelto en una mezcla fundida de KF y KHF₂ (para aumentar la conductividad) a ~95 °C en cuba de acero con ánodo de carbón y cátodo de acero inoxidable en condiciones anhidras.</p>
+        </div>
+
+        <div class="math-box">
+            <strong>Cátodo (-):</strong> 2H⁺ + 2e⁻ → H<sub>2(g)</sub><br>
+            <strong>Ánodo (+):</strong> 2F⁻ - 2e⁻ → F<sub>2(g)</sub><br>
+            <strong>Reacción Global:</strong> 2HF<sub>(l)</sub> → H<sub>2(g)</sub> + F<sub>2(g)</sub>
+        </div>
+
+        <p><strong>Obtención de Precursores:</strong></p>
+        <div class="math-box">
+            CaF<sub>2(s)</sub> + H<sub>2</sub>SO<sub>4(l)</sub> → 2HF<sub>(l)</sub> + CaSO<sub>4(s)</sub><br>
+            4HF<sub>(l)</sub> + 3KOH → KHF<sub>2(s)</sub> + K<sub>2</sub>F<sub>2(s)</sub> + 3H<sub>2</sub>O<sub>(l)</sub>
+        </div>
+
+        <p><strong>Aplicaciones del Flúor:</strong> Fluidos de refrigeración, propelentes, Politetrafluoroetileno (<strong>Teflón</strong> - polímero de alta resistencia térmica y química), conservantes de madera (fungicidas) e industria nuclear para el enriquecimiento del isótopo fisionable U-235 mediante conversión a hexafluoruro de uranio (<span class="math-inline">UF<sub>6</sub></span>) gaseoso y difusión gaseosa (ley de Graham):</p>
+        <div class="math-box">
+            UO<sub>2(s)</sub> + 4HF<sub>(l)</sub> → UF<sub>4(s)</sub> + 2H<sub>2</sub>O<sub>(l)</sub><br>
+            UF<sub>4(s)</sub> + F<sub>2(g)</sub> → UF<sub>6(g)</sub>
+        </div>
+
+        <h3>2. Bromo y Yodo</h3>
+        <p><strong>Bromo:</strong> Presente en el agua de mar e impurezas de cloruros como ión bromuro (<span class="math-inline">Br⁻</span>) en sales (NaBr, KBr, MgBr₂, CaBr₂). Se extrae desplazando el bromuro con cloro gaseoso:</p>
+        <div class="math-box">
+            2NaBr<sub>(s)</sub> + Cl<sub>2(g)</sub> → 2NaCl<sub>(s)</sub> + Br<sub>2(l)</sub>
+        </div>
+        <p><em>Proceso Industrial del Bromo:</em> Se acidula el agua de mar con H₂SO₄ (0,12 kg/m³), se desplaza el Br⁻ con Cl₂, el Bromo se absorbe en solución de Na₂CO₃ y finalmente se acidula y calienta para destilar y condensar Br₂ líquido.</p>
+        <p><em>Aplicaciones:</em> Antidetonantes de gasolina (alquilados de plomo - en retroceso), fumigante agrícola (CH₃Br), emulsiones fotográficas (AgBr) y reactivo de síntesis orgánica.</p>
+
+        <p><strong>Yodo:</strong> Se extrae por sublimación de algas/moluscos o del guano/nitrato de Chile (<span class="math-inline">NaNO<sub>3</sub></span>), donde se encuentra como yodato sódico (<span class="math-inline">NaIO<sub>3</sub></span>). Se trata con bisulfito sódico:</p>
+        <div class="math-box">
+            2NaIO<sub>3(ac)</sub> + 5NaHSO<sub>3(s)</sub> → 3NaHSO<sub>4(ac)</sub> + 2Na<sub>2</sub>SO<sub>4(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub> + I<sub>2(g)</sub>
+        </div>
+        <p><em>Aplicaciones:</em> Componente de la hormona Tiroxina, antiséptico (tintura de yodo en alcohol), fotografía (AgI) y siembra de nubes mediante acetona/AgI para evitar granizo.</p>
+    </section>
+
+    <!-- 9.3 SÍNTESIS INDUSTRIAL DEL CLORO -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">9.3. Síntesis Industrial del Cloro</h2>
+        <p>El cloro se encuentra en la Halita (<span class="math-inline">NaCl</span>), Silvita (<span class="math-inline">NaCl·KCl</span>) y en el agua del mar.</p>
+        <p><strong>Método Antiguo (Deacon, 1868):</strong> Oxidación catalítica (<span class="math-inline">CuCl<sub>2</sub>, FeCl<sub>3</sub>, NO</span>) del cloruro de hidrógeno con oxígeno:</p>
+        <div class="math-box">
+            2HCl<sub>(g)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span> O<sub>2(g)</sub> ⇄ Cl<sub>2(g)</sub> + H<sub>2</sub>O<sub>(g)</sub>
+        </div>
+
+        <h3>9.3.1. Electrólisis del Cloruro Sódico Fundido (Célula Downs)</h3>
+        <p>En ánodo de carbón y cátodo de hierro. El Sodio líquido flota y se sangra por la parte superior.</p>
+        <div class="math-box">
+            <strong>Cátodo (-):</strong> Na⁺ + 1e⁻ → Na<sub>(l)</sub><br>
+            <strong>Ánodo (+):</strong> Cl⁻ - 1e⁻ → <span class="frac"><span class="top">1</span><span class="bottom">2</span></span> Cl<sub>2(g)</sub><br>
+            <strong>Global:</strong> Na⁺Cl⁻<sub>(l)</sub> → Na<sub>(l)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span> Cl<sub>2(g)</sub>
+        </div>
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ Inconvenientes debido al elevado Punto de Fusión (806 °C):</div>
+            <ul>
+                <li>Alto coste energético y elevadísima corrosión de electrodos y cuba.</li>
+                <li>Pérdidas de Sodio por evaporación (P.eb. 887 °C) y rendimiento bajo (&lt;75%).</li>
+                <li><em>Soluciones:</em> Añadir fundente <span class="math-inline">Na<sub>2</sub>CO<sub>3</sub></span> (rebaja Pf a 600 °C) o sustituir por NaOH (Pf 318 °C, obtiene O₂ en ánodo).</li>
+            </ul>
+        </div>
+
+        <h3>9.3.2. Electrólisis del Cloruro Sódico en Disolución (Método del Cloro-Sosa)</h3>
+        <p>Es el método industrial dominante. Reacción global común:</p>
+        <div class="math-box">
+            Na⁺Cl⁻<sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub> → Na⁺OH⁻<sub>(ac)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span> Cl<sub>2(g)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span> H<sub>2(g)</sub>
+        </div>
+        <p>Es vital separar los productos, de lo contrario reaccionan formando hipoclorito sódico: <span class="math-inline">2NaOH<sub>(ac)</sub> + Cl<sub>2(g)</sub> → NaOCl<sub>(ac)</sub> + NaCl<sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub></span>.</p>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <strong>1. Cátodo de Mercurio:</strong>
+                <p>Ánodo de C o Ti/Pt, cátodo de Hg móvil. Se forma amalgama Na/Hg (0.2% Na). La amalgama reacciona con agua separada para dar NaOH puro e H₂.</p>
+                <p><em>Tensión:</em> ~4,5 V (Teórico 3,072 V). Presenta problemas ambientales por Hg.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>2. Células de Diafragma:</strong>
+                <p>Usa diafragma de amianto sobre lana de acero (cátodo). Tensión más baja (3,45 V). Produce NaOH diluido y contaminado con NaCl por difusión de cloro.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>3. Células de Membrana:</strong>
+                <p>Membrana sintética de teflón con resina sulfónica selectiva de cationes Na⁺. Evita la contaminación del NaOH y elimina el uso de Hg y amianto.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9.4 EL CLORO EN LA INDUSTRIA: APLICACIONES -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">9.4. El Cloro en la Industria: Aplicaciones e Impacto Ambiental</h2>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <h4>📊 Distribución del Consumo de Cloro</h4>
+                <ul>
+                    <li><strong>70% Síntesis Orgánica:</strong> Dicloruro de etileno → Cloruro de vinilo → <strong>PVC</strong>, disolventes clorados, pesticidas organoclorados.</li>
+                    <li><strong>25% Industria Papelera:</strong> Blanqueo de pasta de papel.</li>
+                    <li><strong>5% Potabilización:</strong> Tratamiento de agua de consumo.</li>
+                    <li><strong>Otros:</strong> Ácido clorhídrico, hipocloritos, cloratos.</li>
+                </ul>
+            </div>
+            <div class="grid-box-2">
+                <h4>🌍 Impacto Medioambiental Nocivo</h4>
+                <ul>
+                    <li><strong>CFCs (Clorofluorocarbonados):</strong> Ascienden a la estratosfera liberando radicales libres Cl· que destruyen catalíticamente la capa de ozono (Protocolo de Montreal 1988).</li>
+                    <li><strong>Toxicidad Persistente:</strong> Tricloroetano, pesticidas organoclorados (DDT, hexaclorobenceno), PCBs y PCTs (aislantes eléctricos) acumulativos en seres vivos.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9.5 HALOGENUROS DE HIDRÓGENO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">9.5. Halogenuros de Hidrógeno: Síntesis y Aplicaciones</h2>
+        <p>Gases de olor irritante de fórmula general <span class="hl-def">HX</span>. En agua forman ácidos hidrácidos:</p>
+        <div class="math-box">
+            HX<sub>(g)</sub> + H<sub>2</sub>O<sub>(l)</sub> → H<sub>3</sub>O⁺<sub>(ac)</sub> + X⁻<sub>(ac)</sub>
+        </div>
+        <p><strong>Orden creciente de acidez en disolución acuosa:</strong></p>
+        <div class="diagram-box" style="color: var(--accent-red);">
+            HF (H₂F₂) &lt; HCl &lt; HBr &lt; HI
+        </div>
+        <p>El <strong>HF</strong> es un ácido débil debido al fuerte enlace H-F; el resto se comportan como ácidos fuertes.</p>
+
+        <h3>Tabla 9.2. Propiedades de los Halogenuros de Hidrógeno</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>HF</th>
+                        <th>HCl</th>
+                        <th>HBr</th>
+                        <th>HI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Punto de fusión (°C)</strong></td><td>-83,1</td><td>-114,8</td><td>-86,9</td><td>-50,7</td></tr>
+                    <tr><td><strong>Punto de ebullición (°C)</strong></td><td>19,5</td><td>-84,9</td><td>-66,8</td><td>-35,4</td></tr>
+                    <tr><td><strong>Energía de enlace H-X (kJ/mol)</strong></td><td>569</td><td>431</td><td>368</td><td>297</td></tr>
+                    <tr><td><strong>Solubilidad en agua (mL/mL a 0 °C)</strong></td><td>264</td><td>506</td><td>610</td><td>425</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p><em>Aplicación del HF:</em> Grabado de vidrio mediante ataque a silicatos: <span class="math-inline">CaSiO<sub>3(s)</sub> + 6HF<sub>(ac)</sub> → CaF<sub>2(s)</sub> + SiF<sub>4(g)</sub> + 3H<sub>2</sub>O<sub>(l)</sub></span>.</p>
+    </section>
+
+    <!-- 9.6 ÁCIDO CLORHÍDRICO -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">9.6. Ácido Clorhídrico: Síntesis y Aplicaciones Industriales</h2>
+        <p>Es el segundo ácido de mayor volumen industrial tras el sulfúrico. Se sintetiza tratando cloruro sódico con ácido sulfúrico concentrado en retortas de hierro a alta temperatura en dos etapas:</p>
+
+        <div class="math-box">
+            <strong>1.ª etapa (T moderada):</strong> NaCl<sub>(s)</sub> + H<sub>2</sub>SO<sub>4(ac)</sub> → HCl<sub>(g)</sub> + NaHSO<sub>4(s)</sub><br>
+            <strong>2.ª etapa (Al rojo):</strong> NaHSO<sub>4(s)</sub> + NaCl<sub>(s)</sub> → HCl<sub>(g)</sub> + Na<sub>2</sub>SO<sub>4(s)</sub><br>
+            <strong>Reacción Global:</strong> 2NaCl<sub>(s)</sub> + H<sub>2</sub>SO<sub>4(ac)</sub> → 2HCl<sub>(g)</sub> + Na<sub>2</sub>SO<sub>4(s)</sub>
+        </div>
+
+        <p><strong>Aplicaciones Industriales del HCl:</strong> Decapado de metales, neutralización de efluentes, recuperación de aceites minerales, síntesis de colorantes, obtención de PVC y neopreno mediante procesos de hidrocloración y oxihidrocloración.</p>
+    </section>
+
+    <!-- 9.7 ÓXIDOS, OXIÁCIDOS Y OXISALES DE LOS HALÓGENOS -->
+    <section class="section-card">
+        <h2 class="section-title t-red">9.7. Óxidos, Oxiácidos y Oxisales de Halógenos</h2>
+        
+        <h3>Tabla 9.3. Compuestos Oxigenados de los Halógenos</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estado Ox.</th>
+                        <th>Flúor</th>
+                        <th>Cloro</th>
+                        <th>Bromo</th>
+                        <th>Yodo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Óxidos</strong></td><td>OF₂ (-1)</td><td>Cl₂O (+1)<br>ClO₂ (+4)<br>Cl₂O₇ (+7)</td><td>Br₂O (+1)<br>BrO₂ (+4)</td><td>I₂O₅ (+5)</td></tr>
+                    <tr><td><strong>Oxiácidos (+1)</strong></td><td>-</td><td>HOCl (Hipocloroso)</td><td>HOBr</td><td>HOI</td></tr>
+                    <tr><td><strong>Oxiácidos (+3)</strong></td><td>-</td><td>HClO₂ (Cloroso)</td><td>-</td><td>-</td></tr>
+                    <tr><td><strong>Oxiácidos (+5)</strong></td><td>-</td><td>HClO₃ (Clórico)</td><td>HBrO₃</td><td>HIO₃</td></tr>
+                    <tr><td><strong>Oxiácidos (+7)</strong></td><td>-</td><td>HClO₄ (Perclórico)</td><td>HBrO₄</td><td>H₅IO₆ (Periódico)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-info">
+            <div class="callout-title">💡 Destacados Industriales:</div>
+            <ul>
+                <li><strong>Dióxido de Cloro (ClO₂):</strong> Se obtiene reduciendo chlorato sódico con SO₂: <br>
+                <span class="math-inline">2NaClO<sub>3(s)</sub> + SO<sub>2(g)</sub> + H<sub>2</sub>SO<sub>4(ac)</sub> → 2ClO<sub>2(g)</sub> + 2NaHSO<sub>4(ac)</sub></span>.<br> Potente agente desinfectante y blanqueante acuoso. Explosivo en estado puro (se diluye con N₂ o CO₂).</li>
+                <li><strong>Hipocloritos (NaOCl, Ca(ClO)₂):</strong> Obtenidos por reacción del Cl₂ con álcalis. El <em>"Cloruro de cal" o "Polvos de gas"</em> se obtiene pasando Cl₂ sobre cal apagada [<span class="math-inline">Ca(OH)₂</span>].</li>
+                <li><strong>Cloratos (KClO₃, NaClO₃):</strong> Agentes oxidantes para explosivos y desproporción térmica para producción de laboratorio de O₂: <span class="math-inline">2KClO<sub>3(s)</sub> → 2KCl<sub>(s)</sub> + 3O<sub>2(g)</sub></span>.</li>
+                <li><strong>Ácido Perclórico (HClO₄):</strong> Ácido muy fuerte y fuerte oxidante en caliente. Su sal <span class="math-inline">NH<sub>4</sub>ClO<sub>4</sub></span> se utiliza en propulsores y explosivos.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 9.8 CARACTERÍSTICAS GENERALES DEL GRUPO VI A -->
+    <section class="section-card">
+        <h2 class="section-title t-green">9.8. Características Generales de los Elementos del Grupo VI A</h2>
+        <p>Los <span class="hl-def">Anfígenos</span> (Oxígeno, Azufre, Selenio, Teluro y Polonio) muestran marcadas diferencias entre el Oxígeno y el resto de la familia debido a la elevada electronegatividad del oxígeno y la <strong>disponibilidad de orbitales d de baja energía</strong> en los elementos pesados (que les permite expandir el octeto hasta índice de coordinación 6 / 12 electrones).</p>
+
+        <h3>Tabla 9.4. Propiedades de los Elementos del Grupo VI A</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Oxígeno (O)</th>
+                        <th>Azufre (S)</th>
+                        <th>Selenio (Se)</th>
+                        <th>Teluro (Te)</th>
+                        <th>Polonio (Po)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Número atómico (Z)</strong></td><td>8</td><td>16</td><td>34</td><td>52</td><td>84</td></tr>
+                    <tr><td><strong>Configuración de valencia</strong></td><td>2s² 2p⁴</td><td>3s² 3p⁴</td><td>4s² 4p⁴</td><td>5s² 5p⁴</td><td>6s² 6p⁴</td></tr>
+                    <tr><td><strong>Radio covalente (nm)</strong></td><td>0,074</td><td>0,127</td><td>0,140</td><td>0,160</td><td>0,176</td></tr>
+                    <tr><td><strong>Radio iónico X⁻² (nm)</strong></td><td>0,140</td><td>0,180</td><td>0,198</td><td>0,221</td><td>-</td></tr>
+                    <tr><td><strong>Potencial ionización (kJ/mol)</strong></td><td>1.313</td><td>999</td><td>940</td><td>869</td><td>-</td></tr>
+                    <tr><td><strong>Electronegatividad</strong></td><td>3,5</td><td>2,5</td><td>2,5</td><td>2,1</td><td>2,0</td></tr>
+                    <tr><td><strong>Estados de oxidación</strong></td><td>-2, -1 (+2 c/F)</td><td>-2, +2, +4, +6</td><td>-2, +4, +6</td><td>-2, +4, +6</td><td>+2, +4</td></tr>
+                    <tr><td><strong>Punto de fusión (°C)</strong></td><td>-219</td><td>119</td><td>450</td><td>450</td><td>254</td></tr>
+                    <tr><td><strong>Punto de ebullición (°C)</strong></td><td>-183</td><td>445</td><td>1.390</td><td>1.390</td><td>-</td></tr>
+                    <tr><td><strong>Color elemental</strong></td><td>Incoloro</td><td>Amarillo</td><td>Rojo</td><td>Rojo-gris</td><td>Gris</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 9.9 EL OXÍGENO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">9.9. El Oxígeno: Métodos de Obtención y Aplicaciones</h2>
+        <p>Elemento más abundante de la corteza terrestre (50% en masa) y 21% en volumen de la atmósfera (<span class="math-inline">O<sub>2</sub></span>). La molécula <span class="math-inline">O<sub>2</sub></span> es <strong>paramagnética</strong> con dos electrones desapareados.</p>
+
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <h4>🔬 Obtención en Laboratorio</h4>
+                <ul>
+                    <li><em>Descomposición Térmica:</em><br>
+                    <span class="math-inline">2HgO<sub>(s)</sub> → 2Hg<sub>(g)</sub> + O<sub>2(g)</sub></span><br>
+                    <span class="math-inline">2KClO<sub>3(s)</sub> → 2KCl<sub>(s)</sub> + 3O<sub>2(g)</sub></span></li>
+                    <li><em>Descomposición de Peróxidos:</em><br>
+                    <span class="math-inline">2H<sub>2</sub>O<sub>2(l)</sub> → 2H<sub>2</sub>O<sub>(l)</sub> + O<sub>2(g)</sub></span></li>
+                </ul>
+            </div>
+            <div class="grid-box-2">
+                <h4>🏭 Obtención Industrial</h4>
+                <ul>
+                    <li><strong>Destilación Fraccionada de Aire Líquido:</strong> Basada en la diferencia de puntos de ebullición entre N₂ (-196 °C) y O₂ (-183 °C). El O₂ menos volátil se extrae por la base de la columna.</li>
+                    <li><strong>Electrólisis del Agua.</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <p><strong>Aplicaciones Principales:</strong> Comburente en altos hornos siderúrgicos (acero), soplete oxiacetilénico, gasificación de carbón, craqueo de petróleo, propulsión de cohetes y soporte médico respiratorio.</p>
+    </section>
+
+    <!-- 9.10 OZONO Y MEDIOAMBIENTE -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">9.10. Ozono y Medio Ambiente</h2>
+        <p>El Ozono (<span class="hl-purple">O₃</span>) es una variedad alotrópica inestable del oxígeno ($\Delta G^\circ = +326,8 \text{ kJ/mol}$):</p>
+        <div class="math-box">
+            3O<sub>2(g)</sub> ⇄ 2O<sub>3(g)</sub>
+        </div>
+
+        <div class="callout callout-purple">
+            <div class="callout-title">🛡️ Ozono Estratosférico vs ☣️ Ozono Troposférico:</div>
+            <ul>
+                <li><strong>Ozono Estratosférico (Capa de Ozono ~25 km):</strong> Beneficioso. Absorbe radiación ultravioleta perjudicial (UV de corta onda) del Sol mediante reacciones fotoquímicas: <br>
+                <span class="math-inline">O<sub>2</sub> + hν → O + O</span> &nbsp;y&nbsp; <span class="math-inline">O + O<sub>2</sub> + M → O<sub>3</sub> + M</span>.</li>
+                <li><strong>Destrucción del Ozono Fotorreactivo:</strong> Alterado por emisiones de aviones supersónicos (NOₓ) y CFCs (Freones que liberan radicales Cl·):<br>
+                <span class="math-inline">Cl + O<sub>3</sub> → ClO + O<sub>2</sub></span> &nbsp;;&nbsp; <span class="math-inline">ClO + O → Cl + O<sub>2</sub></span> (Ciclo catalítico destructivo en cadena).</li>
+                <li><strong>Ozono Troposférico (Baja atmósfera):</strong> Contaminante nocivo, ataca dobles enlaces orgánicos y tejidos vivos, formando el <em>Smog fotoquímico</em>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 9.11 EL AZUFRE -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">9.11. El Azufre: Estado Natural, Preparación y Aplicaciones</h2>
+        <p>Se encuentra en estado nativo (<span class="math-inline">S<sub>8</sub></span>), sulfuros metálicos (Galena PbS, Pirita FeS₂, Blenda ZnS, Cinabrio HgS) y sulfatos (Yeso, Barita). Más del 50% de la producción mundial se extrae como subproducto del petróleo por oxidación catalítica del H₂S:</p>
+        <div class="math-box">
+            8H<sub>2</sub>S<sub>(g)</sub> + 4O<sub>2(g)</sub> <span class="frac"><span class="top">450 °C</span><span class="bottom">→</span></span> S<sub>8(s)</sub> + 8H<sub>2</sub>O<sub>(g)</sub>
+        </div>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">🏗️ Proceso Frasch de Extracción del Azufre Subterráneo:</div>
+            <p>Inyección de 3 tubos concéntricos: por el exterior entra vapor de agua sobrecalentado a 170 °C que funde el azufre; por el tubo central se inyecta aire a presión que impulsa al azufre líquido mezclado con agua a subir por el tubo intermedio. Se obtiene azufre con un 95% de pureza.</p>
+        </div>
+        <p><em>Aplicaciones del Azufre:</em> >90% dedicado a la fabricación de Ácido Sulfúrico, vulcanización del caucho, pólvora negra y fungicidas agrícolas.</p>
+    </section>
+
+    <!-- 9.12 ÁCIDO SULFHÍDRICO Y SULFUROS METÁLICOS -->
+    <section class="section-card">
+        <h2 class="section-title t-red">9.12. El Ácido Sulfhídrico y Sulfuros Metálicos</h2>
+        <p>El <span class="hl-red">H₂S</span> es un gas extremadamente tóxico y de olor fétido que adormece el sentido del olfato. Es un ácido diprótico débil en agua:</p>
+        <div class="math-box">
+            H<sub>2</sub>S<sub>(g)</sub> + H<sub>2</sub>O<sub>(l)</sub> ⇄ HS⁻<sub>(ac)</sub> + H<sub>3</sub>O⁺<sub>(ac)</sub> &nbsp;&nbsp;&nbsp;&nbsp; (K₁ = 9,1 · 10⁻⁸)<br>
+            HS⁻<sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub> ⇄ S²⁻<sub>(ac)</sub> + H<sub>3</sub>O⁺<sub>(ac)</sub> &nbsp;&nbsp;&nbsp;&nbsp; (K₂ = 1,2 · 10⁻¹³)
+        </div>
+        <p>Los sulfuros metálicos son la mena primaria de extracción de metales (Fe, Zn, Pb, Hg, Cu, Ni). El sulfuro sódico (<span class="math-inline">Na<sub>2</sub>S</span>) se emplea en la digestión alcalina de lignina para la obtención de celulosa (método Kraft).</p>
+    </section>
+
+    <!-- 9.13 ÓXIDOS Y OXIÁCIDOS DE AZUFRE -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">9.13. Óxidos y Oxiácidos de Azufre</h2>
+        <p>El <strong>Dióxido de Azufre (SO₂)</strong> es un gas incoloro, asfixiante y corrosivo obtenido por combustión de azufre o tostación de sulfuros:</p>
+        <div class="math-box">
+            S<sub>x(s)</sub> + xO<sub>2(g)</sub> → xSO<sub>2(g)</sub> &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; ZnS + <span class="frac"><span class="top">3</span><span class="bottom">2</span></span> O<sub>2(g)</sub> → SO<sub>2(g)</sub> + ZnO<sub>(s)</sub>
+        </div>
+        <p>Disuelto en agua da <strong>Ácido Sulfuroso (H₂SO₃)</strong> (ácido débil diprótico, reductor/oxidante usado como blanqueante y conservante alimentario). La oxidación ulterior da <strong>Trióxido de Azufre (SO₃)</strong>, materia prima directa del H₂SO₄ y reactivo de sulfonación para detergentes aniónicos.</p>
+    </section>
+
+    <!-- 9.14 ÁCIDO SULFÚRICO: SÍNTESIS INDUSTRIAL -->
+    <section class="section-card">
+        <h2 class="section-title t-green">9.14. Ácido Sulfúrico: Síntesis Industrial</h2>
+        <p>Es el compuesto químico de mayor volumen de producción industrial del mundo. La reacción central de síntesis es la oxidación del SO₂ a SO₃, seguida de la hidratación
+del trióxido de azufre para dar el ácido:</p>
+        <div class="math-box">
+            SO<sub>2(g)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span> O<sub>2(g)</sub> <span class="frac"><span class="top">Catalizador</span><span class="bottom">$\rightleftarrows$</span></span> SO<sub>3(g)</sub> &nbsp;&nbsp;&nbsp;&nbsp; ($\Delta G^\circ = -68,68 \text{ kJ/mol}$)
+        </div>
+
+        <p><strong>Tres Etapas Fundamentales de Síntesis:</strong></p>
+        <ol>
+            <li><strong>Preparación y Depuración:</strong> Eliminación de venenos del catalizador (polvo, As₂O₃, humedad).</li>
+            <li><strong>Oxidación Catalítica:</strong> Aumentando presión y temperatura moderada (450–600 °C).</li>
+            <li><strong>Absorción:</strong> Absorción del SO₃ sobre H₂SO₄ concentrado.</li>
+        </ol>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <strong>1. Método de las Cámaras de Plomo (Histórico):</strong>
+                <p>Usa catalizador homogéneo de óxidos de nitrógeno (NO, NO₂). Ocurre en cámaras recubiertas de plomo. Rinde un ácido impuro de concentración menor al 80% (usado en abonos).</p>
+                <p><em>Intermedio clave:</em> Ácido Nitrosilsulfúrico [<span class="math-inline">(NO<sub>2</sub>)(OH)SO<sub>2</sub></span>].</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>2. Método de Contacto (Moderno):</strong>
+                <p>Usa catalizador heterogéneo de <strong>Pentóxido de Vanadio (V₂O₅)</strong> soportado en sílice a 450–600 °C.</p>
+                <p>El SO₃ formado se absorbe sobre H₂SO₄ concentrado formando <strong>Óleum (H₂S₂O₇ - Ácido sulfúrico fumante)</strong> que luego se diluye con agua obteniendo H₂SO₄ al 98% o superior de gran pureza.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9.15 PROPIEDADES Y APLICACIONES DEL H2SO4 -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">9.15. Propiedades y Aplicaciones del Ácido Sulfúrico</h2>
+        <p>Líquido viscoso denso (1,85 g/mL), Pf 10,35 °C. Su disolución en agua es altamente exotérmica (<em>¡Añadir siempre el ácido sobre el agua lenta y agitando, nunca al revés!</em>).</p>
+
+        <div class="callout callout-info">
+            <div class="callout-title">⚡ 4 Propiedades Químicas Fundamentales:</div>
+            <ul>
+                <li><strong>1. Propiedades Ácidas:</strong> Ácido diprótico fuerte ($K_1 \gg 0, K_2 = 1,2 \cdot 10^{-2}$). Desplaza ácidos más volátiles de sus sales y produce fertilizantes fosfatados solubles (superfosfatos): <br>
+                <span class="math-inline">Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2(s)</sub> + 2H<sub>2</sub>SO<sub>4(ac)</sub> → Ca(H<sub>2</sub>PO<sub>4</sub>)<sub>2</sub> + 2CaSO<sub>4(s)</sub></span>.</li>
+                <li><strong>2. Propiedades Oxidantes:</strong> En caliente y concentrado oxida a metales por debajo del hidrógeno en la serie electroquímica (ej. Cobre):<br>
+                <span class="math-inline">Cu<sub>(s)</sub> + 2H<sub>2</sub>SO<sub>4(ac)</sub> → SO<sub>2(g)</sub> + CuSO<sub>4(ac)</sub> + 2H<sub>2</sub>O<sub>(l)</sub></span>.</li>
+                <li><strong>3. Propiedades Sulfonantes:</strong> Introduce grupos sulfónicos en compuestos aromáticos para fabricar detergentes (ej. p-nonil-bencenosulfonato sódico) y explosivos.</li>
+                <li><strong>4. Propiedades Deshidratantes:</strong> Ávida afinidad por el agua. Carboniza carbohidratos, papel y tejidos vivos de forma destructiva. Utilizado para deshidratar alcoholes a olefinas.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 9.16 CONTAMINACIÓN ATMOSFÉRICA POR SOX Y CONTROL -->
+    <section class="section-card">
+        <h2 class="section-title t-red">9.16. Contaminación Atmosférica por Óxidos de Azufre y Métodos de Control</h2>
+        <p>La combustión del azufre presente en carbón y petróleo genera SO₂, el cual se oxida en la atmósfera a SO₃ y reacciona con agua produciendo <strong>Lluvia Ácida (H₂SO₄)</strong> con pH inferior a 1,5, degradando construcciones de piedra caliza/mármol (<span class="math-inline">CaCO<sub>3</sub></span>) y acidificando suelos y acuíferos.</p>
+
+        <h3>Métodos Tecnológicos de Prevención y Control:</h3>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>a) Desulfuración del Combustible:</strong>
+                <p>Lavado de carbón con NaOH a 300 °C convirtiendo azufre en H₂S y luego en S elemental. En petróleos se aplica <em>Hidrodesulfuración</em> con H₂ a presión:</p>
+                <p class="math-inline">RSH + H₂ → RH + H₂S</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>b) Lavado de Gases de Combustión:</strong>
+                <p>Lavado contracorriente de gases de chimenea con suspensiones alcalinas de cal, caliza o hidróxido de magnesio:</p>
+                <p class="math-inline">SO₂ + Mg(OH)₂ → MgSO₃ + H₂O</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>c) Combustión en Lecho Fluidizado:</strong>
+                <p>Se inyecta carbonato cálcico (<span class="math-inline">CaCO<sub>3</sub></span>) directamente en la caldera de combustión junto al carbón:</p>
+                <p class="math-inline">CaCO₃ → CaO + CO₂<br>CaO + SO₂ + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span> O₂ → CaSO₄<sub>(s)</sub></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN RESUELTOS -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">🧪 Ejercicios de Autoevaluación Resueltos Paso a Paso</h2>
+
+        <!-- EX 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Obtención industrial del Flúor por electrólisis</div>
+            <p><strong>Enunciado:</strong> ¿Por qué el flúor sólo se puede obtener por electrólisis de sus sales fundidas? Describa brevemente el proceso de obtención industrial.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Completa:</span>
+                <p>El flúor es el oxidante químico más fuerte que existe ($E^\circ = +2,87 \text{ V}$). Por ello, no existe ningún reactivo químico capaz de oxidar al fluoruro a flúor elemental. Además, si el proceso se intentase en disolución acuosa, el flúor formado reaccionaría instantáneamente oxidadando al agua para dar oxígeno y ácido fluorhídrico:</p>
+                <div class="math-box">
+                    F<sub>2(g)</sub> + H<sub>2</sub>O<sub>(l)</sub> → 2HF<sub>(ac)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span> O<sub>2(g)</sub>
+                </div>
+                <p>Por tanto, debe obtenerse en ausencia total de agua mediante electrólisis de una mezcla fundida de HF en KF/KHF₂ (~95 °C) en cuba de acero anhidra. Las reacciones en los electrodos son:</p>
+                <ul>
+                    <li><strong>Cátodo (-):</strong> $H^+ + 1e^- \rightarrow \frac{1}{2}H_{2(g)}$</li>
+                    <li><strong>Ánodo (+):</strong> $F^- - 1e^- \rightarrow \frac{1}{2}F_{2(g)}$</li>
+                </ul>
+                <p>Los gases formados (H₂ y F₂) se deben mantener estrictamente separados para evitar reacciones explosivas.</p>
+            </div>
+        </div>
+
+        <!-- EX 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: Síntesis industrial del Ácido Clorhídrico</div>
+            <p><strong>Enunciado:</strong> Describa brevemente el método más importante de síntesis industrial del cloruro de hidrógeno.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Completa:</span>
+                <p>El método industrial principal es el tratamiento de cloruro sódico con ácido sulfúrico concentrado a alta temperatura en retortas de hierro fundido. Ocurre en dos etapas térmicas:</p>
+                <ul>
+                    <li><strong>1.ª Etapa (T moderada):</strong> $\text{NaCl}_{(s)} + \text{H}_2\text{SO}_{4(l)} \xrightarrow{+Q} \text{HCl}_{(g)} + \text{NaHSO}_{4(s)}$</li>
+                    <li><strong>2.ª Etapa (Calentamiento al rojo):</strong> $\text{NaHSO}_{4(s)} + \text{NaCl}_{(s)} \xrightarrow{\text{al rojo}} \text{HCl}_{(g)} + \text{Na}_2\text{SO}_{4(s)}$</li>
+                </ul>
+                <p>El HCl gaseoso desprendido se absorbe en agua para obtener el ácido clorhídrico comercial.</p>
+            </div>
+        </div>
+
+        <!-- EX 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Termodinámica del Proceso Deacon</div>
+            <p><strong>Enunciado:</strong> El proceso Deacon para obtención de cloro se basa en: $2\text{HCl}_{(g)} + \frac{1}{2}\text{O}_{2(g)} \rightleftharpoons \text{Cl}_{2(g)} + \text{H}_2\text{O}_{(g)}$. <br>
+            <em>Datos:</em> $\Delta H^\circ_f (\text{HCl}) = -92,3 \text{ kJ/mol}$; $\Delta H^\circ_f (\text{H}_2\text{O}_{(g)}) = -241,8 \text{ kJ/mol}$. <br>
+            Entropías $S^\circ$: $\text{HCl}=186,9$; $\text{O}_2=205,1$; $\text{Cl}_2=223,1$; $\text{H}_2\text{O}_{(g)}=188,8 \text{ J/K·mol}$.<br>
+            Calcular: 1) $\Delta H^\circ$ de la reacción; 2) $K_p$ a 298,15 K; 3) Temperatura a partir de la cual la reacción deja de ser espontánea.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                
+                <p><strong>1) Variación de Entalpía Estándar ($\Delta H^\circ$):</strong></p>
+                <p>$\Delta H^\circ = \sum H^\circ_{f,\text{productos}} - \sum H^\circ_{f,\text{reactivos}} = [-241,8 + 0] - [2 \cdot (-92,3) + 0] = -241,8 + 184,6 = \mathbf{-57,2 \text{ kJ}}$</p>
+
+                <p><strong>2) Entropía y Energía Libre ($\Delta G^\circ$) para la constante de equilibrio $K_p$:</strong></p>
+                <p>$\Delta S^\circ = [S^\circ(\text{Cl}_2) + S^\circ(\text{H}_2\text{O})] - [2 S^\circ(\text{HCl}) + \frac{1}{2} S^\circ(\text{O}_2)]$</p>
+                <p>$\Delta S^\circ = [223,1 + 188,8] - [2 \cdot 186,9 + 0,5 \cdot 205,1] = 411,9 - [373,8 + 102,55] = 411,9 - 476,35 = -64,45 \text{ J/K·mol} = -0,06445 \text{ kJ/K·mol}$</p>
+                <p>$\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ = -57,2 - [298,15 \cdot (-0,06445)] = -57,2 + 19,21 = \mathbf{-37,99 \text{ kJ/mol}}$</p>
+                <p>Calculamos $K_p$ mediante $\Delta G^\circ = -RT \ln K_p$:</p>
+                <p>$\ln K_p = \frac{-\Delta G^\circ}{RT} = \frac{-(-37990 \text{ J})}{8,314 \cdot 298,15} = \frac{37990}{2478,8} = 15,326 \implies K_p = e^{15,326} = \mathbf{4,52 \cdot 10^6}$</p>
+
+                <p><strong>3) Temperatura límite de espontaneidad ($\Delta G^\circ \ge 0$):</strong></p>
+                <p>$\Delta H^\circ - T\Delta S^\circ = 0 \implies T = \frac{\Delta H^\circ}{\Delta S^\circ} = \frac{-57,2 \text{ kJ}}{-0,06445 \text{ kJ/K}} = 887,5 \text{ K} \approx \mathbf{614,3 \text{ °C}}$</p>
+                <p>Para $T \ge 615 \text{ °C}$, la reacción deja de ser espontánea en sentido directo.</p>
+            </div>
+        </div>
+
+        <!-- EX 4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4: Electrólisis del NaCl en Cuba de Cátodo de Mercurio</div>
+            <p><strong>Enunciado:</strong> Un proceso consume una intensidad de corriente de $42,2 \text{ kA/día}$ por tonelada de NaOH producido. <br>
+            Datos: $M(\text{NaOH}) = 40,0 \text{ g/mol}$; $F = 96.485 \text{ C/mol}$.<br>
+            a) Reacciones en electrodos. b) Reacción secundaria. c) Rendimiento de la pila. d) $m^3/\text{día}$ de $Cl_2$ producidos en C.N.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p><strong>a) Reacciones en Electrodos:</strong></p>
+                <p>Ánodo (+): $\text{Cl}^- - e^- \rightarrow \frac{1}{2}\text{Cl}_{2(g)}$ | Cátodo (-): $\text{Na}^+ + e^- \rightarrow \text{Na/Hg}_{(l)}$</p>
+                <p><strong>b) Reacción Secundaria de Hidrólisis:</strong></p>
+                <p>$\text{Na/Hg}_{(l)} + \text{H}_2\text{O}_{(l)} \rightarrow \text{NaOH}_{(ac)} + \frac{1}{2}\text{H}_{2(g)} + \text{Hg}_{(l)}$</p>
+
+                <p><strong>c) Rendimiento de la Pila:</strong></p>
+                <p>Moles de NaOH producidos en 1 tonelada ($10^6 \text{ g}$):</p>
+                <p>$n(\text{NaOH}) = \frac{10^6 \text{ g}}{40 \text{ g/mol}} = 25.000 \text{ moles}$</p>
+                <p>Carga teórica necesaria ($Q_{\text{teórica}}$):</p>
+                <p>$Q_{\text{teórica}} = n \cdot F = 25.000 \text{ mol} \cdot 96.485 \text{ C/mol} = \mathbf{2,412 \cdot 10^9 \text{ Coulombs}}$</p>
+                <p>Carga real consumida ($Q_{\text{real}}$):</p>
+                <p>$Q_{\text{real}} = I \cdot t = 42,2 \cdot 10^3 \text{ A} \cdot (24 \cdot 3600 \text{ s}) = 42.200 \text{ A} \cdot 86.400 \text{ s} = \mathbf{3,646 \cdot 10^9 \text{ Coulombs}}$</p>
+                <p>Rendimiento ($R$):</p>
+                <p>$R = \frac{Q_{\text{teórica}}}{Q_{\text{real}}} \cdot 100 = \frac{2,412 \cdot 10^9}{3,646 \cdot 10^9} \cdot 100 = \mathbf{66,15 \%}$</p>
+
+                <p><strong>d) Volumen de $Cl_2$ desprendido en C.N.:</strong></p>
+                <p>Por cada mol de NaOH se forma $\frac{1}{2}$ mol de $\text{Cl}_2$.</p>
+                <p>$n(\text{Cl}_2) = \frac{25.000}{2} = 12.500 \text{ moles}$</p>
+                <p>$V(\text{Cl}_2) = 12.500 \text{ mol} \cdot 22,4 \text{ L/mol} = 280.000 \text{ L} = \mathbf{280 \text{ m}^3/\text{día}}$</p>
+            </div>
+        </div>
+
+        <!-- EX 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5: Equilibrio de Oxidación Catalítica del SO₂</div>
+            <p><strong>Enunciado:</strong> Analice el equilibrio $\text{SO}_{2(g)} + \frac{1}{2}\text{O}_{2(g)} \rightleftharpoons \text{SO}_{3(g)}$ ($\Delta H^\circ < 0$) según Le Chatelier al modificarse distintos parámetros.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <ul>
+                    <li><strong>a) Aumento de la presión parcial de O₂:</strong> Desplaza el equilibrio hacia la <strong>derecha</strong> (favorece formación de $\text{SO}_3$).</li>
+                    <li><strong>b) Dilución con gas inerte a volumen constante:</strong> Las presiones parciales de los reactivos no varían; por tanto, <strong>no altera el equilibrio</strong>.</li>
+                    <li><strong>c) Aumento de la presión total del sistema:</strong> Desplaza el equilibrio hacia donde hay menor número de moles gaseosos (de 1,5 moles a 1 mol), es decir, hacia la <strong>derecha</strong>.</li>
+                    <li><strong>d) Aumento de la temperatura:</strong> Al ser una reacción exotérmica ($\Delta H^\circ < 0$), un aporte térmico desplaza el equilibrio hacia la <strong>izquierda</strong> (descomposición del $\text{SO}_3$).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EX 6 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 6: Retención de SO₂ con Caliza en Calderas</div>
+            <p><strong>Enunciado:</strong> Se usan $1.000 \text{ kg}$ de $\text{CaCO}_3$ para retener el 90% del $\text{SO}_2$ generado por 4 toneladas de carbón con un 2% de azufre. <br>
+            Calcular: Porcentaje de conversión de $\text{CaCO}_3$ en $\text{CaSO}_4$ y toneladas de $\text{CaSO}_4$ producidas. <br>
+            <em>Masas atómicas:</em> $\text{S}=32$; $\text{CaCO}_3=100$; $\text{CaSO}_4=136 \text{ g/mol}$.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p><strong>Masa total de azufre inicial en el carbón:</strong></p>
+                <p>$\text{Masa de S} = 4.000 \text{ kg carbón} \cdot 0,02 = 80 \text{ kg de Azufre}$</p>
+                <p><strong>Azufre reaccionado y retenido (90%):</strong></p>
+                <p>$\text{S}_{\text{retenido}} = 80 \text{ kg} \cdot 0,90 = \mathbf{72 \text{ kg de S}}$</p>
+                <p>Moles de S a retener: $n(\text{S}) = \frac{72 \text{ kg}}{32 \text{ kg/kmol}} = 2,25 \text{ kmoles}$</p>
+
+                <p>Estequiometría: 1 mol de S requiere 1 mol de $\text{CaCO}_3$ para dar 1 mol de $\text{CaSO}_4$.</p>
+                <p>Masa teórica de $\text{CaCO}_3$ necesaria: $2,25 \text{ kmoles} \cdot 100 \text{ kg/kmol} = 225 \text{ kg}$</p>
+
+                <p><strong>Porcentaje de conversión del $\text{CaCO}_3$:</strong></p>
+                <p>$\% \text{ Conversión} = \frac{\text{CaCO}_3 \text{ reaccionado}}{\text{CaCO}_3 \text{ alimentado}} \cdot 100 = \frac{225 \text{ kg}}{1.000 \text{ kg}} \cdot 100 = \mathbf{22,5 \%}$</p>
+
+                <p><strong>Masa de $\text{CaSO}_4$ producida:</strong></p>
+                <p>$\text{Masa de CaSO}_4 = 2,25 \text{ kmoles} \cdot 136 \text{ kg/kmol} = \mathbf{306 \text{ kg de CaSO}_4 = 0,306 \text{ toneladas}}$</p>
+            </div>
+        </div>
+
+        <!-- EX 7 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 7: Hidrorefino de Petróleo e Hidrodesulfuración</div>
+            <p><strong>Enunciado:</strong> Se procesan $100 \text{ t/h}$ de una fracción de petróleo con $0,92\%$ de azufre para reducirlo a $0,1\%$ mediante hidrorefino ($\text{RSH} + \text{H}_2 \rightarrow \text{RH} + \text{H}_2\text{S}$) seguido de oxidación del $\text{H}_2\text{S}$ ($8\text{H}_2\text{S} + 4\text{O}_2 \rightarrow \text{S}_8 + 8\text{H}_2\text{O}$).<br>
+            Calcular: a) $m^3/\text{h}$ de $\text{H}_2$ en C.N.; b) $kg/\text{h}$ de azufre obtenido; c) $m^3/\text{h}$ de aire necesario en C.N. (21% O₂).</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p><strong>Balance de Masa de Azufre:</strong></p>
+                <p>Sea $x$ las toneladas de azufre eliminadas como $\text{H}_2\text{S}$ por hora:</p>
+                <p>$100 \cdot 0,0092 = (100 - x) \cdot 0,001 + x$</p>
+                <p>$0,92 = 0,1 - 0,001x + x \implies 0,82 = 0,999x \implies x = 0,8208 \text{ t/h de S} = \mathbf{820,8 \text{ kg/h de Azufre}}$</p>
+
+                <p><strong>a) Volumen de Hidrógeno ($\text{H}_2$) necesario:</strong></p>
+                <p>Por estequiometría ($\text{RSH} + \text{H}_2 \rightarrow \text{RH} + \text{H}_2\text{S}$), 1 mol de S eliminado requiere 1 mol de $\text{H}_2$:</p>
+                <p>$n(\text{S}) = \frac{820,8 \text{ kg}}{32 \text{ kg/kmol}} = 25,65 \text{ kmoles/h}$</p>
+                <p>$V(\text{H}_2) = 25,65 \text{ kmol/h} \cdot 22,4 \text{ m}^3/\text{kmol} = \mathbf{574,56 \text{ m}^3/\text{h de H}_2 \text{ (C.N.)}}$</p>
+
+                <p><strong>b) Kilos de Azufre elemental producidos:</strong></p>
+                <p>Se producen exactamente los kilos de S eliminados del petróleo: $\mathbf{820,8 \text{ kg/h de S}_8}$.</p>
+
+                <p><strong>c) Volumen de Aire necesario para oxidar el $\text{H}_2\text{S}$:</strong></p>
+                <p>Según la reacción de oxidación ($8\text{H}_2\text{S} + 4\text{O}_2 \rightarrow \text{S}_8 + 8\text{H}_2\text{O}$), 8 moles de $\text{H}_2\text{S}$ requieren 4 moles de $\text{O}_2$ (proporción 2:1):</p>
+                <p>$n(\text{O}_2) = \frac{25,65}{2} = 12,825 \text{ kmoles/h de O}_2$</p>
+                <p>$V(\text{O}_2) = 12,825 \text{ kmol/h} \cdot 22,4 \text{ m}^3/\text{kmol} = 287,28 \text{ m}^3/\text{h}$</p>
+                <p>Teniendo en cuenta que el aire contiene 21% de O₂ en volumen:</p>
+                <p>$V(\text{Aire}) = \frac{287,28 \text{ m}^3/\text{h}}{0,21} = \mathbf{1.368 \text{ m}^3/\text{h de Aire en C.N.}}$</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

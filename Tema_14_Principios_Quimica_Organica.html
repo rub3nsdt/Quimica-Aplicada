@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 14: Principios de Química Orgánica - Resumen Completo</title>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0369a1 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%; right: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header p { font-size: 1.05rem; color: #cbd5e1; max-width: 850px; }
+        .meta-info {
+            margin-top: 20px; padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem; color: #94a3b8;
+            display: flex; flex-wrap: wrap; gap: 20px;
+        }
+        .meta-info span { display: flex; align-items: center; gap: 6px; }
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .section-card:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08); }
+        .section-title {
+            font-size: 1.55rem; font-weight: 700;
+            margin-bottom: 20px; padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+        h3 { font-size: 1.2rem; font-weight: 600; margin: 22px 0 12px 0; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+        h4 { font-size: 1.05rem; font-weight: 600; margin: 16px 0 8px 0; color: var(--primary-light); }
+        p { margin-bottom: 14px; color: #334155; text-align: justify; }
+        .hl-def { background-color: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-green { background-color: #dcfce7; color: #15803d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-red { background-color: #fee2e2; color: #b91c1c; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-amber { background-color: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-purple { background-color: #f3e8ff; color: #6b21a8; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-pink { background-color: #fce7f3; color: #9d174d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-teal { background-color: #ccfbf1; color: #0f766e; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.88em; line-height: 1.0; padding: 0 3px; font-family: 'Cambria', 'Georgia', serif; font-weight: bold; }
+        .frac .top { border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+        .frac .bottom { padding-top: 1px; }
+        .math-box {
+            background-color: #0f172a; color: #f8fafc;
+            padding: 16px 24px; border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif; font-size: 1.1rem;
+            text-align: center; margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8; overflow-x: auto;
+        }
+        .math-box .var { font-style: italic; color: #38bdf8; font-weight: bold; }
+        .math-inline { font-family: 'Cambria', 'Georgia', serif; font-style: italic; font-weight: 600; color: #0f172a; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+        .callout { border-left: 4px solid; padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 18px 0; background-color: #f8fafc; }
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+        .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+        .callout-pink { border-color: var(--accent-pink); background-color: #fdf2f8; }
+        .callout-title { font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .table-responsive { overflow-x: auto; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.92rem; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th { background-color: var(--primary); color: white; padding: 12px 14px; text-align: left; font-weight: 600; }
+        td { padding: 11px 14px; border-bottom: 1px solid var(--border-color); background-color: white; }
+        tr:nth-child(even) td { background-color: #f8fafc; }
+        tr:hover td { background-color: #f1f5f9; }
+        ul, ol { margin: 12px 0 16px 24px; color: #334155; }
+        li { margin-bottom: 8px; }
+        .badge-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 20px 0; }
+        .badge-card { flex:1 1 300px; max-width: 500px; border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; background: #ffffff; border-top: 4px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .exercise-card { background-color: #fefce8; border: 1px solid #fef08a; border-left: 5px solid var(--accent-amber); border-radius: 8px; padding: 20px; margin-bottom: 22px; }
+        .exercise-title { font-weight: 700; color: #854d0e; margin-bottom: 10px; font-size: 1.05rem; }
+        .solution-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px; margin-top: 12px; font-size: 0.95rem; }
+        .solution-tag { display: inline-block; background-color: #dcfce7; color: #166534; font-weight: 700; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; margin-bottom: 8px; }
+        .two-column-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .three-column-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .grid-box-1 { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 14px; }
+        .grid-box-2 { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px; }
+        .grid-box-3 { background: #fdf4ff; border: 1px solid #f0abfc; border-radius: 8px; padding: 14px; }
+        .diagram-box { background: #f1f5f9; border: 1px dashed #64748b; border-radius: 8px; padding: 15px; text-align: center; margin: 15px 0; font-weight: 600; }
+        .flow-steps { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+        .flow-step { background: white; border: 2px solid var(--accent-blue); color: var(--accent-blue); border-radius: 8px; padding: 8px 14px; font-weight: 700; font-size: 0.9rem; }
+        .flow-arrow { color: var(--text-muted); font-size: 1.2rem; font-weight: 900; }
+        figcaption { margin-top: 10px; font-weight: 400; font-size: 0.9rem; color: var(--text-muted); }
+        .molecule-box {
+            background: #ffffff; border: 2px solid var(--border-color); border-radius: 10px;
+            padding: 18px; margin: 15px 0; text-align: center; font-family: 'Cambria','Georgia',serif;
+            font-size: 1.05rem; color: var(--primary); overflow-x: auto;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7rem; }
+            .section-card { padding: 18px; }
+            .two-column-grid { grid-template-columns: 1fr; }
+            .three-column-grid { grid-template-columns: 1fr; }
+            .badge-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 14: Principios de Química Orgánica</h1>
+        <p>Resumen exhaustivo, visual y ordenado de la unidad didáctica: el átomo de carbono y sus hibridaciones (sp³, sp² y sp); los desplazamientos electrónicos en enlaces covalentes (efectos inductivo, conjugativo y resonancia); la clasificación de las reacciones orgánicas según sus intermedios y según el proceso global; las principales funciones orgánicas; y el fenómeno de la isomería. Incluye la resolución completa de la Autoevaluación.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Mª José Caselles Pomares, Mariano Molero Meneses, et al.</span>
+            <span>📍 <strong>Unidad Didáctica:</strong> Tema 14</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Estructura electrónica:</strong> Establecer la estructura electrónica del átomo de carbono.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>Hibridación:</strong> Conocer los diferentes tipos de hibridación de sus orbitales.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>Polaridad de enlace:</strong> Determinar la polaridad y fortaleza de los enlaces covalentes que forma.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>Mecanismos de reacción:</strong> Establecerlos y conocer los intermedios de reacción.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <strong>Tipos de reacciones:</strong> Presentar los diferentes tipos de reacciones orgánicas.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <strong>Clasificación:</strong> Clasificar sistemáticamente los compuestos orgánicos según su composición elemental.
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN INTRODUCTORIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">📝 Resumen General de la Unidad</h2>
+        <p>Se justifica la existencia del elevadísimo número de compuestos orgánicos conocidos, consecuencia de la <span class="hl-def">estructura electrónica del átomo de carbono</span> y de las <span class="hl-def">hibridaciones</span> (sp³, sp² y sp) que le permiten compartir cuatro electrones formando enlaces covalentes consigo mismo o con otros átomos, dando lugar a enlaces sencillos, dobles o triples.</p>
+        <p>Los enlaces covalentes, aunque no polares en sí mismos, adquieren cierta polaridad cuando unen átomos de distinta electronegatividad, lo que hace reactiva a la molécula en ese punto. Se estudian los distintos <span class="hl-green">tipos de reacciones orgánicas</span> (14.8), los <span class="hl-amber">grupos funcionales</span> existentes, y los diferentes tipos de <span class="hl-purple">isomería</span>: de cadena, de posición, funcional y estereoisomería (óptica y geométrica).</p>
+    </section>
+
+    <!-- 14.1 INTRODUCCION -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">14.1. Introducción</h2>
+        <p>La <span class="hl-def">Química Orgánica</span> es la química de los compuestos del carbono. Históricamente se distinguía entre química inorgánica (reino mineral) y orgánica (seres vivos, reinos vegetal y animal). A finales del s. XVIII surgió la <strong>teoría de la fuerza vital</strong>: se creía que solo los seres vivos podían sintetizar compuestos orgánicos.</p>
+        <div class="callout callout-info">
+            <div class="callout-title">⚗️ La Caída de la Teoría de la Fuerza Vital</div>
+            <p>Se determinó que todos los compuestos orgánicos contenían siempre <strong>carbono</strong>. La síntesis en el laboratorio de compuestos orgánicos a partir de sustancias inorgánicas —como la <strong>urea</strong> [CO(NH<sub>2</sub>)<sub>2</sub>] a partir de isocianato amónico [NH<sub>4</sub>OCN], o el <strong>ácido acético</strong> [C<sub>2</sub>H<sub>4</sub>O<sub>2</sub>] a partir de sus elementos— hizo caer definitivamente esta teoría.</p>
+        </div>
+        <p>Hoy se mantiene la denominación «orgánica» por razones históricas. Existe una <strong>frontera orgánica-inorgánica</strong> en compuestos como el ácido carbónico y sus derivados (urea, carbamatos, cianamida), considerados inorgánicos aunque con derivados orgánicos.</p>
+        <p>La Química Orgánica se rige por las <strong>mismas leyes fisicoquímicas</strong> que el resto de la Química; su rasgo identificativo es la presencia del átomo de <strong>carbono</strong> en todos sus compuestos. El desarrollo científico-tecnológico ha permitido sintetizar tanto nuevas estructuras como réplicas de compuestos naturales, originando industrias de <span class="hl-green">plásticos, cauchos, plaguicidas, fertilizantes, textiles, medicamentos</span>, etc. La materia prima fundamental es el <strong>petróleo</strong> (también carbón y gas natural), con importancia creciente de la <strong>biomasa</strong>. En refinerías y petroquímicas se producen hidrocarburos que, al incorporar <span class="hl-def">heteroátomos</span> (O, N, halógenos), dan lugar a las distintas funciones orgánicas.</p>
+    </section>
+
+    <!-- 14.2 EL ATOMO DE CARBONO -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">14.2. El Átomo de Carbono</h2>
+        <p>La estructura electrónica del carbono es <strong>1s² 2s² 2p²</strong>. Según esta distribución sería divalente (dos orbitales parcialmente llenos), pero en los compuestos orgánicos se presenta como <span class="hl-def">tetravalente</span>: un electrón del orbital 2s salta a un orbital 2p vacío, quedando cuatro orbitales con un electrón cada uno (2s, 2p<sub>x</sub>, 2p<sub>y</sub>, 2p<sub>z</sub>).</p>
+        <p>En lugar de perder o ganar cuatro electrones (consumo energético excesivo), el carbono <strong>comparte electrones</strong> formando <span class="hl-def">enlaces covalentes</span> con H, O, N, halógenos, o consigo mismo, generando cadenas de carbono. Esta es la <strong>característica fundamental</strong> de los compuestos orgánicos.</p>
+        <div class="callout callout-warning">
+            <div class="callout-title">🔬 Propiedades de los Compuestos Orgánicos</div>
+            <p>Por la presencia de enlaces covalentes: <strong>no son solubles en agua</strong>, presentan <strong>puntos de fusión y ebullición relativamente bajos</strong>, <strong>no son polares</strong> y <strong>reaccionan lentamente</strong> (muy diferentes de los compuestos iónicos).</p>
+        </div>
+        <p>Mediante rayos X se determinó la estructura del <strong>metano (CH<sub>4</sub>)</strong>: todos los enlaces C-H son idénticos, de longitud <strong>1,11 Å</strong> y ángulo de enlace <strong>109° 28′</strong>, situando a los átomos de H en los vértices de un <span class="hl-teal">tetraedro regular</span> con el carbono en su interior. Esta geometría no es compatible con la distribución electrónica simple (el orbital 2s no comparte geometría con los 2p), lo que exige la <strong>hibridación de orbitales</strong>.</p>
+    </section>
+
+    <!-- 14.3 HIBRIDACION -->
+    <section class="section-card">
+        <h2 class="section-title t-green">14.3. Hibridación de Orbitales</h2>
+
+        <h3>14.3.1. Hibridación sp³</h3>
+        <p>Si los cuatro enlaces C-H del metano son idénticos, los orbitales implicados deben ser idénticos. Agrupando los cuatro orbitales (1 s + 3 p) se obtienen <strong>cuatro orbitales sp³</strong>, cada uno con <strong>25% de carácter s y 75% de carácter p</strong>. Esta hibridación da la geometría de <span class="hl-def">tetraedro regular</span>, la más estable (mínima repulsión entre orbitales).</p>
+        <div class="molecule-box">
+            <strong>CH₄ (metano)</strong><br>
+            H<br>
+            &nbsp;|<br>
+            H — C — H<br>
+            &nbsp;|<br>
+            H
+        </div>
+        <p>El <strong>etano</strong> (dos carbonos) presenta enlaces σ sp³-sp³ (C-C) y sp³-s (C-H). Esta estructura tetraédrica obliga a los átomos de carbono a enlazarse en <strong>zig-zag</strong> (dos enlaces en un plano, dos por delante y por detrás). Es la hibridación de los <span class="hl-green">hidrocarburos saturados o parafinas</span> y sus derivados, donde todos los enlaces son <strong>σ (sigma)</strong>.</p>
+
+        <h3>14.3.2. Hibridación sp²</h3>
+        <p>El orbital 2s se combina con <strong>dos</strong> orbitales 2p, quedando un orbital 2p sin hibridar (perpendicular). Cada orbital híbrido tiene <strong>1/3 de carácter s y 2/3 de carácter p</strong>. Geometría: <span class="hl-def">triángulo equilátero</span> con ángulos de <strong>120°</strong>; el orbital p<sub>z</sub> queda perpendicular al plano.</p>
+        <p>Es la hibridación de los compuestos con <strong>doble enlace</strong>: los <span class="hl-amber">alquenos u olefinas</span>. El carbono presenta tres enlaces σ y un enlace <strong>π (pi)</strong> por solapamiento lateral de los orbitales p<sub>z</sub>. Ejemplo, el <strong>etileno</strong> (CH<sub>2</sub>=CH<sub>2</sub>):</p>
+        <div class="molecule-box">
+            H&nbsp;&nbsp;&nbsp;&nbsp;H<br>
+            &nbsp;\&nbsp;&nbsp;/<br>
+            &nbsp;&nbsp;C = C<br>
+            &nbsp;/&nbsp;&nbsp;\<br>
+            H&nbsp;&nbsp;&nbsp;&nbsp;H<br>
+            <strong>etileno CH₂=CH₂</strong>
+        </div>
+        <p>El doble enlace = un σ + un π. El solapamiento lateral π es <strong>débil</strong>, causa de la <span class="hl-red">gran reactividad de los compuestos insaturados</span>.</p>
+
+        <h3>14.3.3. Hibridación sp</h3>
+        <p>El orbital 2s se combina con <strong>un solo</strong> orbital 2p: dos orbitales híbridos sp (<strong>50% s, 50% p</strong>), alineados con ángulo de <strong>180°</strong>. Quedan dos orbitales 2p sin hibridar, perpendiculares entre sí, que se solapan lateralmente formando <strong>dos enlaces π</strong>. Resultado: <span class="hl-def">triple enlace</span> (un σ fuerte + dos π más débiles). Es la hibridación de los <span class="hl-purple">alquinos o compuestos acetilénicos</span> (también insaturados), como el acetileno (HC≡CH).</p>
+    </section>
+
+    <!-- 14.4 DESPLAZAMIENTOS ELECTRONICOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">14.4. Desplazamientos Electrónicos en Enlaces Covalentes</h2>
+        <p>Si los dos átomos del enlace tienen <strong>igual electronegatividad</strong> (C-C, O-O, Cl-Cl, H-H), el enlace es puro y no polar. Si la electronegatividad es <strong>distinta</strong>, hay un desplazamiento de electrones hacia el elemento más electronegativo, dando un enlace <span class="hl-def">parcialmente iónico</span> y cierta polaridad, responsable de la reactividad orgánica.</p>
+        <div class="math-box">H → Cl &nbsp; (δ<sup>+</sup> H — Cl δ<sup>−</sup>)</div>
+
+        <h3>14.4.1. Efecto Inductivo (I)</h3>
+        <p>Desplazamiento de electrones <strong>a lo largo del enlace</strong>; los electrones permanecen en el mismo octete inicial.</p>
+
+        <h3>14.4.2. Efecto Conjugativo (K)</h3>
+        <p>Desplazamiento <strong>más intenso</strong>, entre átomos de distinta electronegatividad unidos por <strong>doble enlace</strong>. Hay desplazamiento real de electrones (cambian de octete). Ejemplo, un compuesto carbonílico crea una segunda estructura dipolar:</p>
+        <div class="molecule-box">
+            R—C(=O)—H &nbsp; ⇌ &nbsp; R—C(—O<sup>−</sup>)=H<sup>+</sup> &nbsp;&nbsp; (formas canónicas I y II)
+        </div>
+        <p>Ninguna estructura por separado representa la molécula real: es una <strong>estructura híbrida</strong> intermedia entre ambas <span class="hl-def">formas canónicas</span>.</p>
+
+        <h3>14.4.3. Efecto de Resonancia</h3>
+        <p>Cuando pueden formularse varias estructuras canónicas (misma posición atómica, distinta distribución de electrones de enlace), la estructura real es un híbrido de todas ellas, con distinta participación cada una. Este fenómeno se llama <span class="hl-def">resonancia</span>; las estructuras, <strong>formas resonantes</strong>.</p>
+        <div class="callout callout-purple">
+            <div class="callout-title">⚡ Energía de Resonancia (E<sub>r</sub>)</div>
+            <p>Cuantas más fórmulas resonantes se puedan formular, <strong>más estable</strong> es la especie. La estructura híbrida real tiene el <strong>menor contenido energético</strong>. La diferencia energética entre la forma resonante de mínima energía y la estructura híbrida real es la <span class="hl-def">energía de resonancia</span>: cuanto mayor, más estable la especie. Ejemplo típico: el ácido 2,4-pentadiencarboxílico, con varias formas canónicas cuya estructura real es intermedia entre todas.</p>
+        </div>
+    </section>
+
+    <!-- 14.5 CLASIFICACION SEGUN INTERMEDIOS -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">14.5. Clasificación de las Reacciones Orgánicas según los Intermedios de Reacción</h2>
+        <p>Los compuestos orgánicos son <strong>poco reactivos</strong>, lo que permite aislar y estudiar los «estados intermedios». La ruptura del enlace covalente puede ser <span class="hl-def">homolítica</span> o <span class="hl-def">heterolítica</span>.</p>
+
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <h3 style="margin-top:0;">14.5.1. Reacciones Homolíticas</h3>
+                <p>Ruptura simétrica: cada átomo se queda con <strong>un electrón</strong>, formando dos <span class="hl-def">radicales</span>:</p>
+                <div class="math-box">A—B → A· + ·B</div>
+                <ul>
+                    <li>Se inician por <strong>luz UV o calor</strong>; generan más radicales, reacción rápida y difícil de controlar.</li>
+                    <li>Dan siempre una <strong>mezcla de productos</strong>.</li>
+                </ul>
+            </div>
+            <div class="grid-box-2">
+                <h3 style="margin-top:0;">14.5.2. Reacciones Heterolíticas</h3>
+                <p>Ruptura asimétrica: un fragmento se lleva el <strong>par de electrones</strong> (carga negativa), el otro queda con carga positiva:</p>
+                <div class="math-box">A—B → A<sup>:−</sup> + B<sup>+</sup></div>
+                <ul>
+                    <li>Carácter <strong>iónico</strong>, en disolventes polares que estabilizan los intermedios.</li>
+                    <li>Se catalizan por <strong>ácidos y bases</strong>.</li>
+                    <li><strong>Selectivas</strong>, con pocos productos secundarios (vía preferida en síntesis).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14.6 INTERMEDIOS -->
+    <section class="section-card">
+        <h2 class="section-title t-red">14.6. Intermedios en las Reacciones Orgánicas</h2>
+        <p>Ruptura <strong>homolítica</strong> → intermedio <span class="hl-def">radical</span>. Ruptura <strong>heterolítica</strong> → intermedios iónicos:</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-red);">Carbocationes:</strong> carga positiva sobre el carbono.
+                <div class="math-box" style="font-size:0.9rem;">CH<sub>3</sub>—CH<sub>2</sub>Cl → [CH<sub>3</sub>—CH<sub>2</sub>]<sup>+</sup> + Cl<sup>−</sup></div>
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-blue);">Carbaniones:</strong> carga negativa sobre el carbono.
+                <div class="math-box" style="font-size:0.9rem;">CH≡C—Na → [CH≡C]<sup>−</sup> + Na<sup>+</sup></div>
+            </div>
+        </div>
+        <p>Todos los intermedios pueden ser <strong>primarios, secundarios o terciarios</strong>, según la naturaleza del carbono. Orden de estabilidad:</p>
+        <div class="callout callout-danger">
+            <div class="callout-title">📊 Estabilidad de los Intermedios de Reacción</div>
+            <p><strong>Carbocationes y radicales:</strong> <span class="hl-green">3.º &gt; 2.º &gt; 1.º</span> &nbsp;&nbsp; <strong>Carbaniones:</strong> <span class="hl-green">1.º &gt; 2.º &gt; 3.º</span></p>
+        </div>
+        <p>Esta diferencia de estabilidad explica los procesos de <span class="hl-def">isomerización</span>, responsables de la mezcla de productos en muchas reacciones orgánicas; de gran interés comercial para aumentar el <strong>octanaje de las gasolinas</strong>.</p>
+    </section>
+
+    <!-- 14.7 NATURALEZA REACTIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">14.7. Naturaleza de los Reactivos</h2>
+        <p>En reacciones <strong>homolíticas</strong>, el reactivo es un <span class="hl-def">radical</span>. En reacciones <strong>heterolíticas</strong>, los reactivos son especies iónicas: <span class="hl-purple">nucleófilas</span> (carga negativa) o <span class="hl-pink">electrófilas</span> (carga positiva).</p>
+    </section>
+
+    <!-- 14.8 CLASIFICACION PROCESO GLOBAL -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">14.8. Clasificación de las Reacciones Orgánicas según el Proceso Global</h2>
+
+        <h3>14.8.1. Reacciones de Sustitución</h3>
+        <p>Un átomo o grupo funcional es <span class="hl-def">sustituido</span> por el reactivo:</p>
+        <div class="math-box">A—B + X → A—X + B</div>
+        <div class="molecule-box">
+            CH<sub>3</sub>CH<sub>2</sub>CH<sub>3</sub> + Cl<sub>2</sub> → CH<sub>3</sub>CHClCH<sub>3</sub> + HCl
+        </div>
+
+        <h3>14.8.2. Reacciones de Adición</h3>
+        <p>El reactivo se <span class="hl-def">incorpora</span> a la molécula; propia de compuestos <strong>insaturados</strong>:</p>
+        <div class="math-box">
+            R—CH=CH—R′ + HCl → R—CHCl—CH<sub>2</sub>—R′<br>
+            HC≡CH + 2Br<sub>2</sub> → Br<sub>2</sub>CH—CHBr<sub>2</sub>
+        </div>
+
+        <h3>14.8.3. Reacciones de Eliminación</h3>
+        <p>Inversas a la adición: se generan compuestos <span class="hl-def">insaturados</span> (doble/triple enlace) o cíclicos:</p>
+        <div class="math-box">CH<sub>3</sub>—CHOH—CH<sub>3</sub> → CH<sub>3</sub>—CH=CH<sub>2</sub> + H<sub>2</sub>O</div>
+
+        <h3>14.8.4. Reacciones de Condensación</h3>
+        <p>Se unen compuesto y reactivo dando una nueva molécula, con emisión de una <span class="hl-def">molécula pequeña</span> (H<sub>2</sub>O o HCl):</p>
+        <div class="math-box">CH<sub>3</sub>—COOH + OHCH<sub>2</sub>—CH<sub>3</sub> → CH<sub>3</sub>—COOCH<sub>2</sub>—CH<sub>3</sub> + H<sub>2</sub>O</div>
+
+        <h3>14.8.5. Reacciones de Transposición (Isomerización)</h3>
+        <p>Traslado de átomos o agrupaciones atómicas <span class="hl-def">dentro de la molécula</span>. Muy usadas para pasar alcanos lineales a ramificados, aumentando el <strong>octanaje de las gasolinas</strong>.</p>
+        <div class="math-box">CH<sub>3</sub>—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>3</sub> → CH<sub>3</sub>—CH(CH<sub>3</sub>)—CH<sub>3</sub></div>
+
+        <h3>14.8.6. Reacciones de Ciclación</h3>
+        <p>Conducen a <span class="hl-def">compuestos cíclicos</span> a partir de especies alifáticas. Ejemplo: la reacción de <strong>Diels-Alder</strong> (adición 1,4 de un dieno con una olefina o alquino) forma compuestos cíclicos insaturados de seis eslabones.</p>
+
+        <h3>14.8.7. Reacciones de Aromatización</h3>
+        <p>Reacciones de <span class="hl-def">deshidrogenación</span> de compuestos alifáticos y cíclicos saturados; ocurren en el <strong>reformado catalítico</strong> de fracciones petrolíferas.</p>
+
+        <h3>14.8.8. Reacciones de Alquilación</h3>
+        <p>Introducción de un <span class="hl-def">grupo alquilo</span> en una molécula (por adición o sustitución). En petroquímica: entre olefina + aromático (→ areno; <strong>reacción de Friedel-Crafts</strong>) o entre isoparafina + olefina (→ parafina ramificada, interés para el octanaje). <strong>Reacción opuesta al craqueo.</strong></p>
+
+        <h3>14.8.9. Reacciones de Craqueo</h3>
+        <p><span class="hl-def">Fragmentación</span> de moléculas por acción de la temperatura, vía mecanismo radicálico; dan mezclas de productos. Interés industrial para aprovechar fracciones petrolíferas pesadas.</p>
+
+        <h3>14.8.10. Reacciones de Polimerización</h3>
+        <p>Conducen a <span class="hl-def">macromoléculas o polímeros</span> por repetición de moléculas pequeñas (generalmente olefinas), vía <strong>poliadición</strong> o, entre compuestos difuncionalizados, vía <strong>policondensación</strong>.</p>
+        <div class="math-box">n(CH<sub>2</sub>=CH—R) <span class="frac"><span class="top">AlCl₃</span><span class="bottom">→</span></span> (—CH<sub>2</sub>—CHR—)<sub>n</sub></div>
+
+        <h3>14.8.11. Reacciones de Oxidación-Reducción</h3>
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ Concepto Distinto al de la Química Inorgánica</div>
+            <p>En Química Inorgánica: oxidación = pérdida de electrones; reducción = ganancia. En <strong>Química Orgánica</strong>: <span class="hl-red">oxidación</span> = ganancia de oxígeno o pérdida de hidrógeno; <span class="hl-green">reducción</span> = ganancia de hidrógeno o pérdida de oxígeno.</p>
+        </div>
+        <p>Un alcohol se oxida a aldehído y, prosiguiendo, a ácido carboxílico:</p>
+        <div class="math-box">
+            CH<sub>3</sub>—CH<sub>2</sub>OH <span class="frac"><span class="top">oxid.</span><span class="bottom">⇌ reducción</span></span> CH<sub>3</sub>—CHO <span class="frac"><span class="top">oxid.</span><span class="bottom">⇌ reducción</span></span> CH<sub>3</sub>—COOH<br>
+            <span style="font-size:0.85rem;">(alcohol)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(aldehído)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ácido carboxílico)</span>
+        </div>
+        <p>Igualmente, la conversión de alquinos → olefinas → parafinas es un proceso de <span class="hl-green">reducción</span> (aumenta el contenido en hidrógeno):</p>
+        <div class="math-box">HC≡CH <span class="frac"><span class="top">reducción</span><span class="bottom">→</span></span> H<sub>2</sub>C=CH<sub>2</sub> <span class="frac"><span class="top">reducción</span><span class="bottom">→</span></span> H<sub>3</sub>C—CH<sub>3</sub></div>
+    </section>
+
+    <!-- 14.9 FUNCIONES ORGANICAS -->
+    <section class="section-card">
+        <h2 class="section-title t-green">14.9. Principales Funciones Orgánicas</h2>
+        <p>Los compuestos orgánicos más sencillos son los <span class="hl-def">hidrocarburos</span> (solo C e H), base de la Química Orgánica: sobre ellos se incorporan otros elementos (<span class="hl-def">heteroátomos</span>), dando lugar a las distintas funciones orgánicas.</p>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Elementos</th><th>Funciones orgánicas</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>C, H</strong></td><td>Alcanos (parafinas), alquenos (olefinas), alquinos (acetilénicos), aromáticos</td></tr>
+                    <tr><td><strong>C, H, O</strong></td><td>Alcoholes, éteres, epóxidos, fenoles / aldehídos, cetonas, ácidos carboxílicos, anhídridos, ésteres</td></tr>
+                    <tr><td><strong>C, H, N</strong></td><td>Aminas, azocompuestos, nitrilos</td></tr>
+                    <tr><td><strong>C, H, X (halógeno)</strong></td><td>Derivados halogenados</td></tr>
+                    <tr><td><strong>C, H, S</strong></td><td>Tioles</td></tr>
+                    <tr><td><strong>C, H, Li/Mg/Al…</strong></td><td>Compuestos organometálicos</td></tr>
+                    <tr><td><strong>C, H, O, N</strong></td><td>Nitrocompuestos, nitrosocompuestos, amidas</td></tr>
+                    <tr><td><strong>C, H, O, S</strong></td><td>Ácidos sulfónicos, sulfonatos de alquilo, sulfonas, sulfóxidos</td></tr>
+                    <tr><td><strong>C, H, O, N, S</strong></td><td>Sulfonamidas, sulfamidas</td></tr>
+                    <tr><td><strong>C, H, P</strong></td><td>Iluros de fósforo, sales de fosfonio, fosfacenos</td></tr>
+                    <tr><td><strong>C, H, Si, X</strong></td><td>Silanos</td></tr>
+                    <tr><td><strong>C, H, O, Si</strong></td><td>Siloxanos</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Figura 14.12. Principales funciones orgánicas según los elementos incorporados.</p>
+        </div>
+        <p>Los compuestos orgánicos se organizan además en dos grandes ramas estructurales: <strong>alifáticos</strong> (cadena abierta o alicíclicos de cadena cerrada) y <strong>aromáticos</strong>.</p>
+    </section>
+
+    <!-- 14.10 ISOMERIA -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">14.10. Fenómeno de Isomería</h2>
+        <p>Los <span class="hl-def">isómeros</span> son compuestos con la <strong>misma fórmula molecular</strong> pero propiedades distintas (misma o distinta funcionalidad). Ejemplo: etanol y éter dimetílico, ambos C<sub>2</sub>H<sub>6</sub>O:</p>
+        <div class="molecule-box">
+            CH<sub>3</sub>—CH<sub>2</sub>—OH &nbsp;(P.eb. 78 °C) &nbsp;&nbsp;vs&nbsp;&nbsp; CH<sub>3</sub>—O—CH<sub>3</sub> &nbsp;(P.eb. 36 °C)<br>
+            <span style="font-size:0.85rem;">etanol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dimetil-éter</span>
+        </div>
+
+        <div class="callout callout-info">
+            <div class="callout-title">🗂️ Tipos de Isomería</div>
+            <div class="flow-steps">
+                <div class="flow-step">Estructural</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Cadena / Posición / Funcional</div>
+            </div>
+            <div class="flow-steps" style="margin-top:10px;">
+                <div class="flow-step" style="border-color:var(--accent-pink); color:var(--accent-pink);">Estereoisomería</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-pink); color:var(--accent-pink);">Óptica / Geométrica</div>
+            </div>
+        </div>
+
+        <h3>14.10.1. Isomería de Cadena</h3>
+        <p>Misma fórmula molecular y misma funcionalidad; se diferencian en la <span class="hl-def">forma de la cadena</span>:</p>
+        <div class="molecule-box">
+            CH<sub>3</sub>—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>3</sub> &nbsp;&nbsp;vs&nbsp;&nbsp; CH<sub>3</sub>—C(CH<sub>3</sub>)<sub>2</sub>—CH<sub>3</sub><br>
+            <span style="font-size:0.85rem;">n-pentano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2,2-dimetilpropano &nbsp;(C₅H₁₂)</span>
+        </div>
+
+        <h3>14.10.2. Isomería de Posición</h3>
+        <p>Mismo peso molecular, misma cadena y funcionalidad; difieren en la <span class="hl-def">posición del grupo funcional</span> en la cadena:</p>
+        <div class="molecule-box">
+            CH<sub>2</sub>=CH—CH<sub>2</sub>—CH<sub>3</sub> &nbsp;&nbsp;vs&nbsp;&nbsp; CH<sub>3</sub>—CH=CH—CH<sub>3</sub><br>
+            <span style="font-size:0.85rem;">1-buteno &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2-buteno</span>
+        </div>
+
+        <h3>14.10.3. Isomería Funcional</h3>
+        <p>Misma fórmula molecular, pero <span class="hl-def">distinta funcionalidad</span>:</p>
+        <div class="molecule-box">
+            1-hexeno (C<sub>6</sub>H<sub>12</sub>) &nbsp;&nbsp;vs&nbsp;&nbsp; ciclohexano (C<sub>6</sub>H<sub>12</sub>)<br>
+            etanol (C<sub>2</sub>H<sub>6</sub>O) &nbsp;&nbsp;vs&nbsp;&nbsp; dimetil-éter (C<sub>2</sub>H<sub>6</sub>O)
+        </div>
+
+        <h3>14.10.4. Isomería Óptica</h3>
+        <p>Misma fórmula molecular, misma cadena y funcionalidad; solo difieren en la <span class="hl-def">distribución espacial de los sustituyentes</span> de un carbono con sus <strong>cuatro sustituyentes distintos</strong> (carbono <span class="hl-purple">quiral</span>), que desvía el plano de la luz polarizada.</p>
+        <div class="callout callout-purple">
+            <div class="callout-title">🪞 Enantiómeros</div>
+            <p>Los isómeros ópticos son <strong>imágenes especulares</strong> no superponibles (como las manos). Si uno desvía el plano de luz polarizada X° a la derecha (<strong>dextrógiro</strong>), su enantiómero lo desvía X° a la izquierda (<strong>levógiro</strong>).</p>
+            <p>La Naturaleza sintetiza generalmente <strong>un solo enantiómero</strong> (forma óptica pura); en el laboratorio se obtienen mezclas. Una mezcla a partes iguales se llama <span class="hl-def">mezcla racémica</span> y carece de actividad óptica — un inconveniente en la síntesis de fármacos, donde solo un enantiómero suele tener la actividad buscada. Las <strong>síntesis estereoselectivas</strong> con catalizadores específicos permiten hoy obtener un único enantiómero puro.</p>
+        </div>
+
+        <h3>14.10.5. Isomería Geométrica</h3>
+        <p>Se diferencian en la <span class="hl-def">disposición espacial de los átomos respecto de un plano</span>. Junto a la isomería óptica constituye la <strong>estereoisomería</strong>. Se observa en <strong>olefinas asimétricamente sustituidas</strong> y en <strong>cicloalcanos disustituidos</strong>. Ejemplo, el <strong>2-buteno</strong>:</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1" style="text-align:center;">
+                <strong style="color:var(--accent-blue);">Forma cis</strong><br>
+                Los dos H (o sustituyentes iguales) están al <strong>mismo lado</strong> del doble enlace C=C.
+            </div>
+            <div class="grid-box-2" style="text-align:center;">
+                <strong style="color:var(--accent-green);">Forma trans</strong><br>
+                Los dos H están en <strong>lados opuestos</strong> del doble enlace C=C.
+            </div>
+        </div>
+        <p>Si los sustituyentes son todos radicales alquílicos, la forma <strong>cis</strong> es la que sitúa los radicales de <strong>mayor tamaño en el mismo lado</strong> del plano.</p>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">🧪 Ejercicios de Autoevaluación Resueltos Paso a Paso</h2>
+
+        <!-- EX 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Característica Diferencial de los Compuestos Orgánicos</div>
+            <p><strong>Enunciado:</strong> ¿Cuál es la principal característica de los compuestos orgánicos que les diferencia de los compuestos inorgánicos?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Los compuestos orgánicos se caracterizan por estar formados por <strong>cadenas de longitud variable de átomos de carbono</strong>, y todos los elementos que forman las moléculas se encuentran unidos por <strong>enlaces covalentes</strong>.</p>
+            </div>
+        </div>
+
+        <!-- EX 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: Efecto Inductivo vs. Efecto Conjugativo</div>
+            <p><strong>Enunciado:</strong> ¿Cuál es la diferencia fundamental entre el efecto inductivo y el efecto conjugativo en los compuestos orgánicos?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Ambos son fenómenos de <strong>desplazamiento de electrones</strong> de un enlace. En el <span class="hl-def">efecto inductivo</span>, el desplazamiento se realiza <strong>a lo largo del enlace</strong> y los electrones nunca dejan de pertenecer al mismo (mismo octete). En el <span class="hl-def">efecto conjugativo</span>, el desplazamiento de electrones es <strong>real</strong>, pasando a formar parte de otro enlace (cambian de octete).</p>
+            </div>
+        </div>
+
+        <!-- EX 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Reacciones Típicas de las Olefinas</div>
+            <p><strong>Enunciado:</strong> ¿Cuáles son las reacciones típicas de las olefinas? ¿Qué interés sintético tienen?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Las reacciones típicas de las olefinas corresponden a reacciones de <span class="hl-def">adición</span> o incorporación del reactivo. Tienen gran importancia por permitir la <strong>funcionalización de hidrocarburos</strong> para obtener las distintas funciones orgánicas.</p>
+            </div>
+        </div>
+
+        <!-- EX 4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4: Isomerización vía Carbocatión</div>
+            <p><strong>Enunciado:</strong> ¿Por qué en las reacciones heterolíticas vía carbocatión se producen isomerizaciones?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Cuando una reacción transcurre por un intermedio de tipo <span class="hl-def">carbocatión</span> (generado en una ruptura heterolítica) de determinada estabilidad, tiene <strong>tendencia a transformarse en un carbocatión isómero de mayor estabilidad</strong>, si la estructura de la molécula lo permite. Es el caso típico de la transformación de un carbocatión primario en uno secundario, o en uno terciario.</p>
+                <p><strong>Ejemplo:</strong> hidrólisis con NaOH del 2,2-dimetil-1-cloropropano:</p>
+                <div class="math-box">
+                    (CH<sub>3</sub>)<sub>3</sub>C—CH<sub>2</sub>Cl → [(CH<sub>3</sub>)<sub>3</sub>C—CH<sub>2</sub>]<sup>+</sup> <span class="frac"><span class="top">isomerización</span><span class="bottom">→</span></span> [CH<sub>3</sub>—C(CH<sub>3</sub>)<sub>2</sub>—CH<sub>2</sub>CH<sub>3</sub>]<sup>+</sup><br>
+                    <span style="font-size:0.85rem;">carbocatión primario&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carbocatión terciario</span>
+                </div>
+                <div class="math-box">
+                    [carbocatión terciario] <span class="frac"><span class="top">OH⁻</span><span class="bottom">→</span></span> CH<sub>3</sub>—C(OH)(CH<sub>3</sub>)—CH<sub>2</sub>CH<sub>3</sub> + NaCl<br>
+                    <span style="font-size:0.85rem;">2-metil-2-butanol</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5: Reactivos Nucleófilos</div>
+            <p><strong>Enunciado:</strong> ¿Qué es un reactivo nucleófilo? ¿Todos los reactivos nucleófilos son aniones?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Los <span class="hl-def">reactivos nucleófilos</span> son especies que poseen <strong>exceso de carga</strong> y por tanto tienen afinidad («filia») hacia especies con defecto de electrones, tendiendo a compartirlos con éstas.</p>
+                <p>Generalmente son <strong>aniones</strong>, pero también actúan como nucleófilos moléculas que poseen un <strong>par de electrones localizados</strong> sobre determinados átomos, como el <strong>amoniaco</strong> y sus derivados orgánicos, las <strong>aminas</strong> (:NH<sub>3</sub>, R—N̈H<sub>2</sub>).</p>
+            </div>
+        </div>
+
+        <!-- EX 6 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 6: Reactivos Electrófilos</div>
+            <p><strong>Enunciado:</strong> ¿Qué es un reactivo electrófilo?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Los <span class="hl-def">reactivos electrófilos</span> son especies con <strong>defecto de carga</strong> que presentan afinidad («filia») hacia otras con exceso de carga. Reaccionan con <strong>carbaniones</strong> o con <strong>compuestos aromáticos</strong>, experimentando con estos últimos <strong>reacciones de sustitución electrófila</strong>.</p>
+            </div>
+        </div>
+
+        <!-- EX 7 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 7: Isómeros de Fórmula Molecular C₄H₁₀O</div>
+            <p><strong>Enunciado:</strong> Represente los compuestos de fórmula molecular C₄H₁₀O. Indique el tipo de isomería que existe entre ellos.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <div class="molecule-box" style="text-align:left;">
+                    a) CH<sub>3</sub>—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>OH &nbsp;&nbsp;(1-butanol)<br>
+                    b) CH<sub>3</sub>—CH<sub>2</sub>—CHOH—CH<sub>3</sub> &nbsp;&nbsp;(2-butanol)<br>
+                    c) CH<sub>3</sub>—CH(CH<sub>3</sub>)—CH<sub>2</sub>OH &nbsp;&nbsp;(2-metil-1-propanol)<br>
+                    d) CH<sub>3</sub>—C(OH)(CH<sub>3</sub>)—CH<sub>3</sub> &nbsp;&nbsp;(2-metil-2-propanol)<br>
+                    e) CH<sub>3</sub>—CH<sub>2</sub>—O—CH<sub>2</sub>—CH<sub>3</sub> &nbsp;&nbsp;(éter dietílico)<br>
+                    f) CH<sub>3</sub>—O—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>3</sub> &nbsp;&nbsp;(metil-propil-éter)<br>
+                    g) CH<sub>3</sub>—O—CH(CH<sub>3</sub>)—CH<sub>3</sub> &nbsp;&nbsp;(metil-isopropil-éter)
+                </div>
+                <p><strong>Clasificación de la isomería:</strong></p>
+                <ul>
+                    <li><span class="hl-blue" style="background-color:#e0f2fe;color:#0369a1;padding:2px 6px;border-radius:4px;font-weight:600;">Isómeros de posición:</span> a y b &nbsp;;&nbsp; c y d &nbsp;;&nbsp; e y f</li>
+                    <li><span class="hl-purple">Isómeros funcionales:</span> {a, b, c, d} frente a {e, f, g} (alcoholes frente a éteres)</li>
+                    <li><span class="hl-green">Isómeros de cadena:</span> a y b frente a c y d &nbsp;;&nbsp; e y f frente a g</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

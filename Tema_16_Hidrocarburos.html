@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 16: Hidrocarburos - Resumen Completo</title>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0369a1 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%; right: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header p { font-size: 1.05rem; color: #cbd5e1; max-width: 850px; }
+        .meta-info {
+            margin-top: 20px; padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem; color: #94a3b8;
+            display: flex; flex-wrap: wrap; gap: 20px;
+        }
+        .meta-info span { display: flex; align-items: center; gap: 6px; }
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .section-card:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08); }
+        .section-title {
+            font-size: 1.55rem; font-weight: 700;
+            margin-bottom: 20px; padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+        h3 { font-size: 1.2rem; font-weight: 600; margin: 22px 0 12px 0; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+        h4 { font-size: 1.05rem; font-weight: 600; margin: 16px 0 8px 0; color: var(--primary-light); }
+        p { margin-bottom: 14px; color: #334155; text-align: justify; }
+        .hl-def { background-color: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-green { background-color: #dcfce7; color: #15803d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-red { background-color: #fee2e2; color: #b91c1c; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-amber { background-color: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-purple { background-color: #f3e8ff; color: #6b21a8; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-pink { background-color: #fce7f3; color: #9d174d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-teal { background-color: #ccfbf1; color: #0f766e; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.88em; line-height: 1.0; padding: 0 3px; font-family: 'Cambria', 'Georgia', serif; font-weight: bold; }
+        .frac .top { border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+        .frac .bottom { padding-top: 1px; }
+        .math-box {
+            background-color: #0f172a; color: #f8fafc;
+            padding: 16px 24px; border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif; font-size: 1.1rem;
+            text-align: center; margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8; overflow-x: auto;
+        }
+        .math-box .var { font-style: italic; color: #38bdf8; font-weight: bold; }
+        .math-inline { font-family: 'Cambria', 'Georgia', serif; font-style: italic; font-weight: 600; color: #0f172a; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+        .callout { border-left: 4px solid; padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 18px 0; background-color: #f8fafc; }
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+        .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+        .callout-pink { border-color: var(--accent-pink); background-color: #fdf2f8; }
+        .callout-title { font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .table-responsive { overflow-x: auto; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.92rem; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th { background-color: var(--primary); color: white; padding: 12px 14px; text-align: left; font-weight: 600; }
+        td { padding: 11px 14px; border-bottom: 1px solid var(--border-color); background-color: white; }
+        tr:nth-child(even) td { background-color: #f8fafc; }
+        tr:hover td { background-color: #f1f5f9; }
+        ul, ol { margin: 12px 0 16px 24px; color: #334155; }
+        li { margin-bottom: 8px; }
+        .badge-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 20px 0; }
+        .badge-card { flex:1 1 300px; max-width: 500px; border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; background: #ffffff; border-top: 4px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .exercise-card { background-color: #fefce8; border: 1px solid #fef08a; border-left: 5px solid var(--accent-amber); border-radius: 8px; padding: 20px; margin-bottom: 22px; }
+        .exercise-title { font-weight: 700; color: #854d0e; margin-bottom: 10px; font-size: 1.05rem; }
+        .solution-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px; margin-top: 12px; font-size: 0.95rem; }
+        .solution-tag { display: inline-block; background-color: #dcfce7; color: #166534; font-weight: 700; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; margin-bottom: 8px; }
+        .two-column-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .three-column-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .grid-box-1 { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 14px; }
+        .grid-box-2 { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px; }
+        .grid-box-3 { background: #fdf4ff; border: 1px solid #f0abfc; border-radius: 8px; padding: 14px; }
+        .diagram-box { background: #f1f5f9; border: 1px dashed #64748b; border-radius: 8px; padding: 15px; text-align: center; margin: 15px 0; font-weight: 600; }
+        .flow-steps { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+        .flow-step { background: white; border: 2px solid var(--accent-blue); color: var(--accent-blue); border-radius: 8px; padding: 8px 14px; font-weight: 700; font-size: 0.9rem; }
+        .flow-arrow { color: var(--text-muted); font-size: 1.2rem; font-weight: 900; }
+        figcaption { margin-top: 10px; font-weight: 400; font-size: 0.9rem; color: var(--text-muted); }
+        .formula-box {
+            background: #ffffff; border: 2px solid #e2e8f0; border-radius: 10px;
+            padding: 14px 18px; margin: 10px 0; text-align: center;
+            font-family: 'Cambria', 'Georgia', serif; font-size: 1.05rem; color: var(--primary);
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7rem; }
+            .section-card { padding: 18px; }
+            .two-column-grid { grid-template-columns: 1fr; }
+            .three-column-grid { grid-template-columns: 1fr; }
+            .badge-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 16: Hidrocarburos</h1>
+        <p>Resumen exhaustivo, visual y ordenado de la unidad didáctica: clasificación de los hidrocarburos según la hibridación del carbono (parafinas, olefinas, alquinos, naftenos y aromáticos), su nomenclatura, propiedades físicas, reactividad química y los compuestos de mayor interés industrial —incluyendo plásticos, cauchos y fibras derivados—.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Mª José Caselles Pomares, Mariano Molero Meneses, et al.</span>
+            <span>📍 <strong>Unidad Didáctica:</strong> Tema 16</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);"><strong>Hibridación del carbono:</strong> Conocer los hidrocarburos formados en los distintos tipos de hibridación del átomo de carbono.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);"><strong>Propiedades físicas:</strong> Relacionarlas con las estructuras de cada familia de hidrocarburos.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);"><strong>Reactividad comparada:</strong> Comparar la distinta reactividad química según el estado de hibridación del átomo de carbono.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);"><strong>Interconversiones:</strong> Relacionar los distintos hidrocarburos mediante reacciones de hidrogenación-deshidrogenación-ciclación.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);"><strong>Fuentes de obtención:</strong> Conocer las fuentes de obtención directa e indirecta (laboratorio e industrial).</div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);"><strong>Compuestos de interés:</strong> Establecer los compuestos de mayor interés industrial y sus aplicaciones.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-pink);"><strong>Productos terminales:</strong> Conocer la estructura, características y aplicaciones de lubricantes, plásticos y cauchos.</div>
+        </div>
+    </section>
+
+    <!-- RESUMEN INTRODUCTORIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">📝 Resumen General de la Unidad</h2>
+        <p>Las características estructurales de las distintas familias de <span class="hl-def">hidrocarburos</span> son las que les confieren sus propiedades físicas y químicas particulares. La presencia de <strong>enlaces múltiples</strong> está directamente asociada con la reactividad de la molécula, sobre todo en reacciones de <span class="hl-green">adición</span>. Así, las <span class="hl-teal">olefinas y alquinos</span> son la base fundamental de las distintas funcionalidades orgánicas.</p>
+        <p>Las <strong>parafinas</strong> —poco reactivas— también participan en la obtención de moléculas funcionalizadas mediante reacciones radicálicas de sustitución. Los <span class="hl-purple">hidrocarburos aromáticos</span> se comportan de forma diferente: nunca reaccionan por adición (a pesar de sus dobles enlaces), sino mediante <span class="hl-amber">sustitución electrófila aromática (SEA)</span>. Finalmente se describen los hidrocarburos de mayor interés industrial y los productos terminales —plásticos, fibras y cauchos— derivados de ellos.</p>
+    </section>
+
+    <!-- 16.1 INTRODUCCION -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">16.1. Introducción</h2>
+        <p>Los <span class="hl-def">hidrocarburos</span> son los compuestos más sencillos de la Química Orgánica: están formados exclusivamente por átomos de <strong>carbono e hidrógeno</strong>. Según la hibridación que adopta el átomo de carbono, dan lugar a distintas series: <span class="hl-green">parafinas, olefinas y acetilénicos</span> (estructura abierta) y <span class="hl-purple">cicloparafinas y aromáticos</span> (estructura cíclica). Son la base y los «pilares» de la Química Orgánica, origen de las demás funciones orgánicas por fijación de heteroátomos sobre el esqueleto hidrocarbonado.</p>
+        <div class="diagram-box">
+            <strong>Hidrocarburos</strong><br><br>
+            <div class="two-column-grid">
+                <div class="grid-box-1">
+                    <strong style="color:var(--accent-blue);">Cadena abierta:</strong><br>
+                    parafinas (alcanos) · olefinas (alquenos) · acetilénicos (alquinos)
+                </div>
+                <div class="grid-box-2">
+                    <strong style="color:var(--accent-green);">Cadena cíclica:</strong><br>
+                    naftenos (alicíclicos) · aromáticos
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16.2 PARAFINAS -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">16.2. Parafinas o Alcanos</h2>
+        <p>Las <span class="hl-amber">parafinas o alcanos</span> responden a la fórmula molecular <strong>C<sub>n</sub>H<sub>2n+2</sub></strong>. El átomo de carbono presenta hibridación <strong>sp³</strong> en todos los enlaces C–C y C–H. Están unidos al mayor número posible de átomos de hidrógeno —saturados—, por lo que se denominan <span class="hl-def">hidrocarburos saturados</span>.</p>
+
+        <h3>16.2.1. Nomenclatura. Radicales importantes</h3>
+        <p>Sigue las recomendaciones de la <strong>IUPAC</strong>. Los cuatro primeros términos no tienen nombre sistemático: <span class="hl-green">metano (C1), etano (C2), propano (C3) y butano (C4)</span>. A partir de aquí se nombran con el prefijo griego del número de carbonos + terminación <strong>-ano</strong>: C5 pentano, C6 hexano... C10 decano, C18 octadecano. Si el alcano es lineal, se antepone <strong>n-</strong>.</p>
+        <div class="callout callout-info">
+            <div class="callout-title">🔗 Radicales alquílicos</div>
+            <p>Los fragmentos que resultan de quitar un átomo de hidrógeno al alcano se llaman <span class="hl-def">radicales alquílicos</span> y toman el nombre del hidrocarburo terminado en <strong>-il/-ilo</strong>: metano → metil(o); etano → etil(o); n-hexano → n-hexil(o).</p>
+        </div>
+        <p><strong>Nomenclatura de ramificados:</strong> a) se elige la <strong>cadena más larga</strong> como principal; b) se numera por el extremo que dé el número más bajo a los sustituyentes; c) los sustituyentes se nombran como radicales precedidos del número de posición (ej.: <strong>3-metil-hexano</strong>). Pueden representarse de forma <em>desarrollada</em> (con enlaces explícitos) o <em>agrupada</em> (CH₄, CH₃–CH₃...).</p>
+    </section>
+
+    <!-- 16.3 OLEFINAS -->
+    <section class="section-card">
+        <h2 class="section-title t-green">16.3. Olefinas o Alquenos</h2>
+        <p>Las <span class="hl-green">olefinas o alquenos</span> responden a la fórmula <strong>C<sub>n</sub>H<sub>2n</sub></strong>: son <span class="hl-def">compuestos insaturados</span>. El carbono insaturado presenta hibridación <strong>sp²</strong> y forma con el carbono vecino un <strong>doble enlace</strong> (un enlace σ y un enlace π).</p>
+
+        <h3>16.3.1. Nomenclatura</h3>
+        <p>Igual que las parafinas, cambiando <strong>-ano</strong> por <strong>-eno / -ileno</strong>: eteno o etileno, propeno o propileno, buteno o butileno. Con más de un doble enlace: <strong>dienos</strong> (2), <strong>trienos</strong> (3), <strong>polienos</strong> (varios) —los dienos conjugados son los de mayor interés—. Se numera la cadena para dar el número más bajo posible al doble enlace (ej.: <strong>1-buteno o buteno-1</strong>).</p>
+        <div class="callout callout-purple">
+            <div class="callout-title">🔀 Isomería geométrica cis/trans</div>
+            <p>Cuando el compuesto presenta isomería geométrica, se indica al principio del nombre si es la forma <span class="hl-purple">cis</span> o <span class="hl-purple">trans</span> (ej.: cis-3-metil-2-penteno / trans-3-metil-2-penteno).</p>
+        </div>
+    </section>
+
+    <!-- 16.4 ACETILENICOS -->
+    <section class="section-card">
+        <h2 class="section-title t-red">16.4. Acetilénicos o Alquinos</h2>
+        <p>Los <span class="hl-red">alquinos</span> son hidrocarburos insaturados con un <strong>triple enlace</strong>, de fórmula <strong>C<sub>n</sub>H<sub>2n−2</sub></strong> (coincidente con la de los dienos y cicloalquenos). Fórmula general: R–C≡C–R.</p>
+        <h3>16.4.1. Nomenclatura</h3>
+        <p>Igual que las series anteriores, terminado en <strong>-ino</strong>: HC≡CH (etino o <span class="hl-def">acetileno</span>), HC≡C–CH₃ (propino), HC≡C–(CH₂)₂–CH₃ (1-pentino).</p>
+    </section>
+
+    <!-- 16.5 NAFTENOS -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">16.5. Naftenos</h2>
+        <p>Las cadenas de hidrocarburos pueden cerrarse sobre sí mismas formando ciclos: son los <span class="hl-teal">hidrocarburos alicíclicos o naftenos</span>, isómeros de las olefinas (fórmula C<sub>n</sub>H<sub>2n</sub>).</p>
+        <h3>16.5.1. Estructura y nomenclatura</h3>
+        <p>Existen ciclos de 3 a 12 átomos de carbono, saturados (<strong>cicloalcanos</strong>) o insaturados (<strong>cicloalquenos</strong>); se nombran anteponiendo <strong>ciclo-</strong> al nombre del alcano/olefina correspondiente. El <strong>ciclohexano</strong> es el más estable, adoptando conformación <em>silla</em> o <em>bote</em>. Los <strong>ciclopentadienos</strong> aparecen en proporción interesante en la fracción C5 del hidrocraqueo de la nafta.</p>
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ Tensión angular en ciclos pequeños</div>
+            <p>Los términos inferiores <strong>C3 y C4</strong> dan reacciones de <strong>adición por apertura del ciclo</strong> (tensión angular). Los ciclos superiores reaccionan por sustitución, como las parafinas; los cicloalquenos, por adición, como las olefinas.</p>
+        </div>
+    </section>
+
+    <!-- 16.6 AROMATICOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">16.6. Aromáticos</h2>
+        <p>Los <span class="hl-purple">compuestos aromáticos</span>, junto con las olefinas, son el otro pilar básico de la petroquímica. Características estructurales: <strong>a)</strong> compuestos cíclicos planos; <strong>b)</strong> insaturados, con un número de electrones en la insaturación que cumple la regla <strong>4n+2</strong>; <strong>c)</strong> mono, bi o policíclicos, aislados o condensados. El <strong>benceno</strong> es el compuesto aromático por excelencia.</p>
+
+        <h3>16.6.1. Estructura del benceno</h3>
+        <p>Fórmula molecular <strong>C₆H₆</strong>. Se propusieron estructuras lineales y cíclicas que no justificaban su comportamiento: no experimenta <span class="hl-red">reacciones de adición</span> pese a sus insaturaciones, reacciona siempre por <span class="hl-green">sustitución</span>, y todos sus hidrógenos son equivalentes (único producto en monosustitución).</p>
+        <div class="callout callout-info">
+            <div class="callout-title">💠 Estructura de Kekulé y resonancia</div>
+            <p>Se debe a <strong>Kekulé</strong> la propuesta estructural del benceno. No tiene los dobles enlaces fijos: es un <span class="hl-def">híbrido de resonancia</span> entre dos estructuras límite, confirmado por su calor de hidrogenación, unas <strong>36 Kcal/mol inferior</strong> al del 1,3,5-ciclohexatrieno hipotético (esta diferencia es la <em>energía de resonancia</em>). Los carbonos tienen hibridación <strong>sp²</strong>, ángulos de 120°, formando un hexágono regular envuelto por una doble nube electrónica π.</p>
+        </div>
+
+        <h3>16.6.2. Nomenclatura</h3>
+        <p>Se nombran anteponiendo el radical alquílico al compuesto aromático: <strong>tolueno</strong> (metil-benceno), <strong>estireno</strong> (vinil-benceno), <strong>cumeno</strong> (isopropil-benceno). Con dos sustituyentes se usan los prefijos: <span class="hl-green">orto (1,2)</span>, <span class="hl-amber">meta (1,3)</span> y <span class="hl-red">para (1,4)</span>. Los isómeros del dimetil-benceno se llaman <strong>xilenos</strong> (o-, m-, p-xileno).</p>
+        <p>El radical del benceno (C₆H₅–) se denomina <strong>fenilo</strong> (Ar); no confundir con el <strong>bencilo</strong> (C₆H₅–CH₂–), radical del tolueno. Otros aromáticos policíclicos: <strong>naftaleno, antraceno y fenantreno</strong>.</p>
+    </section>
+
+    <!-- 16.7 PROPIEDADES FISICAS -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">16.7. Propiedades Físicas de los Hidrocarburos</h2>
+        <p>Los alifáticos —parafinas— son sustancias <span class="hl-def">no polares o de muy baja polaridad</span> (electronegatividades similares de C e H). Las olefinas y alquinos presentan un momento dipolar algo mayor por la movilidad de los electrones π.</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-blue);">Estado físico:</strong> en alcanos/alquenos, los 4 primeros son gases, hasta C18 líquidos, y los de mayor peso molecular sólidos («hidrocarburos grasos»).</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">Punto de ebullición:</strong> aumenta con el nº de carbonos; disminuye con las ramificaciones (a igual nº de C).</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-purple);">Naftenos:</strong> P.f./P.eb. superiores a los lineales equivalentes por su mayor simetría y empaquetamiento; también más densos.</div>
+        </div>
+        <p>Todos los hidrocarburos, <strong>incluidos los aromáticos</strong>, son <span class="hl-red">insolubles en agua</span> y solubles en disolventes orgánicos poco polares. Industrialmente los alcanos se obtienen de sus fuentes naturales —petróleo y gas natural—; los C1-C5 del gas natural y gases de refinado; los mayores, de las fracciones del destilado o por craqueo y reformado (también usado para obtener aromáticos).</p>
+    </section>
+
+    <!-- 16.8 REACTIVIDAD PARAFINAS -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">16.8. Reactividad de las Parafinas</h2>
+        <p>Las parafinas son <span class="hl-def">poco reactivas</span>, transformándose en otras funciones mediante <strong>reacciones radicálicas de sustitución</strong>.</p>
+
+        <h3>16.8.1. Combustión</h3>
+        <p>Proceso <strong>exotérmico</strong> de oxidación a alta temperatura: R–H + O₂ → CO₂ + H₂O + calor. El <em>calor de combustión</em> aumenta con el número de carbonos; es la base del uso de los alcanos como combustibles.</p>
+
+        <h3>16.8.2. Craqueo</h3>
+        <p>Proceso <strong>térmico de descomposición radicálica</strong> (700 °C): se rompen enlaces C–C y C–H, dando una mezcla de alcanos y alquenos de menor tamaño. Representa el proceso industrial para obtener <span class="hl-green">olefinas</span> a partir de la nafta.</p>
+
+        <h3>16.8.3. Isomerización</h3>
+        <p>Transforma hidrocarburos en sus isómeros, con catalizadores ácidos de Lewis (<strong>AlCl₃</strong>). Ej.: n-butano ⇄ isobutano (equilibrio 20/80). Este proceso tiene lugar en el <span class="hl-def">reformado de gasolinas</span> para aumentar el índice de octano.</p>
+
+        <h3>16.8.4. Halogenación</h3>
+        <p>Mecanismo <strong>radicálico</strong>, con luz UV o a 400 °C. Método de obtención de <span class="hl-purple">derivados halogenados</span> (R–X).</p>
+
+        <h3>16.8.5. Nitración</h3>
+        <p>Reacción radicálica en fase vapor con <strong>HNO₃</strong> a 400-450 °C: R–H + HO–NO₂ → R–NO₂ + H₂O. Se obtienen mezclas de nitrocompuestos por fragmentación de cadena (ej.: propano → 1-nitropropano, 2-nitropropano, nitroetano, nitrometano).</p>
+
+        <div class="diagram-box">
+            <strong>Reactividad de las parafinas</strong><br><br>
+            <div class="flow-steps">
+                <div class="flow-step" style="border-color:var(--accent-red); color:var(--accent-red);">Combustión</div>
+                <div class="flow-step" style="border-color:var(--accent-blue); color:var(--accent-blue);">Craqueo</div>
+                <div class="flow-step" style="border-color:var(--accent-green); color:var(--accent-green);">Isomerización</div>
+                <div class="flow-step" style="border-color:var(--accent-purple); color:var(--accent-purple);">Halogenación</div>
+                <div class="flow-step" style="border-color:var(--accent-amber); color:var(--accent-amber);">Nitración</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16.9 REACTIVIDAD OLEFINAS -->
+    <section class="section-card">
+        <h2 class="section-title t-green">16.9. Reactividad de las Olefinas</h2>
+        <p>Las olefinas son compuestos de <span class="hl-green">gran reactividad</span> por la presencia del doble enlace, de ahí su enorme interés industrial en la síntesis de funciones orgánicas.</p>
+
+        <h3>16.9.1. Reacciones de alquilación</h3>
+        <p>C<sub>n</sub>H<sub>2n+2</sub> + C<sub>m</sub>H<sub>2m</sub> → C<sub>s</sub>H<sub>2s+2</sub> (s = n+m): la reacción <strong>inversa del craqueo</strong>. Interesa para obtener parafinas ramificadas que aumentan el <span class="hl-def">índice de octano</span> de las gasolinas.</p>
+
+        <h3>16.9.2. Reacciones de polimerización</h3>
+        <p>De gran interés industrial: causa de la enorme demanda actual de olefinas. Las olefinas se adicionan a sí mismas muchas veces (apertura del doble enlace), dando <span class="hl-purple">macromoléculas o polímeros</span> (&gt;10.000 daltons), formadas por unidades repetitivas o <strong>monómeros</strong>.</p>
+        <div class="callout callout-info">
+            <div class="callout-title">⚙️ Mecanismos de polimerización</div>
+            <ul>
+                <li><strong>Radicálico:</strong> iniciador generado por luz UV o calor (ej.: etileno → polietileno).</li>
+                <li><strong>Iónico</strong> (aniónico o catiónico): especie activa carbanión o carbocatión, según estabilidad del intermedio.</li>
+                <li><strong>De coordinación</strong> (catalizadores <span class="hl-def">Ziegler-Natta</span>): halogenuro de metal de transición (V o Ti) + cocatalizador alquil-aluminio. Da polímeros <strong>semicristalinos de gran regularidad</strong> y excelentes propiedades mecánicas y térmicas.</li>
+            </ul>
+        </div>
+        <p>El peso molecular de la macromolécula es siempre un <strong>promedio</strong> (depende del nº de monómeros y del mecanismo de terminación). Según la disposición espacial de las unidades, los polímeros son <span class="hl-blue" style="color:var(--accent-blue); font-weight:600;">atácticos, isotácticos y sindiotácticos</span> (los dos últimos, propios de la polimerización por coordinación).</p>
+        <p>Los <strong>dienos</strong> polimerizan uniendo las unidades por los extremos de las insaturaciones, generando un nuevo doble enlace central; la macromolécula resultante sigue funcionalizada como olefina, propiedad clave en la química de los <span class="hl-def">cauchos</span>.</p>
+    </section>
+
+    <!-- 16.10 REACTIVIDAD ALQUINOS -->
+    <section class="section-card">
+        <h2 class="section-title t-red">16.10. Reactividad de los Alquinos</h2>
+        <p>Sustancias muy reactivas por el <strong>triple enlace</strong>: dan reacciones de adición hacia compuestos funcionalizados y polímeros.</p>
+        <h3>16.10.1. Reacciones de polimerización</h3>
+        <p>El acetileno puede <strong>dimerizarse, trimerizarse</strong> (a benceno, con complejos de níquel) o <strong>polimerizarse</strong>, dando <span class="hl-def">poliacetilenos</span> con dobles enlaces conjugados —polímeros conductores por la movilidad de sus electrones—.</p>
+        <h3>16.10.2. Reacciones de vinilación</h3>
+        <p>Incorporación del acetileno como grupo <strong>vinilo</strong> (–CH=CH₂): origina monómeros de interés industrial como el <span class="hl-purple">poli(acrilonitrilo)</span> (fibras) o el <span class="hl-teal">poli(acetato de vinilo)</span>, precursor del poli(alcohol vinílico) (aplicaciones médicas). Del acetileno derivan también cloruro de vinilo (PVC), acrilonitrilo (PAN), ácido acético, cloropreno, acrilatos, tricloroetileno y tetrahidrofurano, entre otros.</p>
+    </section>
+
+    <!-- 16.11 REACTIVIDAD AROMATICOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">16.11. Reactividad de los Hidrocarburos Aromáticos: Sustitución Electrófila Aromática (SEA)</h2>
+        <p>Los aromáticos experimentan <span class="hl-purple">reacciones de sustitución</span> para no romper la estabilidad del anillo. Por la gran densidad electrónica del anillo (doble nube tipo «sándwich»), el reactivo atacante ha de ser <strong>electrófilo</strong> (catión o ácido de Lewis): de ahí el nombre <span class="hl-def">SEA</span>.</p>
+        <p>Estas reacciones conducen a las distintas funciones orgánicas aromáticas: nitración (Ar–NO₂), sulfonación (Ar–SO₃H), halogenación (Ar–X), alquilación Friedel-Krafts (Ar–R), acilación (Ar–CO–R), diazotación (Ar–N≡N·X), entre otras.</p>
+        <h3>16.11.1. Sulfonación</h3>
+        <p>Introduce un grupo <strong>sulfónico (–SO₃H)</strong> en el anillo aromático usando <span class="hl-amber">ácido sulfúrico fumante</span> (con SO₃ disuelto, que actúa como reactivo neutro). De gran interés industrial para la obtención de <span class="hl-def">detergentes sintéticos</span>.</p>
+    </section>
+
+    <!-- 16.12 PARAFINAS DE MAYOR INTERES -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">16.12. Parafinas de Mayor Interés</h2>
+
+        <h3>16.12.1. Metano</h3>
+        <p>Gas incoloro, componente fundamental del <span class="hl-def">gas natural</span>; muy apreciado como combustible y base sintética. Se forma por <strong>fermentación anaerobia</strong> de restos orgánicos (biogás, gas de los pantanos, digestión en rumiantes) y aparece en minas de hulla (<em>gas grisú</em>) y en su destilación seca. Del metano derivan: gas de síntesis (CO+H₂), metanol, ácido cianhídrico (HCN), sulfuro de carbono (CS₂), clorometanos, fosgeno, hidrógeno, oxoalcoholes y etilenglicol.</p>
+
+        <h3>16.12.2. Etano</h3>
+        <p>Interés como fuente de <span class="hl-green">etileno</span>.</p>
+
+        <h3>16.12.3. Propano</h3>
+        <p>Mayor interés petroquímico que el C2, por sus hidrógenos secundarios.</p>
+
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>16.12.4. Éter de petróleo:</strong> mezcla C5-C6, usada como disolvente.</div>
+            <div class="grid-box-2"><strong>16.12.5. Nafta:</strong> mezcla C7-C10, base de productos energéticos y sintéticos.</div>
+        </div>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>16.12.6. Aceites de parafina:</strong> C13-C20, para síntesis de alcoholes y ácidos grasos (detergentes).</div>
+            <div class="grid-box-2"><strong>16.12.7. Parafina:</strong> sólido C22-C35, cristalino; C30-C75 (con ramificados y naftenos) son bases de aceites lubricantes.</div>
+        </div>
+
+        <h3>16.12.8. Gasolinas</h3>
+        <p>El rendimiento del motor depende de la <strong>relación de compresión</strong>; valores elevados producen <span class="hl-red">detonación (knocking)</span>. El <span class="hl-def">índice de octano</span> mide la capacidad antidetonante, comparando con mezclas de <strong>n-heptano</strong> (gran poder detonante, IO=0) y <strong>2,2,4-trimetilpentano/isoctano</strong> (resistente, IO=100).</p>
+        <p>Los hidrocarburos <strong>lineales</strong> dan bajo índice de octano; los <strong>ramificados y alicíclicos</strong>, alto; los <strong>aromáticos</strong>, el mayor. Por ello se someten los saturados a <span class="hl-def">reformado</span>. El aditivo clásico <strong>plomo tetraetilo</strong> aumenta el IO, hoy sustituido (por toxicidad) por compuestos oxigenados como <strong>MTBE</strong> (metil-terc-butil-éter) y <strong>TBA</strong> (alcohol terc-butílico).</p>
+        <p>Síntesis: proceso <strong>Fischer-Tropsch</strong> (Alemania, 2ª Guerra Mundial) a partir del gas de síntesis: nCO + 2nH₂ → [CH₃(CH₂)ₙCH₃] + nH₂O; da gasolinas de bajo índice de octano que requieren reformado posterior.</p>
+
+        <h3>16.12.9. Gasóleo</h3>
+        <p>Fracción C15-C25, combustible en motores <strong>Diesel</strong> y calefacción (doméstico, automoción, agrícola). El comportamiento de combustión se mide con el <span class="hl-def">índice de cetano</span>: escala 100 (cetano, C16, bajo retraso de combustión) - 0 (α-metil-naftaleno, produce «diesel knocking»). Índices demasiado altos → combustión incompleta; demasiado bajos → depósitos sin quemar. Rango habitual: <strong>46-49</strong>.</p>
+
+        <h3>16.12.10. Lubricantes</h3>
+        <p>Mezcla C25-C70; disminuyen el coeficiente de fricción entre superficies. Requisitos: <strong>estabilidad química</strong>, resistencia a oxidación/degradación, poca variación de viscosidad con la temperatura. Aditivos: mejoradores de viscosidad, untuosidad, anticristalizantes, antioxidantes, anticorrosivos, detergentes y antiespumantes.</p>
+    </section>
+
+    <!-- 16.13 OLEFINAS DE MAYOR INTERES -->
+    <section class="section-card">
+        <h2 class="section-title t-green">16.13. Olefinas de Mayor Interés</h2>
+
+        <h3>16.13.1. Etileno</h3>
+        <p>La olefina más sencilla y de <strong>mayor interés industrial</strong>: precursor del <span class="hl-green">40% de los productos petroquímicos</span>. La mayor parte se destina a <strong>polietileno</strong>.</p>
+
+        <h3>16.13.2. Propileno</h3>
+        <p>Importantes aplicaciones en síntesis orgánica.</p>
+
+        <h3>16.13.3. Butenos</h3>
+        <p>Se obtienen de la fracción C4 de las naftas en refinerías; la composición varía según intensidad del craqueo.</p>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Producto</th><th>Baja intensidad (%)</th><th>Alta intensidad (%)</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>1,3-Butadieno</strong></td><td>26</td><td>47</td></tr>
+                    <tr><td>i-Buteno</td><td>32</td><td>22</td></tr>
+                    <tr><td>1-Buteno</td><td>20</td><td>14</td></tr>
+                    <tr><td>trans-2-buteno</td><td>7</td><td>6</td></tr>
+                    <tr><td>cis-2-buteno</td><td>7</td><td>5</td></tr>
+                    <tr><td>n-Butano</td><td>4</td><td>3</td></tr>
+                    <tr><td>Vinilacetileno</td><td>0,2</td><td>2</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 16.1. Proporción de productos C4 según intensidad de craqueo.</p>
+        </div>
+        <p>El <strong>i-buteno</strong> da carburantes de alto octanaje y, con isopreno, caucho butilo; con <strong>metanol</strong> forma <span class="hl-def">MTBE</span> (antidetonante). El <strong>1-buteno</strong> se copolimeriza con etileno.</p>
+
+        <h3>16.13.4. Butadieno</h3>
+        <p>El <span class="hl-red">1,3-butadieno</span> es el dieno C4 de mayor interés industrial (desarrollo bélico, transformación en cauchos). Antigua síntesis desde carbón vía acetileno (proceso Reppe, hoy abandonado); actualmente se obtiene por <strong>craqueo de alta intensidad</strong> de la nafta. Interés fundamental: obtención de <span class="hl-def">cauchos</span>.</p>
+
+        <h3>16.13.5. Isopreno</h3>
+        <p>2-metil-1,3-butadieno: dieno C5 de mayor interés por dar caucho sintético idéntico al natural (forma <strong>cis</strong>, con catalizadores Ziegler-Natta). Se obtiene de la fracción C5 de la nafta.</p>
+
+        <h3>16.13.6. Plásticos (poliolefinas)</h3>
+        <p>Los <span class="hl-def">plásticos</span> son materiales poliméricos aditivados con plastificantes, estabilizantes, cargas y colorantes. Se clasifican en:</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-blue);">Termoplásticos:</strong> cadenas independientes unidas por fuerzas de Van der Waals; funden y se moldean varias veces; reciclables y solubles.</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">Termofijos:</strong> cadenas unidas por enlaces covalentes fuertes; no funden ni se disuelven.</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-purple);">Elastómeros:</strong> como los termofijos, pero con menor «densidad de nudos» entre cadenas (uniones más alejadas).</div>
+        </div>
+        <div class="callout callout-info">
+            <div class="callout-title">🧵 Tipos de Polietileno (PE)</div>
+            <ul>
+                <li><strong>LDPE / PEBD</strong> (baja densidad, ramificado): resistente al impacto, flexible, buen aislante eléctrico; envases y cables.</li>
+                <li><strong>LLDPE</strong> (lineal de baja densidad): copolímero con i-buteno o 1-hexeno; amorfo y transparente; filmes de alimentos.</li>
+                <li><strong>HDPE / PEAD</strong> (alta densidad, muy cristalino): con Ziegler-Natta; contenedores, envases resistentes.</li>
+                <li><strong>UHMWPE / PEUAPM</strong> (peso molecular &gt;3.000.000): propiedades superiores; equipamiento deportivo, implantes médicos.</li>
+            </ul>
+        </div>
+        <p>El <strong>poli(propileno)</strong> existe en forma cristalina (Ziegler-Natta, mejores propiedades que el PE, «plástico técnico»: automoción, electrodomésticos) y amorfa. El <strong>poli(estireno) (PS)</strong>, poliolefina aromática, destaca por su transparencia, estabilidad térmica y bajo coste; en forma de espuma (expandido) es un excelente aislante térmico en construcción y embalaje.</p>
+
+        <h3>16.13.7. Cauchos poli(olefínicos)</h3>
+        <p>Materiales <span class="hl-def">elastómeros</span>: cadenas entrecruzadas covalentemente, gran deformabilidad recuperable. El <strong>caucho natural (NR)</strong>, de la <em>Hevea Brasiliensis</em>, está formado por unidades de <span class="hl-green">cis-isopreno</span> (el isómero todo-trans es la <em>gutapercha</em>, más rígida). Se obtiene como <strong>látex</strong> y se coagula en medio ácido.</p>
+        <div class="callout callout-success">
+            <div class="callout-title">🔥 Vulcanización (Goodyear, 1880)</div>
+            <p>Tratamiento del látex con <strong>azufre</strong> y calor: une las cadenas de poliisopreno a través de sus dobles enlaces, transformando el termoplástico en <strong>termofijo</strong>. A mayor azufre, mayor reticulación y menor elasticidad.</p>
+        </div>
+        <p>Con catalizadores Ziegler-Natta se sintetiza el <strong>poli(isopreno) sintético (IR)</strong>, análogo al natural. Otros cauchos: <span class="hl-def">BR</span> (butadieno, caucho Buna), <span class="hl-def">IIR</span> (butileno-isopreno, baja permeabilidad al aire, usado en air-bags) y <span class="hl-def">SBR</span> (butadieno-estireno, el de mayor consumo, gran resistencia a la abrasión, cintas transportadoras).</p>
+    </section>
+
+    <!-- 16.14 ACETILENICOS DE MAYOR INTERES -->
+    <section class="section-card">
+        <h2 class="section-title t-red">16.14. Acetilénicos de Mayor Interés</h2>
+        <p>El <span class="hl-red">acetileno</span> es el alquino de mayor interés industrial: gas de olor característico y desagradable. Su combustión libera gran energía:</p>
+        <div class="math-box">2 C<sub>2</sub>H<sub>2</sub> + 5 O<sub>2</sub> → 4 CO<sub>2</sub> + 2 H<sub>2</sub>O &nbsp; ΔH = −2.612 kJ</div>
+        <p>Las mezclas con aire pueden dar <strong>explosiones violentas</strong>; se usan mecheros especiales para la <span class="hl-def">soldadura autógena</span> y corte de metales. Gran interés en síntesis orgánica (ver derivados en el apartado 16.10.2).</p>
+    </section>
+
+    <!-- 16.15 NAFTENOS DE MAYOR INTERES -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">16.15. Naftenos de Mayor Interés</h2>
+        <h3>16.15.1. Ciclohexano</h3>
+        <p>Junto con la <strong>decalina</strong>, se obtienen industrialmente por <span class="hl-def">hidrogenación</span> de los aromáticos correspondientes (benceno y naftaleno). El ciclohexano se obtiene por <strong>reformado catalítico</strong> de la nafta.</p>
+        <p>Es un excelente disolvente, pero su interés industrial radica en ser producto de partida para la obtención del <span class="hl-purple">nylon 6,6 y nylon 6</span> (vía ácido adípico, hexametilendiamina y ε-caprolactama).</p>
+    </section>
+
+    <!-- 16.16 AROMATICOS DE MAYOR INTERES -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">16.16. Aromáticos de Mayor Interés</h2>
+        <p>Los productos de mayor demanda son el conjunto <span class="hl-def">BTX</span> (benceno, tolueno y xilenos), además del etilbenceno.</p>
+
+        <h3>16.16.1. Benceno</h3>
+        <p>El hidrocarburo aromático de mayor importancia: ocupa el <strong>5º puesto</strong> en el ranking mundial de producción de compuestos químicos. Usado como disolvente y materia prima de: nitrobenceno→anilina, clorobenceno→fenol, ácido bencenosulfónico, etilbenceno→estireno→poliestireno, cumeno→fenol, ciclohexano→ácido adípico, y anhídrido maleico.</p>
+
+        <h3>16.16.2. Tolueno</h3>
+        <p>Su aplicación más importante: materia prima para obtener <strong>benceno</strong> por hidrodesmetilación. Buen disolvente de polímeros (recubrimientos, pinturas). Materia prima del explosivo <span class="hl-red">TNT</span> (trinitrotolueno, por nitración) y del <span class="hl-def">TDI</span> (tolueno-diisocianato, espumas de poliuretano).</p>
+
+        <h3>16.16.3. Xilenos</h3>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-blue);">o-xileno:</strong> oxidación → anhídrido ftálico (plastificantes del PVC) y ácido ftálico (poliésteres).</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">m-xileno:</strong> el de menor interés; se isomeriza a o- y p-xileno. Su oxidación da ácido isoftálico (fibras Nomex).</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-purple);">p-xileno:</strong> exclusivo para ácido tereftálico → poli(tereftalato de etileno) (fibras de poliéster, plásticos PET, fibras de aramida Kevlar).</div>
+        </div>
+
+        <h3>16.16.4. Etilbenceno</h3>
+        <p>Se obtiene por reacción <strong>Friedel-Krafts (FK)</strong> de benceno con etileno. Su producción se destina íntegramente a <span class="hl-def">estireno</span>, base del poli(estireno) y de los cauchos <strong>ABS</strong> (acrilonitrilo-butadieno-estireno).</p>
+
+        <h3>16.16.5. Cumeno</h3>
+        <p>Isopropil-benceno, obtenido por FK de benceno con propeno. Se utiliza exclusivamente en la obtención de <span class="hl-def">fenol y acetona</span>.</p>
+
+        <h3>16.16.6. Naftaleno</h3>
+        <p>Antes obtenido del alquitrán de hulla, hoy por destilación de la fracción media de aromáticos del craqueo de nafta. Usos: colorantes, curtientes, disolventes hidrogenados (decalina y tetralina) y anhídrido ftálico (ftalatos plastificantes).</p>
+
+        <h3>16.16.7. Antraceno</h3>
+        <p>Abundante en el alquitrán de hulla. Aplicación industrial en colorantes al mordiente, de tina y reactivos.</p>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">🧪 Ejercicios de Autoevaluación Resueltos</h2>
+
+        <!-- EX 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Pirólisis vs. Combustión</div>
+            <p><strong>Enunciado:</strong> La pirólisis y la combustión de los hidrocarburos son procesos térmicos, ¿en qué se diferencian? ¿A qué compuestos conducen?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>La <strong>pirólisis</strong> tiene lugar en <span class="hl-red">ausencia de oxígeno</span> y produce fragmentaciones de la molécula inicial hacia hidrocarburos de menor tamaño. La <strong>combustión</strong> tiene lugar en <span class="hl-green">presencia de oxígeno</span> y conduce a los compuestos de carbono e hidrógeno en su mayor estado de oxidación: <strong>CO₂ y H₂O</strong>.</p>
+            </div>
+        </div>
+
+        <!-- EX 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: Sustitutos del Plomo Tetraetilo</div>
+            <p><strong>Enunciado:</strong> ¿Existe algún sustituto del plomo-tetraetilo como antidetonante en los motores de explosión de gasolina?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Sí. Se ha comprobado que compuestos oxigenados como el <strong>metil-terc-butil-éter (MTBE)</strong> y el <strong>alcohol terc-butílico (TBA)</strong> han dado buenos resultados como antidetonantes, sin la toxicidad de los compuestos de plomo.</p>
+            </div>
+        </div>
+
+        <!-- EX 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Craqueo de Parafinas y Alquilación de Olefinas</div>
+            <p><strong>Enunciado:</strong> ¿Qué relación existe entre el craqueo de las parafinas y la alquilación de las olefinas?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Son reacciones <strong>opuestas (inversas)</strong>. En la <span class="hl-green">alquilación</span> de olefinas se obtienen parafinas de mayor tamaño; en el <span class="hl-red">craqueo</span> de parafinas superiores, se obtienen olefinas de menor tamaño.</p>
+            </div>
+        </div>
+
+        <!-- EX 4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4: Interés Industrial de los Dienos Conjugados</div>
+            <p><strong>Enunciado:</strong> ¿Qué interés industrial tienen los dienos conjugados?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Tienen interés como <strong>monómeros en la obtención de cauchos</strong>, ya que en la polimerización por adición se crea un nuevo doble enlace por cada unidad monomérica incorporada a la macromolécula en crecimiento. Estos dobles enlaces en las cadenas poliméricas permiten la unión entre ellas por apertura del doble enlace, mediante peróxidos o por incorporación de azufre (<span class="hl-def">vulcanización</span>).</p>
+            </div>
+        </div>
+
+        <!-- EX 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5: Interés Industrial del Ciclohexano</div>
+            <p><strong>Enunciado:</strong> ¿Qué interés tiene el ciclohexano en la industria química orgánica?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Es producto de partida para la obtención de:</p>
+                <ul>
+                    <li><strong>Ácido adípico</strong> (por oxidación).</li>
+                    <li><strong>Hexametilendiamina</strong>, para la síntesis del <span class="hl-purple">nylon 6,6</span> (junto con el ácido adípico).</li>
+                    <li><strong>ε-caprolactama</strong>, para la síntesis del <span class="hl-purple">nylon 6</span>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EX 6 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 6: Reactividad de los Compuestos Aromáticos</div>
+            <p><strong>Enunciado:</strong> ¿Qué tipo de reacciones experimentan los compuestos aromáticos? ¿Por qué?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Experimentan reacciones de <span class="hl-def">sustitución electrófila (SEA)</span>. Aunque poseen varios dobles enlaces en el anillo, no dan reacciones de adición, ya que ésta conduciría a la <strong>pérdida de aromaticidad</strong>, disminuyendo mucho la estabilidad del compuesto. Se llama «electrófila» porque, dada la elevada densidad electrónica del anillo aromático, los reactivos atacantes deben tener carácter electrófilo.</p>
+            </div>
+        </div>
+
+        <!-- EX 7 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 7: Obtención Industrial de Aromáticos</div>
+            <p><strong>Enunciado:</strong> A nivel industrial, ¿cómo se obtienen hidrocarburos aromáticos?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Los compuestos aromáticos tienen presencia notable en el <strong>carbón</strong> (en forma de hidrocarburos o, a lo sumo, fenoles), aunque su presencia en el <strong>petróleo</strong> es menor y variable según su procedencia. La operación de <span class="hl-def">reformado con vapor</span> es el procedimiento industrial que permite obtener la fracción <strong>B, T, X</strong> (benceno, tolueno, xilenos) de aromáticos. Cualquier otro derivado de interés debe sintetizarse posteriormente mediante reacciones de <span class="hl-purple">SEA</span>.</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

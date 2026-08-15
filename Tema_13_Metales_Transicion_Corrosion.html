@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 13: Metales de Transición. Corrosión Metálica - Resumen Completo</title>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0369a1 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%; right: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header p { font-size: 1.05rem; color: #cbd5e1; max-width: 850px; }
+        .meta-info {
+            margin-top: 20px; padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem; color: #94a3b8;
+            display: flex; flex-wrap: wrap; gap: 20px;
+        }
+        .meta-info span { display: flex; align-items: center; gap: 6px; }
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .section-card:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08); }
+        .section-title {
+            font-size: 1.55rem; font-weight: 700;
+            margin-bottom: 20px; padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+        h3 { font-size: 1.2rem; font-weight: 600; margin: 22px 0 12px 0; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+        h4 { font-size: 1.05rem; font-weight: 600; margin: 16px 0 8px 0; color: var(--primary-light); }
+        p { margin-bottom: 14px; color: #334155; text-align: justify; }
+        .hl-def { background-color: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-green { background-color: #dcfce7; color: #15803d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-red { background-color: #fee2e2; color: #b91c1c; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-amber { background-color: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-purple { background-color: #f3e8ff; color: #6b21a8; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-pink { background-color: #fce7f3; color: #9d174d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-teal { background-color: #ccfbf1; color: #0f766e; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.88em; line-height: 1.0; padding: 0 3px; font-family: 'Cambria', 'Georgia', serif; font-weight: bold; }
+        .frac .top { border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+        .frac .bottom { padding-top: 1px; }
+        .math-box {
+            background-color: #0f172a; color: #f8fafc;
+            padding: 16px 24px; border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif; font-size: 1.1rem;
+            text-align: center; margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8; overflow-x: auto;
+        }
+        .math-box .var { font-style: italic; color: #38bdf8; font-weight: bold; }
+        .math-inline { font-family: 'Cambria', 'Georgia', serif; font-style: italic; font-weight: 600; color: #0f172a; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+        .callout { border-left: 4px solid; padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 18px 0; background-color: #f8fafc; }
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+        .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+        .callout-pink { border-color: var(--accent-pink); background-color: #fdf2f8; }
+        .callout-title { font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .table-responsive { overflow-x: auto; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.92rem; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th { background-color: var(--primary); color: white; padding: 12px 14px; text-align: left; font-weight: 600; }
+        td { padding: 11px 14px; border-bottom: 1px solid var(--border-color); background-color: white; }
+        tr:nth-child(even) td { background-color: #f8fafc; }
+        tr:hover td { background-color: #f1f5f9; }
+        ul, ol { margin: 12px 0 16px 24px; color: #334155; }
+        li { margin-bottom: 8px; }
+        .badge-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 20px 0; }
+        .badge-card { flex:1 1 300px; max-width: 500px; border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; background: #ffffff; border-top: 4px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .exercise-card { background-color: #fefce8; border: 1px solid #fef08a; border-left: 5px solid var(--accent-amber); border-radius: 8px; padding: 20px; margin-bottom: 22px; }
+        .exercise-title { font-weight: 700; color: #854d0e; margin-bottom: 10px; font-size: 1.05rem; }
+        .solution-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px; margin-top: 12px; font-size: 0.95rem; }
+        .solution-tag { display: inline-block; background-color: #dcfce7; color: #166534; font-weight: 700; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; margin-bottom: 8px; }
+        .two-column-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .three-column-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .grid-box-1 { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 14px; }
+        .grid-box-2 { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px; }
+        .grid-box-3 { background: #fdf4ff; border: 1px solid #f0abfc; border-radius: 8px; padding: 14px; }
+        .diagram-box { background: #f1f5f9; border: 1px dashed #64748b; border-radius: 8px; padding: 15px; text-align: center; margin: 15px 0; font-weight: 600; }
+        .flow-steps { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+        .flow-step { background: white; border: 2px solid var(--accent-blue); color: var(--accent-blue); border-radius: 8px; padding: 8px 14px; font-weight: 700; font-size: 0.9rem; }
+        .flow-arrow { color: var(--text-muted); font-size: 1.2rem; font-weight: 900; }
+        figcaption { margin-top: 10px; font-weight: 400; font-size: 0.9rem; color: var(--text-muted); }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7rem; }
+            .section-card { padding: 18px; }
+            .two-column-grid { grid-template-columns: 1fr; }
+            .three-column-grid { grid-template-columns: 1fr; }
+            .badge-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 13: Metales de Transición. Corrosión Metálica</h1>
+        <p>Resumen exhaustivo, visual y ordenado de la unidad didáctica: propiedades de los metales de transición; Titanio, Cromo, Manganeso, Cobre y Cinc: fuentes, obtención, propiedades y compuestos; el Hierro y la Siderurgia (alto horno, fabricación de aceros); y el fenómeno de la corrosión metálica: tipos, termodinámica, cinética, prevención y control. Incluye la resolución completa de la Autoevaluación.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Mª José Caselles Pomares, Mariano Molero Meneses, et al.</span>
+            <span>📍 <strong>Unidad Didáctica:</strong> Tema 13</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Propiedades de los metales de transición:</strong> Relacionarlas con su posición en el sistema periódico.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>Metalurgia del hierro:</strong> Describir fuentes, alto horno y métodos de fabricación de aceros, tipos, propiedades y aplicaciones.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>Compuestos del hierro:</strong> Conocer los de mayor interés industrial.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>Ti, Cr, Mn, Cu, Zn:</strong> Fuentes, obtención y aplicaciones de estos metales de gran interés industrial.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <strong>Corrosión metálica:</strong> Definir y clasificar sus diversos tipos.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <strong>Corrosión seca:</strong> Factores cinéticos y termodinámicos.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-pink);">
+                <strong>Corrosión electroquímica:</strong> Factores cinéticos y termodinámicos.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Prevención y control:</strong> Fundamento de las diversas técnicas.
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN INTRODUCTORIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">📝 Resumen General de la Unidad</h2>
+        <p>Se aborda el estudio del grupo más numeroso del sistema periódico: los <span class="hl-def">metales de transición y de transición interna</span> (más de 50 elementos estables), de marcado carácter metálico. El tema se centra en los más abundantes y de mayor aplicación industrial: <span class="hl-green">Titanio, Cromo, Manganeso, Cobre y Cinc</span>, y de modo muy especial en el <span class="hl-green">Hierro</span>, detallando su proceso metalúrgico (alto horno) y los métodos de fabricación de aceros.</p>
+        <p>La segunda parte se dedica a la <span class="hl-red">corrosión metálica</span>, uno de los problemas económicos más importantes ligados al uso de los metales: sus fundamentos cinético y termodinámico, los distintos tipos (seca/gaseosa y electroquímica) y las técnicas para su prevención y control.</p>
+    </section>
+
+    <!-- 13.1 CLASIFICACION -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">13.1. Clasificación de los Metales de Transición</h2>
+        <p>Forman un grupo muy numeroso: <strong>más del 50%</strong> de todos los elementos conocidos, que ocupan la parte central del Sistema Periódico. Constituyen una <span class="hl-def">transición</span> entre los elementos electropositivos «formadores de bases» (izquierda) y los electronegativos «formadores de ácidos» (derecha). Se caracterizan porque tienen su <strong>electrón diferenciador en el subnivel d</strong> de su penúltima capa. Los elementos con electrón diferenciador en el subnivel <strong>f</strong> (antepenúltima capa) son los de <span class="hl-def">transición interna</span> (lantánidos y actínidos).</p>
+        <p>Todos son metales, ya que disponen de un <strong>número de orbitales de valencia mayor que el número de electrones de valencia</strong>, lo que deslocaliza los electrones de valencia a lo largo de las bandas de conductividad (buenos conductores eléctricos).</p>
+        <div class="callout callout-info">
+            <div class="callout-title">🗂️ Subdivisión de los Metales de Transición</div>
+            <p>Se subdividen en <strong>ocho grupos o familias</strong> (I a VIII, seguido de «B»): <strong>III B; IV B; V B; VI B; VII B; VIII B; I B y II B</strong>. El Grupo VIII B consta, para cada periodo, de <strong>tres elementos</strong> llamados <span class="hl-amber">tríadas</span>. Según el periodo, se clasifican en tres series: <strong>1.ª Serie</strong> (periodo 4), <strong>2.ª Serie</strong> (periodo 5) y <strong>3.ª Serie</strong> (periodo 6).</p>
+        </div>
+    </section>
+
+    <!-- 13.2 PROPIEDADES GENERALES -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">13.2. Propiedades Generales de los Metales de Transición</h2>
+        <p>Salvo los elementos del <strong>Grupo II B</strong>, todos tienen como característica común su <span class="hl-def">subnivel d incompleto</span> (parcialmente lleno). El solapamiento energético entre el subnivel <em>s</em> de la última capa y el subnivel <em>d</em> de la penúltima produce una <strong>homogeneización de propiedades</strong>, aunque con marcada periodicidad. Las propiedades generales coinciden con las descritas para los metales en el Tema 12.</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Elemento</th><th>Configuración</th><th>P.f. (°C)</th><th>Densidad (g/mL)</th><th>E° (V)</th><th>Nº oxidación</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Ti</strong></td><td>3d²4s²</td><td>1.680</td><td>4,15</td><td>−1,63</td><td>2;3;4;5</td></tr>
+                    <tr><td><strong>Cr</strong></td><td>3d⁵4s¹</td><td>1.900</td><td>7,20</td><td>−0,74</td><td>2;3;4;5;6;7</td></tr>
+                    <tr><td><strong>Mn</strong></td><td>3d⁵4s²</td><td>1.250</td><td>7,43</td><td>−1,18</td><td>2;3</td></tr>
+                    <tr><td><strong>Fe</strong></td><td>3d⁶4s²</td><td>1.540</td><td>7,86</td><td>−0,44</td><td>2;3</td></tr>
+                    <tr><td><strong>Cu</strong></td><td>3d¹⁰4s¹</td><td>1.080</td><td>8,96</td><td>+0,34</td><td>1;2</td></tr>
+                    <tr><td><strong>Zn</strong></td><td>3d¹⁰4s²</td><td>419</td><td>7,14</td><td>−0,76</td><td>2</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 13.1 (extracto). Propiedades destacadas de los elementos de la 1.ª serie de transición más relevantes industrialmente.</p>
+        </div>
+        <p>A continuación se estudian con detalle los elementos y compuestos de mayor interés industrial: <strong>Titanio, Cromo, Manganeso, Cobre, Cinc</strong> y, de modo muy especial, el <strong>Hierro</strong>.</p>
+    </section>
+
+    <!-- 13.3 TITANIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">13.3. Titanio: Fuentes, Obtención, Propiedades y Compuestos</h2>
+        <p>Con un <strong>0,63%</strong> de la corteza terrestre, ocupa el <span class="hl-def">segundo lugar</span> en abundancia entre los elementos de transición (tras el hierro) y el <strong>décimo lugar</strong> de todos los elementos. No se encuentra libre; fuentes principales: <strong>rutilo</strong> (TiO<sub>2</sub>) e <strong>ilmenita</strong> (FeTiO<sub>3</sub>).</p>
+        <div class="callout callout-teal">
+            <div class="callout-title">⚙️ Metalurgia del Titanio</div>
+            <p>El mineral se mezcla con carbón y se calienta con cloro gaseoso, formando cloruro de titanio volátil, que se destila, condensa y purifica por redestilación:</p>
+            <div class="math-box">
+                TiO<sub>2(s)</sub> + 2C<sub>(s)</sub> + 2Cl<sub>2(g)</sub> → TiCl<sub>4(g)</sub> + 2CO<sub>(g)</sub><br>
+                FeTiO<sub>3(s)</sub> + 3C<sub>(s)</sub> + 3Cl<sub>2(g)</sub> → TiCl<sub>4(g)</sub> + 3CO<sub>(g)</sub> + FeCl<sub>2(s)</sub>
+            </div>
+            <p>Después, el TiCl<sub>4</sub> se calienta entre <strong>950-1.050 °C</strong> en reactor de acero, en contacto con <strong>magnesio</strong> metal (virutas), reduciéndose a titanio metal. El MgCl<sub>2</sub> líquido se separa por sangrado o lavado (soluble en agua):</p>
+            <div class="math-box">TiCl<sub>4(g)</sub> + 2Mg<sub>(s)</sub> → 2MgCl<sub>2(l)</sub> + Ti<sub>(s)</sub></div>
+        </div>
+        <p><strong>Propiedades destacadas:</strong> resistencia a la tensión <span class="hl-green">casi el doble que el hierro</span>; densidad <span class="hl-green">prácticamente la mitad que el acero</span>; punto de fusión <span class="hl-green">casi el triple que el aluminio</span>; y sobre todo, <span class="hl-teal">elevadísima resistencia a la corrosión</span> (no lo atacan los ácidos comunes, salvo el sulfúrico concentrado).</p>
+        <p><strong>Aplicaciones:</strong> material estructural en aviación y aeronaves, componentes de reactores nucleares y maquinaria química; aceros especiales duros y resistentes a la abrasión y corrosión.</p>
+        <p><strong>Compuestos:</strong> el <strong>dióxido de titanio (TiO<sub>2</sub>)</strong>, sólido blanco insoluble en agua (soluble en H<sub>2</sub>SO<sub>4</sub> concentrado y bases fuertes, dando el ion titanato), se emplea como <span class="hl-def">pigmento blanco</span> en esmaltes, pinturas y cerámicas, y como carga inerte en papel y plásticos. El <strong>TiCl<sub>4</sub></strong> se usa como catalizador en el <strong>proceso Ziegler-Natta</strong> para polímeros olefínicos estereoespecíficos.</p>
+    </section>
+
+    <!-- 13.4 CROMO -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">13.4. Cromo: Fuentes, Obtención, Propiedades y Compuestos</h2>
+        <p>Elemento poco abundante (<strong>0,0122%</strong> en masa). Mena principal: <strong>cromita</strong> (FeO·Cr<sub>2</sub>O<sub>3</sub>); menos importante: <strong>crocoíta</strong> (PbCrO<sub>4</sub>).</p>
+        <div class="callout callout-purple">
+            <div class="callout-title">⚙️ Metalurgia del Cromo</div>
+            <p><strong>Ferrocromo</strong> (aleación Fe-2Cr, uso directo en aceros), por reducción con carbón:</p>
+            <div class="math-box">FeO·Cr<sub>2</sub>O<sub>3(s)</sub> + 4C<sub>(s)</sub> → Fe + 2Cr<sub>(s)</sub> + 4CO<sub>(g)</sub></div>
+            <p><strong>Cromo puro:</strong> la cromita se somete a fusión alcalina con Na<sub>2</sub>CO<sub>3</sub> en atmósfera oxidante (cromato sódico soluble + óxido férrico insoluble, separados por filtración):</p>
+            <div class="math-box">4FeO·Cr<sub>2</sub>O<sub>3(s)</sub> + 8Na<sub>2</sub>CO<sub>3(s)</sub> + 7O<sub>2(g)</sub> <span class="frac"><span class="top">calor</span><span class="bottom">→</span></span> 8Na<sub>2</sub>CrO<sub>4(l)</sub> + 2Fe<sub>2</sub>O<sub>3</sub> + 8CO<sub>2(g)</sub></div>
+            <p>Se trata con H<sub>2</sub>SO<sub>4</sub> concentrado (a dicromato), se separa por cristalización fraccionada, se reduce con carbón a óxido crómico y finalmente se reduce con aluminio:</p>
+            <div class="math-box">
+                2Na<sub>2</sub>CrO<sub>4(ac)</sub> + H<sub>2</sub>SO<sub>4(ac)</sub> → Na<sub>2</sub>Cr<sub>2</sub>O<sub>7(ac)</sub> + Na<sub>2</sub>SO<sub>4(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub><br>
+                Na<sub>2</sub>Cr<sub>2</sub>O<sub>7(s)</sub> + 2C<sub>(s)</sub> → Cr<sub>2</sub>O<sub>3(s)</sub> + Na<sub>2</sub>CO<sub>3(s)</sub> + CO<sub>(g)</sub><br>
+                Cr<sub>2</sub>O<sub>3(s)</sub> + 2Al<sub>(s)</sub> → 2Cr<sub>(s)</sub> + Al<sub>2</sub>O<sub>3(s)</sub>
+            </div>
+        </div>
+        <p>Metal blanco-azulado, duro y quebradizo, P.f. elevado, <span class="hl-teal">muy resistente a la corrosión</span> por formación de capa protectora de Cr<sub>2</sub>O<sub>3</sub>. Aplicación principal: <strong>acero inoxidable</strong> (14-18% Cr, 7-9% Ni) y <strong>cromado</strong> (recubrimiento electrolítico, electrólisis de Cr<sub>2</sub>O<sub>3</sub> en H<sub>2</sub>SO<sub>4</sub>, con los materiales a proteger como cátodo).</p>
+        <h3>Compuestos de Cromo</h3>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-green);">Cr<sub>2</sub>O<sub>3</sub>:</strong> pigmento verde en pinturas, esmaltes y vidrios. Las sales de Cr³⁺ son mordientes textiles y para curtido de cueros.</div>
+            <div class="grid-box-2"><strong style="color:#78350f;">CrO<sub>2</sub>:</strong> sólido pardo oscuro, alta conductividad y propiedades magnéticas: cintas magnéticas.</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-red);">CrO<sub>3</sub>:</strong> sólido rojo, fuerte oxidante y ácido. En medio alcalino da <strong>cromatos</strong> (amarillos); en medio ácido, <strong>dicromatos</strong> (rojo-naranja), equilibrio reversible.</div>
+        </div>
+        <div class="math-box">2CrO<sub>4</sub><sup>2−</sup><sub>(ac)</sub> + 2H<sup>+</sup><sub>(ac)</sub> ⇄ Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup><sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub></div>
+        <p>Cromatos/dicromatos de Na y K: agentes oxidantes fuertes y pasivantes del hierro/aceros. Otros cromatos de interés como pigmentos: <strong>ZnCrO<sub>4</sub></strong> (amarillo claro), <strong>BaCrO<sub>4</sub></strong> (amarillo limón) y <strong>PbCrO<sub>4</sub></strong> (amarillo fuerte).</p>
+    </section>
+
+    <!-- 13.5 MANGANESO -->
+    <section class="section-card">
+        <h2 class="section-title t-green">13.5. Manganeso: Fuentes, Obtención, Propiedades y Compuestos</h2>
+        <p>Elemento bastante abundante (~<strong>0,11%</strong> en masa). Compuesto natural principal: <strong>pirolusita</strong> o dióxido de manganeso (MnO<sub>2</sub>); también en nódulos de los fondos marinos junto a Fe, Cu, Co y Ni.</p>
+        <div class="callout callout-success">
+            <div class="callout-title">⚙️ Síntesis del Manganeso</div>
+            <p>Reducción del MnO<sub>2</sub> con aluminio (reacción muy exotérmica, riesgo de explosión); por seguridad se reduce primero a <strong>Mn<sub>2</sub>O<sub>3</sub></strong> por calentamiento, y después a aluminotermia:</p>
+            <div class="math-box">
+                2MnO<sub>2(s)</sub> → Mn<sub>2</sub>O<sub>3(s)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>O<sub>2(g)</sub><br>
+                Mn<sub>2</sub>O<sub>3(s)</sub> + 2Al<sub>(s)</sub> → 2Mn<sub>(l)</sub> + Al<sub>2</sub>O<sub>3(s)</sub>
+            </div>
+            <p>El manganeso líquido se separa por destilación.</p>
+        </div>
+        <p>Metal blanco-plateado, duro pero quebradizo; se oxida fácilmente en aire húmedo; <strong>reductor</strong>, se disuelve en ácidos no oxidantes desprendiendo H<sub>2</sub>; se comporta de forma similar a los alcalinos/alcalinotérreos en contacto con agua. El metal puro no tiene aplicación práctica, pero <strong>aleado con hierro</strong> mejora notablemente sus propiedades: aceros con 12-18% Mn, muy duros y resistentes al desgaste (raíles ferroviarios); Fe-Mn en el refinado de aceros (elimina O<sub>2</sub> y S). La <strong>manganina</strong> (83% Cu, 12% Mn, 5% Ni) tiene resistencia eléctrica casi invariable con la temperatura (instrumentos de medida).</p>
+        <p>Presenta gran número de estados de oxidación: <strong>MnO</strong> (+2) y <strong>Mn<sub>2</sub>O<sub>3</sub></strong> (+3), básicos; <strong>MnO<sub>2</sub></strong> (+4), anfótero; <strong>MnO<sub>3</sub></strong> (+6) y <strong>Mn<sub>2</sub>O<sub>7</sub></strong> (+7), ácidos.</p>
+        <h3>Compuestos: Manganatos y Permanganatos</h3>
+        <p>El <strong>MnO<sub>2</sub></strong> se usa en pilas secas (<em>Leclanché</em>), pigmento en esmaltes/vidrios/cerámicas y secante en pinturas al aceite. Los <strong>manganatos</strong> se obtienen por fusión alcalina oxidante del MnO<sub>2</sub>:</p>
+        <div class="math-box">2MnO<sub>2(s)</sub> + 4KOH<sub>(l)</sub> + O<sub>2(g)</sub> → 2K<sub>2</sub>MnO<sub>4(l)</sub> + 2H<sub>2</sub>O<sub>(g)</sub></div>
+        <p>El ion manganato se dismuta en ácido a MnO<sub>2</sub> + permanganato, pero industrialmente el <strong>permanganato</strong> se obtiene por <span class="hl-def">oxidación electrolítica</span> de una disolución básica de manganato:</p>
+        <div class="math-box">
+            <strong>Ánodo (−):</strong> MnO<sub>4</sub><sup>2−</sup><sub>(ac)</sub> − e<sup>−</sup> → MnO<sub>4</sub><sup>−</sup><sub>(ac)</sub><br>
+            <strong>Cátodo (+):</strong> H<sub>2</sub>O<sub>(l)</sub> + e<sup>−</sup> → OH<sup>−</sup><sub>(ac)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>H<sub>2(g)</sub>
+        </div>
+        <p>El <strong>KMnO<sub>4</sub></strong> se usa como oxidante en Química y en la potabilización de aguas. Manganatos y permanganatos se emplean como pigmentos verde y violeta en vidrios.</p>
+    </section>
+
+    <!-- 13.6 HIERRO -->
+    <section class="section-card">
+        <h2 class="section-title t-red">13.6. El Hierro y sus Compuestos</h2>
+        <p><strong>Cuarto elemento</strong> en abundancia en la corteza (<strong>6,2%</strong>) y <strong>segundo metal</strong> en abundancia tras el aluminio. Fuentes: <strong>hematites</strong> (Fe<sub>2</sub>O<sub>3</sub>), <strong>magnetita</strong> (Fe<sub>3</sub>O<sub>4</sub>), <strong>limonita</strong> (Fe<sub>2</sub>O<sub>3</sub>·nH<sub>2</sub>O), <strong>siderita</strong> (FeCO<sub>3</sub>) y <strong>pirita</strong> (FeS<sub>2</sub>). La <span class="hl-def">siderurgia</span> reduce sus óxidos con coque (agente reductor real: CO) en un <strong>alto horno</strong>. La pirita requiere tostación previa:</p>
+        <div class="math-box">3FeS<sub>2(s)</sub> + 8O<sub>2(g)</sub> → FeO/Fe<sub>2</sub>O<sub>3(s)</sub> + 6SO<sub>2(g)</sub></div>
+
+        <h3>13.6.1. Metalurgia del Hierro: el Alto Horno</h3>
+        <p>Construcción de acero tipo chimenea, <strong>&gt;30 m de altura y ~10 m de diámetro</strong> en su parte más ancha (<span class="hl-def">vientre</span>), con paredes de ladrillo refractario. Se cargan por el <strong>tragante</strong> mineral, coque, sílice y caliza; por las <strong>toberas</strong> entra aire caliente; el hierro fundido y la escoria se extraen por <strong>piqueras</strong> distintas.</p>
+        <figure class="diagram-box">
+            <svg viewBox="0 0 300 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="110,15 190,15 240,230 60,230" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+                <text x="150" y="10" text-anchor="middle" font-size="11" fill="#0f172a" font-weight="700">Tragante (mineral+coque+fundente)</text>
+                <line x1="60" y1="60" x2="240" y2="60" stroke="#94a3b8" stroke-dasharray="4,3"/>
+                <text x="250" y="63" font-size="10" fill="#0284c7">I: 200-700°C</text>
+                <line x1="72" y1="110" x2="228" y2="110" stroke="#94a3b8" stroke-dasharray="4,3"/>
+                <text x="238" y="113" font-size="10" fill="#16a34a">II: 700-1200°C</text>
+                <line x1="84" y1="160" x2="216" y2="160" stroke="#94a3b8" stroke-dasharray="4,3"/>
+                <text x="226" y="163" font-size="10" fill="#d97706">III: 1200-1500°C</text>
+                <line x1="96" y1="200" x2="204" y2="200" stroke="#94a3b8" stroke-dasharray="4,3"/>
+                <text x="214" y="203" font-size="10" fill="#dc2626">IV: 1500-2000°C</text>
+                <text x="40" y="205" font-size="10" fill="#0284c7" font-weight="700">Toberas →</text>
+                <text x="150" y="248" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="700">Hierro fundido / Escoria</text>
+            </svg>
+            <figcaption>Figura 13.1. Esquema del alto horno y sus zonas de temperatura.</figcaption>
+        </figure>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Zona I (200-700 °C):</strong> secado del mineral; reducción de Fe<sub>2</sub>O<sub>3</sub> a Fe<sub>3</sub>O<sub>4</sub>; descomposición parcial de CaCO<sub>3</sub>; reducción de Fe<sub>3</sub>O<sub>4</sub> a FeO.
+                <div class="math-box" style="font-size:0.85rem;">
+                    3Fe<sub>2</sub>O<sub>3</sub>+CO→2Fe<sub>3</sub>O<sub>4</sub>+CO<sub>2</sub><br>
+                    CaCO<sub>3</sub>⇄CaO+CO<sub>2</sub><br>
+                    Fe<sub>3</sub>O<sub>4</sub>+CO→3FeO+CO<sub>2</sub>
+                </div>
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Zona II (700-1.200 °C):</strong> se completa descomposición de CaCO<sub>3</sub>; reducción de FeO a Fe.
+                <div class="math-box" style="font-size:0.85rem;">
+                    CaCO<sub>3</sub>→CaO+CO<sub>2</sub><br>
+                    FeO+CO→Fe+CO<sub>2</sub>
+                </div>
+            </div>
+            <div class="grid-box-3">
+                <strong style="color:var(--accent-amber);">Zona III (1.200-1.500 °C):</strong> se funde el hierro; se forma la escoria.
+                <div class="math-box" style="font-size:0.85rem;">
+                    CaO+SiO<sub>2</sub>→CaSiO<sub>3</sub><br>
+                    CaO+Al<sub>2</sub>O<sub>3</sub>→Ca(AlO<sub>2</sub>)<sub>2</sub>
+                </div>
+            </div>
+        </div>
+        <div class="grid-box-1" style="margin-top:15px;">
+            <strong style="color:var(--accent-red);">Zona IV (1.500-2.000 °C):</strong> combustión del coque; reducción y descomposición del CO<sub>2</sub>.
+            <div class="math-box" style="font-size:0.85rem;">
+                2C+O<sub>2</sub>→2CO &nbsp; ; &nbsp; C+O<sub>2</sub>→CO<sub>2</sub><br>
+                CO<sub>2</sub>+C ⇄ 2CO &nbsp; ; &nbsp; CO<sub>2</sub> ⇄ CO+½O<sub>2</sub>
+            </div>
+        </div>
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ El Arrabio</div>
+            <p>Reacciones secundarias por impurezas del mineral/fundente (reducción de sílice a Si, oxidación de Mn a MnO y P a fosfatos) se disuelven en el hierro líquido junto con carbono, aumentando su fragilidad. El hierro impuro del alto horno se llama <span class="hl-red">arrabio</span>: <strong>2-4,5% C; 1-3% Si; 0,5-2% Mn</strong> y &lt;1% de P y S.</p>
+        </div>
+        <p>Parte del arrabio se destina a producir <strong>aceros</strong>; el resto se moldea:</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong>Hierro fundido:</strong> arrabio moldeado directamente. Muy frágil, baja tenacidad y ductilidad, no mecanizable. Piezas moldeadas (bloques de motor, tapas de alcantarilla).</div>
+            <div class="grid-box-2"><strong>Hierro colado:</strong> arrabio + chatarra de hierro/acero fundidos. Menos impurezas, menos frágil, más dúctil.</div>
+            <div class="grid-box-3"><strong>Hierro dulce:</strong> arrabio con &lt;0,02% C (arrabio + óxido de hierro). Duro, dúctil, maleable, resistente a la corrosión: electroimanes, núcleos de bobinas.
+            <div class="math-box" style="font-size:0.8rem;">Fe<sub>2</sub>O<sub>3</sub>+3C→2Fe+3CO</div>
+            </div>
+        </div>
+        <p><strong>Hierro forjado:</strong> hierro dulce + escoria, moldeado a martillo; estructura fibrosa, muy resistente a tracción y corrosión (cadenas, cables, anclas, forjados artísticos).</p>
+
+        <h3>13.6.2. Manufactura de Aceros</h3>
+        <p>Un <span class="hl-def">acero</span> es una aleación de hierro con <strong>0,5-1,5% de carbono</strong> y otros elementos que mejoran sus propiedades mecánicas. Dos procedimientos clásicos:</p>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Proceso Bessemer (1855):</strong>
+                <p>Convertidor de acero en forma de pera (15-25 t), recubierto de ladrillo refractario de sílice. El arrabio (~1.200 °C) se vierte y se inyecta aire/O<sub>2</sub>; la temperatura sube a <strong>1.900 °C</strong>. Reacciones de oxidación de impurezas:</p>
+                <div class="math-box" style="font-size:0.85rem;">2C+O<sub>2</sub>→2CO; Si+O<sub>2</sub>→SiO<sub>2</sub>; Mn+O<sub>2</sub>→MnO; P<sub>4</sub>+5O<sub>2</sub>→P<sub>4</sub>O<sub>10</sub></div>
+                <p>Los óxidos forman escoria con el fundente adecuado (CaO para ácidos SiO<sub>2</sub>/P<sub>4</sub>O<sub>10</sub>; SiO<sub>2</sub> para el básico MnO). <strong>Rápido (~20 min)</strong> pero de calidad media; no apto para aceros especiales.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>Proceso Siemens-Martín (1864):</strong>
+                <p>Horno abierto de 50-250 t. Carga: arrabio, fundente, chatarra y mineral de hierro (agente oxidante). Temperatura por combustión de gas natural. Proceso de <strong>~8 horas</strong>, más lento pero permite control preciso de composición: acero de <strong>mejor calidad</strong>. Hoy se realiza en hornos eléctricos.</p>
+            </div>
+        </div>
+        <div class="callout callout-danger">
+            <div class="callout-title">🔥 Tratamientos Térmicos del Acero</div>
+            <ul>
+                <li><strong>Recocido:</strong> calentar al rojo y enfriar lentamente → material blando, dúctil y maleable.</li>
+                <li><strong>Templado:</strong> enfriamiento brusco (agua/aceite) desde el rojo → material muy duro, tenaz pero frágil.</li>
+                <li><strong>Revenido:</strong> el acero templado se calienta a ~700 °C y se deja enfriar → mantiene dureza, disminuye fragilidad.</li>
+            </ul>
+            <p>Las propiedades dependen de la forma del carbono: libre (<strong>grafito</strong>) o como <strong>cementita</strong> (Fe<sub>3</sub>C), compuesto de extraordinaria dureza pero que fragiliza el acero. Formación endotérmica y reversible:</p>
+            <div class="math-box">3Fe<sub>(s)</sub> + C<sub>(s)</sub> ⇄ Fe<sub>3</sub>C<sub>(s)</sub> &nbsp; ΔH° &gt; 0</div>
+        </div>
+
+        <h3>13.6.3. Clasificación de los Aceros</h3>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong>Suaves o blandos:</strong> C &lt; 0,3%. Se sueldan/forjan con facilidad: láminas, tuberías, raíles.</div>
+            <div class="grid-box-2"><strong>Medios o semiduros:</strong> C entre 0,3-0,6%. Igualmente soldables y forjables.</div>
+            <div class="grid-box-3"><strong>Duros:</strong> C entre 0,6-1,5%. Muelles, herramientas cortantes (cuchillos, tijeras).</div>
+        </div>
+
+        <h3>13.6.4. Compuestos de Hierro de Interés Industrial</h3>
+        <p>El hierro puro se oxida rápidamente en aire húmedo dando <span class="hl-red">herrumbre</span> (óxido hidratado no adherente), favorecido por medios ácidos/salinos. En ácidos no oxidantes diluidos da Fe(II), inestable, que se oxida a Fe(III).</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong>Compuestos de Fe(II):</strong> <strong>sulfato ferroso</strong> (FeSO<sub>4</sub>·7H<sub>2</sub>O, <em>«verde vitriolo»</em>): tintas de imprenta, herbicida, fungicida y reductor. <strong>Sal de Mohr</strong> [(NH<sub>4</sub>)<sub>2</sub>Fe(SO<sub>4</sub>)<sub>2</sub>·6H<sub>2</sub>O]: más estable frente a oxidación.
+            </div>
+            <div class="grid-box-2">
+                <strong>Compuestos de Fe(III):</strong> más estables. <strong>Óxido férrico</strong> (Fe<sub>2</sub>O<sub>3</sub>): pigmento. <strong>Cloruro férrico</strong>, marcado carácter covalente:
+                <div class="math-box" style="font-size:0.85rem;">Fe<sub>(s)</sub>+Cl<sub>2(g)</sub>→FeCl<sub>3(s)</sub></div>
+                Mordiente textil y catalizador ácido (Lewis) en Síntesis Orgánica.
+            </div>
+        </div>
+        <p><strong>Complejos de coordinación:</strong> <strong>K<sub>4</sub>[Fe(CN)<sub>6</sub>]</strong> (hexacianoferrato(II) potásico, <em>ferrocianuro potásico</em>) y <strong>Fe<sub>4</sub>[Fe(CN)<sub>6</sub>]<sub>3</sub></strong> (<em>Azul de Prusia</em>); <strong>K<sub>3</sub>[Fe(CN)<sub>6</sub>]</strong> (hexacianoferrato(III), <em>ferricianuro potásico</em>) y <strong>Fe[Fe(CN)<sub>6</sub>]</strong> (<em>Azul de Turnbull</em>). Todos usados en tintas y pigmentos.</p>
+    </section>
+
+    <!-- 13.7 COBRE -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">13.7. Cobre: Fuentes, Obtención, Propiedades y Compuestos</h2>
+        <p>Junto al oro, el primer metal utilizado por el hombre (aparece libre en la naturaleza). Presencia baja (<strong>0,068%</strong>): se prevé escasez futura. Minerales: <strong>cuprita</strong> (Cu<sub>2</sub>O), <strong>azurita</strong> [Cu<sub>3</sub>(CO<sub>3</sub>)<sub>2</sub>(OH)<sub>2</sub>], <strong>malaquita</strong> [Cu<sub>2</sub>CO<sub>3</sub>(OH)<sub>2</sub>], frecuentemente con <strong>calcopirita</strong> (CuFeS<sub>2</sub>).</p>
+        <div class="callout callout-warning">
+            <div class="callout-title">⚙️ Metalurgia del Cobre</div>
+            <ol>
+                <li><strong>Concentración:</strong> por flotación.</li>
+                <li><strong>Tostación:</strong> con aire controlado para oxidar el FeS pero no el CuS:
+                <div class="math-box">2FeCuS<sub>2(s)</sub> + 3O<sub>2(g)</sub> → 2FeO<sub>(s)</sub> + 2CuS<sub>(s)</sub> + 2SO<sub>2(g)</sub></div></li>
+                <li><strong>Reducción:</strong> horno de reverbero a 1.100 °C con arena y caliza; el CuS se reduce a Cu<sub>2</sub>S y Cu líquidos; la sílice/cal forman escoria con el FeO:
+                <div class="math-box">3CuS<sub>(s)</sub> → Cu<sub>2</sub>S<sub>(l)</sub> + Cu<sub>(l)</sub> + 2S</div></li>
+                <li><strong>Oxidación</strong> en convertidor Bessemer:
+                <div class="math-box">Cu<sub>2</sub>S<sub>(l)</sub> + O<sub>2(g)</sub> → 2Cu<sub>(l)</sub> + SO<sub>2(g)</sub></div></li>
+                <li><strong>Refinado electrolítico</strong> con electrolito de CuSO<sub>4</sub>: el cobre impuro es ánodo, se oxida; en el cátodo se deposita cobre puro.
+                <div class="math-box">
+                    <strong>Ánodo (−):</strong> Cu<sub>(impuro)</sub> − 2e<sup>−</sup> → Cu<sup>2+</sup><sub>(disol)</sub><br>
+                    <strong>Cátodo (+):</strong> Cu<sup>2+</sup><sub>(disol)</sub> + 2e<sup>−</sup> → Cu<sub>(puro)</sub>
+                </div></li>
+            </ol>
+        </div>
+        <p>Metal rojo, muy dúctil y maleable, <span class="hl-teal">conductividad eléctrica solo superada por la plata</span>. Aplicaciones: cables y material eléctrico; aceros al cobre; <strong>latones</strong> (55-90% Cu, 10-45% Zn); <strong>bronces</strong> (70-96% Cu, 10-45% Sn, 1-10% Pb); aleaciones para monedas; manganina.</p>
+        <h3>Compuestos de Cobre</h3>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>Cu(+1):</strong> <strong>óxido cuproso</strong> (Cu<sub>2</sub>O), color rojo, pigmento de esmaltes/vidrios; <strong>cloruro cuproso</strong> (Cu<sub>2</sub>Cl<sub>2</sub>), catalizador orgánico.</div>
+            <div class="grid-box-2"><strong>Cu(+2):</strong> <strong>sulfato cúprico pentahidratado</strong> (CuSO<sub>4</sub>·5H<sub>2</sub>O), fungicida, tratamiento de aguas, pigmento antialgas, baños de cobreado. <strong>Óxido cúprico</strong> (CuO) y <strong>sulfuro cúprico</strong> (CuS), negros, pigmentos.</div>
+        </div>
+    </section>
+
+    <!-- 13.8 CINC -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">13.8. Cinc: Fuentes, Obtención, Propiedades y Compuestos</h2>
+        <p>Poco abundante (~<strong>0,007%</strong>). Mineral principal: <strong>esfalerita o blenda</strong> (ZnS), asociado a galena y <strong>smithsonita</strong> (ZnCO<sub>3</sub>).</p>
+        <div class="callout callout-teal">
+            <div class="callout-title">⚙️ Metalurgia del Cinc</div>
+            <p>Tostación de la blenda seguida de reducción del óxido con carbón:</p>
+            <div class="math-box">
+                2ZnS<sub>(s)</sub> + 3O<sub>2(g)</sub> → 2ZnO<sub>(s)</sub> + 2SO<sub>2(g)</sub><br>
+                ZnO<sub>(s)</sub> + C<sub>(s)</sub> → Zn<sub>(l)</sub> + CO<sub>(g)</sub>
+            </div>
+            <p>El cinc se destila (P.e. 907 °C), se condensa y se vierte en moldes; se purifica por redestilación.</p>
+        </div>
+        <p>Metal duro y quebradizo, muy reactivo: forma película de óxido/carbonato protectora. Aleaciones: <strong>latones</strong> (Cu/Zn), <strong>plata alemana</strong> (Zn/Ni/Cu). Aplicación principal: <span class="hl-def">electrodo de sacrificio</span> en protección catódica del hierro/aceros. El <strong>galvanizado</strong> (inmersión en cinc fundido) y el <strong>galvanizado electrolítico</strong> (deposición electrolítica con la pieza como cátodo) protegen al hierro con una capa de cinc adherente.</p>
+        <p>Único estado de oxidación: <strong>(+2)</strong>. El <strong>óxido de cinc (ZnO)</strong>, obtenido por combustión del vapor de Zn o descomposición térmica de ZnCO<sub>3</sub>, es <span class="hl-amber">anfótero</span>:</p>
+        <div class="math-box">ZnO<sub>(s)</sub> + 2OH<sup>−</sup><sub>(ac)</sub> → ZnO<sub>2</sub><sup>2−</sup><sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub></div>
+        <p>Se usa como pigmento blanco y carga en polímeros/elastómeros. El <strong>sulfuro de cinc (ZnS)</strong> forma el <em>litopón</em> (ZnS+BaSO<sub>4</sub>, pigmento blanco menos tóxico que el plomo) y pantallas de televisión/osciloscopios (fluorescencia con rayos X). El <strong>sulfato de cinc</strong> (ZnSO<sub>4</sub>·7H<sub>2</sub>O), pigmento, mordiente y conservante de cueros. El <strong>cloruro de cinc</strong> (ZnCl<sub>2</sub>), fundente de soldadura y conservante de madera.</p>
+    </section>
+
+    <!-- 13.9 DEFINICION CORROSION -->
+    <section class="section-card">
+        <h2 class="section-title t-red">13.9. Definición y Tipos de Corrosión</h2>
+        <p>La <span class="hl-red">corrosión</span> es el <strong>deterioro o degradación</strong> de las propiedades de un material por ataque químico del entorno. Aunque puede afectar a cualquier material, aquí se trata la corrosión de <strong>metales</strong>, especialmente los <strong>férreos</strong>. Se estima que <strong>~5% del PIB</strong> de un país industrializado se destina a reponer materiales corroídos y a su prevención.</p>
+        <p>Agentes químicos: ácidos, bases, sales, y agentes ambientales (O<sub>2</sub>, agua, CO<sub>2</sub>, contaminantes atmosféricos). La corrosión es, en cierto modo, el <strong>proceso inverso a la extracción metalúrgica</strong>:</p>
+        <div class="math-box">2Fe<sub>(s)</sub> + <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>O<sub>2(g)</sub> <span class="frac"><span class="top">corrosión (oxidación)</span><span class="bottom">⇌ extracción (reducción)</span></span> Fe<sub>2</sub>O<sub>3(s)</sub></div>
+        <p>La oxidación es más favorable a baja temperatura: ΔG° a 25 °C = <strong>−740 kJ</strong>, frente a ΔG° a 1.000 °C = <strong>−276 kJ/mol</strong>; de ahí que en la litosfera el hierro se encuentre mayoritariamente oxidado, y su extracción requiera altas temperaturas.</p>
+        <p>Dos tipos principales: <span class="hl-def">corrosión seca o gaseosa</span> (simple oxidación por O<sub>2</sub> u otro agente gaseoso) y <span class="hl-def">corrosión electroquímica</span> (la más importante, proceso electroquímico complejo).</p>
+    </section>
+
+    <!-- 13.10 CORROSION SECA -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">13.10. Corrosión Seca o Gaseosa</h2>
+        <p>Proceso de oxidación de metales con el O<sub>2</sub> del aire, especialmente importante a alta temperatura (turbinas de gas, motores de cohetes, reactores químicos). Consta de dos semirreacciones:</p>
+        <div class="math-box">
+            2(M → M<sup>n+</sup> + ne<sup>−</sup>) &nbsp;;&nbsp; n(<span class="frac"><span class="top">1</span><span class="bottom">2</span></span>O<sub>2</sub> + 2e<sup>−</sup> → O<sup>2−</sup>)<br>
+            2M<sub>(s)</sub> + <span class="frac"><span class="top">n</span><span class="bottom">2</span></span>O<sub>2(g)</sub> → M<sub>2</sub>O<sub>n</sub>
+        </div>
+        <p>La tendencia a la oxidación depende de ΔG° de formación del óxido: muy negativa en Mg o Al (gran tendencia); menos negativa en Pb o Ni; nula en Au o Pt (no se oxidan). El poder protector de la capa de óxido depende de:</p>
+        <ol>
+            <li>Relación volumen óxido/metal próxima a la unidad.</li>
+            <li>Alta adherencia de la película.</li>
+            <li>Punto de fusión elevado del óxido.</li>
+            <li>Presión de vapor baja del óxido.</li>
+            <li>Coeficientes de dilatación térmica próximos entre óxido y metal.</li>
+            <li>Baja conductividad eléctrica y bajos coeficientes de difusión del óxido.</li>
+            <li>Alta plasticidad de la película a alta temperatura.</li>
+        </ol>
+        <div class="callout callout-danger">
+            <div class="callout-title">📐 Relación de Pilling-Bedworth</div>
+            <p>Cuantifica el primer factor (el más importante):</p>
+            <div class="math-box">Relación P-B = <span class="frac"><span class="top">Volumen del óxido formado</span><span class="bottom">Volumen del metal consumido</span></span> = <span class="frac"><span class="top">M<sub>óxido</sub> · ρ<sub>metal</sub></span><span class="bottom">n · M<sub>metal</sub> · ρ<sub>óxido</sub></span></span></div>
+            <ul>
+                <li><strong>P-B &lt; 1:</strong> óxido poroso, no protector (metales alcalinos, magnesio).</li>
+                <li><strong>1 &lt; P-B &lt; 2:</strong> óxido protector, buena adherencia (<strong>Al, Cr</strong>).</li>
+                <li><strong>P-B &gt; 2:</strong> el recubrimiento se rompe y pierde cohesión, dejando expuestas nuevas superficies (caso del <strong>hierro</strong>, P-B = 2,00).</li>
+            </ul>
+            <div class="table-responsive">
+                <table>
+                    <thead><tr><th>Metal</th><th>P-B</th><th>Metal</th><th>P-B</th></tr></thead>
+                    <tbody>
+                        <tr><td>K</td><td>0,45</td><td>Ni</td><td>1,52</td></tr>
+                        <tr><td>Na</td><td>0,57</td><td>Be</td><td>1,59</td></tr>
+                        <tr><td>Al</td><td>1,28</td><td>Cu</td><td>1,68</td></tr>
+                        <tr><td>Pb</td><td>1,40</td><td>Cr</td><td>1,99</td></tr>
+                        <tr><td>Ti</td><td>1,50</td><td>Fe</td><td>2,00</td></tr>
+                        <tr><td>W</td><td>3,33</td><td>Mo</td><td>3,40</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 13.5. Relación Pilling-Bedworth para diversos metales.</p>
+            </div>
+        </div>
+        <h3>Cinética de la Corrosión Seca</h3>
+        <p>Depende de la difusión de iones O<sup>2−</sup> y M<sup>n+</sup> a través de la capa de óxido:</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-blue);">Lineal</strong> (control por difusión de O<sub>2</sub>; capa porosa y adherente, ej. <strong>Mg</strong>): <span class="math-inline">w = k·t</span></div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">Parabólica</strong> (control por difusión catiónica; óxidos no porosos, ej. <strong>Fe, Cu</strong>): <span class="math-inline">w² = k·t</span></div>
+            <div class="grid-box-3"><strong style="color:var(--accent-purple);">Logarítmica</strong> (capa fina, no porosa, no exfoliable, ej. <strong>Al</strong>): <span class="math-inline">w = k·log(at+b)</span></div>
+        </div>
+    </section>
+
+    <!-- 13.11 CORROSION ELECTROQUIMICA -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">13.11. Corrosión Electroquímica. Bases</h2>
+        <p>La mayoría de los procesos de corrosión son de naturaleza electroquímica, análoga a una <span class="hl-def">pila galvánica</span>: requiere <strong>ánodo, cátodo, electrolito</strong> y <strong>contacto eléctrico</strong> entre electrodos.</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-red);">Ánodo:</strong> reacción de oxidación (M → M<sup>n+</sup> + ne<sup>−</sup>); los electrones se ceden al circuito, los iones al electrolito.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-blue);">Cátodo:</strong> reacción de reducción. En medio ácido: <span class="math-inline">2H⁺ + 2e⁻ → H₂</span>. Reducción de O<sub>2</sub> disuelto:
+                <div class="math-box" style="font-size:0.85rem;">Ácido: O<sub>2</sub>+4H<sup>+</sup>+4e<sup>−</sup>→2H<sub>2</sub>O<br>Neutro/básico: O<sub>2</sub>+2H<sub>2</sub>O+4e<sup>−</sup>→4OH<sup>−</sup></div>
+            </div>
+        </div>
+        <p><strong>Electrolito:</strong> disolución conductora en contacto con ambos electrodos. <strong>Contacto físico:</strong> permite el paso de electrones del ánodo al cátodo.</p>
+    </section>
+
+    <!-- 13.12 TERMODINAMICA -->
+    <section class="section-card">
+        <h2 class="section-title t-green">13.12. Termodinámica de la Corrosión</h2>
+        <p>Para que se produzca corrosión: <strong>ΔG° &lt; 0</strong>. Relación con el potencial eléctrico:</p>
+        <div class="math-box">ΔG° = −nFE</div>
+        <p>Por tanto, se requiere <strong>E &gt; 0</strong>. Se emplea la <span class="hl-def">Serie de Potenciales Normales de Reducción</span> para predecir qué especie actúa de ánodo (se oxida) y cuál de cátodo (se reduce). Ejemplo, pila Zn-Cu:</p>
+        <div class="math-box">
+            Zn → Zn<sup>2+</sup> + 2e<sup>−</sup> &nbsp;(ánodo)&nbsp;;&nbsp; Cu<sup>2+</sup> + 2e<sup>−</sup> → Cu &nbsp;(cátodo)<br>
+            Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu &nbsp; E<sub>pila</sub> = 1,10 V
+        </div>
+        <p>Cuando las concentraciones/presiones no son la unidad, se aplica la <span class="hl-def">ecuación de Nernst</span>:</p>
+        <div class="math-box">E = E° − <span class="frac"><span class="top">0,0592</span><span class="bottom">n</span></span> log <span class="frac"><span class="top">1</span><span class="bottom">C<sub>M</sub><sup>n+</sup></span></span></div>
+        <p>Ejemplo: el electrodo de hidrógeno en agua pura ([H<sup>+</sup>]=10<sup>−7</sup>) da E = <strong>−0,414 V</strong>: el agua en condiciones estándar es más reductora que el electrodo normal de hidrógeno.</p>
+    </section>
+
+    <!-- 13.13 CINETICA -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">13.13. Cinética de la Corrosión</h2>
+        <p>Los potenciales de electrodo son parámetros termodinámicos que predicen la <strong>tendencia</strong> a corroerse, pero no informan de la <strong>velocidad</strong>. Se aplica la <span class="hl-def">Ley de Faraday</span>:</p>
+        <div class="math-box">w = <span class="frac"><span class="top">I·t·M</span><span class="bottom">n·F</span></span> &nbsp;&nbsp; o bien &nbsp;&nbsp; w = <span class="frac"><span class="top">i·S·t·M</span><span class="bottom">n·F</span></span></div>
+        <p>donde <em>w</em> es la masa corroída, <em>I</em> la intensidad, <em>i</em> la densidad de corriente y <em>S</em> la superficie. La densidad de corriente real varía por efectos de <span class="hl-def">polarización</span>:</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong>Por activación:</strong> ligada a las energías de activación de las reacciones en los electrodos; su aumento reduce la velocidad de corrosión.</div>
+            <div class="grid-box-2"><strong>Por concentración:</strong> por acumulación/agotamiento de iones cerca de los electrodos; reduce la corriente de corrosión salvo que se favorezca la difusión.</div>
+            <div class="grid-box-3"><strong>Por resistencia:</strong> por la resistencia eléctrica del electrolito; su aumento reduce la velocidad de corrosión.</div>
+        </div>
+        <div class="callout callout-info">
+            <div class="callout-title">🛡️ Pasivación</div>
+            <p>Pérdida de reactividad de un metal por tratamiento con un agente oxidante fuerte, con efecto duradero. Metales que pasivan: <strong>Al, Ti, Fe, Ni y aceros inoxidables</strong> (%Ni &gt; 11%). La capa de óxido adherida actúa de barrera frente a la difusión.</p>
+        </div>
+    </section>
+
+    <!-- 13.14 TIPOS CORROSION ELECTROQUIMICA -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">13.14. Tipos de Corrosión Electroquímica</h2>
+        <p>Requiere áreas del metal con distinto potencial electroquímico, formando micropilas. Tipos principales:</p>
+
+        <h3>Corrosión Uniforme</h3>
+        <p>El ataque se produce con igual intensidad en toda la superficie (zonas anódicas/catódicas al azar y cambiantes). Es la <span class="hl-green">más común y más fácil de controlar</span>.</p>
+
+        <h3>Corrosión Galvánica entre Dos Metales. Serie Galvánica</h3>
+        <p>Al poner en contacto eléctrico dos metales distintos con un electrolito, el más activo actúa de <strong>ánodo</strong> (se corroe) y el otro queda protegido. Ejemplo, tornillos de hierro en contacto con cobre en ambiente marino:</p>
+        <div class="math-box">
+            2Fe<sub>(s)</sub> + O<sub>2(g)</sub> + 2H<sub>2</sub>O<sub>(l)</sub> → 2Fe<sup>2+</sup><sub>(ac)</sub> + 4OH<sup>−</sup><sub>(ac)</sub><br>
+            2Fe(OH)<sub>2(ac)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>O<sub>2(g)</sub> + H<sub>2</sub>O<sub>(l)</sub> → 2Fe(OH)<sub>3(s)</sub> &nbsp;(herrumbre)
+        </div>
+        <p><strong>Acero galvanizado:</strong> el cinc actúa de ánodo, se corroe y protege al hierro. <strong>Hojalata:</strong> el estaño (E°=−0,14V) es catódico frente al hierro (E°=−0,44V); protege solo mientras la capa esté intacta (si se raya, el hierro se oxida rápido).</p>
+        <div class="callout callout-purple">
+            <div class="callout-title">⚡ Serie Galvánica (en agua de mar)</div>
+            <p>Ordenación empírica de la actividad relativa de metales y aleaciones. Extremo <strong>anódico</strong>: Magnesio, cinc, acero galvanizado, aluminio, cadmio, hierro, acero al carbono. Extremo <strong>catódico</strong>: cobre, aceros inoxidables pasivos, plata, titanio, oro, <strong>platino</strong>.</p>
+        </div>
+        <p>La velocidad es proporcional a la relación de áreas (ánodo pequeño/cátodo grande = corrosión rápida). <strong>Precauciones:</strong> escoger metales próximos en la serie galvánica; relación de áreas ánodo/cátodo alta; aislamiento eléctrico (arandelas de plástico); electrodo de sacrificio.</p>
+        <p><strong>Corrosión intergranular:</strong> por diferencias de composición en los límites de grano (ej. segregación de Cd/Sn en latones; precipitación de <strong>carburo de cromo</strong> en aceros inoxidables calentados entre 500-800 °C, sensibilizándolos a la corrosión, corregible con tratamiento térmico).</p>
+
+        <h3>Pilas de Concentración y Aireación Diferencial</h3>
+        <p>Diferencias de concentración de iones o de presión parcial de O<sub>2</sub> generan diferencias de potencial (ecuación de Nernst). Explica la <strong>corrosión del hierro bajo una gota de agua</strong>: la zona bajo la gota (pobre en O<sub>2</sub>) es <strong>anódica</strong>; el borde exterior (rico en O<sub>2</sub>) es <strong>catódico</strong>:</p>
+        <div class="math-box">
+            <strong>Ánodo (pobre en O₂):</strong> Fe → Fe<sup>2+</sup> + 2e<sup>−</sup><br>
+            <strong>Cátodo (rico en O₂):</strong> O<sub>2</sub> + 4e<sup>−</sup> + 2H<sub>2</sub>O → 4OH<sup>−</sup>
+        </div>
+        <p>Del mismo tipo: <strong>corrosión por picadura o grieta</strong> y <strong>de nivel de agua</strong>. Un aumento de la conductividad electrolítica (agua de mar, lluvia ácida) incrementa la velocidad de corrosión.</p>
+    </section>
+
+    <!-- 13.15 CORROSION EROSION -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">13.15. Corrosión por Erosión</h2>
+        <p>Efecto combinado de <span class="hl-def">ataque químico y abrasión mecánica</span>, por movimiento de un fluido (sólido, líquido o gas) en una tubería. Afecta a metales blandos (cobre, plomo) y a metales pasivados; se manifiesta con <strong>surcos y ondulaciones</strong>. Factores: naturaleza y velocidad del fluido, burbujas y partículas en suspensión.</p>
+    </section>
+
+    <!-- 13.16 PREVENCION -->
+    <section class="section-card">
+        <h2 class="section-title t-green">13.16. Prevención y Control de la Corrosión</h2>
+        <p>Se clasifican en seis grupos: <strong>selección del material, recubrimientos, diseño, protección catódica, protección anódica</strong> y <strong>control de factores ambientales</strong>.</p>
+
+        <h3>13.16.1. Selección del Material</h3>
+        <div class="three-column-grid">
+            <div class="grid-box-1">Medios ácidos no oxidantes/reductores, disoluciones libres de O<sub>2</sub>: aleaciones <strong>Ni-Cr</strong>.</div>
+            <div class="grid-box-2">Condiciones oxidantes: aleaciones de <strong>cromo</strong>.</div>
+            <div class="grid-box-3">Condiciones muy oxidantes: aleaciones de <strong>titanio</strong>.</div>
+        </div>
+
+        <h3>13.16.2. Recubrimientos Protectores</h3>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);"><strong>Metálicos:</strong> capa fina de metal protector (galvanizado, hojalata, cromado —3 capas: Cu, Ni, Cr—). El <em>chapeado</em> aplica una capa por laminación.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);"><strong>Inorgánicos:</strong> capas cerámicas o fosfatación de aceros (con ortofosfato ácido de cinc).</div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);"><strong>Orgánicos:</strong> pinturas, barnices, lacas o polímeros; requieren buena preparación de superficie.</div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);"><strong>Inhibidores:</strong> sustancias que polarizan ánodo o cátodo (ej. iones cromato en radiadores de automóviles).</div>
+        </div>
+
+        <h3>13.16.3. Protección mediante Diseño</h3>
+        <ul>
+            <li>Impedir la formación de pilas galvánicas (separadores de plástico entre metales distintos).</li>
+            <li>Relación de áreas ánodo/cátodo elevada (remaches de cobre en chapas de acero, nunca al revés).</li>
+            <li>Evitar acumulación de líquidos en huecos/hendiduras y aireación diferencial.</li>
+            <li>Soldar acero con electrodos de hierro, no con metal de soldadura Sn/Pb.</li>
+        </ul>
+
+        <h3>13.16.4. Protección Catódica</h3>
+        <p>Método muy eficaz: suministrar electrones al metal a proteger. Se logra con un <span class="hl-def">electrodo de sacrificio</span> más activo (Zn o Mg protegen al hierro), o mediante una <strong>corriente externa</strong> (terminal positivo a electrodo inerte, negativo a la estructura a proteger).</p>
+
+        <h3>13.16.5. Protección Anódica</h3>
+        <p>Formación de una <span class="hl-def">película pasiva</span> mediante corriente anódica externa (requiere potenciostato) o exposición a un oxidante fuerte (ej. hierro con HNO<sub>3</sub> concentrado). El <strong>aluminio anodizado</strong> se pasiva electroquímicamente como ánodo, formando un óxido grueso que puede teñirse.</p>
+
+        <h3>13.16.6. Control de Factores Ambientales</h3>
+        <p>Temperatura, composición del medio, velocidad de flujo y concentración del agente corrosivo. Los tratamientos previos (ej. deformación en frío de clavos) influyen en la corrosión posterior. Agentes atmosféricos: O<sub>2</sub>, humedad, lluvia ácida, nieblas salinas; también aguas duras, agua de mar, suelo, polvo y bacterias.</p>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">🧪 Ejercicios de Autoevaluación Resueltos Paso a Paso</h2>
+
+        <!-- EX 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Justificación de Fenómenos de Corrosión</div>
+            <p><strong>Enunciado:</strong> Justificar: a) Un metal muy puro se corroe menos que uno impurificado. b) Una chapa de cinc de 100 cm² en contacto con hierro de 10 cm² se corroe menos que una de 1 cm² unida a 100 cm² de hierro. c) El agua carbónica es más corrosiva que el agua natural. d) El agua destilada es más corrosiva que el agua natural. e) No es aconsejable unir directamente tuberías de cobre y plomo.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p><strong>a)</strong> En un metal impurificado se pueden formar <strong>micropilas galvánicas</strong>, en las que un elemento actúa de ánodo frente al otro y se corroe.</p>
+                <p><strong>b)</strong> La relación de superficies ánodo/cátodo es mucho mayor en el primer caso ($r_1 = 100/10 = 10$) que en el segundo ($r_2 = 1/100 = 0,01$). La intensidad y velocidad de corrosión es <strong>~1.000 veces mayor</strong> en el segundo caso.</p>
+                <p><strong>c)</strong> El CO<sub>2</sub> reacciona con el agua dando ácido carbónico, que se ioniza liberando protones y aumentando la acidez:</p>
+                <div class="math-box">
+                    CO<sub>2(g)</sub> + H<sub>2</sub>O<sub>(l)</sub> → H<sub>2</sub>CO<sub>3(ac)</sub> ⇄ H<sub>3</sub>O<sup>+</sup><sub>(ac)</sub> + HCO<sub>3</sub><sup>−</sup><sub>(ac)</sub><br>
+                    Fe<sub>(s)</sub> + 2H<sub>3</sub>O<sup>+</sup><sub>(ac)</sub> → H<sub>2(g)</sub> + 2OH<sup>−</sup> + Fe<sup>2+</sup><sub>(ac)</sub>
+                </div>
+                <p><strong>d)</strong> Al destilar el agua se separa el aire disuelto (O<sub>2</sub>, N<sub>2</sub>). La zona de hierro sumergida en agua destilada es <strong>anódica</strong> respecto a la que está en contacto con el aire (catódica): se forma una pila de concentración de O<sub>2</sub> que acelera la corrosión.</p>
+                <p><strong>e)</strong> El plomo (E°=−0,13V) sería <strong>anódico</strong> frente al cobre (E°=+0,34V) y se corroería. Deben aislarse con separadores.</p>
+            </div>
+        </div>
+
+        <!-- EX 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: Fabricación de un Acero Inoxidable — Balance de Materia</div>
+            <p><strong>Enunciado:</strong> Fabricar un acero con: 0,5% C, 2% Mn, 1% Si, 18% Ni, 15% Cr, a partir de un arrabio con: 4,4% C, 2,2% Si, 1,5% Mn, 0,9% P, 0,5% S. a) Describa el proceso. b) Calcule las cantidades a añadir para obtener 15 t de acero (Si como ferrosilicio 22% Si; Cr como ferrocromo 55% Cr).</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p><strong>a)</strong> En la <strong>1.ª etapa</strong> se eliminan las impurezas del arrabio por oxidación-combustión controlada (C y S como gases CO/SO<sub>2</sub>; Mn, P, Si como escoria). En la <strong>2.ª etapa</strong> se añaden al hierro purificado los elementos dosificados para lograr la composición del acero.</p>
+                <p><strong>Balances de materia</strong> (arrabio con 90,5% Fe):</p>
+                <p>Carbono: $d = 15 \cdot 0,005 = \mathbf{0,075 \text{ t}}$ &nbsp;|&nbsp; Manganeso: $e = 15 \cdot 0,02 = \mathbf{0,3 \text{ t}}$ &nbsp;|&nbsp; Níquel: $f = 15 \cdot 0,18 = \mathbf{2,7 \text{ t}}$</p>
+                <p>Silicio (como FeSi 22%): $b \cdot 0,22 = 15 \cdot 0,01 \Rightarrow b = \mathbf{0,682 \text{ t de FeSi}}$</p>
+                <p>Cromo (como FeCr 55%): $c \cdot 0,55 = 15 \cdot 0,15 \Rightarrow c = \mathbf{4,091 \text{ t de FeCr}}$</p>
+                <p>Balance de hierro: $a(0,905) + b(0,78) + c(0,45) = 15(0,635)$</p>
+                <p>$0,905a + 0,682\cdot0,78 + 4,091\cdot0,45 = 9,525 \Rightarrow 0,905a = 7,155 \Rightarrow a = \mathbf{7,903 \text{ t de arrabio}}$</p>
+                <p><strong>Resumen:</strong> 7,903 t arrabio + 0,075 t C + 0,300 t Mn + 2,700 t Ni + 0,682 t FeSi + 4,091 t FeCr ≈ 15,75 t (compensadas por las impurezas eliminadas del arrabio).</p>
+            </div>
+        </div>
+
+        <!-- EX 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Proceso Electrolítico de Cromado</div>
+            <p><strong>Enunciado:</strong> Depositar 100 μm de cromo sobre 100 planchas de acero de 120×60×0,01 cm en baño de sulfato de cromo/H<sub>2</sub>SO<sub>4</sub>. Con I = 12 kA, calcular el tiempo necesario y el volumen de O<sub>2</sub> producido (rendimiento 80%). Densidad Cr = 7,20 g/cm³; M(Cr) = 52,0 g/mol.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p><strong>Reacciones:</strong></p>
+                <div class="math-box">
+                    <strong>Cátodo (−):</strong> 2Cr<sup>3+</sup> + 6e<sup>−</sup> → 2Cr<sup>0</sup><br>
+                    <strong>Ánodo (+):</strong> 3H<sub>2</sub>O − 6e<sup>−</sup> → <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>O<sub>2</sub> + 6H<sup>+</sup>
+                </div>
+                <p>Superficie total: $S = [(2{\cdot}120{\cdot}60 + 2{\cdot}120{\cdot}0,01 + 2{\cdot}60{\cdot}0,01)]{\cdot}100 = 1,4404{\cdot}10^6 \text{ cm}^2$</p>
+                <p>Volumen de cromo: $V_{Cr} = 1,4404{\cdot}10^6 {\cdot} 100{\cdot}10^{-4} = 1,4404{\cdot}10^4 \text{ cm}^3$</p>
+                <p>Masa de cromo: $m_{Cr} = 1,4404{\cdot}10^4 {\cdot} 7,20 = \mathbf{1,037{\cdot}10^5 \text{ g} = 103,7 \text{ kg}}$</p>
+                <p>Ley de Faraday: $t_{teórico} = \dfrac{m_{Cr}{\cdot}F{\cdot}3}{M_{Cr}{\cdot}I} = \dfrac{1,037{\cdot}10^5{\cdot}96.485{\cdot}3}{52{\cdot}12.000} = 4,81{\cdot}10^4 \text{ s} \approx 13,33 \text{ h}$</p>
+                <p>Con rendimiento 80%: $t_{real} = \dfrac{100}{80}{\cdot}13,33 = \mathbf{16,67 \text{ h}}$</p>
+                <p>Volumen de O<sub>2</sub> (C.N.): $V_{O_2} = \dfrac{I{\cdot}t{\cdot}22,4}{4{\cdot}F} = \dfrac{12.000{\cdot}4,81{\cdot}10^4{\cdot}22,4}{4{\cdot}96.485} = 3,4{\cdot}10^4 \text{ L} \approx \mathbf{34 \text{ m}^3 \text{ de O}_2}$</p>
+            </div>
+        </div>
+
+        <!-- EX 4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4: Relación de Pilling-Bedworth</div>
+            <p><strong>Enunciado:</strong> Justificar, con los datos indicados, qué metales de los propuestos (Al, Be, Ca, Ti) forman una capa de óxido protectora.</p>
+            <div class="table-responsive">
+                <table>
+                    <thead><tr><th>Metal</th><th>Densidad (g/cm³)</th><th>Óxido</th><th>Densidad óxido (g/cm³)</th></tr></thead>
+                    <tbody>
+                        <tr><td>Al</td><td>2,70</td><td>Al₂O₃</td><td>3,97</td></tr>
+                        <tr><td>Be</td><td>1,85</td><td>BeO</td><td>3,01</td></tr>
+                        <tr><td>Ca</td><td>1,54</td><td>CaO</td><td>3,33</td></tr>
+                        <tr><td>Ti</td><td>4,50</td><td>TiO₂</td><td>4,26</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p>Aplicando $R_{P-B} = \dfrac{M_{óxido}{\cdot}\rho_{metal}}{n{\cdot}M_{metal}{\cdot}\rho_{óxido}}$:</p>
+                <p><strong>Aluminio:</strong> $R_{P-B} = \dfrac{102{\cdot}2,70}{2{\cdot}27{\cdot}3,97} = \mathbf{1,28}$</p>
+                <p><strong>Berilio:</strong> $R_{P-B} = \dfrac{25{\cdot}1,85}{9{\cdot}3,01} = \mathbf{1,70}$</p>
+                <p><strong>Calcio:</strong> $R_{P-B} = \dfrac{56{\cdot}1,54}{40{\cdot}3,33} = \mathbf{0,65}$</p>
+                <p><strong>Titanio:</strong> $R_{P-B} = \dfrac{81{\cdot}4,5}{49{\cdot}4,26} = \mathbf{1,75}$</p>
+                <p>Como la relación P-B debe estar entre <strong>1 y 2</strong> para que el óxido proteja al metal, resultan <span class="hl-green">protectores el Al, el Be y el Ti</span>; el <span class="hl-red">calcio (0,65 &lt; 1) no queda protegido</span>, formando un óxido poroso no protector.</p>
+            </div>
+        </div>
+
+        <!-- EX 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5: Cinética Parabólica de Oxidación del Níquel</div>
+            <p><strong>Enunciado:</strong> Una probeta cúbica de níquel de 1 cm³ se oxida a 600 °C con mecanismo parabólico ($w^2=kt+C$, C=0). Tras 2 horas gana 4·10⁻² g/cm². Calcular: a) Ganancia de peso a los 100 días. b) Espesor de la capa de NiO. Densidad NiO = 6,67 g/cm³.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p>Constante cinética: $k = \dfrac{(4{\cdot}10^{-2})^2}{2 \text{ h}} = 2{\cdot}10^{-2} \text{ (g/cm}^2)^2/\text{h}$</p>
+                <p><strong>a)</strong> A los 100 días (2.400 h): $w^2 = 2{\cdot}10^{-2}{\cdot}2.400 = 4,8{\cdot}10^1 \text{ (g/cm}^2)^2 $ … $w = 6,92{\cdot}10^{-2} \text{ g/cm}^2$</p>
+                <p>Superficie total del cubo (6 caras de 1 cm²): $S = 6 \text{ cm}^2$</p>
+                <p>Ganancia total de peso: $W_T = 6{\cdot}6,92{\cdot}10^{-2} = \mathbf{4,15{\cdot}10^{-3} \text{ g}}$</p>
+                <p><strong>b)</strong> Volumen del óxido: $V_{óxido} = \dfrac{4,15{\cdot}10^{-3}}{6,67} = 6,22{\cdot}10^{-4} \text{ cm}^3$</p>
+                <p>Espesor medio: $e = \dfrac{6,22{\cdot}10^{-4}}{6} = 1,03{\cdot}10^{-4} \text{ cm} = \mathbf{1,03 \text{ micras}}$</p>
+            </div>
+        </div>
+
+        <!-- EX 6 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 6: Ánodo de Sacrificio de Magnesio (Protección Catódica)</div>
+            <p><strong>Enunciado:</strong> Un ánodo de sacrificio de magnesio de 2,2 kg protege el casco de acero de un buque, con una corriente de corrosión constante de 2 A. Calcular el tiempo máximo de protección. M(Mg) = 24,30 g/mol.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p>Aplicando la Ley de Faraday: $t_{max} = \dfrac{w{\cdot}n{\cdot}F}{I{\cdot}M}$</p>
+                <p>$t_{max} = \dfrac{2.200 \text{ g} {\cdot} 2 {\cdot} 96.485 \text{ C/mol}}{2 \text{ A} {\cdot} 24,30 \text{ g/mol}}$</p>
+                <p>$t_{max} = 8,74{\cdot}10^6 \text{ s} \approx 2.430 \text{ h} \approx \mathbf{101 \text{ días}}$</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

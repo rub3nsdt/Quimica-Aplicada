@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 8: El Hidrógeno - Resumen Completo y Estético</title>
+    <!-- MathJax Configuration -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+          enableLineBreaking: true
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Banner Header */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #0284c7 80%, #0d9488 100%);
+            color: white;
+            padding: 45px 35px;
+            border-radius: 18px;
+            box-shadow: 0 12px 28px -5px rgba(15, 23, 42, 0.35);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.25);
+            color: #38bdf8;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #ffffff, #93c5fd, #67e8f9);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 900px;
+        }
+
+        .meta-info {
+            margin-top: 22px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            font-size: 0.92rem;
+            color: #94a3b8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 35px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.09);
+        }
+
+        .section-title {
+            font-size: 1.65rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 24px 0 14px 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h4 {
+            font-size: 1.08rem;
+            font-weight: 600;
+            margin: 18px 0 10px 0;
+            color: #334155;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* Color Concepts & Highlights */
+        .hl-def {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #bae6fd;
+        }
+
+        .hl-react {
+            background-color: #fef2f2;
+            color: #991b1b;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #fecaca;
+        }
+
+        .hl-green {
+            background-color: #f0fdf4;
+            color: #166534;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #bbf7d0;
+        }
+
+        .hl-amber {
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #fde68a;
+        }
+
+        .hl-purple {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #e9d5ff;
+        }
+
+        .hl-teal {
+            background-color: #ccfbf1;
+            color: #115e59;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #99f6e4;
+        }
+
+        /* Math & Formulas */
+        .math-box {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 18px 26px;
+            border-radius: 12px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 1.12rem;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.35);
+            border-left: 5px solid #38bdf8;
+            overflow-x: auto;
+        }
+
+        .math-box .var {
+            font-style: italic;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        /* Callout Cards */
+        .callout {
+            border-left: 5px solid;
+            padding: 18px 22px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+            background-color: #f8fafc;
+        }
+
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.05rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 22px 0;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 13px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 14px 0 18px 26px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
+        /* Badge Grid */
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin: 22px 0;
+        }
+
+        .badge-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 18px;
+            background: #ffffff;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        /* Exercises */
+        .exercise-card {
+            background-color: #fffbeb;
+            border: 1px solid #fef08a;
+            border-left: 6px solid var(--accent-amber);
+            border-radius: 10px;
+            padding: 22px;
+            margin-bottom: 25px;
+        }
+
+        .exercise-title {
+            font-weight: 700;
+            color: #854d0e;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .solution-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 12px;
+            font-size: 0.96rem;
+        }
+
+        .step-tag {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #334155;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .svg-container {
+            text-align: center;
+            margin: 25px 0;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER BANNER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 8: El Hidrógeno</h1>
+        <p>Resumen exhaustivo y riguroso sobre las fuentes naturales, isótopos, propiedades físicas y químicas, síntesis de laboratorio e industrial, electrólisis, vector energético, pilas de combustible, hidruros binarios, estructura y tratamientos del agua.</p>
+        <div class="meta-info">
+            <span><strong>Autores del texto original:</strong> María José Caselles Pomares, Mariano Molero Meneses, María</span>
+            <span><strong>Editorial:</strong> UNED</span>
+            <span><strong>Asignatura:</strong> Química Aplicada a la Ingeniería</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS Y RESUMEN GENERAL -->
+    <div class="section-card">
+        <h2 class="section-title t-blue">🎯 Objetivos del Tema y Visión General</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4 style="color: var(--accent-blue);">Fuentes y Síntesis</h4>
+                <p style="font-size: 0.9rem;">Conocer la abundancia del hidrógeno en la naturaleza y los métodos de obtención a escala de laboratorio e industrial (reformado, gasificación, electrólisis).</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <h4 style="color: var(--accent-teal);">Vector Energético</h4>
+                <p style="font-size: 0.9rem;">Valorar el hidrógeno como vector energético de contaminación "cero" y estudiar las pilas de combustible para la generación eléctrica sustentable.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <h4 style="color: var(--accent-amber);">Hidruros y el Agua</h4>
+                <p style="font-size: 0.9rem;">Clasificar los hidruros binarios (iónicos, covalentes, metálicos) y estudiar las propiedades singulares del agua y sus tratamientos de potabilización y ablandamiento.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-info">
+            <div class="callout-title" style="color: var(--accent-blue);">📌 Resumen Ejecutivo del Tema</div>
+            <p>Se aborda el estudio del elemento más simple de la tabla periódica: el <strong>hidrógeno</strong>. Se analizan sus isótopos (protio, deuterio, tritio) y sus propiedades moleculares. Se detallan los procesos industriales para su obtención (destacando el reformado de gas natural con vapor y la electrólisis del agua como opción idónea a futuro). Se examinan sus aplicaciones y su rol crucial como <strong>vector energético renovable</strong> mediante pilas de combustible PEM. Finalmente, se analizan los <strong>hidruros</strong>, la estructura anómala del <strong>agua</strong> y las operaciones físico-químicas de purificación, ablandamiento (cal-sosa, resinas) y desinfección de aguas continentales e industriales.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 8.1: EL HIDRÓGENO EN LA NATURALEZA -->
+    <div class="section-card">
+        <h2 class="section-title t-blue">8.1. El Hidrógeno en la Naturaleza</h2>
+        <p>El <span class="hl-def">hidrógeno atómico</span> es el elemento más simple conocido. Su átomo está formado únicamente por un núcleo conteniendo un solo protón y por un solo electrón en su corteza, por lo que su estructura electrónica es $\mathbf{(1s^1)}$.</p>
+        
+        <p>Los átomos de hidrógeno tienden fuertemente a combinarse entre sí para formar <strong>hidrógeno molecular ($\mathbf{H_2}$)</strong>, cuya configuración electrónica en el estado fundamental es $\mathbf{1\sigma^2}$. Este proceso de asociación es fuertemente exotérmico:</p>
+
+        <div class="math-box">
+            $\text{H}_{(g)} + \text{H}_{(g)} \longrightarrow \text{H}_{2(g)} \qquad \Delta H^\circ = -436 \text{ kJ/mol}$
+        </div>
+
+        <p>La elevada cantidad de energía liberada en la recombinación de los átomos de hidrógeno libre se aprovecha industrialmente en el <strong>soplete de hidrógeno atómico</strong> para conseguir temperaturas muy elevadas, del orden de los <span class="hl-amber">4.000 °C</span>. Esto permite la fusión práctica de metales de muy alto punto de fusión (como el platino) y el moldeo de óxidos refractarios.</p>
+
+        <div class="callout callout-purple">
+            <div class="callout-title">Abundancia del Hidrógeno en el Universo y la Tierra</div>
+            <ul>
+                <li><strong>En el Universo:</strong> Es el elemento más abundante de todos. Las estrellas, galaxias y nebulosas están constituidas predominantemente por hidrógeno atómico. También se halla en estado atómico en bajas concentraciones en el espacio interestelar y en las capas más externas de la atmósfera terrestre ($\approx 1\text{ ppm}$).</li>
+                <li><strong>En la Corteza Terrestre:</strong> Ocupa el <strong>noveno lugar en porcentaje en peso</strong>, pero el <strong>tercer lugar en número de átomos</strong> (inmediatamente después del silicio y del oxígeno). Aproximadamente <em>1 de cada 7 átomos</em> en la corteza terrestre es de hidrógeno.</li>
+                <li><strong>Modo de existencia:</strong> Raramente se encuentra libre en forma atómica y muy escasamente en forma molecular ($H_2$) disuelto en el gas natural. En su inmensa mayoría se halla <strong>combinado</strong>: su principal fuente es el <span class="hl-def">agua ($H_2O$)</span>, seguida de los <span class="hl-teal">hidrocarburos</span> y la materia orgánica (proteínas, grasas, carbohidratos).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 8.2: ISÓTOPOS DEL HIDRÓGENO -->
+    <div class="section-card">
+        <h2 class="section-title t-teal">8.2. Isótopos del Hidrógeno</h2>
+        <p>Se conocen tres isótopos del hidrógeno, los cuales se diferencian en la composición de su núcleo atómico:</p>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4 style="color: var(--accent-blue);">Protio (${}^1\text{H}_1$)</h4>
+                <p><strong>Composición:</strong> 1 protón, 0 neutrones, 1 electrón.</p>
+                <p><strong>Abundancia:</strong> Superior al <span class="hl-def">99,98%</span>. Es el isótopo convencional y más ligero.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <h4 style="color: var(--accent-teal);">Deuterio (${}^2\text{H}_1$ o ${}^2\text{D}_1$)</h4>
+                <p><strong>Composición:</strong> 1 protón, 1 neutrón, 1 electrón.</p>
+                <p><strong>Abundancia:</strong> Representa un <span class="hl-teal">0,0156%</span>. Denominado también hidrógeno pesado.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <h4 style="color: var(--accent-purple);">Tritio (${}^3\text{H}_1$ o ${}^3\text{T}_1$)</h4>
+                <p><strong>Composición:</strong> 1 protón, 2 neutrones, 1 electrón.</p>
+                <p><strong>Abundancia:</strong> Trazas microscópicas ($\approx 1\text{ átomo de T por cada } 10^{17}\text{ átomos de H}$). Radiisótopo.</p>
+            </div>
+        </div>
+
+        <h4>Origen y Radiactividad del Tritio</h4>
+        <p>El tritio se origina en las capas superiores de la atmósfera por reacciones nucleares inducidas por neutrones de la radiación cósmica al incidir sobre núcleos de nitrógeno:</p>
+
+        <div class="math-box">
+            ${}^{14}_{7}\text{N} + {}^{1}_{0}\text{n} \longrightarrow {}^{3}_{1}\text{T} + {}^{12}_{6}\text{C}$
+        </div>
+
+        <p>El tritio es radiactivo y se desintegra espontáneamente emitiendo partículas $\beta^-$ con un período de semidesintegración de <span class="hl-amber">12,4 años</span>, transformándose en un isótopo estable de helio:</p>
+
+        <div class="math-box">
+            ${}^{3}_{1}\text{T} \longrightarrow {}^{3}_{2}\text{He} + {}^{0}_{-1}\text{e}$
+        </div>
+
+        <h4>Efecto Isotópico y Aplicaciones</h4>
+        <p>Aunque los tres isótopos son químicamente idénticos (mismo número atómico y configuración electrónica), presentan diferencias significativas en las propiedades físicas y cinéticas que dependen de su masa isotópica. Este fenómeno se denomina <span class="hl-def">Efecto Isotópico</span>. Se aprovecha para dilucidar los mecanismos de reacción en procesos químicos y biológicos complejos. El tritio se emplea además como <strong>elemento trazador radiactivo</strong>.</p>
+
+        <h4>Agua Pesada ($\text{D}_2\text{O}$)</h4>
+        <p>Al igual que la molécula de $H_2$, existen moléculas homonucleares $D_2$ y $T_2$, así como moléculas heteronucleares mixtas ($HD$, $HT$, $DT$). Un compuesto fundamental es el <span class="hl-purple">Agua Pesada ($\text{D}_2\text{O}$)</span>. Se obtiene como producto residual durante la electrólisis prolongada del agua natural, debido a que el <em>Potencial Normal de Reducción del deuterio es ligeramente inferior al del hidrógeno</em>; por tanto, el protio se reduce y desprende más fácilmente en forma gaseosa, enriqueciéndose la fase líquida residual con $\text{D}_2\text{O}$ hasta concentraciones del 99%.</p>
+    </div>
+
+    <!-- SECCIÓN 8.3: PROPIEDADES DEL HIDRÓGENO -->
+    <div class="section-card">
+        <h2 class="section-title t-amber">8.3. Propiedades del Hidrógeno</h2>
+        <p>El hidrógeno molecular ($\text{H}_2$) es un gas incoloro, inodoro e insípido. Es el <strong>gas más ligero conocido</strong> y posee una velocidad de difusión sumamente elevada, lo que le confiere una <strong>conductividad térmica muy alta</strong>.</p>
+        
+        <p>Tiene una capacidad destacada de ser <span class="hl-teal">adsorbido reversiblemente por ciertos metales</span>. Por ejemplo, un volumen de paladio metálico puede adsorber hasta <strong>850 volúmenes de hidrógeno</strong> a temperatura ambiente. Al calentar el sistema, el gas se desorbe cuantitativamente.</p>
+
+        <p>El $\text{H}_2$ es extremadamente difícil de licuar y solidificar debido a sus débilísimas fuerzas intermoleculares de dispersión.</p>
+
+        <h4>Tabla 8.1. Propiedades Físicas del Hidrógeno y del Deuterio Molecular</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Propiedad Física</th>
+                    <th>Hidrógeno ($\text{H}_2$)</th>
+                    <th>Deuterio ($\text{D}_2$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Peso Molecular</strong></td>
+                    <td>$2,016 \text{ g/mol}$</td>
+                    <td>$4,026 \text{ g/mol}$</td>
+                </tr>
+                <tr>
+                    <td><strong>Punto de Ebullición</strong></td>
+                    <td>$20,38 \text{ K} \quad (-252,77 ^\circ \text{C})$</td>
+                    <td>$23,9 \text{ K} \quad (-249,25 ^\circ \text{C})$</td>
+                </tr>
+                <tr>
+                    <td><strong>Punto de Fusión</strong></td>
+                    <td>$13,95 \text{ K} \quad (-259,20 ^\circ \text{C})$</td>
+                    <td>$18,65 \text{ K} \quad (-254,50 ^\circ \text{C})$</td>
+                </tr>
+                <tr>
+                    <td><strong>Punto Triple</strong></td>
+                    <td>$13,96 \text{ K}$</td>
+                    <td>$18,72 \text{ K}$</td>
+                </tr>
+                <tr>
+                    <td><strong>Calor Latente de Fusión</strong></td>
+                    <td>$904,6 \text{ J/mol}$</td>
+                    <td>$1.485,6 \text{ J/mol}$</td>
+                </tr>
+                <tr>
+                    <td><strong>Calor Latente de Vaporización</strong></td>
+                    <td>$117,1 \text{ J/mol}$</td>
+                    <td>$196,5 \text{ J/mol}$</td>
+                </tr>
+                <tr>
+                    <td><strong>Temperatura Crítica</strong></td>
+                    <td>$33,24 \text{ K}$</td>
+                    <td>$38,35 \text{ K}$</td>
+                </tr>
+                <tr>
+                    <td><strong>Presión Crítica</strong></td>
+                    <td>$12,80 \text{ atm}$</td>
+                    <td>$16,433 \text{ atm}$</td>
+                </tr>
+                <tr>
+                    <td><strong>Densidad (en c.n.)</strong></td>
+                    <td>$0,0898 \text{ g/L}$</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>Solubilidad en Agua (en c.n.)</strong></td>
+                    <td>$19,2 \text{ mL/L}$</td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SECCIÓN 8.4: MÉTODOS DE OBTENCIÓN DE HIDRÓGENO -->
+    <div class="section-card">
+        <h2 class="section-title t-green">8.4. Métodos de Obtención de Hidrógeno (Escala de Laboratorio)</h2>
+        <p>El descubrimiento del hidrógeno se atribuye a <strong>Henry Cavendish</strong>, quien lo obtuvo al hacer pasar vapor de agua sobre el cañón de un rifle al rojo vivo. En el laboratorio, todos los métodos utilizan el agua como materia prima:</p>
+
+        <h3>a) Reacción de metales fuertemente reductores con agua</h3>
+        <p>Los metales alcalinos y alcalinotérreos poseen potenciales normales de reducción fuertemente negativos y reaccionan de forma violenta con el agua fría:</p>
+        <div class="math-box">
+            $2\text{H}_2\text{O}_{(l)} + 2\text{Na}_{(s)} \longrightarrow \text{H}_{2(g)} + 2\text{Na}_{(ac)}^+ + 2\text{OH}_{(ac)}^-$
+        </div>
+        <p>Por su alta peligrosidad y desprendimiento masivo de calor, no tiene utilidad práctica salvo que se emplee amalgama de sodio para retardar la velocidad de reacción. Metales como $\text{Mg}$, $\text{Al}$ y $\text{Zn}$ no reaccionan a temperatura ambiente debido a la formación de una capa pasivante e impermeable de hidróxido sobre la superficie del metal. No obstante, al calentar e incidir vapor de agua sobre $\text{Mg}$ o $\text{Fe}$, se genera una capa porosa de óxido que permite la continuidad de la reacción exotérmica automantenida:</p>
+        <div class="math-box">
+            $\text{Mg}_{(s)} + \text{H}_2\text{O}_{(v)} \longrightarrow \text{MgO}_{(s)} + \text{H}_{2(g)} \qquad (\Delta H^\circ < 0)$
+            <br><br>
+            $3\text{Fe}_{(s)} + 4\text{H}_2\text{O}_{(v)} \longrightarrow \text{Fe}_3\text{O}_{4(s)} + 4\text{H}_{2(g)} \qquad (\Delta H^\circ < 0)$
+        </div>
+
+        <h3>b) Reacción de metales más reductores que el hidrógeno con ácidos no oxidantes</h3>
+        <p>Los metales con potencial normal de reducción negativo reaccionan con disoluciones de ácidos no oxidantes (como $\text{HCl}$ diluido) desprendiendo hidrógeno gaseoso. Es la síntesis habitual de laboratorio empleando cinc:</p>
+        <div class="math-box">
+            $\text{Zn}_{(s)} + 2\text{HCl}_{(ac)} \longrightarrow \text{ZnCl}_{2(ac)} + \text{H}_{2(g)}$
+        </div>
+
+        <h3>c) Reacción de metales anfóteros con bases fuertes concentradas</h3>
+        <p>Metales como el aluminio, cinc y silicio disuelven en medios alcalinos concentrados formando hidroxocomplejos solubles y desprendiendo $\text{H}_2$:</p>
+        <div class="math-box">
+            $\text{Zn}_{(s)} + 2\text{H}_2\text{O}_{(l)} + 2\text{OH}_{(ac)}^- \longrightarrow [\text{Zn}(\text{OH})_4]_{(ac)}^{2-} + \text{H}_{2(g)}$
+        </div>
+
+        <h3>d) Electrólisis del agua</h3>
+        <p>Obtención de hidrógeno de elevada pureza mediante la descomposión electrolítica de soluciones acuosas aciduladas o alcalinizadas.</p>
+    </div>
+
+    <!-- SECCIÓN 8.5: SÍNTESIS INDUSTRIAL DEL HIDRÓGENO -->
+    <div class="section-card">
+        <h2 class="section-title t-red">8.5. Síntesis Industrial del Hidrógeno</h2>
+        <p>Todos los métodos industriales se basan en la ruptura de la molécula de agua aportando la <span class="hl-react">Energía Libre de Formación ($\Delta G^\circ = 236 \text{ kJ/mol}$)</span> en condiciones estándar:</p>
+
+        <div class="math-box">
+            $\text{H}_2\text{O}_{(l)} \xrightarrow{\text{Energía}} \text{H}_{2(g)} + \frac{1}{2}\text{O}_{2(g)} \qquad \Delta G^\circ = +236 \text{ kJ/mol}$
+        </div>
+
+        <h3>8.5.1. Reformado de gas natural y fracciones ligeras del petróleo (Naftas) con vapor de agua</h3>
+        <p>Representa aproximadamente el <span class="hl-amber">50% de la producción mundial</span> de hidrógeno. Se realiza en dos etapas sucesivas:</p>
+        
+        <p><strong>1.ª Etapa (Reformado):</strong> Se hace pasar metano (componente principal del gas natural) y vapor de agua sobre un catalizador de níquel-cobalto a unos $800 ^\circ \text{C}$. La reacción es endodérmica:</p>
+        <div class="math-box">
+            $\text{CH}_{4(g)} + \text{H}_2\text{O}_{(v)} \rightleftharpoons \text{CO}_{(g)} + 3\text{H}_{2(g)} \qquad (\Delta H^\circ > 0)$
+        </div>
+        <p>La mezcla gaseosa $(\text{CO} + \text{H}_2)$ se denomina <span class="hl-def">Gas de Agua</span> o <span class="hl-def">Gas de Síntesis</span> y sirve también para preparar metanol y síntesis orgánicas.</p>
+
+        <p><strong>2.ª Etapa (Conversión de CO o Shift-reaction):</strong> El monóxido de carbono reacciona con vapor de agua adicional sobre catalizadores de óxidos de hierro:</p>
+        <div class="math-box">
+            $\text{CO}_{(g)} + \text{H}_2\text{O}_{(v)} \rightleftharpoons \text{CO}_{2(g)} + \text{H}_{2(g)} \qquad (\Delta H^\circ < 0)$
+        </div>
+        
+        <p><strong>Reacción Global del Proceso:</strong></p>
+        <div class="math-box">
+            $\text{CH}_{4(g)} + 2\text{H}_2\text{O}_{(v)} \rightleftharpoons \text{CO}_{2(g)} + 4\text{H}_{2(g)} \qquad (\Delta H^\circ > 0)$
+        </div>
+        <p>La energía endotérmica necesaria se suministra quemando una porción del propio gas natural con aire ($\text{CH}_{4(g)} + 2\text{O}_{2(g)} \rightarrow \text{CO}_{2(g)} + 2\text{H}_2\text{O}_{(v)}, \Delta H^\circ = -886 \text{ kJ/mol}$). El $\text{CO}_2$ se separa finalmente mediante compresión y enfriamiento acoplado.</p>
+
+        <h3>8.5.2. Gasificación del carbón con vapor de agua</h3>
+        <p>Produce más del <span class="hl-amber">25% del consumo mundial</span>. Emplea carbones de baja calidad e inyecta vapor de agua a $1.500 ^\circ \text{C}$ y presiones de 3 a 4 MPa:</p>
+        <div class="math-box">
+            $\text{C}_{(s)} + \text{H}_2\text{O}_{(v)} \rightleftharpoons \text{CO}_{(g)} + \text{H}_{2(g)} \qquad \Delta H^\circ = +131,17 \text{ kJ/mol}$
+        </div>
+        <p>El gas de síntesis resultante vuelve a hacerse reaccionar con vapor para transformar el $\text{CO}$ en $\text{CO}_2$ e incrementar el rendimiento de $\text{H}_2$.</p>
+
+        <h3>8.5.3. Reacción de vapor de agua con hierro al rojo</h3>
+        <p>El óxido magnético de hierro ($\text{Fe}_3\text{O}_4$) producido al atacar el hierro caliente con vapor se regenera continuamente mediante reducción con monóxido de carbono:</p>
+        <div class="math-box">
+            $\text{Fe}_3\text{O}_{4(s)} + 4\text{CO}_{(g)} \longrightarrow 3\text{Fe}_{(s)} + 4\text{CO}_{2(g)}$
+        </div>
+
+        <h3>8.5.4. Electrólisis industrial del agua</h3>
+        <p>Proceso electrolítico fundamentado en la termodinámica del agua ($\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$). En condiciones estándar ($25^\circ \text{C}, 1\text{ atm}$):</p>
+        <div class="math-box">
+            $\Delta G^\circ = 285 \text{ kJ/mol} - 298,16 \text{ K} \cdot (164,5 \cdot 10^{-3} \text{ kJ/mol}\cdot\text{K}) = 236 \text{ kJ/mol}$
+        </div>
+        <p>El potencial teórico mínimo es: $\mathbf{E^\circ = 1,23 \text{ V}}$. En la práctica, la resistencia óhmica de la celda y los sobrepotenciales de electrodo obligan a incrementar el voltaje en 0,6 a 1,0 V adicionales, exigiendo una energía real de 353 a 430 kJ/mol (97 a 118 kWh/kmol). Considerando un coste eléctrico óptimo de 0,04 €/kWh, equivale a un precio final de <span class="hl-react">1,91 €/kg de H₂</span>.</p>
+
+        <h4>Reacciones Electródicas en la Cuba:</h4>
+        <div class="math-box">
+            <strong>Cátodo (-):</strong> $2\text{H}^+ + 2\text{e}^- \longrightarrow \text{H}_{2(g)}$
+            <br>
+            <strong>Ánodo (+):</strong> $2\text{OH}^- - 2\text{e}^- \longrightarrow \frac{1}{2}\text{O}_{2(g)} + \text{H}_2\text{O}_{(l)}$
+        </div>
+
+        <h4>Factores Operativos Principales:</h4>
+        <ul>
+            <li><strong>Temperatura y Presión:</strong> Al elevar $T$, el término $T\Delta S^\circ$ aumenta, reduciendo el trabajo eléctrico requerido $\Delta G^\circ$. Los sistemas comerciales operan a temperaturas entre $800 \text{ y } 1.100 ^\circ \text{C}$ o a altas presiones ($\approx 2,8\text{ MPa}$).</li>
+            <li><strong>Densidad de Corriente ($I/S$):</strong> Relación entre la intensidad de corriente $I$ y la superficie $S$. A mayor densidad aumenta la producción por unidad de volumen, pero se incrementan los sobrepotenciales. Representa un compromiso económico entre coste del equipo y eficiencia energética.</li>
+        </ul>
+
+        <h4>Tipos Comunes de Electrolizadores Comerciales:</h4>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4>1. Electrolizadores Alcalinos</h4>
+                <p>Usan electrolito de $\text{KOH}$ al 30%. Cátodo de hierro y ánodo de hierro niquelado ($T < 100^\circ \text{C}$).</p>
+                <ul>
+                    <li><strong>Unipolares (de tanque):</strong> Electrodos separados por diafragma de amianto. Alta pureza (99,9%), pero menor rendimiento y voltajes de 2,0–2,2 V.</li>
+                    <li><strong>Bipolares (filtro-prensa):</strong> Láminas de Fe en serie donde cada cara actúa de cátodo/ánodo. Mayor rendimiento, menor densidad de corriente y voltajes de 1,85–1,92 V.</li>
+                </ul>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <h4>2. Electrolizadores PEM</h4>
+                <p>Utilizan una <strong>Membrana de Intercambio Protónico</strong> sólida. Electrodos de platino. Es un sistema <em>reversible</em> que trabaja a $\approx 100^\circ \text{C}$, presiones de 3 MPa y 1,8 V. Produce $\text{H}_2$ con pureza excepcionalmente alta (99,99%).</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <h4>3. Cerámicos de Alta Temp.</h4>
+                <p>Electrolitos cerámicos conductores de iones óxido $\text{O}^{2-}$ ($\text{ZrO}_2$ dopado con $\text{Y}_2\text{O}_3$, $\text{MgO}$ o $\text{CaO}$). Operan entre $700 \text{ y } 1.100^\circ \text{C}$, disminuyendo sensiblemente el voltaje de descarga.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 8.6: APLICACIONES INDUSTRIALES DEL HIDRÓGENO -->
+    <div class="section-card">
+        <h2 class="section-title t-purple">8.6. Aplicaciones Industriales del Hidrógeno</h2>
+        <p>La inmensa mayoría del hidrógeno producido en la actualidad se genera y consume <em>in situ</em> dentro del mismo complejo industrial. Sus aplicaciones principales se desglosan en:</p>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4>Síntesis de Amoniaco ($\approx 50\%$)</h4>
+                <p>Se destina a la producción masiva de $\text{NH}_3$ mediante el proceso Haber-Bosch para la industria de fertilizantes nitrogenados.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <h4>Refinado del Petróleo ($35 - 40\%$)</h4>
+                <p>Se utiliza en operaciones de hidrocracking, hidrodesulfuración, reformado catalítico y refino de aceites lubricantes.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <h4>Síntesis de Metanol ($\approx 10\%$)</h4>
+                <p>Materia prima básica para la preparación sintética de metanol ($\text{CH}_3\text{OH}$) a partir del gas de síntesis.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <h4>Otros Usos Químicos y Metalúrgicos</h4>
+                <p>Hidrogenación catalítica de aceites vegetales (evita el enranciamiento), reducción de óxidos refractarios (obtención de wolframio) y uso como vector energético.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 8.7: EL HIDRÓGENO COMO VECTOR ENERGÉTICO -->
+    <div class="section-card">
+        <h2 class="section-title t-pink">8.7. El Hidrógeno como Vector Energético</h2>
+        <p>Ante el agotamiento de los combustibles fósiles y el impacto medioambiental del efecto invernadero, el hidrógeno surge como un <strong>combustible de "contaminación cero"</strong>, ya que el único producto derivado de su combustión es vapor de agua limpia.</p>
+
+        <h4>Pilas de Combustible (Fuel Cells)</h4>
+        <p>En una pila de combustible transcurre el fenómeno inverso a la electrólisis: la reacción de síntesis del agua libera su Energía Libre de Formación como energía eléctrica limpia:</p>
+
+        <div class="math-box">
+            $\text{H}_{2(g)} + \frac{1}{2}\text{O}_{2(g)} \longrightarrow \text{H}_2\text{O}_{(l)} \qquad \Delta G^\circ = -236 \text{ kJ/mol} \quad (E^\circ = 1,23 \text{ V})$
+        </div>
+
+        <p><strong>Semirreacciones Electródicas en la Pila PEM:</strong></p>
+        <div class="math-box">
+            <strong>Ánodo (-):</strong> $\text{H}_2 + 2\text{OH}^- - 2\text{e}^- \longrightarrow 2\text{H}_2\text{O}$
+            <br>
+            <strong>Cátodo (+):</strong> $\frac{1}{2}\text{O}_2 + \text{H}_2\text{O} + 2\text{e}^- \longrightarrow 2\text{OH}^-$
+        </div>
+
+        <p><strong>Rendimiento Termodinámico Máximo del Proceso:</strong></p>
+        <div class="math-box">
+            $\eta = \left( \frac{\Delta G^\circ}{\Delta H^\circ} \right) \cdot 100 = \left( \frac{237}{285} \right) \cdot 100 = \mathbf{83\%}$
+        </div>
+
+        <p>A pesar de las pérdidas inevitables, las pilas reales alcanzan rendimientos superiores al <span class="hl-green">75%</span>, superando ampliamente el rendimiento de los motores térmicos de combustión interna ($35 - 40\%$).</p>
+
+        <div class="svg-container">
+            <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg">
+                <rect width="700" height="240" fill="#f8fafc" rx="12" />
+                <!-- Solar panel -->
+                <rect x="30" y="40" width="120" height="80" fill="#0284c7" rx="8" />
+                <text x="90" y="75" fill="white" font-weight="bold" text-anchor="middle" font-size="14">SOL / Fotocélula</text>
+                <text x="90" y="95" fill="#e0f2fe" text-anchor="middle" font-size="11">Energía Eléctrica</text>
+
+                <path d="M 150 80 L 210 80" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow)" />
+
+                <!-- Electrolyzer -->
+                <rect x="215" y="40" width="120" height="80" fill="#0d9488" rx="8" />
+                <text x="275" y="75" fill="white" font-weight="bold" text-anchor="middle" font-size="14">Electrólisis</text>
+                <text x="275" y="95" fill="#ccfbf1" text-anchor="middle" font-size="11">Agua → H₂ + O₂</text>
+
+                <!-- Storage -->
+                <path d="M 335 80 L 395 80" stroke="#0d9488" stroke-width="3" />
+                <rect x="400" y="40" width="120" height="80" fill="#d97706" rx="8" />
+                <text x="460" y="75" fill="white" font-weight="bold" text-anchor="middle" font-size="14">Depósito H₂</text>
+                <text x="460" y="95" fill="#fef3c7" text-anchor="middle" font-size="11">Almacenamiento</text>
+
+                <path d="M 520 80 L 580 80" stroke="#d97706" stroke-width="3" />
+
+                <!-- Fuel Cell -->
+                <rect x="585" y="40" width="95" height="80" fill="#9333ea" rx="8" />
+                <text x="632" y="75" fill="white" font-weight="bold" text-anchor="middle" font-size="13">Pila Comb.</text>
+                <text x="632" y="95" fill="#f3e8ff" text-anchor="middle" font-size="10">Electr. Útil</text>
+
+                <!-- Return Water -->
+                <path d="M 632 120 L 632 180 L 275 180 L 275 120" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="6" />
+                <text x="450" y="200" fill="#64748b" text-anchor="middle" font-size="12">Reciclado de Agua (H₂O) y Calor</text>
+            </svg>
+            <p style="font-size: 0.88rem; color: var(--text-muted); text-align: center;">Figura 8.6: Esquema integral del sistema Energía Solar - Electrólisis - Células de Combustible de Hidrógeno.</p>
+        </div>
+
+        <h4>Ventajas e Inconvenientes del Hidrógeno como Vector Energético</h4>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <h4 style="color: var(--accent-green);">Ventajas</h4>
+                <ol>
+                    <li><strong>Elevada densidad energética por masa:</strong> $148 \cdot 10^3 \text{ kJ/kg}$ para $\text{H}_2$ frente a $55 \cdot 10^3 \text{ kJ/kg}$ para el metano ($\text{CH}_4$).</li>
+                    <li><strong>Alta velocidad de transporte:</strong> Gran coeficiente de difusión volumétrica.</li>
+                    <li><strong>Materia prima ilimitada y renovable:</strong> El agua es la fuente de ciclo cerrado.</li>
+                    <li><strong>Contaminación Cero:</strong> Libre de sulfuros, $\text{CO}_2$ y partículas.</li>
+                </ol>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <h4 style="color: var(--accent-red);">Inconvenientes</h4>
+                <ol>
+                    <li><strong>Baja densidad energética por volumen:</strong> $12,7 \cdot 10^3 \text{ kJ/m}^3$ para $\text{H}_2$ frente a $39,5 \cdot 10^3 \text{ kJ/m}^3$ para el metano en c.n.</li>
+                    <li><strong>Pérdidas por fugas:</strong> Difusibilidad extrema a través de juntas y grietas.</li>
+                    <li><strong>Licuefacción compleja:</strong> Puntos de fusión y ebullición criogénicos extremadamente bajos.</li>
+                    <li><strong>Riesgo de detonación:</strong> Formación de mezclas inflamables en aire con baja energía e inflamabilidad espontánea.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 8.8: HIDRUROS: SUS TIPOS -->
+    <div class="section-card">
+        <h2 class="section-title t-blue">8.8. Hidruros: Sus Tipos</h2>
+        <p>El hidrógeno forma compuestos binarios con la mayoría de los elementos químicos. Se dividen en tres grandes categorías estructurales:</p>
+
+        <h3>a) Hidruros Iónicos (Salinos)</h3>
+        <p>Formados con los elementos más electropositivos (alcalinos y alcalinotérreos). Son sólidos cristalinos iónicos que contienen el anión hidruro <span class="hl-def">$\mathbf{H^-}$</span> y cationes metálicos $\text{M}^{n+}$.</p>
+        <ul>
+            <li><strong>Estructura:</strong> Los hidruros de alcalinos cristalizan en red cúbica; los de alcalinotérreos en red hexagonal.</li>
+            <li><strong>Demostración del carácter iónico:</strong> Al realizar la electrólisis del $\text{LiH}$ fundido, el gas $\text{H}_2$ se desprende inequívocamente en el <strong>ánodo (+):</strong>
+                <div class="math-box">
+                    $\text{Li}^+\text{H}^-_{(l)} \xrightarrow{\text{Electrólisis}} \text{Li}_{(l)} + \frac{1}{2}\text{H}_{2(g)}$
+                </div>
+            </li>
+            <li><strong>Síntesis y Reactividad:</strong> Reacción directa del metal fundido con $\text{H}_2$ (ej. $\text{Na}_{(l)} + \frac{1}{2}\text{H}_{2(g)} \xrightarrow{400^\circ \text{C}} \text{NaH}_{(s)}$). Reaccionan violentamente con el agua liberando hidrógeno e hidróxido:
+                <div class="math-box">
+                    $\text{CaH}_{2(s)} + 2\text{H}_2\text{O}_{(l)} \longrightarrow \text{Ca}(\text{OH})_{2(s)} + 2\text{H}_{2(g)}$
+                </div>
+            </li>
+            <li><strong>Hidruros Complejos:</strong> El hidruro de litio y aluminio ($\text{LiAlH}_4$) y el borohidruro de sodio ($\text{NaBH}_4$) son reductores clave en química orgánica.</li>
+        </ul>
+
+        <h3>b) Hidruros Covalentes</h3>
+        <p>Formados por combinación de hidrógeno con los elementos electronegativos de los grupos IVA, VA, VIA, VIIA, así como con $\text{Be}$, $\text{B}$ y $\text{Al}$. Forman enlaces covalentes estables. En $\text{HF}$, $\text{H}_2\text{O}$ y $\text{NH}_3$ existen enlaces intermolecular por <strong>puente de hidrógeno</strong>, elevando anómalamente sus puntos de ebullición.</p>
+
+        <h4>Tabla 8.2. Principales Hidruros Covalentes</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>G-IIa</th>
+                    <th>G-IIIa</th>
+                    <th>G-IVa</th>
+                    <th>G-Va</th>
+                    <th>G-VIa</th>
+                    <th>G-VIIa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$\text{BeH}_2$</td>
+                    <td>$\text{B}_2\text{H}_6$</td>
+                    <td>$\text{CH}_4$</td>
+                    <td>$\text{NH}_3$</td>
+                    <td>$\text{H}_2\text{O}$</td>
+                    <td>$\text{H}_2\text{F}_2$ (dímero)</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>$\text{SiH}_4$</td>
+                    <td>$\text{PH}_3$</td>
+                    <td>$\text{H}_2\text{S}$</td>
+                    <td>$\text{HCl}$</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>$\text{AsH}_3$</td>
+                    <td>$\text{H}_2\text{Se}$</td>
+                    <td>$\text{HBr}$</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>$\text{SbH}_3$</td>
+                    <td>$\text{H}_2\text{Te}$</td>
+                    <td>$\text{HI}$</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>$\text{BiH}_3$</td>
+                    <td>$\text{H}_2\text{Po}$</td>
+                    <td>$\text{HAt}$</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Los hidruros de los grupos VIA y VIIA al disolverse en agua reaccionan liberando protones e incrementando la acidez ($\text{HCl}_{(g)} + \text{H}_2\text{O}_{(l)} \rightarrow \text{Cl}_{(ac)}^- + \text{H}_3\text{O}_{(ac)}^+$). El $\text{NH}_3$ reacciona produciendo soluciones básicas ($\text{NH}_{3(g)} + \text{H}_2\text{O}_{(l)} \rightleftharpoons \text{NH}_{4(ac)}^+ + \text{OH}_{(ac)}^-$).</p>
+
+        <h3>c) Hidruros Metálicos o Intersticiales</h3>
+        <p>Formados con metales de transición. Pueden tener composición estequiométrica fija ($\text{LaH}_3, \text{TiH}_2, \text{CoH}_2, \text{NiH}_2, \text{CrH}_2, \text{AgH}$) o estequiometría no definida ($\text{TaH}_{2,76}, \text{VH}_{0,56}$), acomodando los átomos de hidrógeno en los cavidades o intersticios de la red red cristalina del metal.</p>
+
+        <p>Son de especial interés los hidruros de paladio y platino y la aleación <span class="hl-teal">FeTi (85-90% Fe)</span>, capaz de adsorber un 1,5% p/p de hidrógeno de forma reversible, abriendo la puerta al <strong>almacenamiento seguro de hidrógeno en soporte sólido</strong>.</p>
+    </div>
+
+    <!-- SECCIÓN 8.9: EL AGUA -->
+    <div class="section-card">
+        <h2 class="section-title t-teal">8.9. El Agua</h2>
+        <p>El agua es el compuesto más abundante en la superficie terrestre. Representa aproximadamente el <span class="hl-def">7% de la masa total de la Tierra</span> y cubre el 75% (3/4 partes) de su superficie ("Hidrosfera"), con un volumen total de $\mathbf{1,36 \cdot 10^9 \text{ km}^3}$.</p>
+
+        <div class="callout callout-info">
+            <div class="callout-title">Distribución de los Recursos Hídricos Continentales</div>
+            <ul>
+                <li><strong>Mares y Océanos:</strong> Más del <span class="hl-amber">97%</span> del total (agua salada no apta para consumo).</li>
+                <li><strong>Aguas Continentales:</strong> Apenas un <span class="hl-green">2,7%</span> del agua total.
+                    <ul>
+                        <li><em>Casquetes Polares y Glaciares:</em> $> 75\%$ de las aguas continentales (sólida e inaccesible).</li>
+                        <li><em>Aguas Subterráneas Profundas (>1000m):</em> $\approx 24\%$ del agua continental.</li>
+                        <li><em>Aguas Superficiales Accesibles (ríos, lagos, suelo):</em> $< 1\%$ ($0,67\%$ de las aguas continentales).</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3>8.9.1. Estructura y Propiedades Singulares del Agua</h3>
+        <p>La molécula de $H_2O$ es angular, con un ángulo de enlace de <span class="hl-def">104°</span>. En fase gaseosa se halla como moléculas simples. En fase líquida y sólida, la diferencia de electronegatividad entre O e H forma intensos <strong>puentes de hidrógeno</strong>, produciendo una estructura polimérica de fórmula $[\text{H}_2\text{O}]_n$.</p>
+
+        <p>En el <strong>Hielo</strong>, cada molécula de agua se coordina tetraédricamente con otras 4 moléculas mediante enlaces de hidrógeno. Esto genera una red muy abierta cuya <span class="hl-react">densidad es menor que la del agua líquida</span> (la densidad máxima del agua líquida se alcanza a <strong>4 °C</strong>).</p>
+
+        <p>Estas uniones confieren al agua valores anormalmente elevados en sus puntos de fusión y ebullición, viscosidad, tensión superficial, calor específico y constante dieléctrica.</p>
+
+        <h3>8.9.2. El Agua en la Naturaleza (Sistemas Dispersos)</h3>
+        <p>Según el tamaño de las partículas contaminantes retenidas en el agua, los sistemas se clasifican en:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de Sistema Disperso</th>
+                    <th>Tamaño de Partícula</th>
+                    <th>Estado de Agregación y Características</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Suspensiones o Emulsiones</strong></td>
+                    <td>$> 10^{-5} \text{ cm}$</td>
+                    <td>Partículas sólidas (suspensión) o líquidas (emulsión) visíbles y sedimentables.</td>
+                </tr>
+                <tr>
+                    <td><strong>Coloides</strong></td>
+                    <td>$10^{-5} \text{ a } 10^{-7} \text{ cm}$</td>
+                    <td>Partículas con carga eléctrica que no sedimentan espontáneamente.</td>
+                </tr>
+                <tr>
+                    <td><strong>Disoluciones</strong></td>
+                    <td>$< 10^{-7} \text{ cm}$</td>
+                    <td>Mezclas homogéneas a nivel molecular o iónico (sales, gases disueltos).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SECCIÓN 8.10: TRATAMIENTOS DEL AGUA -->
+    <div class="section-card">
+        <h2 class="section-title t-amber">8.10. Tratamientos del Agua para Consumo Humano y Usos Industriales</h2>
+
+        <h3>8.10.1. Eliminación de Partículas en Suspensión y Aireación</h3>
+        <ul>
+            <li><strong>Coagulación - Floculación:</strong> Las partículas coloidales poseen cargas del mismo signo que impiden su aglomeración. Al añadir coagulantes como <em>sulfato de aluminio</em>, <em>sulfato de hierro (III)</em> o <em>polielectrolitos sintéticos</em>, se neutralizan las cargas, formando flóculos mayores que sedimentan fácilmente.</li>
+            <li><strong>Aireación:</strong> Aplicada a aguas subterráneas para desgasificar compuestos indeseables ($\text{H}_2\text{S}$) u oxidar iones solubles $\text{Fe}^{2+} \rightarrow \text{Fe}^{3+}$ y $\text{Mn}^{2+} \rightarrow \text{Mn}^{4+}$, haciéndolos precipitar como hidróxidos insolubles.</li>
+        </ul>
+
+        <h3>8.10.2. Dureza de un Agua</h3>
+        <p>La dureza se debe a la presencia de sales disueltas de cationes divalentes, principalmente <span class="hl-def">Calcio ($\text{Ca}^{2+}$) y Magnesio ($\text{Mg}^{2+}$)</span>, combinados con aniones bicarbonato, sulfato, cloruro y nitrato.</p>
+
+        <h4>Mecanismo Natural de Formación de la Dureza:</h4>
+        <div class="math-box">
+            $\text{CO}_{2(g)} + \text{H}_2\text{O}_{(l)} + \text{CaCO}_{3(s)} \rightleftharpoons \text{Ca}_{(ac)}^{2+} + 2\text{HCO}_{3(ac)}^-$
+        </div>
+
+        <p>La dureza se expresa cuantitativamente en <span class="hl-amber">mg/L de $\text{CaCO}_3$</span>:</p>
+        <ul>
+            <li><strong>Aguas Blandas:</strong> $< 50 \text{ mg/L como } \text{CaCO}_3$</li>
+            <li><strong>Moderadamente Duras:</strong> $50 - 150 \text{ mg/L como } \text{CaCO}_3$</li>
+            <li><strong>Duras:</strong> $150 - 300 \text{ mg/L como } \text{CaCO}_3$</li>
+            <li><strong>Muy Duras:</strong> $> 300 \text{ mg/L como } \text{CaCO}_3$</li>
+        </ul>
+
+        <h4>Tipos de Dureza:</h4>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <h4>Dureza Temporal (Carbonatada)</h4>
+                <p>Causada por $\text{Ca}^{2+}$ y $\text{Mg}^{2+}$ asociados al anión bicarbonato ($\text{HCO}_3^-$). <strong>Se elimina hirviendo el agua</strong>, lo que provoca la precipitación de carbonatos insolubles e incrustaciones térmicas:</p>
+                <div style="font-size: 0.85rem; background: #f1f5f9; padding: 6px; border-radius: 4px; margin-top: 5px;">
+                    $\text{Mg}^{2+} + 2\text{HCO}_{3(ac)}^- \xrightarrow{\text{Calor}} \text{MgCO}_{3(s)} \downarrow + \text{CO}_{2(g)} \uparrow + \text{H}_2\text{O}_{(l)}$
+                </div>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <h4>Dureza Permanente (No Carbonatada)</h4>
+                <p>Causada por los mismos cationes divalentes asociados a aniones como sulfatos ($\text{SO}_4^{2-}$), cloruros ($\text{Cl}^-$) o nitratos ($\text{NO}_3^-$). <strong>No precipita por ebullición</strong>.</p>
+            </div>
+        </div>
+        <p><strong>Dureza Total:</strong> Es la suma cuantitativa de la Dureza Temporal más la Dureza Permanente.</p>
+
+        <h3>8.10.3. Métodos de Ablandamiento para Usos Industriales</h3>
+
+        <h4>1. Proceso de la Cal - Sosa</h4>
+        <p>Añade una mezcla de óxido de calcio ($\text{CaO}$) y carbonato sódico ($\text{Na}_2\text{CO}_3$). El $\text{pH}$ sube por encima de 10 por formación de $\text{Ca}(\text{OH})_2$, precipitando la dureza temporal y permanente:</p>
+        <div class="math-box">
+            $\text{Ca}(\text{HCO}_3)_{2(ac)} + \text{Ca}(\text{OH})_{2(ac)} \longrightarrow 2\text{CaCO}_{3(s)}\downarrow + 2\text{H}_2\text{O}_{(l)}$
+            <br><br>
+            $\text{Mg}(\text{HCO}_3)_{2(ac)} + 2\text{Ca}(\text{OH})_{2(ac)} \longrightarrow 2\text{CaCO}_{3(s)}\downarrow + \text{Mg}(\text{OH})_{2(s)}\downarrow + 2\text{H}_2\text{O}_{(l)}$
+            <br><br>
+            $\text{CaSO}_{4(ac)} + \text{Na}_2\text{CO}_{3(ac)} \longrightarrow \text{CaCO}_{3(s)}\downarrow + \text{Na}_2\text{SO}_{4(ac)}$
+        </div>
+
+        <h4>2. Resinas Cambiadoras de Iones e Intercambio Iónico</h4>
+        <ul>
+            <li><strong>Zeolitas (Aluminosilicatos de Sodio):</strong> Retienen $\text{Ca}^{2+}$ y $\text{Mg}^{2+}$ sustituyéndolos por $\text{Na}^+$:
+                <div class="math-box">
+                    $\text{M}^{2+} + 2\text{NaZ}_{(s)} \longrightarrow 2\text{Na}^+ + \text{M}(\text{Z})_{2(s)}$
+                </div>
+                Se regeneran pasando una disolución concentrada de $\text{NaCl}$.
+            </li>
+            <li><strong>Resinas Orgánicas Sintéticas (Desionización Total):</strong>
+                <p>El agua pasa sucesivamente por una <span class="hl-def">Resina Catiónica ($\text{R}-\text{H}^+$)</span> y una <span class="hl-green">Resina Aniónica ($\text{R}-\text{OH}^-$)</span>, obteniéndose <strong>Agua Desionizada</strong>:</p>
+                <div class="math-box">
+                    <strong>Resina Catiónica:</strong> $\text{R}-2\text{H} + \text{Ca}_{(ac)}^{2+} \longrightarrow \text{R}-\text{Ca} + 2\text{H}_{(ac)}^+$
+                    <br>
+                    <strong>Resina Aniónica:</strong> $\text{R}-2\text{OH} + 2\text{X}_{(ac)}^- \longrightarrow \text{R}-2\text{X} + 2\text{OH}_{(ac)}^-$
+                    <br><br>
+                    $\text{H}^+ + \text{OH}^- \longrightarrow \text{H}_2\text{O}$
+                </div>
+            </li>
+        </ul>
+
+        <h3>8.10.4. Desinfección de Aguas para Consumo Humano</h3>
+        <ul>
+            <li><strong>Cloración:</strong> El cloro gas o hipoclorito genera ácido hipocloroso ($\text{HOCl}$) y anión hipoclorito ($\text{ClO}^-$), denominados <em>Cloro Libre</em>:
+                <div class="math-box">
+                    $\text{Cl}_{2(g)} + \text{H}_2\text{O}_{(l)} \rightleftharpoons \text{HOCl}_{(ac)} + \text{H}_{(ac)}^+ + \text{Cl}_{(ac)}^-$
+                </div>
+                En presencia de amoniaco se forman <em>cloraminas ($\text{NH}_2\text{Cl}$)</em> o <em>Cloro Combinado</em>, de acción más prolongada.
+            </li>
+            <li><strong>Ozonización ($\text{O}_3$):</strong> Potente desinfectante viricida y bactericida. Elimina el riesgo de generar organoclorados nocivos como los <span class="hl-react">trihalometanos ($\text{CHCl}_3$)</span>.</li>
+            <li><strong>Radiación Ultravioleta (UV):</strong> Radiación UV de onda corta ($240 - 280 \text{ nm}$).</li>
+        </ul>
+    </div>
+
+    <!-- SECCIÓN EJERCICIOS DE AUTOEVALUACIÓN -->
+    <div class="section-card">
+        <h2 class="section-title t-green">📝 Ejercicios de Autoevaluación y Soluciones Detalladas</h2>
+
+        <!-- EJERCICIO 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1</div>
+            <p>Defina brevemente los siguientes tipos de aguas: agua pesada; agua dura; agua desionizada; agua natural; agua destilada y agua oxigenada.</p>
+            
+            <div class="solution-box">
+                <p><span class="step-tag">Solución</span></p>
+                <ul>
+                    <li><strong>Agua Pesada ($\mathbf{D_2O}$):</strong> Óxido de deuterio donde los átomos de hidrógeno son sustituidos por su isótopo deuterio. Se obtiene como residuo electrolítico porque el $\text{D}^+$ tiene menor movilidad y mayor potencial de descarga que el $\text{H}^+$.</li>
+                    <li><strong>Agua Dura:</strong> Agua natural con elevada concentración de sales de metales alcalinotérreos ($\text{Ca}^{2+}$ y $\text{Mg}^{2+}$).</li>
+                    <li><strong>Agua Desionizada:</strong> Agua exenta de cationes y aniones por tratamiento sucesivo con resinas sintéticas intercambiadoras ($\text{H}^+$ y $\text{OH}^-$).</li>
+                    <li><strong>Agua Natural:</strong> Agua tal como se encuentra en el medio ambiente, conteniendo sustancias sólidas, líquidas o gaseosas disueltas.</li>
+                    <li><strong>Agua Destilada:</strong> Agua purificada por evaporación y condensación en un destilador, quedando los solutos no volátiles en el recipiente de ebullición.</li>
+                    <li><strong>Agua Oxigenada ($\mathbf{H_2O_2}$):</strong> Compuesto químico distinto correspondiente al peróxido de hidrógeno.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EJERCICIO 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2</div>
+            <p>Describa brevemente un método de obtención industrial de hidrógeno partiendo de agua como materia prima y sin utilizar energía eléctrica.</p>
+            
+            <div class="solution-box">
+                <p><span class="step-tag">Solución</span></p>
+                <p>El método industrial no electrolítico es el <strong>Reformado de Hidrocarburos (Metano) con Vapor de Agua</strong>. Transcurre a $800^\circ \text{C}$ sobre catalizadores de $\text{Ni}-\text{Co}$ en dos etapas:</p>
+                <div style="background: #f8fafc; padding: 10px; border-radius: 6px; font-family: monospace;">
+                    1.ª etapa: CH₄(g) + H₂O(vapor) ──► CO(g) + 3 H₂(g)<br>
+                    2.ª etapa: CO(g) + H₂O(vapor) ──► CO₂(g) + H₂(g)
+                </div>
+                <p>El $\text{CO}_2$ se elimina por compresión y enfriamiento. La energía térmica requerida se obtiene quemando una fracción de metano.</p>
+            </div>
+        </div>
+
+        <!-- EJERCICIO 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3</div>
+            <p>Describa el funcionamiento de una célula combustible de hidrógeno.</p>
+            
+            <div class="solution-box">
+                <p><span class="step-tag">Solución</span></p>
+                <p>Es un dispositivo electroquímico que transforma directamente la energía de oxidación del hidrógeno en energía eléctrica. Se suministra $\text{H}_2$ al ánodo y $\text{O}_2$ al cátodo:</p>
+                <ul>
+                    <li><strong>Ánodo (-):</strong> $\text{H}_2 + 2\text{OH}^- - 2\text{e}^- \longrightarrow 2\text{H}_2\text{O}$</li>
+                    <li><strong>Cátodo (+):</strong> $\frac{1}{2}\text{O}_2 + \text{H}_2\text{O} + 2\text{e}^- \longrightarrow 2\text{OH}^-$</li>
+                </ul>
+                <p>Genera una fuerza electromotriz teórica de $1,23\text{ V}$ con producción exclusiva de agua y calor.</p>
+            </div>
+        </div>
+
+        <!-- EJERCICIO 4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4</div>
+            <p>¿Cuál será el rendimiento teórico máximo de una pila combustible de hidrógeno que funciona en condiciones estándar? Si el voltaje real es de solo 0,75 V, ¿cuál será el rendimiento real de la pila y su potencia en kWh por $\text{m}^3$ de $\text{H}_2$ consumido en c.n.?</p>
+            <p><strong>Datos:</strong> $\Delta H^\circ(\text{H}_2\text{O}) = -285,8\text{ kJ/mol}$; $S^\circ(\text{H}_2\text{O}) = 69,9\text{ J/K}\cdot\text{mol}$; $S^\circ(\text{H}_2) = 130,7\text{ J/K}\cdot\text{mol}$; $S^\circ(\text{O}_2) = 205,1\text{ J/K}\cdot\text{mol}$; $F = 96.485\text{ C/mol}$.</p>
+            
+            <div class="solution-box">
+                <p><span class="step-tag">Paso 1: Cálculo de $\Delta G^\circ$ y Rendimiento Teórico</span></p>
+                <p>Reacción: $\text{H}_{2(g)} + \frac{1}{2}\text{O}_{2(g)} \longrightarrow \text{H}_2\text{O}_{(l)}$</p>
+                <p>$$\Delta H^\circ = -285,8 \text{ kJ/mol}$$</p>
+                <p>$$\Delta S^\circ = S^\circ(\text{H}_2\text{O}) - \left[S^\circ(\text{H}_2) + \frac{1}{2}S^\circ(\text{O}_2)\right] = 69,9 - \left[130,7 + \frac{1}{2}(205,1)\right] = -163,35 \text{ J/K}\cdot\text{mol}$$</p>
+                <p>$$T\Delta S^\circ = 298,16 \text{ K} \cdot (-0,16335 \text{ kJ/K}\cdot\text{mol}) = -48,70 \text{ kJ/mol}$$</p>
+                <p>$$\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ = -285,80 - (-48,70) = \mathbf{-237,10 \text{ kJ/mol}}$$</p>
+                <p>$$\eta_{\text{teórico}} = \left( \frac{\Delta G^\circ}{\Delta H^\circ} \right) \cdot 100 = \left( \frac{-237,10}{-285,80} \right) \cdot 100 = \mathbf{82,96\% \approx 83\%}$$</p>
+
+                <p><span class="step-tag">Paso 2: Rendimiento Real a 0,75 V</span></p>
+                <p>$$\Delta G^\circ_{\text{real}} = -n \cdot E_{\text{real}} \cdot F = -2 \cdot (0,75\text{ V}) \cdot (96.485\text{ C/mol}) = -144,73 \text{ kJ/mol}$$</p>
+                <p>$$\eta_{\text{real}} = \left( \frac{-144,73}{-285,80} \right) \cdot 100 = \mathbf{50,6\%}$$</p>
+
+                <p><span class="step-tag">Paso 3: Potencia Real en $\text{kWh/m}^3$ de $\text{H}_2$ en c.n.</span></p>
+                <p>Considerando $1\text{ kWh} = 3.600\text{ kJ}$ y volumen molar $V_m = 22,4\text{ L/mol} = 22,4 \cdot 10^{-3}\text{ m}^3\text{/mol}$ ($22,4\text{ m}^3\text{/kmol}$):</p>
+                <p>$$P_{\text{mol}} = \frac{144,73 \text{ kJ/mol}}{3.600 \text{ kJ/kWh}} = 0,0402 \text{ kWh/mol}$$</p>
+                <p>$$P_{\text{real}} = \frac{0,0402 \text{ kWh/mol} \cdot 1.000 \text{ mol/kmol}}{22,4 \text{ m}^3\text{/kmol}} = \mathbf{1.795 \text{ kWh/m}^3 \text{ de H}_2}$$</p>
+            </div>
+        </div>
+
+        <!-- EJERCICIO 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5</div>
+            <p>Un agua natural presenta la siguiente composición analítica:</p>
+            <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 5px;">
+                <li>Bicarbonato cálcico: $52\text{ mg/L}$</li>
+                <li>Sulfato magnésico: $3\text{ mg/L}$</li>
+                <li>Cloruro cálcico: $43\text{ mg/L}$</li>
+                <li>Cloruro magnésico: $6\text{ mg/L}$</li>
+                <li>Bicarbonato magnésico: $36\text{ mg/L}$</li>
+                <li>Cloruro sódico: $15\text{ mg/L}$</li>
+                <li>Bisulfato magnésico: $9\text{ mg/L}$</li>
+                <li>Materia orgánica: $1\text{ mg/L}$</li>
+            </ul>
+            <p>Calcular la dureza temporal, la dureza permanente y la dureza total expresadas en $\text{mg/L de CaCO}_3$.</p>
+            <p><strong>Datos de Masas Atómicas (g/mol):</strong> H: 1,0; C: 12,0; O: 16,0; Na: 23,0; Mg: 24,1; S: 32,0; Cl: 35,5; Ca: 40,0.</p>
+
+            <div class="solution-box">
+                <p><span class="step-tag">1. Dureza Temporal (Debida a Bicarbonatos)</span></p>
+                <p>Pesos Moleculares: $\text{Ca}(\text{HCO}_3)_2 = 162 \text{ g/mol}$; $\text{Mg}(\text{HCO}_3)_2 = 146,1 \text{ g/mol}$.</p>
+                <p>$$|\text{Ca}^{2+}| = 52 \cdot \frac{40,0}{162} = 12,83 \text{ mg/L}$$</p>
+                <p>$$|\text{Mg}^{2+}| = 36 \cdot \frac{24,1}{146,1} = 5,93 \text{ mg/L}$$</p>
+                <p>Expresado equivalente en $\text{CaCO}_3$ ($P_m = 100 \text{ g/mol}$):</p>
+                <p>$$D_{\text{temporal}} = 12,83 \cdot \left(\frac{100}{40,0}\right) + 5,93 \cdot \left(\frac{100}{24,1}\right) = 32,075 + 24,605 = \mathbf{56,69 \text{ mg/L como CaCO}_3}$$</p>
+
+                <p><span class="step-tag">2. Dureza Permanente (Otras Sales de Ca y Mg)</span></p>
+                <p>Pesos Moleculares: $\text{CaCl}_2 = 111\text{ g/mol}$; $\text{MgSO}_4 = 120,6\text{ g/mol}$; $\text{MgCl}_2 = 95,1\text{ g/mol}$; $\text{Mg}(\text{HSO}_4)_2 = 218,1\text{ g/mol}$.</p>
+                <p>$$|\text{Ca}^{2+}| = 43 \cdot \frac{40,0}{111} = 15,59 \text{ mg/L}$$</p>
+                <p>$$|\text{Mg}^{2+}| = 3 \cdot \frac{24,1}{120,6} + 6 \cdot \frac{24,1}{95,1} + 9 \cdot \frac{24,1}{218,1} = 0,60 + 1,52 + 0,99 = 3,10 \text{ mg/L}$$</p>
+                <p>$$D_{\text{permanente}} = 15,59 \cdot \left(\frac{100}{40,0}\right) + 3,10 \cdot \left(\frac{100}{24,1}\right) = 38,975 + 12,863 = \mathbf{51,83 \text{ mg/L como CaCO}_3}$$</p>
+
+                <p><span class="step-tag">3. Dureza Total</span></p>
+                <p>$$D_{\text{total}} = D_{\text{temporal}} + D_{\text{permanente}} = 56,69 + 51,83 = \mathbf{108,52 \text{ mg/L como CaCO}_3}$$</p>
+                <p><em>(El agua se clasifica como <strong>Moderadamente Dura</strong>)</em>.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

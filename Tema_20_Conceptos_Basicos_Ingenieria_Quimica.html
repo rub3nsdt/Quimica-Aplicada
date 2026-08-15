@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 20: Conceptos Básicos de la Ingeniería Química - Resumen Completo</title>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0369a1 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%; right: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header p { font-size: 1.05rem; color: #cbd5e1; max-width: 850px; }
+        .meta-info {
+            margin-top: 20px; padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem; color: #94a3b8;
+            display: flex; flex-wrap: wrap; gap: 20px;
+        }
+        .meta-info span { display: flex; align-items: center; gap: 6px; }
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .section-card:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08); }
+        .section-title {
+            font-size: 1.55rem; font-weight: 700;
+            margin-bottom: 20px; padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+        h3 {
+            font-size: 1.2rem; font-weight: 600;
+            margin: 22px 0 12px 0; color: var(--primary);
+            display: flex; align-items: center; gap: 8px;
+        }
+        h4 { font-size: 1.05rem; font-weight: 600; margin: 16px 0 8px 0; color: var(--primary-light); }
+        p { margin-bottom: 14px; color: #334155; text-align: justify; }
+        .hl-def { background-color: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-green { background-color: #dcfce7; color: #15803d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-red { background-color: #fee2e2; color: #b91c1c; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-amber { background-color: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-purple { background-color: #f3e8ff; color: #6b21a8; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-pink { background-color: #fce7f3; color: #9d174d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .hl-teal { background-color: #ccfbf1; color: #0f766e; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.88em; line-height: 1.0; padding: 0 3px; font-family: 'Cambria', 'Georgia', serif; font-weight: bold; }
+        .frac .top { border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+        .frac .bottom { padding-top: 1px; }
+        .math-box {
+            background-color: #0f172a; color: #f8fafc;
+            padding: 16px 24px; border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif; font-size: 1.1rem;
+            text-align: center; margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8; overflow-x: auto;
+        }
+        .math-box .var { font-style: italic; color: #38bdf8; font-weight: bold; }
+        .math-inline { font-family: 'Cambria', 'Georgia', serif; font-style: italic; font-weight: 600; color: #0f172a; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+        .callout { border-left: 4px solid; padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 18px 0; background-color: #f8fafc; }
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+        .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+        .callout-pink { border-color: var(--accent-pink); background-color: #fdf2f8; }
+        .callout-title { font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .table-responsive { overflow-x: auto; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.92rem; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th { background-color: var(--primary); color: white; padding: 12px 14px; text-align: left; font-weight: 600; }
+        td { padding: 11px 14px; border-bottom: 1px solid var(--border-color); background-color: white; }
+        tr:nth-child(even) td { background-color: #f8fafc; }
+        tr:hover td { background-color: #f1f5f9; }
+        ul, ol { margin: 12px 0 16px 24px; color: #334155; }
+        li { margin-bottom: 8px; }
+        .badge-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 20px 0; }
+        .badge-card { flex:1 1 300px; max-width: 500px; border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; background: #ffffff; border-top: 4px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .exercise-card { background-color: #fefce8; border: 1px solid #fef08a; border-left: 5px solid var(--accent-amber); border-radius: 8px; padding: 20px; margin-bottom: 22px; }
+        .exercise-title { font-weight: 700; color: #854d0e; margin-bottom: 10px; font-size: 1.05rem; }
+        .solution-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px; margin-top: 12px; font-size: 0.95rem; }
+        .solution-tag { display: inline-block; background-color: #dcfce7; color: #166534; font-weight: 700; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; margin-bottom: 8px; }
+        .two-column-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .three-column-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .grid-box-1 { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 14px; }
+        .grid-box-2 { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px; }
+        .grid-box-3 { background: #fdf4ff; border: 1px solid #f0abfc; border-radius: 8px; padding: 14px; }
+        .diagram-box { background: #f1f5f9; border: 1px dashed #64748b; border-radius: 8px; padding: 15px; text-align: center; margin: 15px 0; font-weight: 600; }
+        .flow-steps { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+        .flow-step { background: white; border: 2px solid var(--accent-blue); color: var(--accent-blue); border-radius: 8px; padding: 8px 14px; font-weight: 700; font-size: 0.9rem; }
+        .flow-arrow { color: var(--text-muted); font-size: 1.2rem; font-weight: 900; }
+        figcaption { margin-top: 10px; font-weight: 400; font-size: 0.9rem; color: var(--text-muted); }
+        .step-list { counter-reset: step; list-style: none; margin-left: 0; }
+        .step-list li { position: relative; padding-left: 42px; margin-bottom: 12px; }
+        .step-list li::before {
+            counter-increment: step; content: counter(step);
+            position: absolute; left: 0; top: 0;
+            background: var(--accent-blue); color: white;
+            width: 28px; height: 28px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7rem; }
+            .section-card { padding: 18px; }
+            .two-column-grid { grid-template-columns: 1fr; }
+            .three-column-grid { grid-template-columns: 1fr; }
+            .badge-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Principios Básicos de Ingeniería Química</span>
+        <h1>Tema 20: Conceptos Básicos de la Ingeniería Química</h1>
+        <p>Resumen exhaustivo, visual y ordenado de la unidad didáctica: herramientas básicas de cálculo (mol, densidad, concentración, estequiometría y energía de reacción), medidas y propiedades físicas de los procesos, comportamiento de gases, líquidos y sólidos, definición de sistema y proceso, balances de materia (con y sin reacción química, con reciclaje, derivación y purgado), balances de energía y control de procesos.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Prof. Sardá Hoyo, J.</span>
+            <span>📍 <strong>Parte 3.ª:</strong> Principios Básicos de Ingeniería Química</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Herramientas básicas:</strong> Repasar conceptos previos (mol, fracción molar, densidad, peso específico, formas de expresar la concentración) necesarios para los balances de energía y materia.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>Coherencia dimensional:</strong> Ejercitarse en el empleo de sistemas de unidades y sus equivalencias, comprobando la coherencia de las ecuaciones.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>Termodinámica aplicada:</strong> Entender cómo las propiedades físicas (presión, temperatura, caudales) condicionan la viabilidad de un proceso.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>Seguridad y medio ambiente:</strong> Conocer parámetros de toxicidad, inflamabilidad y autoignición que condicionan la viabilidad de un proceso.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <strong>Sistematización:</strong> Dotar de herramientas básicas para sistematizar el estudio de procesos industriales.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <strong>Combustión:</strong> Conocimientos prácticos sobre la reacción de combustión, análisis de combustibles y gases de chimenea.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-pink);">
+                <strong>Balances de materia:</strong> Realizar balances de materia en procesos con y sin reacción química.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Balances de energía:</strong> Realizar balances de energía en procesos con y sin reacción química.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>Control de procesos:</strong> Comprender cómo la instrumentación, el tratamiento de señales y la automatización permiten controlar y optimizar los procesos.
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN INTRODUCTORIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">📝 Resumen General de la Unidad</h2>
+        <p>Este tema constituye una <span class="hl-def">introducción a la Ingeniería Química</span>, entendida como una aproximación al mundo real que emplea las herramientas y conocimientos previos del alumno. La principal novedad es el aprendizaje de una <strong>sistemática</strong> que permite esquematizar un proceso industrial, identificar las variables que lo condicionan y establecer las ecuaciones que las relacionan.</p>
+        <p>Esto conduce a la obtención de los <span class="hl-green">balances de materia</span> y <span class="hl-amber">balances de energía</span> del proceso y de los subsistemas que lo constituyen. Con estas herramientas, los procesos se pueden <strong>controlar y optimizar</strong>, objetivo último del trabajo del ingeniero.</p>
+    </section>
+
+    <!-- 20.1 INTRODUCCIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">20.1. Introducción a la Ingeniería Química</h2>
+        <p>El ingeniero tiene, entre otros objetivos, el <strong>estudio, diseño, desarrollo o mejora</strong> de los procesos industriales: generar electricidad, refinar petróleo, producir cemento, acero, ácido sulfúrico, plásticos, fabricar paneles solares, electrodomésticos, etc.</p>
+        <div class="callout callout-info">
+            <div class="callout-title">🎯 Objetivo de un proceso industrial</div>
+            <p>Conseguir, a partir de una <strong>materia prima</strong>, con un mínimo coste de energía y de impacto ambiental, un producto que tenga una <strong>calidad y precio</strong> que lo haga competitivo en el mercado.</p>
+        </div>
+        <p>La Ingeniería Química es una parte de la Ingeniería que aborda el proceso con la profundidad que requiere el estudio de las <span class="hl-def">transformaciones de las sustancias</span>: no solo reacciones químicas, sino también cambios físicos (evaporación, condensación, disolución, concentración, destilación, etc.).</p>
+        <p>El ingeniero debe controlar variables (temperaturas, presiones, caudales), determinar el consumo de materias y energías, decidir dónde aportar energía y dónde refrigerar (optimizando calores residuales), almacenar y transportar materias primas, diseñar equipos (mezcladores, reactores, torres de destilación, hornos...) y prever la gestión de residuos y subproductos evitando la contaminación.</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-blue);">Conocimiento químico:</strong> transformaciones y reacciones de las sustancias.</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">Aspectos «ingenieriles»:</strong> selección de equipos, instrumentación y control.</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-purple);">Herramientas de cálculo:</strong> balances de materia y de energía.</div>
+        </div>
+    </section>
+
+    <!-- 20.2 HERRAMIENTAS BÁSICAS -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">20.2. Herramientas Básicas</h2>
+
+        <h3>20.2.1. Conceptos Básicos Utilizados</h3>
+        <p>Es imprescindible dominar conceptos como <span class="hl-def">Mol</span>, <span class="hl-def">Fracción Molar</span> y <span class="hl-def">Peso Molecular</span>. Los pesos moleculares son masas moleculares relativas: en un campo gravitatorio común, masa y peso son valores equivalentes pero <strong>no idénticos</strong> (Masa: kg; Peso: Newton = kg·m/s²).</p>
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ Coherencia dimensional</div>
+            <p>Cada cantidad manejada lleva implícitas unas unidades. Las operaciones matemáticas y ecuaciones que describen un proceso deben ser <strong>dimensionalmente coherentes</strong>: los dos términos de una igualdad deben tener las mismas unidades.</p>
+        </div>
+
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Densidad:</strong> masa por unidad de volumen de una sustancia.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Peso específico:</strong> relación entre el peso y el volumen que ocupa una sustancia en unas condiciones de P y T determinadas.
+            </div>
+        </div>
+        <p><strong>Peso específico relativo (Per):</strong> relación entre la densidad de la sustancia a T°C y la densidad del agua a 4 °C (≈1,0000 g/cm³), por lo que numéricamente coincide con la densidad.</p>
+        <div class="math-box">
+            Per = <span class="frac"><span class="top">(kg/m³) sustancia a T °C</span><span class="bottom">(kg/m³) agua a 4 °C</span></span>
+        </div>
+
+        <h4>Formas de expresar la concentración</h4>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong>Masa/volumen:</strong> kg soluto / m³</div>
+            <div class="grid-box-2"><strong>Moles/volumen:</strong> g mol soluto / cm³</div>
+            <div class="grid-box-3"><strong>ppm / ppb:</strong> fracción de peso (sólidos/líquidos) o fracción molar (gases)</div>
+        </div>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>Normalidad:</strong> equivalentes de soluto por litro de disolución (equivalente = moles de soluto / valencia).</div>
+            <div class="grid-box-2"><strong>Molaridad:</strong> moles de soluto por litro de disolución.</div>
+        </div>
+        <div class="callout callout-info">
+            <div class="callout-title">💧 Disoluciones ideales</div>
+            <p>En disoluciones ideales (gases, mezclas de compuestos de naturaleza parecida como hidrocarburos), los volúmenes de los componentes pueden sumarse sin error apreciable. Una disolución muy diluida puede considerarse ideal; <strong>esto no ocurre en mezclas no ideales.</strong></p>
+        </div>
+
+        <h3>20.2.1.1. Reacción Química y Estequiometría</h3>
+        <p>La ecuación química aporta información <span class="hl-def">cualitativa</span> (reactivos y productos) y <span class="hl-def">cuantitativa</span> (cantidades que intervienen, es decir, la estequiometría).</p>
+        <div class="math-box">
+            C<sub>7</sub>H<sub>16</sub> + 11 O<sub>2</sub> → 7 CO<sub>2</sub> + 8 H<sub>2</sub>O
+        </div>
+        <p>Conocidos los pesos atómicos, se calculan los pesos moleculares de las sustancias. Eligiendo una <strong>base de cálculo</strong> (por ejemplo, la masa), se determinan los moles y, mediante los coeficientes estequiométricos, las cantidades de producto formadas.</p>
+        <div class="callout callout-success">
+            <div class="callout-title">🧮 Ejemplo de cálculo (base: 1.000 kg de heptano)</div>
+            <p>1.000 kg C₇H₁₆ → 9,99 kg mol → 9,99 × 7 = 69,93 kg mol CO₂ → 69,93 × 44 = <strong>≈ 380 kg de CO₂</strong></p>
+        </div>
+        <p>La ecuación química supone que la reacción se completa al 100%, lo cual no siempre ocurre en la realidad: pueden aparecer reacciones secundarias o descomposiciones. Por ello, en la práctica se suele introducir un <span class="hl-amber">exceso de reactivos</span>.</p>
+        <div class="callout callout-warning">
+            <div class="callout-title">⚗️ Reactivo limitante</div>
+            <p>Si se mezclan los reactivos en proporciones no estequiométricas, el reactivo que se agota primero detiene la reacción: es el <strong>reactivo limitante</strong>. El resto de reactivos queda en exceso.</p>
+        </div>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-blue);">Conversión:</strong> fracción del reactivo (o producto limitante) que se transforma en producto.</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">Selectividad:</strong> relación entre el producto deseado y los productos secundarios no deseados.</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-purple);">Rendimiento:</strong> relación entre la cantidad de reactivo consumido y de producto final obtenido.</div>
+        </div>
+        <div class="callout callout-info">
+            <div class="callout-title">🔢 Número de ecuaciones necesarias</div>
+            <p>El número de ecuaciones químicas necesarias es igual al <strong>número de sustancias químicas menos el número de elementos químicos distintos</strong> que las forman.</p>
+        </div>
+
+        <h3>20.2.1.2. Reacción Química y Energía</h3>
+        <p><span class="hl-def">Calor de reacción</span>: absorción o desprendimiento de energía asociado a una reacción, consecuencia de reorganizar los elementos químicos. Debe indicarse el estado físico de cada sustancia, pues los cambios de estado llevan asociada energía.</p>
+        <div class="math-box">
+            CH<sub>3</sub>OH<sub>(l)</sub> + 3/2 O<sub>2(g)</sub> → CO<sub>2(g)</sub> + 2 H<sub>2</sub>O<sub>(g)</sub>&nbsp;&nbsp; ΔH = −638 kJ/mol
+        </div>
+        <div class="math-box">ΔH<sub>reacción</sub> = ΔH<sub>productos</sub> − ΔH<sub>reactivos</sub></div>
+        <div class="callout callout-purple">
+            <div class="callout-title">📐 Ley de Hess</div>
+            <p>El cambio de entalpía de una reacción depende <strong>solo de la naturaleza y cantidad</strong> de reactivos y productos, no del camino seguido (función de estado).</p>
+        </div>
+        <p>Todo sistema posee <span class="hl-green">energía cinética (Ec)</span> por su movimiento, <span class="hl-amber">energía potencial (Ep)</span> por su posición en un campo (gravitatorio o electromagnético), y <span class="hl-purple">energía interna (U)</span> asociada a la rotación, vibración e interacciones de átomos y moléculas.</p>
+        <div class="callout callout-info">
+            <div class="callout-title">⚛️ Primer Principio de la Termodinámica</div>
+            <p>La energía no se crea ni se destruye, se transforma como <strong>trabajo</strong> o como <strong>calor</strong>.</p>
+            <div class="math-box">Variación de energía = Entrada de energía − Salida de energía</div>
+        </div>
+        <p>Cuando la reacción transcurre a <strong>presión constante</strong>, el calor de reacción coincide con la <span class="hl-def">entalpía (H)</span>:</p>
+        <div class="math-box">H = U + PV</div>
+        <p>Si ΔH es <span class="hl-red">negativa</span>, la reacción es <strong>exotérmica</strong> (desprende calor); si es <span class="hl-green">positiva</span>, es <strong>endotérmica</strong> (absorbe calor). Cuando ΔP y ΔV son despreciables (sin gases), ΔH ≈ ΔU.</p>
+        <div class="callout callout-warning">
+            <div class="callout-title">🌀 Segundo Principio y Entropía</div>
+            <p>La <span class="hl-def">entropía (S)</span> mide la tendencia al desorden de un sistema y también es función de estado. La entropía del universo aumenta constantemente en cualquier proceso espontáneo.</p>
+        </div>
+        <p>Para valorar la espontaneidad a P y T constantes se define la <span class="hl-def">energía libre de Gibbs (G)</span>:</p>
+        <div class="math-box">G = H − TΔS</div>
+        <table>
+            <thead><tr><th>Valor de ΔG</th><th>Significado</th></tr></thead>
+            <tbody>
+                <tr><td>ΔG &lt; 0</td><td>Proceso <strong>espontáneo</strong></td></tr>
+                <tr><td>ΔG = 0</td><td>Proceso en <strong>equilibrio</strong></td></tr>
+                <tr><td>ΔG &gt; 0</td><td>Proceso <strong>no espontáneo</strong></td></tr>
+            </tbody>
+        </table>
+        <div class="math-box">ΔG° = −RT ln K</div>
+        <div class="callout callout-success">
+            <div class="callout-title">✅ Conclusión clave</div>
+            <p>La dirección de un proceso (físico o reacción química) se controla siempre mediante las condiciones de <strong>presión, temperatura y caudales</strong> de reactivos y productos, buscando así mejores rendimientos.</p>
+        </div>
+
+        <h3>20.2.2. Medidas y Propiedades Físicas Necesarias en el Análisis de Procesos</h3>
+        <p>La medida y control de <span class="hl-def">temperatura, presión, caudales, inflamabilidad y toxicidad</span> son aspectos básicos por motivos de seguridad y de eficacia: si estos parámetros no son adecuados, las reacciones y procesos pueden no ser viables.</p>
+
+        <h4>20.2.2.1. Temperatura y Presión</h4>
+        <p>Los métodos de medida de temperatura dependen del rango: dilatación, radiación, resistencia eléctrica, potencial de electrodo, etc.</p>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap: 20px">
+            <div class="table-responsive" style="flex:1 1 350px; max-width:500px">
+                <table>
+                    <thead><tr><th>Instrumento</th><th>Rango (°C)</th></tr></thead>
+                    <tbody>
+                        <tr><td>Termómetro de radiación</td><td>−50 ... 3.000</td></tr>
+                        <tr><td>Pirómetros ópticos</td><td>1.100 ... 1.300</td></tr>
+                        <tr><td>Termopares hierro/constantán</td><td>−200 ... 500</td></tr>
+                        <tr><td>Termopares cromel/alumel</td><td>500 ... 1.000</td></tr>
+                        <tr><td>Termopares platino/paladio-rodio</td><td>1.000 ... 2.000</td></tr>
+                        <tr><td>Termopares tungsteno/iridio</td><td>2.000 ... 2.800</td></tr>
+                        <tr><td>Termometría de resistencia de platino</td><td>−200 ... 1.000</td></tr>
+                        <tr><td>Termometría de resistencia de termistores</td><td>−200 ... 1.000</td></tr>
+                        <tr><td>Termómetros de vidrio y empacados</td><td>−100 ... 1.000</td></tr>
+                        <tr><td>Termómetros bimetálicos</td><td>−200 ... 400</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive" style="flex:1 1 350px; max-width:500px">
+                <table>
+                    <thead><tr><th>Instrumento de presión</th><th>Rango (bar aprox.)</th></tr></thead>
+                    <tbody>
+                        <tr><td>Manómetro de Burdon</td><td>1 ... 1.000</td></tr>
+                        <tr><td>Diafragma metálico</td><td>0,01 ... 10</td></tr>
+                        <tr><td>Manómetro de mercurio</td><td>0,001 ... 50</td></tr>
+                        <tr><td>Vacuómetro</td><td>&lt; 0,0001 ... 1</td></tr>
+                        <tr><td>Sensores capacitivos</td><td>0,001 ... 100</td></tr>
+                        <tr><td>Manómetros piezoeléctricos</td><td>0,001 ... 100</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p>Escalas: <span class="hl-def">Celsius (°C)</span> y <span class="hl-def">Kelvin (K)</span> (S.I.); <span class="hl-def">Fahrenheit (°F)</span> y <span class="hl-def">Rankine (°R)</span> (sistema anglosajón).</p>
+        <p>La <strong>presión</strong> es la fuerza normal por unidad de área, y puede expresarse en escala absoluta (referencia: vacío) o relativa/manométrica (referencia: presión atmosférica local):</p>
+        <div class="math-box">P<sub>Absoluta</sub> = P<sub>Manométrica</sub> + P<sub>Atmosférica</sub></div>
+        <p>Unidad S.I.: <span class="hl-def">Pascal (Pa = N/m² = kg/(m·s²))</span>. Equivalencias habituales:</p>
+        <div class="math-box">10 m H<sub>2</sub>O = 1 atm = 760 mmHg = 1,013 bar = 101,3 kPa = 14,696 psia</div>
+
+        <div class="callout callout-info">
+            <div class="callout-title">📌 Condiciones normales y de referencia</div>
+            <p>Condiciones normales (C.N.): <strong>1 atm y 0 °C</strong>. Condiciones de referencia termodinámica: <strong>1 atm y 25 °C</strong>.</p>
+        </div>
+
+        <h4>20.2.2.2. Caudal y Flujos: Másico y Volumétrico. Velocidad Media</h4>
+        <p><span class="hl-def">Velocidad de flujo másico:</span> masa transportada por unidad de tiempo (kg/s). <span class="hl-def">Velocidad de flujo volumétrico:</span> volumen transportado por unidad de tiempo (m³/s). Relación: ρ = m/V.</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong>Presión diferencial:</strong> tubo de Pitot, Venturi, orificio.</div>
+            <div class="grid-box-2"><strong>Turbina/hélice:</strong> giro proporcional a la velocidad.</div>
+            <div class="grid-box-3"><strong>Ultrasonidos:</strong> desfase emisión-recepción proporcional a la velocidad.</div>
+        </div>
+        <p>El <span class="hl-def">Número de Reynolds</span> determina el régimen de circulación de un fluido:</p>
+        <div class="math-box">Re = v · d · ρ / μ</div>
+        <table>
+            <thead><tr><th>Re</th><th>Régimen</th></tr></thead>
+            <tbody>
+                <tr><td>Re &lt; 2.000</td><td><span class="hl-green">Laminar</span></td></tr>
+                <tr><td>2.000 &lt; Re &lt; 4.000</td><td><span class="hl-amber">Transición</span></td></tr>
+                <tr><td>Re &gt; 4.000</td><td><span class="hl-red">Turbulento</span></td></tr>
+            </tbody>
+        </table>
+        <p>En régimen laminar, el caudal se calcula como: Q = π r² v, y mediante la <strong>ecuación de Hagen-Poiseuille</strong> cuando se conoce la diferencia de presión:</p>
+        <div class="math-box">Q = π r<sup>4</sup> (P<sub>1</sub> − P<sub>2</sub>) / (8 μ L)</div>
+        <p>La pérdida de carga por fricción se evalúa con el factor de fricción f (f = 16/Re en laminar; f = 0,079 Re<sup>−1/4</sup> en turbulento):</p>
+        <div class="math-box">ΔP = 2 f L v² ρ / d</div>
+
+        <h4>20.2.2.3. Inflamabilidad y Autoignición</h4>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-red);">Explosivo:</strong> forma mezclas explosivas en aire (incluso sin él) como polvos, aerosoles o gotitas.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-amber);">Comburente:</strong> arde espontáneamente a T ambiente o con rapidez usando su propio oxígeno.
+            </div>
+        </div>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-purple);">Extremadamente inflamable:</strong> punto de ignición o ebullición muy bajo; se inflama a T y P normales con el aire.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-blue);">Fácilmente inflamable:</strong> libera sustancias inflamables con calentamiento moderado o altas temperaturas.
+            </div>
+        </div>
+        <p><strong>Productos no combustibles:</strong> no arden con aire durante un tiempo y a temperaturas normalizadas.</p>
+        <div class="callout callout-danger">
+            <div class="callout-title">🔥 Definiciones clave</div>
+            <p><strong>Punto de inflamación:</strong> temperatura a la que el vapor de una sustancia produce un destello/explosión en presencia de llama.</p>
+            <p style="margin-bottom:0;"><strong>Temperatura de autoignición:</strong> temperatura más baja a la que un vapor produce una mezcla que se enciende <em>en ausencia</em> de llama o chispa.</p>
+        </div>
+
+        <h4>20.2.2.4. Toxicidad</h4>
+        <p>Las sustancias se clasifican según el efecto que produce en las personas su <span class="hl-def">inhalación, ingestión o penetración cutánea</span>:</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-red);">Muy tóxicos:</strong> pequeña cantidad produce muerte o efectos agudos/crónicos.</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-amber);">Tóxicos:</strong> pequeña cantidad produce lesiones temporales/permanentes y ponen en riesgo la vida.</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-blue);">Nocivos:</strong> lesiones menores, temporales o permanentes (incluye corrosivos e irritantes).</div>
+        </div>
+        <p><strong>Nocivos para el medio ambiente:</strong> solo en dosis masivas provocan efectos tóxicos.</p>
+
+        <h3>20.2.3. Comportamiento de Gases, Líquidos y Sólidos</h3>
+
+        <h4>20.2.3.1. Ecuaciones de Estado de los Gases Ideales y Reales</h4>
+        <p>La ecuación de estado de los gases ideales relaciona P, V, T. La <span class="hl-def">Ley de Dalton</span> (presiones parciales) permite conocer la contribución de cada gas en una mezcla ideal.</p>
+        <div class="callout callout-info">
+            <div class="callout-title">🌡️ Ley de los Estados Correspondientes</div>
+            <p>En el estado crítico, todas las sustancias se comportan de manera similar. Por encima de T<sub>c</sub> y P<sub>c</sub>, un fluido está en <strong>estado supercrítico</strong>.</p>
+        </div>
+        <p>Ecuación de <strong>Van der Waals</strong> para gases reales:</p>
+        <div class="math-box">(P + a/V²)(V − b) = RT</div>
+        <p>Ecuación generalizada mediante el <span class="hl-def">factor de compresibilidad z</span>:</p>
+        <div class="math-box">PV = z n R T</div>
+        <p>(z = 1 en gas ideal; z ≈ 0,27 en el punto crítico). Para mezclas se usa el <strong>Método de Kay</strong> (valores seudocríticos ponderados):</p>
+        <div class="math-box">P′<sub>c</sub> = Σ y<sub>i</sub> P<sub>ci</sub>&nbsp;&nbsp;&nbsp;&nbsp; T′<sub>c</sub> = Σ y<sub>i</sub> T<sub>ci</sub></div>
+
+        <h4>20.2.3.2. Presión de Vapor y los Líquidos</h4>
+        <p>Un fluido está en estado <span class="hl-def">gas</span> por encima del punto crítico, y en estado <span class="hl-def">vapor</span> por debajo de sus condiciones críticas.</p>
+        <figure class="diagram-box">
+            <svg viewBox="0 0 320 220" width="100%" height="220" xmlns="http://www.w3.org/2000/svg">
+                <line x1="40" y1="190" x2="300" y2="190" stroke="#0f172a" stroke-width="2"/>
+                <line x1="40" y1="190" x2="40" y2="20" stroke="#0f172a" stroke-width="2"/>
+                <text x="305" y="195" font-size="13" fill="#0f172a">T</text>
+                <text x="15" y="25" font-size="13" fill="#0f172a">P</text>
+                <path d="M 60 185 Q 90 100 130 60" stroke="#0284c7" stroke-width="3" fill="none"/>
+                <path d="M 60 185 Q 90 180 180 175" stroke="#16a34a" stroke-width="3" fill="none"/>
+                <path d="M 130 60 Q 220 90 260 40" stroke="#dc2626" stroke-width="3" fill="none"/>
+                <circle cx="130" cy="60" r="4" fill="#0f172a"/>
+                <circle cx="260" cy="40" r="4" fill="#9333ea"/>
+                <text x="90" y="55" font-size="11" fill="#0f172a" font-weight="700">Punto triple</text>
+                <text x="220" y="30" font-size="11" fill="#9333ea" font-weight="700">Punto crítico</text>
+                <text x="65" y="145" font-size="12" fill="#0284c7" font-weight="700">Sólido</text>
+                <text x="150" y="130" font-size="12" fill="#dc2626" font-weight="700">Líquido</text>
+                <text x="220" y="170" font-size="12" fill="#16a34a" font-weight="700">Vapor / Gas</text>
+            </svg>
+            <figcaption>Diagrama de fases P-T: equilibrios sólido-líquido, sólido-vapor y líquido-vapor, con Punto Triple y Punto Crítico.</figcaption>
+        </figure>
+        <p>Estados en la curva líquido-vapor: <span class="hl-def">vapor saturado</span> / <span class="hl-def">líquido saturado</span> (equivalentes a punto de rocío y punto de burbuja). A la derecha: vapor <strong>sobrecalentado</strong>; a la izquierda: líquido <strong>sobreenfriado</strong>. El <strong>vapor húmedo</strong> es el equilibrio entre vapor y líquido saturados; la fracción de masa de vapor es la <strong>calidad</strong>.</p>
+        <p>La relación P<sub>vapor</sub>-T se estima con la <strong>ecuación de Antoine</strong>:</p>
+        <div class="math-box">P<sub>vapor</sub> = A − B/(C+T)</div>
+        <p>Los líquidos suelen tratarse como incompresibles; su densidad varía con la temperatura: ρ = ρ₀ − β(T − T₀).</p>
+
+        <h4>20.2.3.3. Cambios de Estado, Equilibrio y Energía</h4>
+        <p>Las entalpías de <span class="hl-def">fusión, vaporización y sublimación</span> son los <strong>calores latentes</strong>: calor requerido para cambiar de estado una masa unitaria a T y P constantes. Varían poco con la presión, pero sí con la temperatura.</p>
+        <p>Como la entalpía es función de estado, para calcular un cambio se puede elegir un camino alternativo (p. ej., calentar/enfriar a P constante y usar el calor latente en el punto normal de transición).</p>
+        <p>Para cambios sin transición de fase se emplea la <span class="hl-def">capacidad calorífica</span> Cp (kJ/(kg·mol·K)), que varía con T:</p>
+        <div class="math-box">Cp = a + bT + cT²</div>
+        <p>En mezclas de gases ideales: Cp<sub>mezcla</sub> = Σ y<sub>i</sub> Cp<sub>i</sub> (no válido para líquidos ni mezclas de gases reales).</p>
+
+        <h4>20.2.3.4. Equilibrio entre Fases en Sistemas Multicomponentes</h4>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Ley de Henry</strong> (componente diluido, condiciones ideales):
+                <div class="math-box" style="margin:10px 0;">P<sub>i</sub> = H<sub>i</sub> x<sub>i</sub></div>
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Ley de Raoult</strong> (fracción molar cercana a 1):
+                <div class="math-box" style="margin:10px 0;">P<sub>i</sub> = P<sub>i</sub>* x<sub>i</sub></div>
+            </div>
+        </div>
+        <p>Constante de equilibrio: K<sub>i</sub> = y<sub>i</sub>/x<sub>i</sub> = P<sub>i</sub>*/P<sub>total</sub>. La entalpía de vaporización se calcula con la <strong>ecuación de Clapeyron</strong>:</p>
+        <div class="math-box">ln P<sub>i</sub>* = −(ΔH<sub>v</sub>/RT) + B</div>
+        <p>Y para otras temperaturas, con la <strong>correlación de Watson</strong>:</p>
+        <div class="math-box">ΔH<sub>v</sub>(T<sub>2</sub>) = ΔH<sub>v</sub>(T<sub>1</sub>) · [(T<sub>c</sub>−T<sub>2</sub>)/(T<sub>c</sub>−T<sub>1</sub>)]<sup>0,38</sup></div>
+    </section>
+
+    <!-- 20.3 PROCESOS EN INGENIERÍA -->
+    <section class="section-card">
+        <h2 class="section-title t-green">20.3. Procesos en Ingeniería</h2>
+        <p>Un <span class="hl-def">proceso</span> es cualquier operación o serie de operaciones que produce un cambio físico o químico mediante un tratamiento. La unidad donde se lleva a cabo es el <span class="hl-def">sistema</span>. Al sistema entran sustancias (y, en ocasiones, energía) y de él salen sustancias (y energía).</p>
+        <p>Un proceso puede ser simple o estar formado por una sucesión de equipos: reactores, columnas de destilación, intercambiadores de calor, secadores, hornos, calderas, torres de absorción, evaporadores, extractores, decantadores, mezcladores...</p>
+
+        <h3>20.3.1. Definición del Sistema: Frontera, Entorno</h3>
+        <figure class="diagram-box">
+            <svg viewBox="0 0 320 160" width="100%" height="160" xmlns="http://www.w3.org/2000/svg">
+                <rect x="90" y="30" width="140" height="100" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="3"/>
+                <text x="160" y="85" text-anchor="middle" font-size="14" fill="#0f172a" font-weight="700">SISTEMA</text>
+                <line x1="10" y1="80" x2="88" y2="80" stroke="#16a34a" stroke-width="3" marker-end="url(#arrE)"/>
+                <line x1="232" y1="80" x2="310" y2="80" stroke="#dc2626" stroke-width="3" marker-end="url(#arrE)"/>
+                <text x="10" y="70" font-size="11" fill="#16a34a" font-weight="700">ENTRADAS</text>
+                <text x="245" y="70" font-size="11" fill="#dc2626" font-weight="700">SALIDAS</text>
+                <text x="160" y="18" text-anchor="middle" font-size="11" fill="#64748b" font-style="italic">ENTORNO</text>
+                <defs><marker id="arrE" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0f172a"/></marker></defs>
+            </svg>
+            <figcaption>El sistema queda delimitado por una frontera; fuera de ella está el entorno.</figcaption>
+        </figure>
+
+        <h3>20.3.2. Sistemas Abiertos o Continuos y Sistemas Cerrados</h3>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-blue);">Sistema abierto (continuo):</strong> entra o sale materia o energía a través de la frontera durante el intervalo estudiado.</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">Sistema cerrado:</strong> no hay transferencia de materia con el entorno durante el estudio (p. ej., reactor discontinuo: se cargan reactivos, se cierra, reacciona, y se extraen productos).</div>
+        </div>
+
+        <h3>20.3.3. Conceptos de: Acumulación, Generación y Consumo</h3>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-purple);">Acumulación:</strong> cambio (positivo o negativo) de la masa en el interior del sistema.</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">Generación:</strong> producción de una sustancia en el interior del sistema a partir de los reactivos.</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-red);">Consumo:</strong> desaparición de materia en el interior del sistema al reaccionar para formar productos.</div>
+        </div>
+        <div class="callout callout-info">
+            <div class="callout-title">⏱️ Estado estacionario vs. transitorio</div>
+            <p>Si durante el estudio las variables (caudales, T, P) permanecen constantes, el proceso es <strong>estacionario</strong> y se puede operar con valores discretos. Si varían con el tiempo, el proceso es <strong>no estacionario o transitorio</strong> y requiere ecuaciones diferenciales (no se aborda en esta introducción).</p>
+        </div>
+    </section>
+
+    <!-- 20.4 BALANCE DE MATERIA -->
+    <section class="section-card">
+        <h2 class="section-title t-red">20.4. Balance de Materia</h2>
+
+        <h3>20.4.1. Ecuación General</h3>
+        <div class="math-box">ACUMULACIÓN = ENTRADA − SALIDAS + GENERACIÓN − CONSUMO</div>
+        <p>En estado estacionario la acumulación es nula:</p>
+        <div class="math-box">0 = ENTRADA − SALIDAS + GENERACIÓN − CONSUMO</div>
+        <p>Sin reacción química (no se generan ni consumen sustancias), la ecuación se simplifica:</p>
+        <div class="math-box">ENTRADAS = SALIDAS</div>
+
+        <h3>20.4.2. Planteamiento en Procesos sin Reacciones Químicas</h3>
+        <p>Metodología recomendada de <strong>10 pasos</strong> para resolver problemas de balance de materia:</p>
+        <ol class="step-list">
+            <li>Leer el problema y asegurarse de entenderlo.</li>
+            <li>Hacer un dibujo sencillo del sistema (entradas y salidas con flechas).</li>
+            <li>Asignar un símbolo a cada entrada y salida.</li>
+            <li>Indicar los valores conocidos de cada variable.</li>
+            <li>Escoger una base de cálculo adecuada.</li>
+            <li>Listar las variables desconocidas (incógnitas).</li>
+            <li>Establecer las ecuaciones que relacionan las incógnitas.</li>
+            <li>Contar el número de ecuaciones (deben ser independientes e iguales al número de incógnitas).</li>
+            <li>Resolver las ecuaciones.</li>
+            <li>Verificar las respuestas con una ecuación no utilizada.</li>
+        </ol>
+        <div class="callout callout-success">
+            <div class="callout-title">🧪 Ejemplo resuelto: secado de un residuo</div>
+            <p>Un residuo con 80% de agua se seca con aire caliente hasta un 30% de humedad, eliminando 100 kg de agua. Planteando balances de agua y de residuo seco se obtiene: <strong>A = 140 kg</strong> de residuo de entrada, <strong>B = 40 kg</strong> de residuo seco de salida, y un <strong>rendimiento del 89,29%</strong> en la eliminación de agua.</p>
+        </div>
+
+        <h3>20.4.3. Planteamiento en Procesos con Reacciones Químicas</h3>
+        <p>Conceptos clave para procesos de <span class="hl-def">combustión</span>:</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>Gases de chimenea (base húmeda):</strong> todos los gases de la combustión incluido el vapor de agua.</div>
+            <div class="grid-box-2"><strong>Análisis de Orsat (base seca):</strong> composición de gases de combustión sin contar el vapor de agua.</div>
+        </div>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>Aire (u oxígeno) teórico/requerido:</strong> cantidad necesaria para la combustión completa según la estequiometría.</div>
+            <div class="grid-box-2"><strong>Aire en exceso:</strong>
+                <div class="math-box" style="margin-top:8px;">% exceso = (aire que entra − aire requerido) / aire requerido × 100</div>
+            </div>
+        </div>
+        <div class="callout callout-warning">
+            <div class="callout-title">🔥 Ejemplo resuelto: combustión de carbón húmedo</div>
+            <p>Carbón con 4% de humedad (74% C, 5% H, 3% O, 2% N, 6% S, 10% cenizas) se quema con aire (0,5% humedad). El análisis de Orsat da 15% (CO₂+SO₂), 4% O₂, 81% N₂. En la ceniza queda un 16% de carbón sin quemar. Resolviendo el sistema de ecuaciones de balance por elemento (C+S, H, O, N) se obtiene: <strong>G = 41,47 kg mol</strong> de gas, <strong>A = 42,43 kg mol</strong> de aire, <strong>V = 2,78 kg mol</strong> de vapor de agua, y un <strong>aire en exceso del 15,64%</strong>.</p>
+        </div>
+        <div class="callout callout-info">
+            <div class="callout-title">🔍 Verificación y errores reales</div>
+            <p>Al comprobar el balance con la ecuación no utilizada suele aparecer una pequeña discrepancia (en el ejemplo, ≈6,7% en oxígeno), consecuencia de redondeos, fugas, acumulaciones no consideradas o imprecisión en las medidas reales. <strong>Medir es siempre lo más difícil</strong> en la práctica industrial.</p>
+        </div>
+
+        <h3>20.4.4. Balance de Materia con Procesos Constituidos por Subsistemas</h3>
+        <p>Cuando un proceso está formado por varias unidades (mezclador + reactor + decantador, por ejemplo), el <strong>balance global es la suma de los balances de cada subsistema</strong>. Se plantean los balances de cada subsistema y se comprueba el resultado con el balance del sistema total.</p>
+
+        <h3>20.4.5. Balance de Materia en Procesos con Reciclaje, Derivación y Purgado</h3>
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-blue);">Reciclaje:</strong> se reutiliza una sustancia que sale en exceso de una unidad, devolviéndola a una etapa anterior.</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-green);">Derivación:</strong> un flujo pasa directamente a una unidad posterior sin atravesar alguna etapa del proceso.</div>
+            <div class="grid-box-3"><strong style="color:var(--accent-red);">Purgado:</strong> extracción de un producto para evitar la acumulación de impurezas o sustancias que interferirían en etapas posteriores.</div>
+        </div>
+        <p>De los cuatro balances posibles en un proceso con reciclaje (proceso total, proceso interno, mezclador, separador), <strong>solo tres son independientes</strong>; el cuarto sirve para verificar la solución.</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>Conversión total:</strong>
+                <div class="math-box" style="margin-top:8px; font-size:0.95rem;">(masa en A − masa en E) / masa en A</div>
+            </div>
+            <div class="grid-box-2"><strong>Conversión en una pasada:</strong>
+                <div class="math-box" style="margin-top:8px; font-size:0.95rem;">(masa en C − masa en D) / masa en C</div>
+            </div>
+        </div>
+        <p>En un proceso con purgado, la regulación se adapta para que se cumpla:</p>
+        <div class="math-box">Materia que entra o se produce = Materia que se purga o pierde &nbsp;→&nbsp; (No se acumula)</div>
+    </section>
+
+    <!-- 20.5 BALANCE DE ENERGÍA -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">20.5. Balance de Energía</h2>
+        <p>Tan importante como el aprovechamiento de las materias es la <span class="hl-def">optimización de la energía</span> empleada en los procesos. En los diagramas de flujo se añaden entalpías específicas, temperatura, presión, estado de agregación, y las entradas/salidas de trabajo y calor.</p>
+
+        <h3>20.5.1. Ecuación General</h3>
+        <h4>20.5.1.1. Formas de la Energía. Primera Ley de la Termodinámica</h4>
+        <p><span class="hl-def">Trabajo (W):</span> resultado de aplicar una fuerza en la dirección de un desplazamiento de la frontera del sistema. Es <strong>positivo</strong> si se aplica sobre el sistema (compresión) y <strong>negativo</strong> si el sistema lo realiza contra el entorno (expansión). El trabajo <strong>no es función de estado</strong> (depende del camino).</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong>Expansión a P constante:</strong>
+                <div class="math-box" style="margin-top:8px;">W = P (V₂ − V₁)</div>
+            </div>
+            <div class="grid-box-2">
+                <strong>Expansión a T constante:</strong>
+                <div class="math-box" style="margin-top:8px;">W = nRT ln(V₂/V₁)</div>
+            </div>
+        </div>
+        <p>Además del trabajo externo (partes móviles), existe el <span class="hl-def">trabajo de flujo</span>, realizado sobre el fluido que entra o sale a una presión P y velocidad v:</p>
+        <div class="math-box">W = W<sub>externo</sub> + W<sub>flujo</sub> = W<sub>externo</sub> + (P<sub>entrada</sub>·C<sub>entrada</sub> − P<sub>salida</sub>·C<sub>salida</sub>)</div>
+        <p><span class="hl-def">Calor (Q):</span> flujo de energía a través de la frontera debido a una diferencia de temperaturas. Positivo si entra al sistema, negativo si sale. Se transmite por conducción, convección y radiación:</p>
+        <div class="math-box">Q = u · A · ΔT</div>
+
+        <h4>20.5.1.2. Energía Cinética y Potencial</h4>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Energía cinética:</strong>
+                <div class="math-box" style="margin-top:8px;">Ec = ½ m v²</div>
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Energía potencial:</strong>
+                <div class="math-box" style="margin-top:8px;">Ep = m g h</div>
+            </div>
+        </div>
+
+        <h3>20.5.2. Cálculo de Cambios de Energía Interna y Entalpía</h3>
+        <p>No se pueden determinar valores absolutos de energía interna, solo <strong>diferencias</strong>:</p>
+        <div class="math-box">ΔU = ∫ Cv dT</div>
+        <p>Y de entalpía (a presión constante):</p>
+        <div class="math-box">ΔH = ∫ Cp dT</div>
+
+        <h3>20.5.3. Balance de Energía en Procesos sin Reacción Química</h3>
+        <p>Aplicación macroscópica del principio de conservación de la energía, válida tanto para el sistema total como para un subsistema. En reactores, columnas de destilación e intercambiadores de calor, dominan los cambios de <span class="hl-def">energía interna y entalpía</span> frente a los de energía cinética/potencial y trabajo externo (por lo que en sistemas cerrados Q≈ΔU y en abiertos Q≈ΔH). En procesos de transporte y almacenamiento ocurre lo contrario.</p>
+
+        <h4>20.5.3.1. Balance de Energía en Sistemas Cerrados</h4>
+        <div class="math-box">ΔE = ΔU + ΔEc + ΔEp = Q − W</div>
+        <div class="callout callout-info">
+            <div class="callout-title">🔄 Casos particulares</div>
+            <p>Si no hay reacción química, ni cambio de fase, ni variación de T (gas ideal): <strong>ΔU = 0</strong>. Si el proceso es <strong>adiabático</strong> (sin intercambio de calor): <strong>Q = 0</strong>. Si no hay partes móviles ni corriente eléctrica: <strong>W = 0</strong>.</p>
+        </div>
+        <p>Ejemplo con ciclo P-V de un gas ideal (expansión isobárica → compresión isotérmica → expansión isócora → compresión isotérmica): el <strong>trabajo neto</strong> del ciclo coincide con el área encerrada por el polígono en el diagrama P-V, y si el proceso es cíclico y adiabático, ΔU = 0 porque se vuelve al mismo estado inicial.</p>
+
+        <h4>20.5.3.2. Balance de Energía en Sistemas Abiertos</h4>
+        <p>Se incorporan los términos de energía asociados a los flujos de masa que entran y salen, incluyendo el trabajo de flujo (P·V), que sumado a U da la entalpía H:</p>
+        <div class="math-box">ΔE = Σ(H<sub>1</sub>+Ec<sub>1</sub>+Ep<sub>1</sub>)·m<sub>1</sub> − Σ(H<sub>2</sub>+Ec<sub>2</sub>+Ep<sub>2</sub>)·m<sub>2</sub> + Q − W</div>
+        <p>Casos particulares: sistema cerrado (m₁=m₂=0) → ΔE = Q − W; sin acumulación y sistema cerrado → Q = W = 0.</p>
+
+        <h4>20.5.3.3. Balance de Energía en Procesos de Disolución y Mezcla</h4>
+        <p>El <span class="hl-def">calor de disolución</span> es el cambio de entalpía al disolver un mol de soluto en n moles de disolvente a T constante. Cuando n→∞, se llega al <strong>calor a dilución infinita</strong>. En líquidos se llama <strong>calor de mezcla</strong>; el proceso inverso a la dilución es la <strong>concentración</strong>.</p>
+        <div class="math-box">ΔH<sub>f</sub>°<sub>disolución</sub> = ΔH<sub>f</sub>°<sub>soluto</sub> + ΔH<sub>disolución</sub></div>
+
+        <h3>20.5.4. Balance de Energía en Procesos con Reacción Química</h3>
+        <p>El <span class="hl-def">calor de combustión</span> se expresa en condiciones estándar (25 °C, 1 atm). La entalpía de una sustancia incluye su entalpía de formación, el calor sensible (si no está a T de referencia) y la entalpía de cambio de fase (si procede):</p>
+        <div class="math-box">H<sub>i</sub> = n<sub>i</sub> [ΔH°<sub>if</sub> + Cp<sub>i</sub>(T−T₀) + ΔH<sub>i</sub> cambio de fase]</div>
+        <p>De forma resumida, para un sistema abierto con reacción:</p>
+        <div class="math-box">ΔH = Σ(n<sub>i</sub> ΔH°<sub>if</sub>)<sub>productos</sub> − Σ(n<sub>i</sub> ΔH°<sub>if</sub>)<sub>reactivos</sub> + Σn<sub>i</sub>Cp<sub>i</sub>(T−T₀) + Σn<sub>i</sub>ΔH<sub>i</sub> cambio de fase</div>
+        <div class="callout callout-purple">
+            <div class="callout-title">📋 Los 3 pasos del balance de energía con reacción</div>
+            <ol style="margin-bottom:0;">
+                <li>Determinar los caudales másicos de todos los componentes (balance de masa).</li>
+                <li>Determinar las entalpías específicas de cada sustancia respecto a un estado de referencia (25 °C, 1 atm), incluyendo formación, calor sensible y cambio de fase.</li>
+                <li>Escribir la ecuación de balance de energía particularizada (sistema abierto/cerrado, energías despreciables o no).</li>
+            </ol>
+        </div>
+        <div class="callout callout-danger">
+            <div class="callout-title">🔥 Ejemplo resuelto: tostación de un mineral de hierro</div>
+            <p>4FeS₂ + 11O₂ → 2Fe₂O₃ + 8SO₂, con 200% de exceso de aire. Tras el balance de materia (X₁=3,1 kg mol SO₂, X₂=0,33 kg mol O₂, X₅=1,03 kg Fe₂O₃, X₆=73,45 kg FeS₂ sin reaccionar), el balance de energía con las entalpías de formación tabuladas da: <strong>Q = ΔH ≈ −598.161,9 kJ / 100 kg</strong>, es decir, <strong>≈ −5.981,6 kJ/kg</strong> de calor que sale del sistema (reacción exotérmica).</p>
+        </div>
+
+        <h3>20.5.5. Procesos Reales y Balance de Energía</h3>
+        <p>Los procesos <span class="hl-def">reversibles o cuasiestáticos</span> son una idealización matemática; los <strong>procesos reales son irreversibles</strong> (fricciones, turbulencias). La eficiencia mide esta diferencia:</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>Eficiencia mecánica (sobre el sistema):</strong>
+                <div class="math-box" style="margin-top:8px; font-size:0.9rem;">W<sub>reversible</sub> / W<sub>real</sub></div>
+            </div>
+            <div class="grid-box-2"><strong>Eficiencia mecánica (contra el entorno):</strong>
+                <div class="math-box" style="margin-top:8px; font-size:0.9rem;">W<sub>real</sub> / W<sub>reversible</sub></div>
+            </div>
+        </div>
+        <div class="math-box">Eficiencia energética = Energía útil que sale del sistema / Energía que entra al sistema</div>
+    </section>
+
+    <!-- 20.6 CONTROL -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">20.6. Control de Materia y Energía en Procesos</h2>
+        <p>El rendimiento, la dirección y la viabilidad de un proceso dependen de las condiciones de presión, temperatura y caudales; su <span class="hl-def">medida y control</span> son básicos para garantizarlas. La automatización permite un funcionamiento seguro y eficaz, tanto en régimen estacionario como en puestas en marcha, paradas y cambios de producción.</p>
+        <p>El proceso de control consiste en: medir variables (P, T, caudal C, composición Co, nivel N) → un <strong>transductor</strong> las convierte en señales eléctricas (V<sub>m</sub>) → un <strong>controlador</strong> las compara con una señal de consigna (V<sub>c</sub>) → se actúa sobre <strong>actuadores</strong> (válvulas, aportes de calor, etc.).</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Tipo de control</th><th>Ecuación</th><th>Característica</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Proporcional (P)</strong></td>
+                        <td>S = K(V<sub>m</sub>−V<sub>c</sub>) = K·E</td>
+                        <td>Sencillo, pero presenta oscilaciones en la respuesta.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proporcional-Integral (PI)</strong></td>
+                        <td>S = K·E + (K/τ)∫E dt</td>
+                        <td>Reduce las oscilaciones y el tiempo de acomodación a la consigna.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proporcional-Derivativo (PD)</strong></td>
+                        <td>S = K·E + K·dE/dt</td>
+                        <td>Respuesta más rápida, con menor error residual.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proporcional-Integral-Derivativo (PID)</strong></td>
+                        <td>S = K·E + K·dE/dt + (K/τ)∫E dt</td>
+                        <td>Estabilización y control más rápidos, con menores oscilaciones.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-info">
+            <div class="callout-title">🖥️ Supervisión del control</div>
+            <p>El control, aunque automatizado, siempre está <strong>supervisado</strong>: manualmente por operarios de planta, o mediante ordenador/autómata programable. Las señales y alarmas se reciben en una <strong>consola central</strong> (control centralizado) o en <strong>consolas de planta</strong> (control descentralizado). Se almacenan datos históricos para comprobaciones, explotación y mantenimiento.</p>
+        </div>
+
+        <figure class="diagram-box">
+            <div class="flow-steps">
+                <div class="flow-step">Medidas (P,T,C,N,Co)</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Transductor</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-purple); color:var(--accent-purple);">Controlador</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-red); color:var(--accent-red);">Actuador</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-green); color:var(--accent-green);">Proceso</div>
+            </div>
+            <figcaption>Bucle de control: medida → transducción → comparación con consigna → actuación sobre el proceso.</figcaption>
+        </figure>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">🧪 Ejercicios de Autoevaluación Resueltos (Síntesis)</h2>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Concentración y flujo másico en un reactor</div>
+            <p><strong>Enunciado:</strong> Un producto (PM=192) sale disuelto en agua al 41,2% con Per=1,025, a 10,3 L/min. Calcular la concentración en kg/L y el flujo másico de salida.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución</span>
+                <p>Concentración de la disolución = 1.025 g/cm³. Concentración del producto = 0,412 × 1,025 = <strong>0,422 kg/L</strong> (≈2,198 mol/L). Flujo másico = 2,198 mol/L × 10,3 L/min = 22,64 mol/min ≈ <strong>4,35 kg/min</strong>.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: Reactivo limitante en el ataque de obleas de silicio</div>
+            <p><strong>Enunciado:</strong> Reacción 3 Si + 4 HNO₃ + 18 HF → 3 H₂SiF₆ + 4 NO + 8 H₂O, con un baño 4:1:3 de HF (49%), HNO₃ (70%) y ácido acético (100%). Determinar el reactivo limitante.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución</span>
+                <p>Relación molar en el baño HF/HNO₃ = 24,8, frente a la relación estequiométrica 18/4 = 4,5. Como hay mucho más exceso de HF que el requerido, <strong>el HNO₃ es el reactivo limitante</strong>, con un exceso de HF del <strong>452%</strong>.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Clasificación de un proceso con reciclaje (síntesis de etanol)</div>
+            <p><strong>Enunciado:</strong> Reactor con mezclador, reactor y depósito, con reciclaje de etileno/acetileno no reaccionados. Clasificar cada subsistema.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución</span>
+                <p><strong>Mezclador:</strong> abierto, continuo, sin reacción, sin acumulación en estacionario. <strong>Reactor:</strong> abierto, continuo, con reacción química (generación y consumo), sin acumulación en estacionario. <strong>Depósito:</strong> abierto, discontinuo, con acumulación, sin reacción.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4: Transferencias de energía en un circuito de calefacción</div>
+            <p><strong>Enunciado:</strong> Sistema bomba+motor+caldera+radiadores. Analizar Q, W, ΔE y ΔU en cada subsistema.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución</span>
+                <p><strong>Radiador:</strong> ΔU = Q = Cp(T₁−T₂), sin trabajo. <strong>Bomba/motor:</strong> ΔEp = −W (predomina el trabajo de flujo frente a ΔU y ΔEc). <strong>Caldera:</strong> ΔU = Q − ΔH (reacción de combustión, sin trabajo, sin acumulación en estacionario).</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5: Balance de materia y energía en un horno de tostación</div>
+            <p><strong>Enunciado:</strong> 4FeS₂ + 11O₂ → 2Fe₂O₃ + 8SO₂, mineral con 75% FeS₂ a 25°C, 200% exceso de aire, ceniza con 4% de FeS₂ sin reaccionar. Calcular el calor transferido por kg de mineral.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución</span>
+                <p>Balance de materia (base 100 kg mineral): G(SO₂)=3,1 kg mol, O₂ sin reaccionar=0,33 kg mol, Fe₂O₃=1,03 kg, FeS₂ residual=73,45 kg. Balance de energía: <strong>ΔH ≈ −598.162 kJ/100 kg ≈ −5.981,6 kJ/kg</strong> (calor desprendido, reacción exotérmica).</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

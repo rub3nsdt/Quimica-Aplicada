@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 12: Metales. Procesos Metalúrgicos. Metales Representativos - Resumen Completo</title>
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Banner Header */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0369a1 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            max-width: 850px;
+        }
+
+        .meta-info {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
+            color: #94a3b8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 1.55rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 22px 0 12px 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 16px 0 8px 0;
+            color: var(--primary-light);
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* Color Concepts & Highlights */
+        .hl-def {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-green {
+            background-color: #dcfce7;
+            color: #15803d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-red {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-amber {
+            background-color: #fef3c7;
+            color: #b45309;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-purple {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-pink {
+            background-color: #fce7f3;
+            color: #9d174d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-teal {
+            background-color: #ccfbf1;
+            color: #0f766e;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Vertical Fractions CSS */
+        .frac {
+            display: inline-flex;
+            flex-direction: column;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 0.88em;
+            line-height: 1.0;
+            padding: 0 3px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-weight: bold;
+        }
+
+        .frac .top {
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 1px;
+        }
+
+        .frac .bottom {
+            padding-top: 1px;
+        }
+
+        /* Math & Formulas Box */
+        .math-box {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 16px 24px;
+            border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8;
+            overflow-x: auto;
+        }
+
+        .math-box .var {
+            font-style: italic;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .math-inline {
+            font-family: 'Cambria', 'Georgia', serif;
+            font-style: italic;
+            font-weight: 600;
+            color: #0f172a;
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Callout Cards */
+        .callout {
+            border-left: 4px solid;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 18px 0;
+            background-color: #f8fafc;
+        }
+
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+        .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+        .callout-pink { border-color: var(--accent-pink); background-color: #fdf2f8; }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Tables */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 11px 14px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 12px 0 16px 24px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Badge Grid */
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .badge-card {
+            flex:1 1 300px;
+            max-width: 500px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            background: #ffffff;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Autoevaluación Solutions */
+        .exercise-card {
+            background-color: #fefce8;
+            border: 1px solid #fef08a;
+            border-left: 5px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 22px;
+        }
+
+        .exercise-title {
+            font-weight: 700;
+            color: #854d0e;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .solution-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        .solution-tag {
+            display: inline-block;
+            background-color: #dcfce7;
+            color: #166534;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        /* Visual Grids */
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .three-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .grid-box-1 {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .grid-box-2 {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .grid-box-3 {
+            background: #fdf4ff;
+            border: 1px solid #f0abfc;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        /* Diagram Box */
+        .diagram-box {
+            background: #f1f5f9;
+            border: 1px dashed #64748b;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .flow-steps {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .flow-step {
+            background: white;
+            border: 2px solid var(--accent-blue);
+            color: var(--accent-blue);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .flow-arrow {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7rem; }
+            .section-card { padding: 18px; }
+            .two-column-grid { grid-template-columns: 1fr; }
+            .three-column-grid { grid-template-columns: 1fr; }
+            .badge-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 12: Metales. Procesos Metalúrgicos. Metales Representativos. Grupos I A, II A, III A y IV A</h1>
+        <p>Resumen exhaustivo, visual y ordenado de la unidad didáctica: propiedades generales de los metales, fuentes minerales, procesos metalúrgicos (concentración, reducción, refino) y conservación de recursos; metales alcalinos y alcalinotérreos; el aluminio y el plomo; materiales de construcción (cal, cemento y yeso); y resolución completa de la Autoevaluación.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Mª José Caselles Pomares, Mariano Molero Meneses, et al.</span>
+            <span>📍 <strong>Unidad Didáctica:</strong> Tema 12</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Propiedades de los metales:</strong> Describir y relacionar las propiedades físicas y químicas de los metales en función de su posición en el sistema periódico.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>Fuentes minerales:</strong> Clasificar por familias las fuentes principales de los metales en la naturaleza.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>Procesos metalúrgicos:</strong> Conocer los principios básicos de los procesos metalúrgicos para la obtención de metales a partir de sus fuentes naturales.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>Metales alcalinos:</strong> Descubrir las aplicaciones y métodos de síntesis industrial del litio, sodio y potasio, mediante reducción electrolítica.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <strong>Compuestos de Na y K:</strong> Conocer los principales compuestos de sodio y potasio de importancia industrial: fuentes, obtención y aplicaciones.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <strong>Magnesio y calcio:</strong> Estudiar fuentes, síntesis y aplicaciones del magnesio y del calcio y sus compuestos, como materia prima de la cal, el cemento y el yeso.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-pink);">
+                <strong>Aluminio:</strong> Descubrir las fuentes minerales del aluminio y las fases del proceso metalúrgico de obtención del metal.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Aplicaciones del aluminio:</strong> Describir las propiedades y aplicaciones del aluminio metal y de sus compuestos de mayor interés industrial.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>Plomo:</strong> Estudiar las fuentes y el proceso metalúrgico para la obtención y refino del plomo, sus propiedades y aplicaciones.
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN INTRODUCTORIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">📝 Resumen General de la Unidad</h2>
+        <p>El tema estudia las propiedades y características generales de los <span class="hl-def">metales</span>, sus principales fuentes minerales o <span class="hl-def">menas</span> en la naturaleza y los principios básicos de los <span class="hl-def">procesos metalúrgicos</span> que permiten extraer, reducir y purificar los metales. Se insiste en la necesidad de preservar los recursos metálicos y en los métodos para conseguirlo.</p>
+        <p>La segunda parte se dedica a los metales representativos de los grupos <strong>I A, II A, III A y IV A</strong>: sus propiedades periódicas y, en profundidad, el <span class="hl-green">litio, sodio y potasio</span> (alcalinos), el <span class="hl-green">magnesio y calcio</span> (alcalinotérreos), el <span class="hl-green">aluminio</span> (III A) y el <span class="hl-green">plomo</span> (IV A): fuentes naturales, proceso metalúrgico, propiedades y aplicaciones. Por último, se estudian los procesos de fabricación y propiedades de tres materiales aglomerantes: <span class="hl-amber">la cal, el cemento y el yeso</span>.</p>
+    </section>
+
+    <!-- 12.1 CLASIFICACION Y PROPIEDADES GENERALES -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">12.1. Clasificación de los Metales y Propiedades Generales</h2>
+        <p>Los metales forman el grupo más numeroso de los elementos químicos: <strong>más del 75%</strong> de los elementos conocidos presentan, en mayor o menor grado, las llamadas <span class="hl-def">propiedades metálicas</span>, que los distinguen de los <strong>no metales</strong> y de los <strong>semimetales</strong> (propiedades intermedias).</p>
+
+        <div class="callout callout-info">
+            <div class="callout-title">🗺️ Posición en el Sistema Periódico</div>
+            <p>Los elementos metálicos ocupan una gran parte de la tabla: los <strong>Grupos I A y II A</strong> (electrón diferenciador en el subnivel <em>s</em>), los elementos de mayor número atómico de los <strong>Grupos III A, IV A, V A</strong> e incluso <strong>VI A</strong> (electrón diferenciador en el subnivel <em>p</em>), los <strong>elementos de transición</strong> (subnivel <em>d</em>) y los de <strong>transición interna</strong> (subnivel <em>f</em>). El carácter metálico <strong>crece hacia la izquierda</strong> en cada periodo y <strong>hacia abajo</strong> en cada grupo, siendo esta variación mucho más acusada en los elementos representativos que en los de transición, y menos aún en los de transición interna.</p>
+        </div>
+
+        <h3>Propiedades Físicas</h3>
+        <div class="three-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Densidad:</strong> sólidos cristalinos compactos (excepto el Hg, líquido). Máxima en el <strong>Osmio</strong> (22,6 g/mL); mínima en el <strong>Litio</strong> (0,53 g/mL).
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Conductividad eléctrica y térmica:</strong> excelente, por la movilidad de los electrones de valencia. El mejor conductor es la <strong>plata</strong> (conductancia 0,616 μΩ⁻¹).
+            </div>
+            <div class="grid-box-3">
+                <strong style="color:var(--accent-purple);">Puntos de fusión/ebullición:</strong> relativamente elevados (excepciones: Hg, −38,4 °C; Ga, 29 °C). Máximos en el <strong>W</strong> (P.f. 3.410 °C; P.e. 5.930 °C).
+            </div>
+        </div>
+        <ul>
+            <li><strong>Poder reflexivo:</strong> brillo o lustre metálico, por el alto empaquetamiento atómico; color blanco-grisáceo en superficies recién cortadas (excepto oro y cobre).</li>
+            <li><strong>Propiedades magnéticas:</strong> los metales de transición y sus iones, con electrones desapareados, son <strong>paramagnéticos</strong>; la tendencia crece dentro de cada grupo hacia la derecha, con máximo en el Grupo VIII, decreciendo después.</li>
+            <li><strong>Propiedades mecánicas:</strong> <strong>maleabilidad</strong> (láminas), <strong>ductilidad</strong> (hilos) y <strong>tenacidad</strong> (resistencia a la fatiga), base de numerosas aplicaciones tecnológicas.</li>
+        </ul>
+
+        <h3>Propiedades Químicas</h3>
+        <p>Los metales tienen potenciales de ionización y electronegatividades relativamente bajos, con tendencia a actuar como <strong>donadores de electrones</strong>, formando cationes tanto más estables cuanto más a la izquierda y abajo se sitúa el metal. Los <strong>óxidos metálicos</strong> tienen generalmente carácter <span class="hl-def">básico</span>, excepto los de metales de transición con número de oxidación alto (V(5), Cr(6), Mn(6,7), Mo(6), W(6)), que se comportan como <span class="hl-red">ácidos</span>; y algunos con número de oxidación intermedio (Cr(3), o metales tipo ns²p<sup>x</sup> como Al, Sn, Pb), que son <span class="hl-amber">anfóteros</span>.</p>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">⚗️ Reactividad frente al ion hidronio (H₃O⁺)</div>
+            <ul>
+                <li><strong>Metales muy activos:</strong> reaccionan con el agua pura ([H<sub>3</sub>O<sup>+</sup>] = 10<sup>−7</sup>). Mayoría de alcalinos y algunos alcalinotérreos (Na, K, Ca); muy reductores, con Potenciales Normales de Reducción muy negativos.
+                <div class="math-box">Na<sub>(s)</sub> + H<sub>2</sub>O<sub>(ac)</sub> → NaOH<sub>(ac)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>H<sub>2(g)</sub></div>
+                </li>
+                <li><strong>Metales activos:</strong> reaccionan con el agua en disoluciones ácidas; más reductores que el hidrógeno (Potenciales negativos). Incluye Mg, Zn, Al, Ti, Cr, Fe, Mn, Co, Ni, Sn y Pb, de gran interés industrial.
+                <div class="math-box">Zn<sub>(s)</sub> + 2H<sub>3</sub>O<sup>+</sup><sub>(ac)</sub> → Zn<sup>2+</sup><sub>(ac)</sub> + H<sub>2(g)</sub> + 2H<sub>2</sub>O</div>
+                </li>
+                <li><strong>Metales no activos:</strong> por debajo del hidrógeno en la Serie de Potenciales (E° positivo), no reaccionan ni con ácidos no oxidantes. Cu, Ag, Au, Hg, Pd, Os, Ir y Pt; los más inactivos (Ag, Au, Pt) son los <strong>metales nobles</strong>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 12.2 METALES EN LA NATURALEZA -->
+    <section class="section-card">
+        <h2 class="section-title t-green">12.2. Los Metales en la Naturaleza</h2>
+        <p>Salvo el oro, la plata, el platino y, en menor medida, el mercurio y el cobre, los metales nunca se encuentran libres: forman <span class="hl-def">minerales</span>, y cuando su concentración es adecuada para la extracción se denominan <span class="hl-def">menas</span> (el resto de mineral acompañante es la <span class="hl-def">ganga</span>).</p>
+
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong>Óxidos:</strong> Fe, Al, Mn, Sn<br>
+                <strong>Sulfuros:</strong> Cu, Zn, Pb, Cd, Ag, Ni, Hg<br>
+                <strong>Carbonatos:</strong> Fe, Pb, Zn, Mg, Ca
+            </div>
+            <div class="grid-box-2">
+                <strong>Silicatos:</strong> Be, Zn, Ni, Li<br>
+                <strong>Sulfatos:</strong> Mg, Ca, Pb<br>
+                <strong>Haluros:</strong> Na, K, Ca, Mg<br>
+                <strong>Agua del mar:</strong> Mg, Na, Ca
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Elemento</th><th>% peso</th><th>Elemento</th><th>% peso</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Oxígeno</strong></td><td>46,6</td><td><strong>Titanio</strong></td><td>0,44</td></tr>
+                    <tr><td><strong>Silicio</strong></td><td>27,7</td><td><strong>Fósforo</strong></td><td>0,12</td></tr>
+                    <tr><td><strong>Aluminio</strong></td><td>8,1</td><td><strong>Manganeso</strong></td><td>0,10</td></tr>
+                    <tr><td><strong>Hierro</strong></td><td>5,0</td><td><strong>Flúor</strong></td><td>0,08</td></tr>
+                    <tr><td><strong>Calcio</strong></td><td>3,6</td><td><strong>Azufre</strong></td><td>0,052</td></tr>
+                    <tr><td><strong>Sodio</strong></td><td>2,8</td><td><strong>Cloro</strong></td><td>0,048</td></tr>
+                    <tr><td><strong>Potasio</strong></td><td>2,6</td><td><strong>Carbono</strong></td><td>0,032</td></tr>
+                    <tr><td><strong>Magnesio</strong></td><td>2,1</td><td><strong>Litio</strong></td><td>0,007</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 12.2. Elementos más abundantes en la corteza terrestre (% en peso).</p>
+        </div>
+
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Tipo</th><th>Nombre y fórmula del mineral</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Metales nativos</strong></td><td>Au, Ag, Pt, Pd, Os, Ir, Bi, Cu, Hg</td></tr>
+                    <tr><td><strong>Óxidos</strong></td><td>Hematita (Fe₂O₃); Magnetita (Fe₃O₄); Bauxita (Al₂O₃·2H₂O); Corindón (Al₂O₃); Cuprita (Cu₂O); Casiterita (SnO₂); Pirolusita (MnO₂); Rutilo (TiO₂)</td></tr>
+                    <tr><td><strong>Sulfuros</strong></td><td>Argentita (Ag₂S); Pirita (FeS₂); Calcopirita (CuFeS₂); Cinabrio (HgS); Galena (PbS); Calcocita (Cu₂S); Blenda (ZnS)</td></tr>
+                    <tr><td><strong>Carbonatos</strong></td><td>Cálcita (CaCO₃); Magnesita (MgCO₃); Dolomita (CaCO₃·MgCO₃); Cerusita (PbCO₃); Smithsonita (ZnCO₃); Witherita (BaCO₃); Siderita (FeCO₃)</td></tr>
+                    <tr><td><strong>Halogenuros</strong></td><td>Halita (NaCl); Fluorita (CaF₂); Silvita (KCl); Carnalita (KCl·MgCl₂); Criolita (Na₃AlF₆)</td></tr>
+                    <tr><td><strong>Sulfatos</strong></td><td>Yeso (CaSO₄·2H₂O); Anhidrita (CaSO₄); Barita (BaSO₄); Anglesita (PbSO₄); Epsomita (MgSO₄·7H₂O)</td></tr>
+                    <tr><td><strong>Silicatos</strong></td><td>Berilo (Be₃Al₂Si₆O₁₈); Caolinita (Al₂(Si₂O₈)(OH)₄); Espodumeno (LiAlSi₂O₆); Circón (ZrSiO₄)</td></tr>
+                    <tr><td><strong>Fosfatos</strong></td><td>Apatito (Ca₃(PO₃)₂); Hidroxiapatito (Ca₅(PO₄)₃OH)</td></tr>
+                    <tr><td><strong>Otros</strong></td><td>Uranita (U₃O₈); Calaverita (Te₂Au); Wolframita (WO₄Fe)</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 12.3. Principales fuentes de minerales de los metales más importantes.</p>
+        </div>
+    </section>
+
+    <!-- 12.3 METALURGIA -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">12.3. Metalurgia. Procesos de Obtención de los Metales</h2>
+        <p>La <span class="hl-def">Metalurgia</span> es la ciencia que estudia los metales, su extracción a partir de los minerales, su purificación y preparación para usos posteriores. El proceso metalúrgico consta de: <strong>1)</strong> Extracción del mineral, <strong>2)</strong> Concentración de la mena, <strong>3)</strong> Reducción de la mena a metal libre, <strong>4)</strong> Refinado o purificación y <strong>5)</strong> Fabricación de aleaciones.</p>
+
+        <h3>12.3.1. Concentración de la Mena</h3>
+        <p>Tras triturar y moler el mineral, se separan las partículas de mena y ganga, generalmente por métodos físicos:</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Precipitación:</strong> separación por gravedad en medio acuoso según la densidad (o mediante ciclón: partículas pesadas hacia la pared, ligeras arrastradas por el aire).
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Flotación:</strong> mineral finamente dividido + agua + agente colector (xantatos, ditiofosfatos) + tensioactivo; burbujas de aire recubren la mena, que asciende como espuma, mientras la ganga (más densa) queda en el fondo. Muy usada en sulfuros, carbonatos y silicatos.
+            </div>
+            <div class="grid-box-3">
+                <strong style="color:var(--accent-purple);">Separación electrostática:</strong> las menas conductoras (sulfuros) se cargan eléctricamente y son atraídas a un electrodo colector; la ganga, no conductora, no se carga.
+            </div>
+        </div>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong>Lixiviación:</strong> basada en la distinta solubilidad de mena y ganga en un disolvente, generalmente acuoso.
+            </div>
+            <div class="grid-box-2">
+                <strong>Separación magnética:</strong> para minerales ferromagnéticos (hierro, cobalto), mediante un imán.
+            </div>
+        </div>
+        <p><strong>Otros tratamientos:</strong> descomposición de carbonatos o deshidratación de hidróxidos:</p>
+        <div class="math-box">
+            CaCO<sub>3(s)</sub> ⇄ CaO<sub>(s)</sub> + CO<sub>2(g)</sub> &nbsp;(T &gt; 1.000 °C)<br>
+            Mg(OH)<sub>2(s)</sub> → MgO<sub>(s)</sub> + H<sub>2</sub>O<sub>(g)</sub>
+        </div>
+        <p>La <strong>amalgamación</strong> (aleación con mercurio) se usa para extraer metales preciosos (plata y oro); la amalgama se descompone después por calor, destilando el mercurio:</p>
+        <div class="math-box">xM + xHg ⇄ M<sub>x</sub>Hg<sub>y</sub></div>
+        <p>La <strong>cianuración</strong> forma un complejo metal-cianuro que después se descompone por desplazamiento; así se extrae el oro con cianuro potásico, desplazándolo después con cinc:</p>
+        <div class="math-box">
+            2Au<sub>(s)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>O<sub>2(g)</sub> + 4CN<sup>−</sup><sub>(ac)</sub> + H<sub>2</sub>O<sub>(ac)</sub> → 2Au(CN)<sub>2</sub><sup>−</sup><sub>(ac)</sub> + 2OH<sup>−</sup><sub>(ac)</sub><br>
+            2Au(CN)<sub>2</sub><sup>−</sup><sub>(ac)</sub> + Zn<sub>(s)</sub> → Zn(CN)<sub>4</sub><sup>2−</sup> + 2Au<sub>(s)</sub>
+        </div>
+
+        <h3>12.3.2. Reducción del Mineral</h3>
+        <p>La obtención de los metales a partir de sus minerales es siempre un proceso de <span class="hl-def">reducción</span>. Menas de hidratos, hidróxidos o carbonatos se someten a <strong>calcinación</strong> (calentar sin fundir):</p>
+        <div class="math-box">
+            Al<sub>2</sub>O<sub>3</sub>·2H<sub>2</sub>O<sub>(s)</sub> → Al<sub>2</sub>O<sub>3(s)</sub> + 2H<sub>2</sub>O<sub>(g)</sub> &nbsp;(bauxita)<br>
+            ZnCO<sub>3(s)</sub> → ZnO<sub>(s)</sub> + CO<sub>2(g)</sub>
+        </div>
+        <p>Las menas de sulfuros se someten a <strong>tostación</strong> (oxidación con el O<sub>2</sub> del aire: metal → óxido, azufre → SO<sub>2</sub>):</p>
+        <div class="math-box">
+            2ZnS<sub>(s)</sub> + 3O<sub>2(g)</sub> → 2ZnO<sub>(s)</sub> + 2SO<sub>2(g)</sub> &nbsp;(blenda)<br>
+            HgS<sub>(s)</sub> + O<sub>2(g)</sub> → Hg<sub>(g)</sub> + SO<sub>2(g)</sub> &nbsp;(cinabrio, conduce directo al metal)<br>
+            2Cu<sub>2</sub>S<sub>(s)</sub> + 3O<sub>2(g)</sub> → 2Cu<sub>2</sub>O<sub>(s)</sub> + 2SO<sub>2(g)</sub> &nbsp;;&nbsp; 2Cu<sub>2</sub>O<sub>(s)</sub> + Cu<sub>2</sub>S<sub>(s)</sub> → 6Cu<sub>(s)</sub> + SO<sub>2(g)</sub><br>
+            PbS<sub>(s)</sub> + 2O<sub>2(g)</sub> → PbSO<sub>4(s)</sub> &nbsp;;&nbsp; PbSO<sub>4(s)</sub> + PbS<sub>(s)</sub> → 2Pb<sub>(s)</sub> + 2SO<sub>2(g)</sub>
+        </div>
+
+        <div class="callout callout-purple">
+            <div class="callout-title">📉 Reducción química y el diagrama de Ellingham</div>
+            <p>La reducción de un metal es más fácil cuanto menos negativo sea su Potencial Normal de Reducción. Para la formación de un óxido MO: $M_{(s)} + \frac{1}{2}O_{2(g)} \rightleftharpoons MO_{(s)}$, $\Delta G^\circ &lt; 0$, con $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$. Como $\Delta H^\circ$ es negativo y $\Delta S^\circ$ también (disminuye el número de moles de gas), $\Delta G^\circ$ es tanto más negativo (óxido más estable) cuanto menor es la temperatura: <strong>solo a temperaturas altas se favorece la reducción</strong>. La representación de $\Delta G^\circ$ frente a $T$ da una recta de <strong>pendiente positiva</strong>: el <strong>diagrama de Ellingham</strong>.</p>
+            <figure class="diagram-box">
+                <svg viewBox="0 0 320 220" width="100%" height="220" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="40" y1="190" x2="300" y2="190" stroke="#0f172a" stroke-width="2"/>
+                    <line x1="40" y1="190" x2="40" y2="20" stroke="#0f172a" stroke-width="2"/>
+                    <text x="305" y="195" font-size="13" fill="#0f172a">T</text>
+                    <text x="15" y="25" font-size="13" fill="#0f172a">ΔG°</text>
+                    <line x1="55" y1="60" x2="280" y2="175" stroke="#dc2626" stroke-width="3"/>
+                    <text x="230" y="150" font-size="12" fill="#dc2626" font-weight="700">M + ½O₂ → MO</text>
+                </svg>
+                <figcaption>Figura 12.1. Diagrama de Ellingham de un óxido metálico M-O (pendiente positiva).</figcaption>
+            </figure>
+            <p>El agente reductor más empleado es el sistema <strong>carbón/monóxido de carbono</strong>; también otros metales más electropositivos (calcio, magnesio, aluminio) o hidrógeno. Ejemplos industriales:</p>
+            <div class="math-box">
+                Fe<sub>2</sub>O<sub>3(s)</sub> + 3CO<sub>(g)</sub> → 2Fe<sub>(l)</sub> + 3CO<sub>2(g)</sub><br>
+                TiCl<sub>4(g)</sub> + 2Mg<sub>(l)</sub> → Ti<sub>(s)</sub> + 2MgCl<sub>2(s)</sub><br>
+                Cr<sub>2</sub>O<sub>3(s)</sub> + 2Al<sub>(s)</sub> → 2Cr<sub>(s)</sub> + Al<sub>2</sub>O<sub>3(s)</sub><br>
+                V<sub>2</sub>O<sub>5(s)</sub> + 5Ca<sub>(l)</sub> → 2V<sub>(l)</sub> + 5CaO<sub>(s)</sub><br>
+                WO<sub>3(s)</sub> + 3H<sub>2(g)</sub> → W<sub>(s)</sub> + 3H<sub>2</sub>O<sub>(g)</sub>
+            </div>
+            <p>La formación de CO, al contrario, transcurre con <strong>aumento</strong> de entropía (aumenta el nº de moles de gas: $C_{(s)}+\frac{1}{2}O_{2(g)}\rightleftharpoons CO_{(g)}$, $\Delta G^\circ = -137$ kJ/mol), dando una recta de <strong>pendiente negativa</strong>. La intersección de ambas rectas define la temperatura <strong>T<sub>M</sub></strong> por encima de la cual se favorece la reducción del óxido con carbono:</p>
+            <figure class="diagram-box">
+                <svg viewBox="0 0 320 220" width="100%" height="220" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="40" y1="190" x2="300" y2="190" stroke="#0f172a" stroke-width="2"/>
+                    <line x1="40" y1="190" x2="40" y2="20" stroke="#0f172a" stroke-width="2"/>
+                    <text x="305" y="195" font-size="13" fill="#0f172a">T</text>
+                    <text x="15" y="25" font-size="13" fill="#0f172a">ΔG°</text>
+                    <line x1="55" y1="60" x2="280" y2="175" stroke="#dc2626" stroke-width="3"/>
+                    <line x1="55" y1="175" x2="280" y2="60" stroke="#0284c7" stroke-width="3"/>
+                    <circle cx="167" cy="117" r="4" fill="#16a34a"/>
+                    <text x="172" y="110" font-size="12" fill="#16a34a" font-weight="700">T_M</text>
+                    <text x="180" y="150" font-size="12" fill="#dc2626" font-weight="700">M + ½O₂ → MO</text>
+                    <text x="180" y="85" font-size="12" fill="#0284c7" font-weight="700">C + ½O₂ → CO</text>
+                </svg>
+                <figcaption>Figura 12.2. Reducción de un óxido metálico con el sistema Carbón/CO: por encima de T<sub>M</sub>, $C_{(s)}+MO_{(s)} \rightarrow CO_{(g)}+M_{(l)}$.</figcaption>
+            </figure>
+        </div>
+
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Metal</th><th>Proceso de Reducción</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Litio, Sodio, Magnesio, Calcio</strong></td><td>Reducción electrolítica de sus cloruros fundidos</td></tr>
+                    <tr><td><strong>Aluminio</strong></td><td>Reducción electrolítica de Al₂O₃ fundido</td></tr>
+                    <tr><td><strong>Hierro, Cromo, Estaño, Vanadio</strong></td><td>Reducción de sus óxidos con coque/monóxido de carbono, o por otro elemento más electropositivo</td></tr>
+                    <tr><td><strong>Manganeso, Titanio, Cadmio, Cinc</strong></td><td>Reducción de sus óxidos o haluros con hidrógeno</td></tr>
+                    <tr><td><strong>Wolframio, Iridio, Osmio</strong></td><td>Se encuentran en estado libre, o se obtienen por tostación de sus sulfuros y reducción de sus óxidos</td></tr>
+                    <tr><td><strong>Ag, Au, Pt, Hg, Pb, Cu</strong></td><td>Se encuentran en estado libre, o se obtienen por tostación de sus sulfuros y reducción de sus óxidos</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 12.4. Procesos de reducción de los metales principales.</p>
+        </div>
+
+        <p><strong>Reducción electrolítica:</strong> imprescindible para metales muy activos (Potenciales muy negativos), ya que con C/CO se necesitarían temperaturas superiores a 2.000 °C, técnica y energéticamente prohibitivas. Ejemplo, electrólisis de la alúmina fundida:</p>
+        <div class="math-box">
+            <strong>Cátodo (−):</strong> 2Al<sup>3+</sup> + 6e<sup>−</sup> → 2Al<sub>(l)</sub><br>
+            <strong>Ánodo (+):</strong> 3O<sup>2−</sup> − 6e<sup>−</sup> → <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>O<sub>2(g)</sub><br>
+            <strong>Global:</strong> Al<sub>2</sub>O<sub>3(l)</sub> → Al<sub>(l)</sub> + <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>O<sub>2(g)</sub>
+        </div>
+        <p>Metales menos activos (cromo, níquel, cobre, cinc) pueden obtenerse por electrólisis de sus sales en disolución acuosa; el mismo método permite obtener metales de gran pureza o realizar recubrimientos electrolíticos (cromado, niquelado, cincado).</p>
+
+        <h3>12.3.3. Refino y Purificación de Metales</h3>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Destilación:</strong> para metales volátiles (Hg, Zn); se calienta por encima de su punto de ebullición y se condensa el destilado, repitiendo el proceso si es necesario.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Formación de compuesto volátil:</strong> el níquel forma con CO el <strong>níquel tetracarbonilo</strong> (gas tóxico), que se descompone por calor dando Ni de pureza superior al 99,99%:
+                <div class="math-box">
+                    Ni<sub>(s)</sub> + 4CO<sub>(g)</sub> <span class="frac"><span class="top">40-90 °C</span><span class="bottom">→</span></span> Ni(CO)<sub>4(g)</sub><br>
+                    Ni(CO)<sub>4(g)</sub> <span class="frac"><span class="top">200 °C</span><span class="bottom">→</span></span> Ni<sub>(s)</sub> + 4CO<sub>(g)</sub>
+                </div>
+            </div>
+        </div>
+        <p><strong>Refinado electrolítico:</strong> el más utilizado (Cu, Al, Au, Ag, Zn, Cd, Pb, Sn...). En una cuba electrolítica, el metal impuro actúa de ánodo (se oxida) y el metal puro se deposita en el cátodo:</p>
+        <div class="math-box">
+            <strong>Ánodo (−):</strong> Cu<sub>(impuro)</sub> − 2e<sup>−</sup> → Cu<sup>2+</sup><sub>(ac)</sub><br>
+            <strong>Cátodo (+):</strong> Cu<sup>2+</sup><sub>(ac)</sub> + 2e<sup>−</sup> → Cu<sub>(puro)</sub><br>
+            <strong>Global:</strong> Cu<sub>(impuro)</sub> → Cu<sub>(puro)</sub>
+        </div>
+        <p><strong>Fusión por zonas:</strong> igual que en la purificación del silicio, se basa en la mayor solubilidad de las impurezas en el metal fundido que en el sólido, concentrándose en el extremo de la barra al desplazar la fuente de calor.</p>
+
+        <h3>12.3.4. Criterios de Pureza</h3>
+        <div class="callout callout-teal">
+            <p>La mayoría de los metales comerciales tienen una pureza de <strong>dos o tres nueves</strong> (hierro comercial: 99,5%). El cobre para hilos eléctricos requiere <strong>99,99–99,999%</strong> (las impurezas disminuyen mucho la conductividad, aumentando las pérdidas por efecto Joule). El indio para transistores exige <strong>99,9999999%</strong> (nueve nueves). El coste de producción del metal se <strong>duplica por cada nueve</strong> añadido a su riqueza.</p>
+        </div>
+    </section>
+
+    <!-- 12.4 CONSERVACION -->
+    <section class="section-card">
+        <h2 class="section-title t-red">12.4. Conservación de los Recursos Metálicos</h2>
+        <p>El agotamiento de los recursos minerales hace necesario preservarlos. Las principales estrategias son:</p>
+        <ul>
+            <li><strong>Mejor aprovechamiento</strong> de los recursos, con tecnologías de utilización más racional y reutilización de residuos.</li>
+            <li><strong>Reuso</strong> del metal para el mismo fin (con limitaciones).</li>
+            <li><strong>Reciclado:</strong> recuperación y reprocesado del material. Ejemplos: aluminio de envases, cobre de hilos y aparatos eléctricos, plomo de baterías. El reciclado del acero de automóviles presenta problemas si no se separan previamente las aleaciones. Los <strong>Residuos Sólidos Urbanos (RSU)</strong> suponen ~1,5 kg/persona/día en países desarrollados, con ~10% de residuos metálicos (Fe y Al principalmente). El reciclado de una tonelada de aluminio de envases ahorra un <strong>90%</strong> de energía frente a su obtención a partir de bauxita/criolita.</li>
+            <li><strong>Fuentes más pobres</strong> en metal: escombreras de minas abandonadas (metales nobles), agua del mar (magnesio actualmente).</li>
+            <li><strong>Sustitución</strong> por otros materiales: vidrio, granito, madera, y sobre todo polímeros sintéticos y materiales compuestos (composites), que sustituyen a los metales con ventaja en la industria aeronáutica y aeroespacial.</li>
+        </ul>
+        <div class="callout callout-info">
+            <div class="callout-title">🪨 El granito como fuente potencial de metales</div>
+            <p>De un cubo de granito de 100 t (~3 m de lado) podrían extraerse: <strong>8 t de aluminio</strong>, <strong>5 t de hierro</strong>, <strong>0,8 t de manganeso</strong>, 80 kg de cobre, 45 kg de wolframio, 18 kg de níquel, 14 kg de vanadio y 9 kg de estaño.</p>
+        </div>
+    </section>
+
+    <!-- 12.5 GRUPO IA -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">12.5. Características Generales de los Elementos del Grupo I A</h2>
+        <p>Los <span class="hl-purple">metales alcalinos</span> —Litio, Sodio, Potasio, Rubidio, Cesio y Francio— tienen un único electrón en su última capa, fácil de perder por el apantallamiento de las capas internas: son los elementos <strong>más electropositivos</strong> que se conocen y muy reductores (el litio ocupa el primer lugar en la Serie de Potenciales Normales de Reducción). Al perder su electrón forman iones M<sup>+</sup>, con configuración de gas noble: compuestos predominantemente <strong>iónicos</strong>, con PF y PE relativamente altos.</p>
+        <p>Los metales libres forman redes cristalinas <strong>cúbicas centradas en el cuerpo</strong> (bajo empaquetamiento, baja densidad —el litio es el metal más ligero—); tienen PF y PE bajos y son muy blandos (se cortan con un cuchillo).</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Propiedad</th><th>Li</th><th>Na</th><th>K</th><th>Rb</th><th>Cs</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Número atómico (Z)</strong></td><td>3</td><td>11</td><td>19</td><td>37</td><td>55</td></tr>
+                    <tr><td><strong>Configuración</strong></td><td>2s¹</td><td>3s¹</td><td>4s¹</td><td>5s¹</td><td>6s¹</td></tr>
+                    <tr><td><strong>Radio covalente (nm)</strong></td><td>0,134</td><td>0,154</td><td>0,196</td><td>0,211</td><td>0,225</td></tr>
+                    <tr><td><strong>Radio iónico X⁺ (nm)</strong></td><td>0,060</td><td>0,095</td><td>0,133</td><td>0,148</td><td>0,169</td></tr>
+                    <tr><td><strong>Potencial de ionización (kJ/mol)</strong></td><td>518</td><td>497</td><td>418</td><td>401</td><td>376</td></tr>
+                    <tr><td><strong>Electronegatividad</strong></td><td>1,0</td><td>0,9</td><td>0,8</td><td>0,8</td><td>0,7</td></tr>
+                    <tr><td><strong>Punto de fusión (°C)</strong></td><td>108</td><td>98</td><td>64</td><td>39</td><td>28</td></tr>
+                    <tr><td><strong>Punto de ebullición (°C)</strong></td><td>1.330</td><td>892</td><td>760</td><td>688</td><td>690</td></tr>
+                    <tr><td><strong>Densidad en el P.f. (g/mL)</strong></td><td>0,53</td><td>0,97</td><td>0,86</td><td>1,53</td><td>1,90</td></tr>
+                    <tr><td><strong>Potencial de reducción (E°, V)</strong></td><td>−3,05</td><td>−2,71</td><td>−2,92</td><td>−2,93</td><td>−2,92</td></tr>
+                    <tr><td><strong>Color</strong></td><td colspan="5">Blanco/gris</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 12.5. Propiedades periódicas de los elementos alcalinos.</p>
+        </div>
+    </section>
+
+    <!-- 12.6 FUENTES Y APLICACIONES ALCALINOS -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">12.6. Fuentes, Obtención y Aplicaciones de los Metales Alcalinos</h2>
+        <p>Grupo más reactivo de todos los metales (la reactividad crece con Z), nunca libres en la naturaleza. Debido a su fuerte carácter reductor, solo se obtienen por <strong>reducción electrolítica de sus sales fundidas</strong> (el sodio también por electrólisis de NaCl en disolución acuosa sobre cátodo de mercurio).</p>
+
+        <h3>Litio</h3>
+        <p>~0,007% en masa de la corteza; en agua de mar ~0,1 ppm. Fuente principal: <strong>espodumeno</strong> (LiAlSi<sub>2</sub>O<sub>6</sub>). Por digestión alcalina se obtiene LiOH, que con HCl da LiCl; el litio se obtiene por electrólisis del LiCl fundido:</p>
+        <div class="math-box">
+            <strong>Cátodo (−):</strong> Li<sup>+</sup><sub>(fun)</sub> + e<sup>−</sup> → Li<sub>(fun)</sub><br>
+            <strong>Ánodo (+):</strong> Cl<sup>−</sup><sub>(fun)</sub> − e<sup>−</sup> → <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>Cl<sub>2(g)</sub><br>
+            <strong>Global:</strong> LiCl<sub>(fun)</sub> → Li<sub>(fun)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>Cl<sub>2(g)</sub>
+        </div>
+        <p>El litio se combina directamente con halógenos, oxígeno y nitrógeno (LiX, Li<sub>2</sub>O, Li<sub>3</sub>N). Con hidrógeno forma el hidruro iónico <strong>LiH</strong>, muy reductor, y los hidruros dobles <strong>LiBH<sub>4</sub></strong> y <strong>LiAlH<sub>4</sub></strong>, usados como reductores en Síntesis Orgánica.</p>
+        <div class="callout callout-teal">
+            <div class="callout-title">🚀 El hidróxido de litio en el espacio</div>
+            <p>El Li<sub>2</sub>O, fuertemente básico, reacciona con agua dando LiOH, que tiene gran capacidad para absorber CO<sub>2</sub> formando carbonato de litio: se emplea como <strong>purificador del aire en recintos cerrados</strong>, como los vehículos espaciales.</p>
+            <div class="math-box">2LiOH<sub>(s)</sub> + CO<sub>2(g)</sub> → Li<sub>2</sub>CO<sub>3(s)</sub> + H<sub>2</sub>O<sub>(l)</sub></div>
+        </div>
+        <p>Aplicaciones: aleaciones ligeras con magnesio (excelente relación tenacidad/peso); pilas alcalinas de botón y pilas de hidruro de litio (bajo peso, gran capacidad de carga); estearato de litio [CH<sub>3</sub>(CH<sub>2</sub>)<sub>16</sub>CO<sub>2</sub>Li], aditivo en aceites lubricantes.</p>
+
+        <h3>Sodio y Potasio</h3>
+        <p><strong>Sodio:</strong> halita/sal gema (NaCl), albita (NaAlSi<sub>3</sub>O<sub>8</sub>), nitro de Chile (NaNO<sub>3</sub>), tenardita (Na<sub>2</sub>S), bórax; disuelto en agua de mar (hasta el 25% en mares interiores como el Mar Muerto o el Lago Salado). <strong>Potasio:</strong> carnalita (KCl·MgCl<sub>2</sub>·6H<sub>2</sub>O), silvita (KCl), kainita (KCl·MgSO<sub>4</sub>·3H<sub>2</sub>O), ortoclasa (KAlSi<sub>3</sub>O<sub>8</sub>), salitre (KNO<sub>3</sub>).</p>
+        <p>El sodio se obtiene por electrólisis del NaCl; la del potasio es más difícil, ya que el K es demasiado soluble en el KCl fundido y, al ser más denso, no flota para recogerse en la superficie de la cuba.</p>
+        <p>Ambos reaccionan con el agua y con compuestos de hidrógeno activo (alcoholes), desprendiendo hidrógeno:</p>
+        <div class="math-box">
+            Na<sub>(s)</sub> + H<sub>2</sub>O<sub>(l)</sub> → <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>H<sub>2(g)</sub> + NaOH<sub>(ac)</sub><br>
+            Na<sub>(s)</sub> + CH<sub>3</sub>OH<sub>(l)</sub> → <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>H<sub>2(g)</sub> + CH<sub>3</sub>O<sup>−</sup>Na<sup>+</sup>
+        </div>
+        <p>Aplicaciones del sodio: fabricación de plomo tetraetilo (antidetonante en gasolinas, en retroceso por su toxicidad); refrigerante líquido en reactores nucleares y válvulas de motores de avión (aprovechando su alta conductividad térmica); lámparas de vapor de sodio (luz amarilla intensa por descarga eléctrica a baja presión).</p>
+    </section>
+
+    <!-- 12.7 COMPUESTOS NA Y K -->
+    <section class="section-card">
+        <h2 class="section-title t-green">12.7. Compuestos de Sodio y de Potasio de Interés Industrial</h2>
+        <p>Compuestos predominantemente iónicos, obtenidos por reacción directa entre los elementos o por reacciones ácido-base; PF elevados, solubles en agua y disolventes polares, poco solubles en apolares (salvo algunas sales de litio de ácidos grasos).</p>
+
+        <h3>Cloruros de Sodio y de Potasio</h3>
+        <p><strong>NaCl</strong> (sal gema, agua de mar): aditivo alimentario y conservante; materia prima de cloro, sodio, hidróxido sódico y carbonato/bicarbonato sódico. <strong>KCl</strong> (de la carnalita): síntesis de nitrato potásico (KNO<sub>3</sub>, abonos y pólvora) y de clorato/perclorato potásico (KClO<sub>3</sub>, KClO<sub>4</sub>, explosivos y cerillas).</p>
+
+        <h3>Hidróxidos de Sodio y de Potasio</h3>
+        <p>La <strong>sosa</strong> (NaOH) y la <strong>potasa cáustica</strong> (KOH) son de fuerte carácter básico, muy solubles y corrosivas. Se obtienen como subproducto de la electrólisis de sus cloruros en disolución acuosa, o por hidrólisis de la amalgama de sodio; también por un método clásico:</p>
+        <div class="math-box">Ca(OH)<sub>2(ac)</sub> + Na<sub>2</sub>CO<sub>3(ac)</sub> → 2NaOH<sub>(ac)</sub> + CaCO<sub>3(s)</sub></div>
+        <p>El NaOH se emplea en la fabricación de papel, jabones, lejías, plásticos, refino del petróleo y extracción de aceites esenciales. El KOH, en menor proporción, principalmente en la fabricación de <strong>jabones potásicos (blandos)</strong>.</p>
+
+        <h3>Otros Compuestos de Interés</h3>
+        <p><strong>Carbonato y bicarbonato sódico</strong> (sosa Solvay): síntesis y aplicaciones ya tratadas al estudiar el ácido carbónico. <strong>Sulfato sódico:</strong> subproducto de la síntesis del ácido clorhídrico, anhidro o decahidratado (Na<sub>2</sub>SO<sub>4</sub>·10H<sub>2</sub>O, <em>sal de Glover</em>); se emplea en la fabricación de vidrios, en la digestión de la pulpa de madera para papel y como laxante suave.</p>
+    </section>
+
+    <!-- 12.8 GRUPO IIA -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">12.8. Características Generales de los Elementos del Grupo II A</h2>
+        <p>Los <span class="hl-amber">alcalinotérreos</span> —berilio, magnesio, calcio, estroncio, bario y radio— son algo menos reactivos que los alcalinos, con reactividad creciente del Be al Ra (el berilio solo reacciona con agua caliente; el bario, enérgicamente incluso en frío, dando siempre el hidróxido correspondiente e hidrógeno). El radio es radiactivo (<sup>226</sup>Ra, semidesintegración de 1.600 años).</p>
+        <p>Pierden fácilmente sus 2 electrones de valencia, actuando con número de oxidación <strong>(+2)</strong>. Forman compuestos iónicos, excepto el berilio, de marcado carácter covalente (orbitales híbridos <em>sp</em>). Se oxidan fácilmente, formando una película de óxido protectora en el berilio y el magnesio. Son buenos conductores, más duros y densos que los alcalinos, aunque la dureza varía mucho en el grupo (el Be raya el vidrio; el Ba es solo algo más duro que el Na).</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Propiedad</th><th>Be</th><th>Mg</th><th>Ca</th><th>Sr</th><th>Ba</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Número atómico (Z)</strong></td><td>4</td><td>12</td><td>20</td><td>38</td><td>56</td></tr>
+                    <tr><td><strong>Configuración</strong></td><td>2s²</td><td>3s²</td><td>4s²</td><td>5s²</td><td>6s²</td></tr>
+                    <tr><td><strong>Radio covalente (nm)</strong></td><td>0,090</td><td>0,130</td><td>0,197</td><td>0,192</td><td>0,198</td></tr>
+                    <tr><td><strong>Radio iónico X²⁺ (nm)</strong></td><td>0,031</td><td>0,060</td><td>0,099</td><td>0,130</td><td>0,135</td></tr>
+                    <tr><td><strong>Potencial de ionización (kJ/mol)</strong></td><td>899</td><td>737</td><td>589</td><td>548</td><td>502</td></tr>
+                    <tr><td><strong>Electronegatividad</strong></td><td>1,5</td><td>1,2</td><td>1,0</td><td>1,0</td><td>0,9</td></tr>
+                    <tr><td><strong>Punto de fusión (°C)</strong></td><td>1.277</td><td>565</td><td>838</td><td>768</td><td>714</td></tr>
+                    <tr><td><strong>Punto de ebullición (°C)</strong></td><td>2.770</td><td>1.107</td><td>1.440</td><td>1.380</td><td>1.640</td></tr>
+                    <tr><td><strong>Densidad en el P.f. (g/mL)</strong></td><td>1,85</td><td>1,74</td><td>1,55</td><td>2,60</td><td>3,50</td></tr>
+                    <tr><td><strong>Potencial de reducción (E°, V)</strong></td><td>−1,85</td><td>−2,30</td><td>−2,87</td><td>−2,89</td><td>−2,90</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 12.6. Propiedades de los elementos alcalinotérreos.</p>
+        </div>
+    </section>
+
+    <!-- 12.9 FUENTES Y APLICACIONES ALCALINOTERREOS -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">12.9. Fuentes, Obtención y Aplicaciones de los Metales Alcalinotérreos</h2>
+
+        <h3>12.9.1. Magnesio: Metalurgia del Magnesio</h3>
+        <p>6º elemento en abundancia en la corteza (~2,1%). Minerales: carnalita, magnesita (MgCO<sub>3</sub>), dolomita (MgCO<sub>3</sub>·CaCO<sub>3</sub>) y epsomita (MgSO<sub>4</sub>·7H<sub>2</sub>O). La fuente principal son las <strong>salmueras del agua de mar</strong> (~0,13% de Mg<sup>2+</sup>).</p>
+
+        <div class="callout callout-info">
+            <div class="callout-title">⚙️ Etapas de la metalurgia del magnesio</div>
+            <p><strong>1. Concentración y preparación de la mena:</strong> se disuelve en HCl y se filtra el residuo insoluble; se precipita Mg(OH)<sub>2</sub> con lechada de cal (su producto de solubilidad, $1,5\cdot10^{-11}$, es más bajo que el de Ca(OH)<sub>2</sub>, $7,9\cdot10^{-6}$); se filtra, seca y neutraliza con HCl concentrado, obteniendo MgCl<sub>2</sub> sólido tras evaporar. Si se parte del agua de mar, se precipita directamente el hidróxido:</p>
+            <div class="math-box">
+                Ca(OH)<sub>2(ac)</sub> + Mg<sup>2+</sup><sub>(ac)</sub> → Mg(OH)<sub>2(s)</sub> + Ca<sup>2+</sup><sub>(ac)</sub><br>
+                Mg(OH)<sub>2(s)</sub> + 2HCl<sub>(con)</sub> → Mg<sup>2+</sup> + 2Cl<sup>−</sup><sub>(ac)</sub> + 2H<sub>2</sub>O
+            </div>
+            <p><strong>2. Reducción de la sal a metal:</strong> el MgCl<sub>2</sub> seco y fundido se electroliza en cuba de acero inoxidable (cátodo) con ánodo de grafito; se añade NaCl para aumentar la conductividad y bajar el punto de fusión. La electrólisis se realiza en atmósfera inerte para evitar la oxidación del magnesio:</p>
+            <div class="math-box">
+                <strong>Cátodo (−):</strong> Mg<sup>2+</sup> + 2e<sup>−</sup> → Mg<sub>(l)</sub><br>
+                <strong>Ánodo (+):</strong> 2Cl<sup>−</sup> − 2e<sup>−</sup> → Cl<sub>2(g)</sub><br>
+                <strong>Global:</strong> MgCl<sub>2(l)</sub> → Mg<sub>(l)</sub> + Cl<sub>2(g)</sub>
+            </div>
+            <p>El magnesio, menos denso que el baño, se retira periódicamente por la parte superior de la cuba.</p>
+        </div>
+
+        <p>Alternativas: reducción térmica del MgO con coque a <strong>2.000 °C</strong> (el Mg se desprende como vapor, que debe enfriarse rápido); o reducción con silicio (Mg más puro, temperatura menor, 1.200 °C, a partir de la mezcla de óxidos de la dolomita calcinada, con el silicato cálcico como escoria):</p>
+        <div class="math-box">
+            MgO<sub>(s)</sub> + C<sub>(s)</sub> <span class="frac"><span class="top">2.000 °C</span><span class="bottom">→</span></span> Mg<sub>(g)</sub> + CO<sub>(g)</sub><br>
+            MgO·CaO<sub>(s)</sub> + Si<sub>(s)</sub> → Mg<sub>(g)</sub> + CaSiO<sub>2(s)</sub>
+        </div>
+        <p>El magnesio arde en el aire con llama muy brillante (focos flash fotográficos, bengalas, bombas incendiarias, fuegos pirotécnicos). Aplicaciones principales: aleaciones ligeras con aluminio —<strong>metal Dow</strong> (Mg+Al con Mn y Zn), aviación, automóviles, ferrocarril—; y electrodo de sacrificio para proteger de la corrosión al hierro y los aceros. Es además elemento esencial para la vida (procesos enzimáticos, pigmento de la clorofila, fotosíntesis).</p>
+
+        <h3>12.9.2. Calcio</h3>
+        <p>3,4% de la corteza terrestre combinado. Minerales: caliza, calcita y mármol (variedades de CaCO<sub>3</sub>), dolomita, yeso (CaSO<sub>4</sub>·2H<sub>2</sub>O), fluorita (CaF<sub>2</sub>) y fosforita (Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>); también en numerosos silicatos. El ion Ca<sup>2+</sup> es el tercer catión en abundancia en el agua de mar (tras Na y Mg).</p>
+        <p>El calcio metal se obtiene por reducción electrolítica del CaCl<sub>2</sub> fundido, de forma análoga al magnesio. Sus aplicaciones son reducidas: aleaciones con Al, Cu y Pb (el Pb-Ca, más duro, para recubrimiento de cables y placas de acumuladores); agente reductor en procesos metalúrgicos; desoxidante en la purificación de Cu, Pb, Ni y Al; agente desulfurante en el refino de combustibles.</p>
+    </section>
+
+    <!-- 12.10 COMPUESTOS MG Y CA -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">12.10. Compuestos de Magnesio y de Calcio de Interés Industrial</h2>
+
+        <h3>Óxidos de Magnesio y de Calcio</h3>
+        <p>El óxido de magnesio o <strong>magnesia</strong> se obtiene por calcinación de la magnesita:</p>
+        <div class="math-box">MgCO<sub>3(s)</sub> ⇄ MgO<sub>(s)</sub> + CO<sub>2(g)</sub></div>
+        <p>Si la calcinación es inferior a 900 °C, el producto fragua con agua; si supera los 1.700 °C, no fragua pero presenta excelentes propiedades refractarias (ladrillos refractarios básicos).</p>
+        <p>El óxido de calcio o <strong>cal viva</strong> (CaO), uno de los productos químicos más antiguos, se obtiene por calcinación de la caliza en una reacción endotérmica; conviene no superar los 700 °C, para evitar la desactivación (<em>cal muerta</em>):</p>
+        <div class="math-box">CaCO<sub>3(s)</sub> ⇄ CaO<sub>(s)</sub> + CO<sub>2(g)</sub> &nbsp; ΔH° = +176,8 kJ/mol</div>
+        <p>Se emplea en la fabricación de cementos, vidrios y materiales cerámicos, como fundente metalúrgico, para eliminar impurezas ácidas en la fabricación de aceros y el SO<sub>2</sub> de la combustión de combustibles fósiles, y en agricultura para corregir suelos ácidos. En Química, como agente de neutralización, desecante y materia prima del <strong>carburo cálcico (CaC<sub>2</sub>)</strong> (horno de arco eléctrico, &gt;2.000 °C), cuya hidrólisis produce acetileno:</p>
+        <div class="math-box">
+            CaO<sub>(s)</sub> + 3C<sub>(s)</sub> <span class="frac"><span class="top">arco eléctrico</span><span class="bottom">→</span></span> CaC<sub>2(s)</sub> + CO<sub>(g)</sub><br>
+            CaC<sub>2(s)</sub> + 2H<sub>2</sub>O<sub>(l)</sub> → C<sub>2</sub>H<sub>2(g)</sub> + Ca(OH)<sub>2(s)</sub>
+        </div>
+        <p>El carburo cálcico con nitrógeno (900-1.000 °C, con fluoruro cálcico) da <strong>cianamida cálcica</strong> (CaCN<sub>2</sub>), usada como abono:</p>
+        <div class="math-box">CaC<sub>2(s)</sub> + N<sub>2(g)</sub> <span class="frac"><span class="top">900-1.000 °C</span><span class="bottom">→</span></span> CaCN<sub>2(s)</sub> + C<sub>(s)</sub></div>
+
+        <h3>Hidróxidos de Magnesio y de Calcio</h3>
+        <p>El <strong>Mg(OH)<sub>2</sub></strong> se obtiene tratando agua de mar con una suspensión de cal. En suspensión, elimina el SO<sub>2</sub> de gases de combustión sulfurados (con ventaja sobre CaO/Ca(OH)<sub>2</sub>); la <em>magnesia alba</em> (Mg(OH)<sub>2</sub>+MgCO<sub>3</sub>) se usa en cosmética y pasta dentífrica; la <em>lechada de magnesio</em> como antiácido estomacal y, a dosis mayores, como laxante.</p>
+        <p>La <strong>cal apagada</strong> o Ca(OH)<sub>2</sub> se obtiene de la reacción ácido-base muy exotérmica entre CaO y agua (agua de cal):</p>
+        <div class="math-box">CaO<sub>(s)</sub> + H<sub>2</sub>O<sub>(l)</sub> → Ca(OH)<sub>2(susp)</sub> &nbsp; ΔH° = −60,7 kJ/mol</div>
+        <p>Poco soluble; su suspensión (<em>lechada de cal</em>) se usa como pigmento blanco para encalado (con acción antiséptica) y en morteros de construcción; en Química, como el agente de neutralización más económico.</p>
+
+        <h3>Carbonatos de Magnesio y de Calcio</h3>
+        <p>El <strong>MgCO<sub>3</sub></strong>, de la magnesita, se emplea sobre todo para sintetizar MgO. El <strong>CaCO<sub>3</sub></strong>, segundo compuesto más abundante en la naturaleza tras la sílice, tiene doble origen: mineral (calcita hexagonal, aragonito rómbico, calizas compactas —estalactitas, estalagmitas—) y orgánico (caparazones y arrecifes de coral). Es la materia prima de prácticamente todos los compuestos de calcio, en especial CaO y Ca(OH)<sub>2</sub>:</p>
+        <div class="math-box">
+            CaCO<sub>3(s)</sub> ⇄ CaO<sub>(s)</sub> + CO<sub>2(g)</sub> &nbsp;(descomposición térmica)<br>
+            CaCO<sub>3(s)</sub> + 2HCl<sub>(ac)</sub> → CaCl<sub>2(ac)</sub> + CO<sub>2(g)</sub> + H<sub>2</sub>O<sub>(l)</sub> &nbsp;(descomposición por ácidos)
+        </div>
+
+        <h3>Sulfatos de Magnesio y de Calcio</h3>
+        <p>El <strong>MgSO<sub>4</sub></strong> se extrae de la epsomita o se obtiene por reacción del carbonato/hidróxido de magnesio con ácido sulfúrico; relleno en papel, polímeros y tejidos de algodón. El <strong>CaSO<sub>4</sub></strong> es abundante como yeso (CaSO<sub>4</sub>·2H<sub>2</sub>O); su hemihidrato (CaSO<sub>4</sub>·½H<sub>2</sub>O) se usa como material de construcción y el anhidro en la industria del vidrio. Otros compuestos de calcio de interés: <strong>cloruro cálcico</strong> (CaCl<sub>2</sub>, subproducto del proceso Solvay) y <strong>bisulfito cálcico</strong> (Ca(SO<sub>3</sub>H)<sub>2</sub>), para la fabricación de pasta de papel (Método del Sulfito).</p>
+    </section>
+
+    <!-- 12.11 MATERIALES DE CONSTRUCCION -->
+    <section class="section-card">
+        <h2 class="section-title t-red">12.11. Materiales de Construcción: Cal, Cemento y Yeso</h2>
+
+        <h3>12.11.1. La Cal como Conglomerante</h3>
+        <p>La materia prima es la piedra caliza. La calcinación, en continuo, se realiza en hornos verticales o de lecho fluidizado: por la parte superior se introduce caliza + carbón (o combustible líquido) y por la inferior se retira la cal viva (CaO); el aire insuflado por la base mantiene la combustión y la temperatura (1.000-1.200 °C), favorece la retirada del CO<sub>2</sub> y evita la reacción inversa. Después, la cal viva se apaga con agua (Ca(OH)<sub>2</sub>), se seca en horno rotatorio, se muele y se envasa.</p>
+
+        <figure class="diagram-box">
+            <svg viewBox="0 0 280 220" width="100%" height="220" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="90,20 190,20 220,190 60,190" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+                <text x="140" y="15" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="700">Caliza + Carbón</text>
+                <line x1="140" y1="20" x2="140" y2="55" stroke="#0284c7" stroke-width="2" marker-end="url(#arrM)"/>
+                <text x="60" y="110" font-size="12" fill="#0284c7" font-weight="700">Aire →</text>
+                <line x1="65" y1="185" x2="100" y2="150" stroke="#0284c7" stroke-width="2"/>
+                <text x="225" y="100" font-size="12" fill="#dc2626" font-weight="700">← Gases</text>
+                <text x="140" y="210" text-anchor="middle" font-size="12" fill="#16a34a" font-weight="700">Cal (CaO)</text>
+                <defs><marker id="arrM" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0284c7"/></marker></defs>
+            </svg>
+            <figcaption>Figura 12.3. Horno vertical para la obtención de cal.</figcaption>
+        </figure>
+
+        <p>Como conglomerante: al mezclar la cal apagada con agua y exponerla al aire, primero <strong>fragua</strong> al perder agua y cristalizar el Ca(OH)<sub>2</sub>, y después se <strong>endurece</strong> por carbonatación con el CO<sub>2</sub> del aire, formando cristales de CaCO<sub>3</sub> entrelazados. El proceso es lento y la resistencia no muy elevada. Mezclada con arena (1 parte de cal : 3 de arena) se obtiene el <strong>mortero de cal</strong>: la arena ahorra conglomerante, facilita el secado y la carbonatación, y las impurezas arcillosas de la arena favorecen el fraguado actuando como un cemento.</p>
+
+        <h3>12.11.2. Cemento Portland</h3>
+        <p>El aglomerante hidráulico de mayor uso en construcción (su volumen de producción es un índice del grado de desarrollo de un país). Está formado por silicatos y aluminatos de calcio, con óxido férrico en menor proporción. Se obtiene calcinando a <strong>1.500 °C</strong> una mezcla pulverizada de caliza y arcilla, dando el <strong>clínquer</strong>, que se muele añadiendo yeso (favorece el fraguado) para dar el cemento.</p>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">🔥 Reacciones en fase sólida durante la calcinación</div>
+            <ol>
+                <li>~900 °C: la arcilla se deshidrata, transformándose sus componentes en los óxidos correspondientes.</li>
+                <li>900-1.000 °C: la caliza se descompone totalmente en CO<sub>2</sub> y CaO.</li>
+                <li>De 1.000 a 1.500 °C, en este orden:
+                    <ul>
+                        <li><strong>a)</strong> Fe<sub>2</sub>O<sub>3</sub> + Al<sub>2</sub>O<sub>3</sub> + CaO (1:1:4) → <strong>aluminoferrito tetracálcico</strong> (Al<sub>2</sub>O<sub>3</sub>·Fe<sub>2</sub>O<sub>3</sub>·4CaO)</li>
+                        <li><strong>b)</strong> Si Al<sub>2</sub>O<sub>3</sub>/Fe<sub>2</sub>O<sub>3</sub> &gt; 1 (lo más frecuente): el Al<sub>2</sub>O<sub>3</sub> sobrante + CaO (1:3) → <strong>aluminato tricálcico</strong> (Al<sub>2</sub>O<sub>3</sub>·3CaO). Si es &lt; 1: el Fe<sub>2</sub>O<sub>3</sub> sobrante + 2CaO → <strong>ferrito dicálcico</strong> (Fe<sub>2</sub>O<sub>3</sub>·2CaO).</li>
+                        <li><strong>c)</strong> El SiO<sub>2</sub> + CaO → <strong>silicato dicálcico</strong> (SiO<sub>2</sub>·2CaO)</li>
+                        <li><strong>d)</strong> El CaO restante + silicato dicálcico → <strong>silicato tricálcico</strong> (SiO<sub>2</sub>·3CaO); si sobra CaO, queda como cal libre.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <p>Constituyentes del cemento (nomenclatura convencional): <strong>Silicato tricálcico (S3C)</strong>, <strong>Silicato dicálcico (S2C)</strong>, <strong>Aluminoferrito tetracálcico (AF4C)</strong>, <strong>Aluminato tricálcico (A3C)</strong> y <strong>Ferrito dicálcico (F2C)</strong>. Composición típica de un clínquer con Al<sub>2</sub>O<sub>3</sub>/Fe<sub>2</sub>O<sub>3</sub> &gt; 1: S3C (50-70%), S2C (15-30%), A3C (5-10%) y AF4C (5-15%).</p>
+
+        <figure class="diagram-box">
+            <div class="flow-steps">
+                <div class="flow-step">Caliza + Arcilla</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Dosificación</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Molino crudo</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-red); color:var(--accent-red);">Horno Rotatorio</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-amber); color:var(--accent-amber);">Clínquer</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Molino + Yeso</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-green); color:var(--accent-green);">Cemento</div>
+            </div>
+            <figcaption>Figura 12.4. Esquema de fabricación del cemento.</figcaption>
+        </figure>
+
+        <div class="callout callout-info">
+            <div class="callout-title">🌀 Componentes del horno rotatorio</div>
+            <p>1. Entrada de crudo · 2. Ciclón separador de polvo · 3. Salida de gases · 4. Salida de polvo · 5. Horno rotatorio (temperatura creciente) · 6. Salida del clínquer · 7. Quemador · 8. Entrada de combustible · 9. Entrada de aire.</p>
+            <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);">Figura 12.5. Esquema de un horno rotatorio para la fabricación de cemento.</p>
+        </div>
+
+        <h3>Propiedades de los Cementos</h3>
+        <p>La propiedad principal es la <strong>resistencia mecánica</strong> a presión, tracción o flexión; también importan la velocidad de reacción con agua, el calor de hidratación y la resistencia a agentes químicos. El componente que confiere mayor resistencia mecánica es el <strong>S3C</strong>, seguido del <strong>S2C</strong>; el Fe<sub>2</sub>O<sub>3</sub> y el Al<sub>2</sub>O<sub>3</sub> forman a temperaturas más bajas (&lt;1.300 °C) aluminoferritos y aluminatos líquidos que actúan de fundentes, favoreciendo la formación de S3C y S2C.</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Propiedad</th><th>S3C</th><th>S2C</th><th>AF4C</th><th>A3C</th><th>F2C</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Velocidad de hidratación</strong></td><td>grande</td><td>pequeña</td><td>diferida</td><td>inmediata</td><td>inmediata</td></tr>
+                    <tr><td><strong>Calor de hidratación</strong></td><td>grande</td><td>pequeño</td><td>grande</td><td>grande</td><td>pequeño</td></tr>
+                    <tr><td><strong>Resistencia mecánica</strong></td><td>grande</td><td>grande</td><td>pequeño</td><td>escasa</td><td>escasa</td></tr>
+                    <tr><td><strong>Resistencia química</strong></td><td>aceptable</td><td>buena</td><td>escasa</td><td>muy mala</td><td>buena</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 12.7. Influencia de los componentes del cemento sobre sus propiedades.</p>
+        </div>
+
+        <h3>Fraguado y Endurecimiento</h3>
+        <p>El fraguado, proceso químico complejo, comienza con reacciones de hidratación muy exotérmicas seguidas de la cristalización de los hidratos: la mezcla pasa de masa plástica a masa rígida (aún no resistente). Después, la carbonatación del Ca(OH)<sub>2</sub> inicia una larga etapa de <strong>endurecimiento</strong> que puede durar meses o años. La relación agua/cemento en peso debe oscilar entre <strong>1/0,3 y 1/0,6</strong>.</p>
+        <p>El <strong>A3C</strong> presenta la mayor velocidad de fraguado y energía de hidratación (ΔH° = −861 J/g); el <strong>S2C</strong>, los valores más bajos (ΔH° = −255 J/g); el <strong>S3C</strong> presenta una situación intermedia (ΔH° = −495 J/g).</p>
+        <div class="callout callout-danger">
+            <div class="callout-title">⚠️ Efectos negativos: exceso de Al₂O₃, CaO y MgO</div>
+            <p>Un exceso de <strong>Al<sub>2</sub>O<sub>3</sub></strong> forma más A3C, que fragua rápido con un hidrato de baja resistencia química, facilitando la degradación de las estructuras (se corrige añadiendo yeso). Un exceso de <strong>CaO</strong>, y peor aún de <strong>MgO</strong>, se hidratan muy lentamente produciendo expansiones y grietas; el contenido en MgO de las materias primas no debe superar nunca el <strong>5%</strong>.</p>
+        </div>
+        <p>La composición se adapta a la aplicación: cementos para presas hidráulicas, ricos en <strong>S2C</strong> (cementos fríos, fraguado lento pero resistencia final muy elevada); cementos para autopistas, ricos en <strong>S3C</strong> (cementos calientes, desarrollo rápido de resistencia). La finura de grano y la porosidad también influyen: cuanto menores, mayor y más rápida la resistencia mecánica; para cementos especiales de alta resistencia a la tensión se emplea humo de sílice.</p>
+        <p>Una alternativa es el <strong>cemento fundido</strong>: caliza y bauxitas ferruginosas fundidas en horno eléctrico a 1.600 °C, sangradas, enfriadas y molidas. Más caro, pero de fraguado y endurecimiento rápidos (idóneo para bajas temperaturas) y, al no tener CaO libre, excelente resistencia a agentes químicos y al choque térmico: se emplea en hornos refractarios.</p>
+
+        <h3>12.11.3. El Yeso</h3>
+        <p>Sulfato cálcico dihidratado (CaSO<sub>4</sub>·2H<sub>2</sub>O), cristalizado en el mineral <strong>selenita</strong> (monoclínico), amorfo en el <strong>alabastro</strong>, o como <strong>anhidrita</strong> (sulfato cálcico anhidro); también se obtienen grandes excedentes en la fabricación de abonos fosfatados y en la desulfuración de centrales térmicas. Para su empleo se deshidrata térmicamente:</p>
+        <div class="math-box">CaSO<sub>4</sub>·2H<sub>2</sub>O<sub>(s)</sub> <span class="frac"><span class="top">107-170 °C</span><span class="bottom">→</span></span> CaSO<sub>4</sub>·<span class="frac"><span class="top">1</span><span class="bottom">2</span></span>H<sub>2</sub>O<sub>(s)</sub> + <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>H<sub>2</sub>O<sub>(g)</sub></div>
+        <p>El hemihidrato fragua y endurece por hidratación, regenerando el dihidrato: al amasarlo con agua se hidrata (mayor solubilidad del hemihidrato) precipitando el dihidrato como masa plástica, que después forma agujas entrecruzadas que endurecen la masa. Se añaden retardadores de fraguado: fosfatos de metales alcalinos, bórax o sustancias macromoleculares orgánicas (queratina hidrolizada). La fabricación se realiza en hornos similares a los de la cal, siendo el reto conseguir uniformidad térmica en toda la masa.</p>
+    </section>
+
+    <!-- 12.12 GRUPO IIIA -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">12.12. Características de los Metales del Grupo III A</h2>
+        <p>Las propiedades generales del grupo III A se estudiaron con los elementos semimetálicos. Salvo el <strong>boro</strong> (semimetal), el resto —aluminio, galio, indio y talio— presenta marcado carácter metálico. El único con importancia industrial relevante es el <span class="hl-purple">aluminio</span>.</p>
+    </section>
+
+    <!-- 12.13 ALUMINIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">12.13. Aluminio: Fuentes y Métodos de Obtención</h2>
+        <p>El aluminio ocupa el <strong>tercer lugar</strong> en abundancia de todos los elementos en la naturaleza (~8% en peso), siendo el <strong>metal más abundante</strong>. Muy reactivo, no se encuentra libre; minerales principales: <strong>bauxita</strong> (Al<sub>2</sub>O<sub>3</sub>·2H<sub>2</sub>O) y <strong>corindón</strong> (Al<sub>2</sub>O<sub>3</sub>); también forma parte de silicatos y aluminosilicatos (berilo, ortoclasa, criolita, caolín).</p>
+
+        <h3>12.13.1. Metalurgia del Aluminio</h3>
+        <p>A pesar de su abundancia, el aluminio fue un elemento raro hasta finales del siglo XVIII, por la dificultad de su obtención (reducción del cloruro de aluminio con sodio metálico, muy cara). En <strong>1885, Hall</strong> propuso la electrólisis de la bauxita fundida, dando lugar a la metalurgia moderna del aluminio, que pasó a ser el segundo metal más utilizado tras el hierro.</p>
+
+        <div class="callout callout-teal">
+            <div class="callout-title">🏭 Etapas del proceso metalúrgico (Método de Hall)</div>
+            <p><strong>1.º Purificación de la bauxita (proceso Bayer):</strong> digestión con NaOH concentrado; la alúmina y la sílice se solubilizan como aluminatos y silicatos, mientras que las impurezas de hierro y titanio quedan como óxidos insolubles, separados por filtración:</p>
+            <div class="math-box">
+                Al<sub>2</sub>O<sub>3(s)</sub> + 2OH<sup>−</sup><sub>(ac)</sub> → 2AlO<sub>2</sub><sup>−</sup><sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub><br>
+                SiO<sub>2(s)</sub> + 2OH<sup>−</sup><sub>(ac)</sub> → SiO<sub>3</sub><sup>2−</sup><sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub><br>
+                Fe<sub>2</sub>O<sub>3(s)</sub> + 3H<sub>2</sub>O<sub>(l)</sub> → 2Fe(OH)<sub>3(s)</sub> &nbsp;;&nbsp; TiO<sub>2(s)</sub> + 2H<sub>2</sub>O<sub>(l)</sub> → Ti(OH)<sub>4(s)</sub>
+            </div>
+            <p><strong>2.º Precipitación de la alúmina:</strong> se acidula burbujeando CO<sub>2</sub>, precipitando Al(OH)<sub>3</sub> (el silicato sódico queda en disolución):</p>
+            <div class="math-box">2AlO<sub>2</sub><sup>−</sup><sub>(ac)</sub> + CO<sub>2(g)</sub> + 3H<sub>2</sub>O<sub>(l)</sub> → 2Al(OH)<sub>3(s)</sub> + CO<sub>3</sub><sup>2−</sup><sub>(ac)</sub></div>
+            <p><strong>3.º Deshidratación:</strong> el Al(OH)<sub>3</sub> se calienta a 1.000 °C en horno rotatorio, obteniendo alúmina seca:</p>
+            <div class="math-box">2Al(OH)<sub>3(s)</sub> <span class="frac"><span class="top">calor</span><span class="bottom">→</span></span> Al<sub>2</sub>O<sub>3(s)</sub> + 3H<sub>2</sub>O<sub>(g)</sub></div>
+            <p><strong>4.º Electrólisis del óxido:</strong> cuba de hierro con recubrimiento refractario exterior y grafito interior (cátodo); ánodos también de grafito. Se añade <strong>criolita</strong> (Na<sub>3</sub>AlF<sub>6</sub>) como fundente, rebajando el punto de fusión del baño de los 2.045 °C de la alúmina a ~1.000 °C —el avance clave que hizo viable la producción industrial—. Con un voltaje de ~4,5 V y densidad de corriente de ~1 A/cm², el aluminio líquido (P.f. 660 °C) se deposita en el fondo:</p>
+            <div class="math-box">
+                <strong>Cátodo (−):</strong> 2Al<sup>3+</sup><sub>(l)</sub> + 6e<sup>−</sup> → 2Al<sub>(l)</sub><br>
+                <strong>Ánodo (+):</strong> 3O<sup>2−</sup><sub>(l)</sub> − 6e<sup>−</sup> → <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>O<sub>2(g)</sub><br>
+                <strong>Global:</strong> Al<sub>2</sub>O<sub>3(l)</sub> → 2Al<sub>(l)</sub> + <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>O<sub>2(g)</sub>
+            </div>
+            <figure class="diagram-box">
+                <svg viewBox="0 0 300 190" width="100%" height="190" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="30" y="30" width="240" height="120" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+                    <rect x="30" y="30" width="240" height="120" fill="none" stroke="#64748b" stroke-width="8" stroke-dasharray="1,0" opacity="0.15"/>
+                    <text x="150" y="20" text-anchor="middle" font-size="11" fill="#0f172a" font-weight="700">Ánodos de carbón (+)</text>
+                    <line x1="70" y1="35" x2="70" y2="90" stroke="#0f172a" stroke-width="6"/>
+                    <line x1="150" y1="35" x2="150" y2="90" stroke="#0f172a" stroke-width="6"/>
+                    <line x1="230" y1="35" x2="230" y2="90" stroke="#0f172a" stroke-width="6"/>
+                    <rect x="40" y="95" width="220" height="25" fill="#bae6fd" opacity="0.5"/>
+                    <text x="150" y="112" text-anchor="middle" font-size="10" fill="#0369a1" font-weight="700">Baño (Al₂O₃ / Na₃AlF₆)</text>
+                    <rect x="40" y="120" width="220" height="20" fill="#94a3b8"/>
+                    <text x="150" y="134" text-anchor="middle" font-size="10" fill="white" font-weight="700">Aluminio fundido — Cátodo (−)</text>
+                    <text x="150" y="165" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="700">↑ O₂ &nbsp;&nbsp; Sangrado de aluminio →</text>
+                </svg>
+                <figcaption>Figura 12.6. Esquema de una célula electrolítica para la producción de aluminio (método de Hall).</figcaption>
+            </figure>
+            <p>El O<sub>2</sub> desprendido oxida el ánodo de grafito a CO y CO<sub>2</sub>, que se consume y debe reemplazarse con frecuencia; esto, junto con la energía térmica del baño, son los principales costes del proceso. Pureza del aluminio obtenido: <strong>99–99,9%</strong>.</p>
+            <p>Existe un método alternativo, la electrólisis del <strong>AlCl<sub>3</sub></strong> fundido (~650 °C, menor consumo de electrodos), aunque requiere obtener antes el AlCl<sub>3</sub> a partir de la bauxita mediante reducción con carbono y cloro a alta temperatura:</p>
+            <div class="math-box">
+                Al<sub>2</sub>O<sub>3</sub> + 3C<sub>(s)</sub> + 3Cl<sub>2(g)</sub> <span class="frac"><span class="top">900 °C</span><span class="bottom">→</span></span> 2AlCl<sub>3(l)</sub> + 3CO<sub>(g)</sub><br>
+                2AlCl<sub>3(l)</sub> <span class="frac"><span class="top">Electrólisis</span><span class="bottom">→</span></span> 2Al<sub>(l)</sub> + 3Cl<sub>2(g)</sub>
+            </div>
+            <p><strong>5.º Refino del aluminio:</strong> refino electrolítico con tres capas: la inferior de aluminio fundido impuro (ánodo), la intermedia de criolita y fluoruros de aluminio y bario fundidos (electrolito), y la superior de aluminio purificado (cátodo). El aluminio del ánodo se oxida a Al<sup>3+</sup>, migra a través del electrolito y se reduce en el cátodo, mientras las impurezas se acumulan en el fondo.</p>
+        </div>
+
+        <h3>12.13.2. Propiedades y Aplicaciones Industriales</h3>
+        <p>Uno de los materiales más versátiles: baja densidad (<strong>2,7 g/cm³</strong>, solo superado a la baja por el magnesio entre los metales de mayor uso); alta resistencia a la tensión, muy dúctil y maleable. Conductividad eléctrica ~65% de la del cobre: se usa ampliamente en cables de alto voltaje (compensando su menor conductividad con menor peso y precio; con alma de acero para mayor resistencia).</p>
+        <div class="three-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Material estructural:</strong> aleado con Fe, Mg, Zn, Si y Mn (dureza y propiedades mecánicas). El <strong>duraluminio</strong> (93-97% Al, 2-5% Cu, 0-2% Zn) se usa en aeronaves, barcos, automóviles y cerramientos de construcción.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Conductividad térmica y reflexión:</strong> menaje de cocina; pinturas (purpurinas); tanques de almacenamiento (no se sobrecalientan al sol) y bases de telescopios.
+            </div>
+            <div class="grid-box-3">
+                <strong style="color:var(--accent-purple);">Láminas finas:</strong> envoltorio de alimentos, sustituyendo con ventaja al papel de estaño, mucho más caro.
+            </div>
+        </div>
+        <p>El aluminio reacciona rápido con el oxígeno formando un óxido protector fuertemente adherido (aparente inercia, como un metal noble). La reacción es exotérmica y puede ser explosiva si el metal está en polvo finamente dividido (propelente en vehículos espaciales):</p>
+        <div class="math-box">2Al<sub>(s)</sub> + <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>O<sub>2(g)</sub> → Al<sub>2</sub>O<sub>3(s)</sub> &nbsp; ΔH° = −1.670 kJ/mol</div>
+        <p>Se emplea como agente reductor en la metalurgia de otros metales (<strong>aluminotermia</strong>, p. ej. para obtener cromo), destacando la <strong>reacción de las termitas</strong> (obtención de hierro, antiguamente usada para soldar raíles de ferrocarril; requiere un iniciador, típicamente una cinta de magnesio):</p>
+        <div class="math-box">
+            Cr<sub>2</sub>O<sub>3(s)</sub> + 2Al<sub>(s)</sub> → Al<sub>2</sub>O<sub>3(s)</sub> + 2Cr<sub>(s)</sub><br>
+            Fe<sub>2</sub>O<sub>3(s)</sub> + 2Al<sub>(s)</sub> → Al<sub>2</sub>O<sub>3(s)</sub> + 2Fe<sub>(s)</sub> &nbsp; ΔH° = −852 kJ
+        </div>
+        <p>Dado el gran volumen de residuos de aluminio, su <strong>reciclado</strong> resulta imprescindible por las ventajas económicas frente a la obtención a partir de materia prima.</p>
+    </section>
+
+    <!-- 12.14 COMPUESTOS ALUMINIO -->
+    <section class="section-card">
+        <h2 class="section-title t-green">12.14. Compuestos de Aluminio de Interés Industrial</h2>
+
+        <h3>Cloruro de Aluminio</h3>
+        <p>Compuesto de marcado carácter covalente, volátil, con estructura de dímero (<strong>Al<sub>2</sub>Cl<sub>6</sub></strong>), en el que los monómeros se unen mediante dos enlaces covalentes coordinados. Se emplea como catalizador «ácido» en reacciones orgánicas de alquilación.</p>
+
+        <h3>Óxido e Hidróxido de Aluminio</h3>
+        <p>El <strong>Al<sub>2</sub>O<sub>3</sub></strong> se encuentra en la naturaleza como corindón (compuesto cristalino muy duro) o se obtiene por deshidratación del hidróxido (bauxita); se usa como abrasivo y en revestimientos de hornos refractarios «ácidos». Calentado a alta temperatura da <strong>alúmina activada</strong>, de superficie específica muy elevada, empleada como catalizador ácido y soporte de catalizadores en Síntesis Orgánica.</p>
+        <p>El <strong>Al(OH)<sub>3</sub></strong> precipita al tratar una sal de Al<sup>3+</sup> con una base débil (amoniaco); es <strong>anfótero</strong> y se disuelve en base fuerte dando el anión aluminato:</p>
+        <div class="math-box">
+            Al<sup>3+</sup><sub>(ac)</sub> + 3NH<sub>3</sub>·H<sub>2</sub>O<sub>(ac)</sub> → Al(OH)<sub>3(s)</sub> + 3NH<sub>4</sub><sup>+</sup><sub>(ac)</sub><br>
+            Al(OH)<sub>3(s)</sub> + OH<sup>−</sup><sub>(ac)</sub> → AlO<sub>2</sub><sup>−</sup><sub>(ac)</sub> + 2H<sub>2</sub>O<sub>(l)</sub>
+        </div>
+        <p>Su gran poder adsorbente lo hace útil como <strong>mordiente</strong> en el teñido textil (fija el colorante a la fibra) y para precipitar sólidos en suspensión en la potabilización de aguas.</p>
+
+        <h3>Otras Sales de Aluminio</h3>
+        <p>La más importante es el <strong>sulfato de aluminio</strong> (Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>), obtenido industrialmente por reacción del ácido sulfúrico con la bauxita:</p>
+        <div class="math-box">Al<sub>2</sub>O<sub>3</sub>·3H<sub>2</sub>O<sub>(s)</sub> + 3H<sub>2</sub>SO<sub>4(ac)</sub> → Al<sub>2</sub>(SO<sub>4</sub>)<sub>3(ac)</sub> + 6H<sub>2</sub>O<sub>(l)</sub></div>
+        <p>Se cristaliza con un número variable de moléculas de agua (9 a 18) y es un agente coagulante en el tratamiento de aguas residuales. Al evaporar disoluciones con sulfato de aluminio y otros sulfatos alcalinos precipitan los <strong>alumbres</strong>, sales dobles de fórmula general M<sub>2</sub>Al<sub>2</sub>(SO<sub>4</sub>)<sub>4</sub>·24H<sub>2</sub>O (M = Na, K o NH<sub>4</sub>; el Al puede sustituirse por Cr), con colores característicos según su composición.</p>
+    </section>
+
+    <!-- 12.15 GRUPO IVA -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">12.15. Características de los Metales del Grupo IV A</h2>
+        <p>Las propiedades generales del grupo IV A se vieron al estudiar el carbono (no metal). De los restantes, el germanio y el silicio se comportan como semimetales, mientras que el <strong>estaño</strong> y el <strong>plomo</strong> presentan carácter metálico. Junto con el cobre y los metales nobles, fueron de los primeros metales utilizados por el hombre y siguen teniendo numerosas aplicaciones, pese a su marcada toxicidad.</p>
+    </section>
+
+    <!-- 12.16 PLOMO -->
+    <section class="section-card">
+        <h2 class="section-title t-red">12.16. Plomo: Síntesis, Propiedades y Aplicaciones</h2>
+        <p>La mena principal es la <strong>galena</strong> (PbS), a menudo junto a minerales de plata y oro.</p>
+        <div class="callout callout-danger">
+            <div class="callout-title">⚙️ Metalurgia del plomo</div>
+            <p><strong>1.º Concentración:</strong> flotación a boca de mina. <strong>2.º Tostación</strong> de la galena en alto horno: oxidación parcial de PbS a óxido y SO<sub>2</sub>, y en menor proporción a sulfato:</p>
+            <div class="math-box">
+                2PbS<sub>(s)</sub> + 3O<sub>2(g)</sub> → 2PbO<sub>(s)</sub> + 2SO<sub>2(g)</sub><br>
+                PbS<sub>(s)</sub> + 2O<sub>2(g)</sub> → PbSO<sub>4(s)</sub>
+            </div>
+            <p><strong>3.º Reducción a metal:</strong> el producto de tostación se mezcla con coque, chatarra de hierro y fundentes, reduciéndose en fase líquida a alta temperatura:</p>
+            <div class="math-box">
+                PbO<sub>(s)</sub> + C<sub>(s)</sub> → Pb<sub>(l)</sub> + CO<sub>(g)</sub> &nbsp;;&nbsp; PbO<sub>(s)</sub> + CO<sub>(g)</sub> → Pb<sub>(l)</sub> + CO<sub>2(g)</sub><br>
+                PbS<sub>(s)</sub> + Fe<sub>(l)</sub> → Pb<sub>(l)</sub> + FeS<sub>(s)</sub> &nbsp;;&nbsp; PbS<sub>(s)</sub> + PbSO<sub>4(s)</sub> → 2Pb<sub>(l)</sub> + 2SO<sub>2(g)</sub>
+            </div>
+            <p>El sulfuro de hierro y otras impurezas forman una escoria que flota sobre el plomo fundido; la plata y el oro disueltos se recuperan por extracción con cinc fundido. <strong>4.º Refinado</strong> por electrólisis.</p>
+        </div>
+        <p>Aplicación principal: <strong>acumuladores de plomo/ácido</strong>. También en el recubrimiento interno de tanques para la fabricación de ácido sulfúrico (método de las cámaras de plomo); aleaciones (bronces, latones, metal de imprenta —76-85% Pb, 12-18% Sb, 3-6% Sn—, metal de cojinetes —85% Pb, 15% Sb—); pantallas protectoras frente a radiaciones de alta energía. Sus aplicaciones en tuberías de agua y derivados alquilados antidetonantes de gasolinas están en franco retroceso por su toxicidad.</p>
+    </section>
+
+    <!-- 12.17 COMPUESTOS PLOMO -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">12.17. Compuestos de Plomo de Interés Industrial</h2>
+        <h3>Óxidos y Oxisales del Plomo</h3>
+        <div class="three-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-amber);">Óxido plumboso o litargirio (PbO):</strong> color amarillo; esmaltes y vidrios de plomo.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-red);">Trióxido de plomo (Pb₂O₃):</strong> color naranja (mezcla de PbO y PbO₂); se obtiene por oxidación parcial del PbO con cloro alcalino.
+            </div>
+            <div class="grid-box-3">
+                <strong style="color:var(--accent-purple);">Dióxido de plomo (PbO₂):</strong> oxidante muy fuerte (E° = 1,8 V); se obtiene oxidando el ion plumbito (PbO₂²⁻) con hipoclorito sódico.
+            </div>
+        </div>
+        <div class="math-box">Na<sub>2</sub>PbO<sub>2(ac)</sub> + NaClO<sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub> → PbO<sub>2(s)</sub> + NaCl<sub>(ac)</sub> + 2NaOH<sub>(ac)</sub></div>
+        <p>El <strong>óxido plumboso-plúmbico o minio</strong> (Pb<sub>3</sub>O<sub>4</sub>) se forma calentando PbO en aire; se usa como pintura de base para proteger estructuras de acero y en la fabricación de vidrios:</p>
+        <div class="math-box">6PbO<sub>(s)</sub> + O<sub>2(g)</sub> → 2Pb<sub>3</sub>O<sub>4(s)</sub></div>
+
+        <h3>El Acumulador de Plomo</h3>
+        <p>Pila reversible que genera un potencial de <strong>2,01 V</strong>, con placas alternadas de plomo esponjoso y dióxido de plomo sumergidas en ácido sulfúrico (electrolito). Reacciones de descarga:</p>
+        <div class="math-box">
+            <strong>Ánodo (−, oxidación):</strong> Pb<sub>(s)</sub> + SO<sub>4</sub><sup>2−</sup><sub>(ac)</sub> − 2e<sup>−</sup> → PbSO<sub>4(s)</sub><br>
+            <strong>Cátodo (+, reducción):</strong> PbO<sub>2(s)</sub> + 4H<sup>+</sup> + SO<sub>4</sub><sup>2−</sup><sub>(ac)</sub> + 2e<sup>−</sup> → PbSO<sub>4(s)</sub> + 2H<sub>2</sub>O<sub>(l)</sub><br>
+            <strong>Global:</strong> Pb<sub>(s)</sub> + PbO<sub>2(s)</sub> + 2SO<sub>4</sub><sup>2−</sup><sub>(ac)</sub> + 4H<sup>+</sup><sub>(ac)</sub> → 2PbSO<sub>4(s)</sub> + 2H<sub>2</sub>O<sub>(l)</sub> &nbsp; E = 2,01 V
+        </div>
+        <p>En la <strong>carga</strong>, aplicando un potencial mayor de 2,01 V, se produce la reacción inversa. El estado de la batería se puede evaluar por la <strong>conductividad</strong> del electrolito (máxima cargada, mínima descargada) o por la <strong>densidad</strong> de la disolución, que disminuye al descargarse (baja la concentración de H<sub>2</sub>SO<sub>4</sub>).</p>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">🧪 Ejercicios de Autoevaluación Resueltos Paso a Paso</h2>
+
+        <!-- EX 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Fundamento de la Purificación por Zonas</div>
+            <p><strong>Enunciado:</strong> ¿Cuál es el fundamento de la purificación por zonas de un metal? Describa el proceso e indique una aplicación.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Este tipo de purificación se emplea cuando se quiere obtener un metal con un alto grado de pureza. El proceso se basa en la <strong>mayor solubilidad de las impurezas en el metal fundido que en el metal sólido</strong>. Al pasar lentamente una barra de metal impuro por una fuente de calor, que produce una estrecha franja de fusión, las impurezas se concentran en dicha zona; cuando la fuente se aleja, el metal solidifica reconstruyendo su estructura cristalina, mientras las impurezas se acumulan en el extremo final de la barra. El proceso se puede repetir cuantas veces sea necesario hasta obtener la pureza deseada. Aplicación: se emplea, por ejemplo, para purificar el <strong>cobalto</strong> (y, como se vio en el Tema 11, el silicio).</p>
+            </div>
+        </div>
+
+        <!-- EX 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: Estabilidad Relativa de CO/CO₂ y Reducción del Óxido de Cromo (III)</div>
+            <p><strong>Enunciado:</strong> Considerando las constantes termodinámicas siguientes (invariables con la temperatura), calcular: a) La temperatura por encima de la cual el CO es más estable que el CO₂. b) La temperatura mínima a la que el carbón reduce al óxido de cromo (III).</p>
+            <div class="table-responsive">
+                <table>
+                    <thead><tr><th>Compuesto</th><th>ΔH°<sub>f</sub> (kJ/mol)</th><th>S° (J/K·mol)</th></tr></thead>
+                    <tbody>
+                        <tr><td>C</td><td>0</td><td>5,7</td></tr>
+                        <tr><td>CO₂ (g)</td><td>−393,5</td><td>213,7</td></tr>
+                        <tr><td>CO (g)</td><td>−110,5</td><td>197,7</td></tr>
+                        <tr><td>Cr (s)</td><td>0</td><td>23,8</td></tr>
+                        <tr><td>Cr₂O₃ (s)</td><td>−1.139,7</td><td>81,2</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p><strong>a) Equilibrio C + CO₂ ⇄ 2CO</strong> (resta de las reacciones de formación de CO y CO₂):</p>
+                <p>$\Delta H^\circ = 2\cdot(-110,5) - (-393,5) = \mathbf{172,5 \text{ kJ/mol}}$</p>
+                <p>$\Delta S^\circ = [2\cdot197,7 - 5,7 - 213,7]\cdot10^{-3} = \mathbf{0,176 \text{ kJ/mol·K}}$</p>
+                <p>La temperatura buscada cumple $\Delta G^\circ = 0$:</p>
+                <p>$T = \frac{\Delta H^\circ}{\Delta S^\circ} = \frac{172,5}{0,176} = 980 \text{ K} \approx \mathbf{707\ ^\circ C}$</p>
+                <p>Por debajo de 707 °C el óxido más estable es el CO₂; por encima, lo es el CO.</p>
+                <p><strong>b) Reducción de la cromita:</strong> $\text{Cr}_2\text{O}_3{}_{(s)} + 3\text{C}_{(s)} \rightarrow 2\text{Cr}_{(s)} + 3\text{CO}_{(g)}$</p>
+                <p>$T = \frac{\Delta H^\circ}{\Delta S^\circ} = \frac{3\cdot(-110,5) - (-1.139,7)}{[2\cdot 23,8 + 3\cdot197,7 - 81,2 - 3\cdot5,7]\cdot10^{-3}} \approx \mathbf{1.491 \text{ K} \approx 1.218\ ^\circ C}$</p>
+                <p>Solo por encima de esta temperatura se cumple $\Delta G^\circ &lt; 0$ y es posible la reducción de la cromita a cromo con carbono.</p>
+            </div>
+        </div>
+
+        <!-- EX 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Metalurgia del Magnesio a partir de la Magnesita</div>
+            <p><strong>Enunciado:</strong> Describa brevemente el proceso metalúrgico para la obtención de magnesio metal a partir de la magnesita.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>El proceso consta de las siguientes etapas:</p>
+                <p><strong>a) Calcinación de la magnesita:</strong></p>
+                <div class="math-box">MgCO<sub>3(s)</sub> → MgO<sub>(s)</sub> + CO<sub>2(g)</sub></div>
+                <p><strong>b) Disolución del MgO en ácido clorhídrico:</strong></p>
+                <div class="math-box">MgO<sub>(s)</sub> + 2HCl<sub>(ac)</sub> → Mg<sup>2+</sup><sub>(ac)</sub> + 2Cl<sup>−</sup><sub>(ac)</sub> + H<sub>2</sub>O<sub>(l)</sub></div>
+                <p><strong>c)</strong> Evaporación del agua y secado de la sal (MgCl₂).</p>
+                <p><strong>d) Fusión y electrólisis</strong> de la sal fundida para obtener el metal:</p>
+                <div class="math-box">
+                    <strong>Cátodo (−):</strong> Mg<sup>2+</sup> + 2e<sup>−</sup> → Mg<sub>(l)</sub><br>
+                    <strong>Ánodo (+):</strong> 2Cl<sup>−</sup> − 2e<sup>−</sup> → Cl<sub>2(g)</sub><br>
+                    <strong>Global:</strong> MgCl<sub>2(l)</sub> → Mg<sub>(l)</sub> + Cl<sub>2(g)</sub>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4: Compuestos Formados en la Calcinación del Cemento</div>
+            <p><strong>Enunciado:</strong> La relación molar de una mezcla de óxidos empleada como materia prima en la fabricación de cemento es: CaO/SiO₂/Al₂O₃/Fe₂O₃ = 70/20/2,5/1. ¿Qué compuestos cabe esperar que se formen en el horno de calcinación?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p>Composición inicial (moles): CaO : SiO₂ : Al₂O₃ : Fe₂O₃ = 70 : 20 : 2,5 : 1.</p>
+                <p><strong>1.</strong> El Fe₂O₃ reacciona con Al₂O₃ y CaO en proporción 1:1:4, dando <strong>aluminoferrito tetracálcico</strong> (Al₂O₃·Fe₂O₃·4CaO). Se consumen 1 de Fe₂O₃, 1 de Al₂O₃ y 4 de CaO.</p>
+                <p>Quedan: CaO : SiO₂ : Al₂O₃ = 66 : 20 : 1,5.</p>
+                <p><strong>2.</strong> El Al₂O₃ sobrante (1,5) reacciona con CaO en proporción 1:3, dando <strong>aluminato tricálcico</strong> (Al₂O₃·3CaO). Se consumen 1,5 de Al₂O₃ y 4,5 de CaO.</p>
+                <p>Quedan: CaO : SiO₂ = 61,5 : 20.</p>
+                <p><strong>3.</strong> Como hay CaO suficiente, se combina con el SiO₂ en la proporción máxima 3:1, dando <strong>silicato tricálcico</strong> (SiO₂·3CaO), consumiendo 60 de CaO y quedando un exceso de <strong>1,5 moles de CaO libre</strong>.</p>
+                <p>La composición final del cemento será: <strong>AF4C</strong> (Al₂O₃·Fe₂O₃·4CaO) + <strong>A3C</strong> (Al₂O₃·3CaO) + <strong>S3C</strong> (SiO₂·3CaO) + <strong>CaO en exceso</strong>. Será un cemento con muy buena resistencia mecánica y una velocidad de fraguado razonablemente alta.</p>
+            </div>
+        </div>
+
+        <!-- EX 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5: Consumo de Carbón en la Producción de Cal Viva</div>
+            <p><strong>Enunciado:</strong> La cal viva se produce por calcinación de CaCO₃ a 1.000 °C, empleando carbón como combustible. Calcular los kg de carbón por tonelada de cal producida, con un rendimiento térmico del 80% y quemando el carbón a CO₂ en un 98% y a CO en el 2% restante.<br>
+            <em>Datos:</em> ΔH descomposición carbonato a 1.000 °C = +175,6 kJ/mol; ΔH combustión carbón a CO₂ = −395 kJ/mol; a CO = −110,4 kJ/mol. Masas atómicas C, O, Ca: 12,0; 16,0 y 40,0 g/mol.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p>Energía teórica necesaria para producir 1 tonelada de CaO ($M_{\text{CaO}}=56$ g/mol):</p>
+                <p>$Q_T = 175,6 \text{ kJ/mol} \cdot \frac{10^6 \text{ g}}{56 \text{ g/mol}} = 3,14\cdot 10^6 \text{ kJ/t de cal}$</p>
+                <p>Con un rendimiento del 80%, la energía real necesaria:</p>
+                <p>$Q_R = \frac{100}{80}\cdot 3,14\cdot 10^6 = 3,92\cdot 10^6 \text{ kJ/t de cal}$</p>
+                <p>Esta energía la aporta la combustión de $x$ gramos de carbón (98% a CO₂, 2% a CO):</p>
+                <p>$3,92\cdot 10^6 = 0,98\cdot\frac{x}{12}\cdot 395 + 0,02\cdot\frac{x}{12}\cdot 110,4$</p>
+                <p>$3,92\cdot 10^6 = 32,14\,x + 0,18\,x = 32,32\,x$</p>
+                <p>$x = 0,121\cdot 10^6 \text{ g} = 0,121 \text{ t de carbón/t de CaO} = \mathbf{121 \text{ kg/t}}$</p>
+            </div>
+        </div>
+
+        <!-- EX 6 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 6: Reacción de las Termitas</div>
+            <p><strong>Enunciado:</strong> Se mezclan óxido férrico y óxido de aluminio en polvo en proporción estequiométrica para la reacción de las termitas, iniciada con la llama de una cinta de magnesio. Se desprenden 106,25 kJ (energía de combustión del iniciador despreciable, sin pérdidas de calor). Se pide la composición centesimal de la mezcla inicial y la cantidad de hierro obtenido.<br>
+            <em>Datos:</em> ΔH de la reacción de las termitas por mol de aluminio = −425 kJ/mol. Masas atómicas O, Al, Fe: 16,0; 26,98 y 55,85 g/mol.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p>Reacción de las termitas (por mol de Al):</p>
+                <div class="math-box"><span class="frac"><span class="top">1</span><span class="bottom">2</span></span>Fe<sub>2</sub>O<sub>3(s)</sub> + Al<sub>(s)</sub> <span class="frac"><span class="top">Mg</span><span class="bottom">→</span></span> Fe<sub>(s)</sub> + <span class="frac"><span class="top">1</span><span class="bottom">2</span></span>Al<sub>2</sub>O<sub>3(s)</sub> &nbsp; ΔH = −425 kJ/mol</div>
+                <p>Moles de Al que reaccionan:</p>
+                <p>$n_{Al} = \frac{106,25}{425} = 0,25 \text{ mol}$</p>
+                <p>Por estequiometría, moles de Fe₂O₃ que reaccionan: $n_{\text{Fe}_2\text{O}_3} = 0,125 \text{ mol}$ &nbsp;($M_{\text{Fe}_2\text{O}_3}=159,7$ g/mol)</p>
+                <p><strong>Composición centesimal inicial:</strong></p>
+                <p>$\%\text{Fe}_2\text{O}_3 = \frac{0,125\cdot159,7}{0,125\cdot159,7 + 0,250\cdot26,98}\cdot100 = \frac{19,96}{26,70}\cdot100 = \mathbf{74,8\%}$</p>
+                <p>$\%\text{Al} = \frac{0,250\cdot26,98}{26,70}\cdot100 = \mathbf{25,16\%}$</p>
+                <p><strong>Cantidad de hierro producido:</strong></p>
+                <p>$m_{Fe} = 0,250 \text{ mol} \cdot 55,85 \text{ g/mol} = \mathbf{13,96 \text{ g de Fe}}$</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

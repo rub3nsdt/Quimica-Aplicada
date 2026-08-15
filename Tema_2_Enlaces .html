@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen Completo - Tema 2: Enlace Químico</title>
+    
+    <!-- Configuración y script de MathJax 3 -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    
+    
+    <style>
+        :root {
+            --primary-dark: #1e1b4b;
+            --primary-main: #312e81;
+            --primary-accent: #4338ca;
+            
+            --ionic-main: #0284c7;
+            --ionic-bg: #f0f9ff;
+            --ionic-border: #bae6fd;
+            --ionic-text: #0369a1;
+            
+            --covalent-main: #059669;
+            --covalent-bg: #ecfdf5;
+            --covalent-border: #a7f3d0;
+            --covalent-text: #047857;
+            
+            --metallic-main: #d97706;
+            --metallic-bg: #fffbeb;
+            --metallic-border: #fde68a;
+            --metallic-text: #b45309;
+            
+            --vsepr-main: #7c3aed;
+            --vsepr-bg: #f5f3ff;
+            --vsepr-border: #ddd6fe;
+            --vsepr-text: #6d28d9;
+            
+            --tev-main: #e11d48;
+            --tev-bg: #fff1f2;
+            --tev-border: #fecdd3;
+            --tev-text: #be123c;
+            
+            --tom-main: #0d9488;
+            --tom-bg: #f0fdfa;
+            --tom-border: #99f6e4;
+            --tom-text: #0f766e;
+            
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Banner de Cabecera */
+        .header-banner {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-accent));
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(30, 27, 75, 0.3);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-banner::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .header-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .header-subtitle {
+            font-size: 1.1rem;
+            color: #c7d2fe;
+            font-weight: 400;
+        }
+
+        .header-meta {
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge-meta {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Contenedores distribuidos mediante Flexbox */
+        .intro-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .intro-flex > .card {
+            flex: 1 1 450px;
+            margin-bottom: 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-objectives {
+            border-left: 5px solid var(--primary-accent);
+            background: #f5f3ff;
+        }
+
+        .card-summary {
+            border-left: 5px solid var(--ionic-main);
+            background: #f0f9ff;
+        }
+
+        ul.custom-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.custom-list li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        ul.custom-list li::before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            color: var(--primary-accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Secciones Principales */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 35px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--border-color);
+        }
+
+        .section-header h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+
+        .section-number {
+            background: var(--primary-dark);
+            color: white;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        /* Colores temáticos por tipo de enlace */
+        .topic-ionic .section-number { background: var(--ionic-main); }
+        .topic-ionic { border-color: var(--ionic-border); }
+        .topic-covalent .section-number { background: var(--covalent-main); }
+        .topic-covalent { border-color: var(--covalent-border); }
+        .topic-vsepr .section-number { background: var(--vsepr-main); }
+        .topic-tev .section-number { background: var(--tev-main); }
+        .topic-tom .section-number { background: var(--tom-main); }
+
+        /* Cajas de Destacados */
+        .highlight-box {
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+
+        .box-blue {
+            background-color: var(--ionic-bg);
+            border: 1px solid var(--ionic-border);
+            color: var(--ionic-text);
+        }
+
+        .box-green {
+            background-color: var(--covalent-bg);
+            border: 1px solid var(--covalent-border);
+            color: var(--covalent-text);
+        }
+
+        .box-amber {
+            background-color: var(--metallic-bg);
+            border: 1px solid var(--metallic-border);
+            color: var(--metallic-text);
+        }
+
+        .box-purple {
+            background-color: var(--vsepr-bg);
+            border: 1px solid var(--vsepr-border);
+            color: var(--vsepr-text);
+        }
+
+        .box-rose {
+            background-color: var(--tev-bg);
+            border: 1px solid var(--tev-border);
+            color: var(--tev-text);
+        }
+
+        .box-teal {
+            background-color: var(--tom-bg);
+            border: 1px solid var(--tom-border);
+            color: var(--tom-text);
+        }
+
+        /* Tablas */
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            text-align: left;
+            background: white;
+        }
+
+        th {
+            background: #f1f5f9;
+            color: var(--text-dark);
+            font-weight: 700;
+            padding: 12px 15px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* Fórmulas y Expresiones Matemáticas */
+        .formula-box {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1.05rem;
+            margin: 15px 0;
+            text-align: center;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            overflow-x: auto;
+        }
+
+        .formula-box span.highlight {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .formula-box span.yellow {
+            color: #fde047;
+            font-weight: bold;
+        }
+
+        /* Badges de Conceptos */
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-right: 5px;
+        }
+
+        .badge-ionic { background: #e0f2fe; color: #0284c7; }
+        .badge-covalent { background: #d1fae5; color: #059669; }
+        .badge-metallic { background: #fef3c7; color: #d97706; }
+
+        /* Contenedores de Tarjetas con Flexbox */
+        .card-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin: 20px 0;
+        }
+
+        .mini-card {
+            flex: 1 1 280px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 18px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.06);
+        }
+
+        .mini-card-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Pasos numerados */
+        .step-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: white;
+            padding: 14px 18px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .step-number {
+            background: var(--primary-accent);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- CABECERA PRINCIPAL -->
+    <header class="header-banner">
+        <h1 class="header-title">TEMA 2: ENLACE QUÍMICO</h1>
+        <p class="header-subtitle">Química Aplicada a la Ingeniería — UNED</p>
+        <div class="header-meta">
+            <span class="badge-meta">Autores: M.J. Caselles, M. Molero, M.</span>
+            <span class="badge-meta">Resumen Completo Exhaustivo</span>
+            <span class="badge-meta">Guía de Estudio Visual</span>
+        </div>
+    </header>
+
+    <!-- SECCIÓN INTRODUCTORIA: OBJETIVOS Y RESUMEN -->
+    <div class="intro-flex">
+        <div class="card card-objectives">
+            <h2 class="card-title" style="color: var(--primary-accent);">
+                🎯 Objetivos del Tema
+            </h2>
+            <ul class="custom-list">
+                <li>Comprender los aspectos energéticos del enlace químico.</li>
+                <li>Comprender la formación del enlace iónico y definir la energía reticular.</li>
+                <li>Indicar las propiedades de los compuestos iónicos.</li>
+                <li>Profundizar en la formación de enlaces covalentes con electrones compartidos y representar fórmulas de Lewis.</li>
+                <li>Justificar enlaces sencillos, dobles y triples; aplicar electronegatividad a la polaridad de enlace.</li>
+                <li>Escribir estructuras de resonancia y estimar entalpías de reacción a partir de energías de enlace.</li>
+                <li>Predecir la forma de las moléculas (Modelo RPECV) y conocer los tipos de hibridación (TEV).</li>
+                <li>Conocer las características de los orbitales moleculares (TOM), sus diagramas energéticos y configuraciones.</li>
+                <li>Explicar las propiedades de los metales según las teorías de enlace (Mar de electrones y Bandas).</li>
+            </ul>
+        </div>
+
+        <div class="card card-summary">
+            <h2 class="card-title" style="color: var(--ionic-main);">
+                💡 Resumen Ejecutivo
+            </h2>
+            <p style="font-size: 0.93rem; margin-bottom: 10px;">
+                Los átomos se enlazan para ganar, perder o compartir electrones hasta alcanzar la configuración estable de gas noble (<strong style="color:var(--ionic-main);">8 electrones de valencia / Regla del Octeto</strong>).
+            </p>
+            <ul class="custom-list">
+                <li><strong style="color:var(--ionic-main);">Enlace Iónico:</strong> Atracción electrostática entre iones de carga opuesta tras transferencia total de electrones. Su estabilidad se mide con la <em>Energía Reticular ($U$)</em>, calculada mediante el <em>Ciclo de Born-Haber</em> (Ley de Hess).</li>
+                <li><strong style="color:var(--covalent-main);">Enlace Covalente:</strong> Compartición de pares de electrones. Descríbelo mediante estructuras de Lewis, resonancia y modelos avanzados: <strong>RPECV</strong> (geometría), <strong>TEV</strong> (orbitales híbridos y solapamiento) y <strong>TOM</strong> (orbitales moleculares enlazantes/antienlazantes y paramagnetismo).</li>
+                <li><strong style="color:var(--metallic-main);">Enlace Metálico:</strong> Red cristalina de cationes rodeados por un "mar de electrones" o bandas energéticas continuas (alta conductividad y brillo).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 2.1: CONCEPTO DE ENLACE Y TEORÍA DE LEWIS -->
+    <section>
+        <div class="section-header">
+            <div class="section-number">2.1</div>
+            <h2>Concepto de Enlace y Teoría de Lewis</h2>
+        </div>
+
+        <div class="card">
+            <p style="margin-bottom: 15px;">
+                Un <strong>enlace químico</strong> es una fuerza de atracción enérgica entre los átomos de una sustancia, de modo que cada átomo individual se ve influenciado por el otro y abandona sus propiedades individuales.
+            </p>
+
+            <h3 style="color: var(--primary-dark); margin: 20px 0 10px 0; font-size: 1.1rem;">
+                Clasificación Principal de los Enlaces Químicos
+            </h3>
+            
+            <div class="card-flex-container">
+                <div class="mini-card" style="border-top: 4px solid var(--ionic-main);">
+                    <div class="mini-card-title">
+                        <span>Enlace Iónico</span>
+                        <span class="badge badge-ionic">Atracción</span>
+                    </div>
+                    <p style="font-size: 0.9rem;">
+                        Resulta de la atracción electrostática de iones con carga opuesta originados por la <strong>transferencia completa</strong> de electrones. <br><em>Ejemplo: $Na^+$ y $Cl^-$.</em>
+                    </p>
+                </div>
+
+                <div class="mini-card" style="border-top: 4px solid var(--covalent-main);">
+                    <div class="mini-card-title">
+                        <span>Enlace Covalente</span>
+                        <span class="badge badge-covalent">Compartición</span>
+                    </div>
+                    <p style="font-size: 0.9rem;">
+                        Surge entre átomos (generalmente no metálicos) que <strong>comparten electrones</strong> de valencia. Cada electrón es atraído por ambos núcleos positivos. <br><em>Ejemplo: $CO_2$, $H_2O$, Sacarosa.</em>
+                    </p>
+                </div>
+
+                <div class="mini-card" style="border-top: 4px solid var(--metallic-main);">
+                    <div class="mini-card-title">
+                        <span>Enlace Metálico</span>
+                        <span class="badge badge-metallic">Deslocalizado</span>
+                    </div>
+                    <p style="font-size: 0.9rem;">
+                        Típico de metales sólidos ($Na, Cu, Fe$). Los electrones de valencia se mueven libremente por todo el cristal atraídos por la red de cationes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Curva de Energía Potencial -->
+            <div class="highlight-box box-blue">
+                <h4 style="margin-bottom: 8px; font-weight: 700;">📉 Aspectos Energéticos de la Formación del Enlace</h4>
+                <p style="font-size: 0.92rem;">
+                    Cuando dos átomos se aproximan:
+                </p>
+                <ol style="margin-left: 20px; font-size: 0.92rem; margin-top: 5px;">
+                    <li>La <strong>Energía Potencial ($E_p$)</strong> disminuye hasta alcanzar un <strong>mínimo</strong> a la <em>distancia de enlace</em>. En este punto, las fuerzas de atracción núcleo-electrón superan al máximo las repulsiones núcleo-núcleo y electrón-electrón. Es la situación de <strong>máxima estabilidad</strong>.</li>
+                    <li>La formación del enlace libera energía al entorno, siendo un proceso <strong>exotérmico</strong>.</li>
+                    <li>Si los átomos se aproximan aún más, las fuerzas repulsivas crecen bruscamente y la energía potencial aumenta drásticamente.</li>
+                </ol>
+            </div>
+
+            <h3 style="color: var(--primary-dark); margin: 25px 0 10px 0; font-size: 1.1rem;">
+                Teoría de Lewis (1916) y Regla del Octeto
+            </h3>
+            <p style="font-size: 0.93rem; margin-bottom: 12px;">
+                Gilbert Lewis propuso que los átomos se unen para alcanzar una configuración electrónica estable similar a la del gas noble más cercano:
+            </p>
+            <div class="step-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div><strong>Electrones de Valencia:</strong> Son los electrones más externos del átomo y los únicos responsables en la formación de enlaces. Su número coincide con el número del grupo en la Tabla Periódica.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div><strong>Regla del Octeto:</strong> Los átomos ganan, pierden o comparten electrones hasta rodearse de <strong>8 electrones de valencia</strong> (un octeto, $ns^2 np^6$).</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div><strong>Símbolos de Lewis (Electrón-Punto):</strong> Representación gráfica donde los electrones de valencia se dibujan como puntos alrededor del símbolo del elemento (máximo 2 puntos por cada uno de los 4 lados). <br><em>Ejemplo Cloro ($[Ne]3s^2 3p^5$): 7 puntos alrededor del símbolo Cl.</em></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2.2: ENLACE IÓNICO -->
+    <section class="topic-ionic">
+        <div class="section-header">
+            <div class="section-number">2.2</div>
+            <h2>Enlace Iónico</h2>
+        </div>
+
+        <div class="card">
+            <h3 style="color: var(--ionic-main); font-size: 1.15rem; margin-bottom: 10px;">
+                2.2.1. Formación del Enlace Iónico
+            </h3>
+            <p style="font-size: 0.93rem; margin-bottom: 12px;">
+                Se produce entre átomos con una <strong>gran diferencia de electronegatividad</strong> (generalmente un metal con baja energía de ionización y un no metal con elevada afinidad electrónica).
+            </p>
+
+            <div class="formula-box">
+                $Na ([Ne]3s^1) + Cl ([Ne]3s^2 3p^5) \longrightarrow \text{Na}^+ ([Ne]) + \text{Cl}^- ([Ar])$
+            </div>
+
+            <p style="font-size: 0.92rem; margin-bottom: 15px;">
+                El átomo menos electronegativo ($Na$) cede su electrón de valencia convirtiéndose en catión ($Na^+$) con configuración interna de Neón, mientras que el más electronegativo ($Cl$) lo capta formando un anión ($Cl^-$) con la estructura del Argón. Los iones quedan unidos por <strong>fuerza electrostática</strong>.
+            </p>
+
+            <div class="highlight-box box-blue">
+                <strong>Fuerza de atracción iónica:</strong> Aumenta al <strong>aumentar la carga</strong> de los iones y al <strong>disminuir su tamaño (radio)</strong>. Los compuestos iónicos no forman moléculas aisladas, sino <strong>redes cristalinas tridimensionales</strong> ordenadas.
+            </div>
+
+            <h3 style="color: var(--ionic-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                2.2.2. Redes Iónicas y Cristalografía
+            </h3>
+            <p style="font-size: 0.93rem; margin-bottom: 12px;">
+                Los iones se comportan como esferas indeformables que se empaquetan simétricamente minimizando la repulsión entre cargas iguales y maximizando la atracción entre cargas opuestas.
+            </p>
+            <ul class="custom-list" style="margin-bottom: 15px;">
+                <li><strong>Celda Unitaria:</strong> La unidad repetitiva más pequeña de la red cristalina que reproduce toda la estructura por repetición en tres dimensiones.</li>
+                <li><strong>Número de Coordinación (NC):</strong> Número de iones de carga opuesta que rodean directamente a un ión dado.</li>
+            </ul>
+
+            <!-- Tabla de Estructuras Cristalinas -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Estructura Modelo</th>
+                            <th>Empaquetamiento y Huecos</th>
+                            <th>N.º Coordinación</th>
+                            <th>Relación / Ejemplos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong style="color:var(--ionic-main);">Cloruro Sódico ($NaCl$)</strong></td>
+                            <td>Aniones $Cl^-$ en Cúbica Centrada en las Caras (FCC); cationes $Na^+$ en huecos octaédricos.</td>
+                            <td><strong>6 : 6</strong></td>
+                            <td>Relación 1:1. <br><em>Otros: $KCl, CaO, AgCl, LiF$.</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:var(--ionic-main);">Cloruro de Cesio ($CsCl$)</strong></td>
+                            <td>Red cúbica centrada en el cuerpo (BCC). Tamaños de iones muy similares ($Cs^+$ en centro del cubo).</td>
+                            <td><strong>8 : 8</strong></td>
+                            <td>Relación 1:1. <br><em>Otros: $TlCl, NH_4Cl$.</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:var(--ionic-main);">Sulfuro de Zinc ($ZnS$)</strong></td>
+                            <td>Sustancia polimórfica (Blenda de Zinc = Cúbica FCC; Wurtzita = Hexagonal). $Zn^{2+}$ en huecos tetraédricos.</td>
+                            <td><strong>4 : 4</strong></td>
+                            <td>Relación 1:1. <br><em>Otros: $CuCl, ZnO, BeO$.</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="color: var(--ionic-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                2.2.3. Aspectos Energéticos y Energía Reticular ($U$)
+            </h3>
+            <p style="font-size: 0.93rem;">
+                La formación de un sólido iónico a partir de sus elementos siempre desprende energía ($\Delta H_f^\circ < 0$, exotérmico). Para el $NaCl$, $\Delta H_f^\circ = -411\text{ kJ/mol}$.
+            </p>
+
+            <div class="card-flex-container" style="margin-top: 15px;">
+                <div class="mini-card">
+                    <h4 style="color:var(--tev-main); margin-bottom: 5px;">Etapa 1: Formación de Iones Gaseosos</h4>
+                    <p style="font-size: 0.88rem;">
+                        • Ionización de Na: $Na(g) \rightarrow Na^+(g) + e^-$ ($\Delta H = +496\text{ kJ/mol}$)<br>
+                        • Afinidad Electrónica de Cl: $Cl(g) + e^- \rightarrow Cl^-(g)$ ($\Delta H = -349\text{ kJ/mol}$)<br>
+                        <strong style="color:var(--tev-main);">Balance Neto: $+147\text{ kJ/mol}$ (Endotérmico)</strong>
+                    </p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 style="color:var(--covalent-main); margin-bottom: 5px;">Etapa 2: Atracción Electrostática y Red</h4>
+                    <p style="font-size: 0.88rem;">
+                        Ley de Coulomb: $E = k \frac{Q_1 Q_2}{d}$. La unión de iones gaseosos para formar pares libera $-493\text{ kJ/mol}$ y la condensación en la red cristalina libera otros $-293\text{ kJ/mol}$.<br>
+                        <strong style="color:var(--covalent-main);">Liberación Total: $-786\text{ kJ/mol}$</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-box box-blue" style="margin-top: 15px;">
+                <strong>Definición de Energía Reticular ($U$):</strong> Es la energía necesaria para separar completamente 1 mol de un compuesto iónico sólido en sus iones en estado gaseoso. <br>
+                <div style="text-align:center; font-weight:bold; margin-top:5px; font-size: 1.05rem;">
+                    $NaCl(s) \longrightarrow Na^+(g) + Cl^-(g) \quad (U = +786\text{ kJ/mol})$
+                </div>
+                A mayor energía reticular, mayor es la estabilidad del cristal iónico y su punto de fusión.
+            </div>
+
+            <h3 style="color: var(--ionic-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                2.2.4. Ciclo de Born-Haber
+            </h3>
+            <p style="font-size: 0.93rem; margin-bottom: 10px;">
+                Ciclo termoquímico basado en la <strong>Ley de Hess</strong> para determinar la Energía Reticular ($U$) indirectamente sumando los cambios entálpicos de rutas alternativas.
+            </p>
+
+            <div class="formula-box">
+                <span class="highlight">Ruta Directa:</span> $Na(s) + \frac{1}{2}Cl_2(g) \longrightarrow NaCl(s) \quad (\Delta H_f^\circ = -411\text{ kJ/mol})$
+            </div>
+
+            <p style="font-weight:700; margin:10px 0 5px 0; font-size:0.95rem;">Etapas de la Ruta Indirecta para $NaCl$:</p>
+            <ol style="margin-left: 20px; font-size:0.9rem; line-height:1.7;">
+                <li><strong>Sublimación del Sodio:</strong> $Na(s) \rightarrow Na(g) \quad (\Delta H_1 = +108\text{ kJ})$</li>
+                <li><strong>Disociación del Cloro:</strong> $\frac{1}{2}Cl_2(g) \rightarrow Cl(g) \quad (\Delta H_2 = +120\text{ kJ})$</li>
+                <li><strong>Ionización del Sodio:</strong> $Na(g) \rightarrow Na^+(g) + e^- \quad (\Delta H_3 = +496\text{ kJ})$</li>
+                <li><strong>Ionización (Afinidad) del Cloro:</strong> $Cl(g) + e^- \rightarrow Cl^-(g) \quad (\Delta H_4 = -349\text{ kJ})$</li>
+                <li><strong>Formación de la Red Iónica:</strong> $Na^+(g) + Cl^-(g) \rightarrow NaCl(s) \quad (\Delta H_5 = -U)$</li>
+            </ol>
+
+            <div class="formula-box" style="margin-top: 12px;">
+                $\Delta H_f^\circ = \Delta H_1 + \Delta H_2 + \Delta H_3 + \Delta H_4 - U$<br>
+                $-411 = 108 + 120 + 496 - 349 - U \implies -411 = 375 - U \implies$ <span class="yellow">$U = 786\text{ kJ/mol}$</span>
+            </div>
+
+            <h3 style="color: var(--ionic-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                2.2.5. Propiedades de los Compuestos Iónicos
+            </h3>
+            <div class="card-flex-container">
+                <div class="mini-card">
+                    <strong style="color:var(--ionic-text);">Sólidos Duros y Quebradizos</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;">Presentan elevados puntos de fusión y ebullición debido a la gran magnitud de la fuerza electrostática.</p>
+                </div>
+                <div class="mini-card">
+                    <strong style="color:var(--ionic-text);">Conductividad Eléctrica</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;"><strong>No conducen</strong> en estado sólido (iones fijos). <strong>Sí conducen</strong> fundidos o disueltos en agua (los iones adquieren movilidad: <em>Electrolitos</em>).</p>
+                </div>
+            </div>
+
+            <h4 style="margin: 15px 0 8px 0; color: var(--primary-dark);">Reglas Generales de Solubilidad en Agua (Tabla 2.1)</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Anión</th>
+                            <th>Regla de Solubilidad</th>
+                            <th>Excepciones Principales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nitratos ($NO_3^-$)</strong></td>
+                            <td><span class="badge" style="background:#d1fae5; color:#059669;">Todos solubles</span></td>
+                            <td>Ninguna.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloruros ($Cl^-$)</strong></td>
+                            <td><span class="badge" style="background:#d1fae5; color:#059669;">Solubles</span></td>
+                            <td>Insolubles: $AgCl, Hg_2Cl_2, PbCl_2$.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sulfatos ($SO_4^{2-}$)</strong></td>
+                            <td><span class="badge" style="background:#d1fae5; color:#059669;">Solubles</span></td>
+                            <td>Insolubles: $SrSO_4, BaSO_4, PbSO_4$.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Carbonatos ($CO_3^{2-}$) y Fosfatos ($PO_4^{3-}$)</strong></td>
+                            <td><span class="badge" style="background:#ffe4e6; color:#e11d48;">Insolubles</span></td>
+                            <td>Solubles: Elementos del Grupo I y $NH_4^+$.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hidróxidos ($OH^-$) y Sulfuros ($S^{2-}$)</strong></td>
+                            <td><span class="badge" style="background:#ffe4e6; color:#e11d48;">Insolubles</span></td>
+                            <td>Solubles: Grupo I, $NH_4^+$, $Sr(OH)_2, Ba(OH)_2$. <br><em>$Ca(OH)_2$ es poco soluble.</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-muted);">
+                * Criterios cuantitativos: Soluble > $0,1\text{ mol/L}$; Poco soluble $0,01 - 0,1\text{ mol/L}$; Insoluble < $0,01\text{ mol/L}$.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2.3: ENLACE COVALENTE -->
+    <section class="topic-covalent">
+        <div class="section-header">
+            <div class="section-number">2.3</div>
+            <h2>Enlace Covalente</h2>
+        </div>
+
+        <div class="card">
+            <h3 style="color: var(--covalent-main); font-size: 1.15rem; margin-bottom: 10px;">
+                2.3.1. Características del Enlace Covalente
+            </h3>
+            <p style="font-size: 0.93rem; margin-bottom: 12px;">
+                Se forma cuando dos átomos comparten uno o más pares de electrones, siendo atraídos simultáneamente por los núcleos de ambos átomos.
+            </p>
+
+            <ul class="custom-list" style="margin-bottom: 15px;">
+                <li><strong>Enlace Covalente Coordinado (Dativo):</strong> Un enlace en el cual uno solo de los átomos aporta los dos electrones del par compartido.</li>
+                <li><strong>Polaridad de Enlace:</strong> En heteroátomos con distinta electronegatividad, el átomo más electronegativo atrae con más fuerza el par enlazante generando un dipolo ($\delta^+ - \delta^-$) (ej. $HCl$). En homoátomos es <strong>no polar</strong> (ej. $H_2, Cl_2$).</li>
+                <li><strong>Longitud de Enlace:</strong> Distancia entre los núcleos de dos átomos enlazados en la que la energía del sistema es mínima. Se estima sumando sus <strong>radios covalentes</strong> (Tabla 2.2). <br><em>Ejemplo: Longitud P-N = Radio P (110 pm) + Radio N (74 pm) = 184 pm.</em></li>
+            </ul>
+
+            <!-- Tabla de Radios Covalentes -->
+            <h4 style="margin: 15px 0 8px 0; color: var(--covalent-text);">Radios Covalentes en Picómetros (pm) — Tabla 2.2</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>H</th> <th>B</th> <th>C</th> <th>N</th> <th>O</th> <th>F</th>
+                            <th>Si</th> <th>P</th> <th>S</th> <th>Cl</th> <th>Ge</th> <th>As</th> <th>Se</th> <th>Br</th> <th>Sb</th> <th>Te</th> <th>I</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>37</td> <td>88</td> <td>77</td> <td>74</td> <td>66</td> <td>64</td>
+                            <td>117</td> <td>110</td> <td>104</td> <td>100</td> <td>122</td> <td>121</td> <td>117</td> <td>114</td> <td>141</td> <td>137</td> <td>133</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 style="margin: 20px 0 8px 0; color: var(--covalent-text);">Energía de Disociación y Entalpía de Reacción</h4>
+            <p style="font-size: 0.92rem;">
+                La <strong>energía de disociación</strong> ($\Delta H > 0$, proceso endotérmico) mide la fuerza del enlace. En moléculas poliatómicas se emplean entalpías medias (ej. en el metano $CH_4$, la atomización requiere $1652\text{ kJ/mol}$, luego el promedio para el enlace C-H es $1652 / 4 = 413\text{ kJ/mol}$).
+            </p>
+
+            <div class="formula-box" style="margin-top: 10px;">
+                $\Delta H_r = \sum (\text{Entalpías de Enlaces Rotos}) - \sum (\text{Entalpías de Enlaces Formados})$
+            </div>
+
+            <div class="highlight-box box-green">
+                <strong>Ejemplo de Estimación:</strong> Cloración del Metano ($CH_{4(g)} + Cl_{2(g)} \rightarrow CH_3Cl_{(g)} + HCl_{(g)}$)<br>
+                • Enlaces rotos: 1 C-H ($413\text{ kJ}$) + 1 Cl-Cl ($242\text{ kJ}$) = $+655\text{ kJ}$<br>
+                • Enlaces formados: 1 C-Cl ($328\text{ kJ}$) + 1 H-Cl ($431\text{ kJ}$) = $+759\text{ kJ}$<br>
+                • <strong style="color:var(--covalent-text);">$\Delta H_r = 655 - 759 = -104\text{ kJ}$ (Reacción exotérmica)</strong>
+            </div>
+
+            <h3 style="color: var(--covalent-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                2.3.1.1. Enlaces Sencillos y Múltiples — Orden de Enlace
+            </h3>
+            <p style="font-size: 0.93rem;">
+                Según el número de pares compartidos: <strong>Sencillo</strong> (1 par), <strong>Doble</strong> (2 pares, ej. Etileno $C_2H_4$), <strong>Triple</strong> (3 pares, ej. Acetileno $C_2H_2$, $N_2$).
+            </p>
+            <div class="highlight-box box-green" style="margin-top: 10px;">
+                Al <strong>aumentar el Orden de Enlace</strong> (número de pares enlazantes):
+                <ul style="margin-left: 20px; margin-top:5px;">
+                    <li>Aumenta la fuerza del enlace (mayor entalpía de disociación).</li>
+                    <li>Disminuye la longitud del enlace: <br><em>Enlace C-C (154 pm, OE=1) > C=C (134 pm, OE=2) > C≡C (121 pm, OE=3).</em></li>
+                </ul>
+            </div>
+
+            <h3 style="color: var(--covalent-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                2.3.1.2. Reglas para Representar Estructuras de Lewis
+            </h3>
+            <div class="step-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div>Sumar todos los electrones de valencia. Añadir o restar electrones según la carga en aniones o cationes.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div>Escribir la estructura básica situando el átomo central (el menos electronegativo) unido a los periféricos mediante enlaces sencillos.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div>Completar el octeto de los átomos unidos al central (el Hidrógeno solo requiere 2 $e^-$).</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div>Colocar los electrones restantes como pares solitarios en el átomo central.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div>Si el átomo central no completa el octeto, convertir pares solitarios periféricos en dobles o triples enlaces hacia el central.</div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--covalent-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                2.3.1.3. Carga Formal
+            </h3>
+            <p style="font-size: 0.92rem; margin-bottom: 10px;">
+                Permite seleccionar la estructura de Lewis más probable cuando existen varias alternativas posibles cumpliendo la regla del octeto.
+            </p>
+
+            <div class="formula-box">
+                $\text{Carga Formal} = (N.^\circ e^-\text{ valencia}) - (N.^\circ e^-\text{ no compartidos}) - \frac{1}{2} (N.^\circ e^-\text{ compartidos})$
+            </div>
+
+            <p style="font-weight:700; font-size:0.92rem;">Criterios de Estabilidad:</p>
+            <ol style="margin-left: 20px; font-size: 0.9rem;">
+                <li>Son preferibles las estructuras con cargas formales <strong>iguales a cero o lo más pequeñas posibles</strong>.</li>
+                <li>Si deben existir cargas formales, las cargas negativas deben situarse sobre los átomos <strong>más electronegativos</strong>.</li>
+            </ol>
+
+            <h3 style="color: var(--covalent-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                2.3.1.4. Resonancia y Electrones Deslocalizados
+            </h3>
+            <p style="font-size: 0.93rem; margin-bottom: 10px;">
+                Ocurre cuando una sola estructura de Lewis no basta para describir adecuadamente las propiedades de una molécula.
+            </p>
+            <div class="highlight-box box-green">
+                <strong>Ejemplo del Ozono ($O_3$):</strong> La longitud del enlace O-O experimental es de 128 pm (intermedia entre los 132 pm de un enlace sencillo O-O y los 112 pm de un doble enlace O=O). Se representa como un <strong>híbrido de resonancia</strong> entre dos estructuras equivalentes unidas por una doble flecha ($\longleftrightarrow$). Los electrones están <strong>deslocalizados</strong>.
+            </div>
+
+            <h3 style="color: var(--covalent-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                2.3.1.5. Excepciones a la Regla del Octeto
+            </h3>
+            <div class="card-flex-container">
+                <div class="mini-card" style="border-left: 4px solid var(--tev-main);">
+                    <strong style="color:var(--tev-main);">1. Número Impar de $e^-$</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;">Moléculas con un número total impar de electrones (radicales libres). Imposible completar el octeto en todos los átomos. <br><em>Ejemplos: $NO, ClO_2, NO_2$.</em></p>
+                </div>
+                <div class="mini-card" style="border-left: 4px solid var(--metallic-main);">
+                    <strong style="color:var(--metallic-main);">2. Octeto Incompleto</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;">Átomos centrales (especialmente Be y B) quedan rodeados por menos de 8 $e^-$. En el $BF_3$, el Boro tiene 6 $e^-$. Reacciona con $NH_3$ formando un enlace coordinado en el $NH_3BF_3$.</p>
+                </div>
+                <div class="mini-card" style="border-left: 4px solid var(--ionic-main);">
+                    <strong style="color:var(--ionic-main);">3. Capa de Valencia Expandida</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;">Átomos del tercer período o posterior ($P, S, Cl, Xe$) pueden albergar 10 o 12 electrones por disponer de <strong>orbitales d vacíos</strong> accesibles. <br><em>Ejemplo: $PCl_5$ (10 $e^-$), $SF_6$ (12 $e^-$).</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2.3.2: GEOMETRÍA Y TEORÍAS DE ENLACE -->
+    <section class="topic-vsepr">
+        <div class="section-header">
+            <div class="section-number">VSEPR</div>
+            <h2>2.3.2. Geometría Molecular y Modelo RPECV</h2>
+        </div>
+
+        <div class="card">
+            <p style="font-size: 0.93rem; margin-bottom: 12px;">
+                El modelo de <strong>Repulsión de Pares de Electrones de la Capa de Valencia (RPECV / VSEPR)</strong> (Gillespie y Nyholm) establece que los pares de electrones alrededor de un átomo central se disponen en el espacio de forma que las repulsiones entre ellos sean <strong>mínimas</strong>.
+            </p>
+
+            <div class="highlight-box box-purple">
+                <strong>Repulsión relativa entre pares:</strong> <br>
+                <span style="font-weight:bold; color:var(--vsepr-main);">Par Solitario - Par Solitario > Par Solitario - Par Enlazante > Par Enlazante - Par Enlazante</span>
+                <p style="font-size: 0.88rem; margin-top:5px;">Los pares solitarios requieren más espacio libre y comprimen los ángulos entre los pares enlazantes (ej. $CH_4 = 109,5^\circ$, $NH_3 = 107,5^\circ$, $H_2O = 104,5^\circ$).</p>
+            </div>
+
+            <h3 style="color: var(--vsepr-main); font-size: 1.15rem; margin: 20px 0 10px 0;">
+                Tabla Completa de Geometrías Moleculares RPECV (Figuras 2.4, 2.5 y 2.6)
+            </h3>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo AX_nE_m</th>
+                            <th>Pares Totales</th>
+                            <th>Enlazantes (n)</th>
+                            <th>Solitarios (m)</th>
+                            <th>Geometría de Pares</th>
+                            <th>Geometría Molecular</th>
+                            <th>Ejemplos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>$AX_2$</td><td>2</td><td>2</td><td>0</td><td>Lineal</td><td><strong>Lineal</strong> ($180^\circ$)</td><td>$BeF_2, BeCl_2, CO_2$</td></tr>
+                        <tr><td>$AX_3$</td><td>3</td><td>3</td><td>0</td><td>Plana Trigonal</td><td><strong>Plana Trigonal</strong> ($120^\circ$)</td><td>$BF_3, BCl_3$</td></tr>
+                        <tr><td>$AX_2E$</td><td>3</td><td>2</td><td>1</td><td>Plana Trigonal</td><td><strong>Angular</strong> (&lt; $120^\circ$)</td><td>$SO_2, O_3$</td></tr>
+                        <tr><td>$AX_4$</td><td>4</td><td>4</td><td>0</td><td>Tetraédrica</td><td><strong>Tetraédrica</strong> ($109,5^\circ$)</td><td>$CH_4, SiCl_4, NH_4^+$</td></tr>
+                        <tr><td>$AX_3E$</td><td>4</td><td>3</td><td>1</td><td>Tetraédrica</td><td><strong>Piramidal Trigonal</strong> ($107,5^\circ$)</td><td>$NH_3, PF_3$</td></tr>
+                        <tr><td>$AX_2E_2$</td><td>4</td><td>2</td><td>2</td><td>Tetraédrica</td><td><strong>Angular</strong> ($104,5^\circ$)</td><td>$H_2O, SCl_2$</td></tr>
+                        <tr><td>$AX_5$</td><td>5</td><td>5</td><td>0</td><td>Bipirámide Trigonal</td><td><strong>Bipirámide Trigonal</strong> ($90^\circ, 120^\circ$)</td><td>$PCl_5$</td></tr>
+                        <tr><td>$AX_4E$</td><td>5</td><td>4</td><td>1</td><td>Bipirámide Trigonal</td><td><strong>Tetraedro Distorsionado / Balanceín</strong></td><td>$SF_4$</td></tr>
+                        <tr><td>$AX_3E_2$</td><td>5</td><td>3</td><td>2</td><td>Bipirámide Trigonal</td><td><strong>En Forma de T</strong></td><td>$ClF_3$</td></tr>
+                        <tr><td>$AX_2E_3$</td><td>5</td><td>2</td><td>3</td><td>Bipirámide Trigonal</td><td><strong>Lineal</strong></td><td>$XeF_2, I_3^-$</td></tr>
+                        <tr><td>$AX_6$</td><td>6</td><td>6</td><td>0</td><td>Octaédrica</td><td><strong>Octaédrica</strong> ($90^\circ$)</td><td>$SF_6$</td></tr>
+                        <tr><td>$AX_5E$</td><td>6</td><td>5</td><td>1</td><td>Octaédrica</td><td><strong>Piramidal Cuadrada</strong></td><td>$IF_5$</td></tr>
+                        <tr><td>$AX_4E_2$</td><td>6</td><td>4</td><td>2</td><td>Octaédrica</td><td><strong>Plana Cuadrada</strong></td><td>$XeF_4$</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight-box box-purple">
+                📌 <strong>Regla para capas expandidas (5 y 6 pares):</strong> En la bipirámide trigonal (5 pares), los pares solitarios siempre ocupan preferentemente las <strong>posiciones ecuatoriales</strong> ($120^\circ$) para minimizar las repulsiones a $90^\circ$. En la geometría octaédrica (6 pares con 2 solitarios), los pares libres se sitúan en lados opuestos ($180^\circ$) dando una forma plana cuadrada.
+            </div>
+
+            <h3 style="color: var(--vsepr-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                Polaridad Molecular y Momento Dipolar ($\mu$)
+            </h3>
+            <p style="font-size: 0.92rem;">
+                El momento dipolar ($\mu = \delta \cdot d$, medido en Debyes $D$) es la suma vectorial de los dipolos de cada enlace. La simetría molecular es determinante:
+            </p>
+            <ul class="custom-list" style="margin-top:8px;">
+                <li><strong>Moléculas Apolares ($\mu = 0$):</strong> Poseen geometría altamente simétrica donde los vectores dipolares se anulan perfectamente (ej. $CO_2, BF_3, CH_4, PCl_5, SF_6, XeF_4$).</li>
+                <li><strong>Moléculas Polares ($\mu \neq 0$):</strong> Geometrías asimétricas o presencia de pares solitarios no compensados (ej. $HF, H_2O \, (\mu = 1,85\text{ D}), NH_3, ClF_3$).</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TEV -->
+    <section class="topic-tev">
+        <div class="section-header">
+            <div class="section-number">TEV</div>
+            <h2>Teoría del Enlace de Valencia (TEV) y Hibridación</h2>
+        </div>
+
+        <div class="card">
+            <p style="font-size: 0.93rem; margin-bottom: 12px;">
+                Basada en la mecánica cuántica. Plantea que el enlace covalente se forma cuando los <strong>orbitales atómicos de valencia se solapan</strong>, permitiendo que dos electrones con espines opuestos ocupen la región internuclear.
+            </p>
+
+            <h3 style="color: var(--tev-main); font-size: 1.15rem; margin: 20px 0 10px 0;">
+                Hibridación de Orbitales Atómicos
+            </h3>
+            <p style="font-size: 0.92rem; margin-bottom: 10px;">
+                Mezcla de orbitales atómicos desemejantes de un mismo átomo para originar un conjunto de <strong>orbitales híbridos equivalentes</strong> en forma y energía.
+            </p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Orbitales Combinados</th>
+                            <th>Hibridación</th>
+                            <th>N.º Híbridos</th>
+                            <th>Geometría de Orbitales</th>
+                            <th>Ángulo</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>$1s + 1p$</td><td><strong style="color:var(--tev-main);">$sp$</strong></td><td>2</td><td>Lineal</td><td>$180^\circ$</td><td>$Be$ en $BeF_2$</td></tr>
+                        <tr><td>$1s + 2p$</td><td><strong style="color:var(--tev-main);">$sp^2$</strong></td><td>3</td><td>Plana Trigonal</td><td>$120^\circ$</td><td>$B$ en $BF_3$, $C$ en etileno</td></tr>
+                        <tr><td>$1s + 3p$</td><td><strong style="color:var(--tev-main);">$sp^3$</strong></td><td>4</td><td>Tetraédrica</td><td>$109,5^\circ$</td><td>$C$ en $CH_4$, $O$ en $H_2O$</td></tr>
+                        <tr><td>$1s + 3p + 1d$</td><td><strong style="color:var(--tev-main);">$sp^3d$</strong></td><td>5</td><td>Bipirámide Trigonal</td><td>$90^\circ, 120^\circ$</td><td>$P$ en $PCl_5$</td></tr>
+                        <tr><td>$1s + 3p + 2d$</td><td><strong style="color:var(--tev-main);">$sp^3d^2$</strong></td><td>6</td><td>Octaédrica</td><td>$90^\circ$</td><td>$S$ en $SF_6$</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="color: var(--tev-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                Tipos de Enlaces según el Solapamiento: Enlaces $\sigma$ y $\pi$
+            </h3>
+            <div class="card-flex-container">
+                <div class="mini-card" style="border-top: 4px solid var(--tev-main);">
+                    <strong style="color:var(--tev-main);">Enlace Sigma ($\sigma$)</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;">Solapamiento <strong>frontal</strong> a lo largo del eje internuclear. Cilíndricamente simétrico. Es más fuerte que el enlace $\pi$. Todos los enlaces sencillos son enlaces $\sigma$.</p>
+                </div>
+                <div class="mini-card" style="border-top: 4px solid var(--vsepr-main);">
+                    <strong style="color:var(--vsepr-main);">Enlace Pi ($\pi$)</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;">Solapamiento <strong>lateral</strong> de orbitales p paralelos no hibridados. La densidad electrónica queda por encima y por debajo del eje del enlace. Es más débil.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box box-rose" style="margin-top: 15px;">
+                <strong>Hibridación en Enlaces Múltiples:</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li><strong>Doble Enlace ($C=C$ en Etileno $C_2H_4$):</strong> Formado por <strong>$1 \text{ enlace } \sigma$</strong> (solapamiento de orbitales $sp^2$) + <strong>$1 \text{ enlace } \pi$</strong> (solapamiento lateral de orbitales $2p$ puros). Molécula rígida y plana.</li>
+                    <li><strong>Triple Enlace ($C\equiv C$ en Acetileno $C_2H_2$):</strong> Formado por <strong>$1 \text{ enlace } \sigma$</strong> (orbitales $sp$) + <strong>$2 \text{ enlaces } \pi$</strong> (solapamiento de dos pares de orbitales $2p$ perpendiculares). Geometría lineal.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TOM -->
+    <section class="topic-tom">
+        <div class="section-header">
+            <div class="section-number">TOM</div>
+            <h2>Teoría de Orbitales Moleculares (TOM)</h2>
+        </div>
+
+        <div class="card">
+            <p style="font-size: 0.93rem; margin-bottom: 12px;">
+                Supera las limitaciones de la TEV (como el <strong>paramagnetismo del $O_2$</strong> con sus 2 electrones desapareados). Postula que los orbitales moleculares (OM) pertenecen a toda la molécula y se forman por combinación lineal de orbitales atómicos (CLOA).
+            </p>
+
+            <div class="card-flex-container">
+                <div class="mini-card" style="border-left: 4px solid var(--tom-main);">
+                    <strong style="color:var(--tom-main);">Orbital Molecular Enlazante ($\sigma_{1s}, \pi_{2p}$)</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;">Mayor densidad electrónica en la zona internuclear. De <strong>menor energía</strong> y más estable que los orbitales atómicos de origen.</p>
+                </div>
+                <div class="mini-card" style="border-left: 4px solid var(--tev-main);">
+                    <strong style="color:var(--tev-main);">Orbital Molecular Antienlazante ($\sigma^*_{1s}, \pi^*_{2p}$)</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;">Presenta un nodo (densidad nula) entre los núcleos. De <strong>mayor energía</strong> e inestable. Se designan con un asterisco (*).</p>
+                </div>
+            </div>
+
+            <div class="formula-box" style="margin-top: 15px;">
+                $\text{Orden de Enlace (OE)} = \frac{1}{2} \left( N.^\circ e^-\text{ enlazantes} - N.^\circ e^-\text{ antienlazantes} \right)$
+            </div>
+
+            <p style="font-size:0.9rem; margin-bottom: 10px;">
+                Si $\text{OE} > 0$, la molécula es estable. A mayor OE $\longrightarrow$ menor longitud de enlace y mayor estabilidad.
+            </p>
+
+            <h3 style="color: var(--tom-main); font-size: 1.15rem; margin: 25px 0 10px 0;">
+                Configuraciones de Moléculas Diatómicas Homonucleares del Período 2
+            </h3>
+
+            <div class="highlight-box box-teal">
+                <strong>Orden energético de los orbitales moleculares:</strong>
+                <ul style="margin-left:20px; font-size:0.88rem; margin-top:5px;">
+                    <li><strong>Para $O_2$ y $F_2$ ($Z \ge 8$):</strong> $\sigma_{1s} < \sigma^*_{1s} < \sigma_{2s} < \sigma^*_{2s} < \sigma_{2p_x} < (\pi_{2p_y} = \pi_{2p_z}) < (\pi^*_{2p_y} = \pi^*_{2p_z}) < \sigma^*_{2p_x}$</li>
+                    <li><strong>Para $B_2, C_2, N_2$ ($Z < 8$ - por fuerte interacción $2s-2p$):</strong> El orbital $\sigma_{2p_x}$ sube en energía pasando por encima de los $\pi_{2p}$: <br>$\sigma_{2s} < \sigma^*_{2s} < (\pi_{2p_y} = \pi_{2p_z}) < \sigma_{2p_x} < (\pi^*_{2p_y} = \pi^*_{2p_z}) < \sigma^*_{2p_x}$</li>
+                </ul>
+            </div>
+
+            <!-- Tabla de moléculas en TOM -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Especie</th>
+                            <th>N.º $e^-$ Valencia</th>
+                            <th>Configuración Electrónica de Valencia</th>
+                            <th>Orden Enlace</th>
+                            <th>Propiedad Magnética</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>$Li_2$</td><td>2</td><td>$KK (\sigma_{2s})^2$</td><td>1</td><td>Diamagnético</td></tr>
+                        <tr><td>$B_2$</td><td>6</td><td>$KK (\sigma_{2s})^2 (\sigma^*_{2s})^2 (\pi_{2p_y})^1 (\pi_{2p_z})^1$</td><td>1</td><td><strong>Paramagnético</strong> (Regla Hund)</td></tr>
+                        <tr><td>$N_2$</td><td>10</td><td>$KK (\sigma_{2s})^2 (\sigma^*_{2s})^2 (\pi_{2p_y})^2 (\pi_{2p_z})^2 (\sigma_{2p_x})^2$</td><td>3</td><td>Diamagnético (Muy estable)</td></tr>
+                        <tr><td>$O_2$</td><td>12</td><td>$KK (\sigma_{2s})^2 (\sigma^*_{2s})^2 (\sigma_{2p_x})^2 (\pi_{2p_y})^2 (\pi_{2p_z})^2 (\pi^*_{2p_y})^1 (\pi^*_{2p_z})^1$</td><td>2</td><td><strong>Paramagnético</strong> (2 $e^-$ desapareados)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ENLACE METÁLICO -->
+    <section>
+        <div class="section-header" style="border-color: var(--metallic-border);">
+            <div class="section-number" style="background: var(--metallic-main);">Metales</div>
+            <h2>Enlace Metálico</h2>
+        </div>
+
+        <div class="card">
+            <div class="card-flex-container">
+                <div class="mini-card" style="border-top: 4px solid var(--metallic-main);">
+                    <strong style="color:var(--metallic-main);">Teoría del Mar de Electrones</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;">Modelo cualitativo en el que los cationes metálicos ocupan posiciones fijas en la red cristalina y los electrones de valencia se mueven libremente por todo el cristal formando un "mar" que mantiene la cohesión.</p>
+                </div>
+                <div class="mini-card" style="border-top: 4px solid var(--tom-main);">
+                    <strong style="color:var(--tom-main);">Teoría de Bandas (TOM)</strong>
+                    <p style="font-size:0.88rem; margin-top:5px;">Aplicación de la TOM a un gran número de átomos. Los orbitales atómicos se combinan formando <strong>bandas de energía continuas</strong> donde los electrones se desplazan con extrema facilidad.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box box-amber" style="margin-top:15px;">
+                ⚡ <strong>Propiedades Explicadas:</strong> Elevada conductividad eléctrica y térmica, alta maleabilidad, ductilidad y brillo metálico característico.
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Resumen completo diseñado según el contenido de <em>Química Aplicada a la Ingeniería (UNED)</em> — Tema 2: Enlace Químico</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

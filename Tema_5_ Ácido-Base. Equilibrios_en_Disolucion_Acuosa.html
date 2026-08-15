@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      // Habilitar saltos de línea automáticos
+      enableLineBreaking: true
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 5: Equilibrios en Disolución Acuosa - Resumen Completo</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Banner Header */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0284c7 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            max-width: 850px;
+        }
+
+        .meta-info {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
+            color: #94a3b8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 22px 0 12px 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 16px 0 8px 0;
+            color: #334155;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* Color Concepts & Highlights */
+        .hl-acid {
+            background-color: #fef2f2;
+            color: #991b1b;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            border: 1px solid #fecaca;
+        }
+
+        .hl-base {
+            background-color: #f0fdf4;
+            color: #166534;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            border: 1px solid #bbf7d0;
+        }
+
+        .hl-def {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            border: 1px solid #bae6fd;
+        }
+
+        .hl-law {
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            border: 1px solid #fde68a;
+        }
+
+        .hl-purple {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            border: 1px solid #e9d5ff;
+        }
+
+        /* Math & Formulas */
+        .math-box {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 16px 24px;
+            border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8;
+            overflow-x: auto;
+        }
+
+        .math-box .var {
+            font-style: italic;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .math-inline {
+            font-family: 'Cambria', 'Georgia', serif;
+            font-style: italic;
+            font-weight: 600;
+            color: #0f172a;
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #cbd5e1;
+        }
+
+        /* Callout Cards */
+        .callout {
+            border-left: 5px solid;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 18px 0;
+            background-color: #f8fafc;
+        }
+
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            table-layout: fixed; 
+                 
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            
+        }
+
+        td {
+            padding: 11px 16px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: white;
+        }     
+        
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 12px 0 16px 24px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Badge Grid */
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .badge-card {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            background: #ffffff;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Exercises */
+        .exercise-card {
+            background-color: #fffbeb;
+            border: 1px solid #fef08a;
+            border-left: 5px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .exercise-title {
+            font-weight: 700;
+            color: #854d0e;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .solution-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        .step-tag {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #334155;
+            padding: 1px 7px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        .img-placeholder {
+            background: #f1f5f9;
+            border: 2px dashed #cbd5e1;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            color: #64748b;
+            margin: 20px 0;
+        }
+
+        .curve-svg {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER BANNER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 5: Equilibrios en Disolución Acuosa</h1>
+        <p>Resumen completo y detallado sobre los equilibrios ácido-base, constante de disociación, efecto del ión común, disoluciones amortiguadoras, valoraciones y equilibrios heterogéneos de solubilidad.</p>
+        <div class="meta-info">
+            <span><strong>Autores del texto original:</strong> María José Caselles Pomares, Mariano Molero Meneses, María</span>
+            <span><strong>Editorial:</strong> UNED</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS Y RESUMEN GENERAL -->
+    <div class="section-card">
+        <h2 class="section-title t-blue">🎯 Objetivos del Tema y Visión General</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4 style="color: var(--accent-blue);">Ácido-Base</h4>
+                <p style="font-size: 0.9rem;">Describir las teorías de Arrhenius, Brønsted-Lowry y Lewis. Calcular pH, pOH, $K_a$ y $K_b$. Predecir la acidez/basicidad de sales (hidrólisis).</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <h4 style="color: var(--accent-teal);">Sistemas Reguladores</h4>
+                <p style="font-size: 0.9rem;">Explicar el efecto del ión común, el funcionamiento de disoluciones amortiguadoras e indicadores, y calcular curvas de titulación.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <h4 style="color: var(--accent-amber);">Equilibrios de Solubilidad</h4>
+                <p style="font-size: 0.9rem;">Escribir y calcular $K_{ps}$, predecir reacciones de precipitación, e identificar el efecto del ión común, pH y complejalción sobre la solubilidad.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-info">
+            <div class="callout-title" style="color: var(--accent-blue);">📌 Resumen Ejecutivo del Tema</div>
+            <p>En este tema se aplican las leyes del equilibrio químico a reacciones en disolución acuosa. Se estudian en primer lugar los <strong>equilibrios ácido-base</strong> (clasificación en fuertes/débiles, constantes $K_a$ y $K_b$, hidrólisis salina, disoluciones amortiguadoras y valoraciones) y en segundo lugar los <strong>equilibrios de solubilidad</strong> (heterogéneos, constante del producto de solubilidad $K_{ps}$, precipitaciones y factores que modifican la solubilidad como pH, ión común y formación de complejos).</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 5.1: EQUILIBRIOS ÁCIDO-BASE -->
+    <div class="section-card">
+        <h2 class="section-title t-blue">5.1. Equilibrios Ácido-Base</h2>
+
+        <!-- 5.1.1 Introducción -->
+        <h3>5.1.1. Introducción al Concepto de Ácidos y Bases</h3>
+        <p>Los compuestos solubles en agua se dividen en <span class="hl-def">electrólitos</span> (se ionizan/disocian en sus iones) y <strong>no electrólitos</strong>. Los electrólitos fuertes (ácidos fuertes, bases fuertes y la mayoría de las sales) se disocian completamente.</p>
+
+        <h4>Evolución Histórica de los Conceptos Ácido-Base:</h4>
+        <ul>
+            <li><strong>Robert Boyle (1663):</strong> Estableció que los ácidos tienen sabor agrio, cambian el color de colorantes vegetales (indicadores) y liberan hidrógeno al reaccionar con ciertos metales, formando sustancias neutras al reaccionar con bases.</li>
+            <li><strong>Antoine Lavoisier (1777):</strong> Propuso que el <em>oxígeno</em> era el elemento esencial de la acidez ($H_2SO_4$, $HNO_3$).</li>
+            <li><strong>Humphry Davy (1808):</strong> Demostró que el $HCl$ no contiene oxígeno y es ácido, demostrando que el <span class="hl-acid">hidrógeno</span> es el elemento imprescindible.</li>
+            <li><strong>Svante Arrhenius (finales del S. XIX):</strong> Teoría de la disociación electrolítica.
+                <ul>
+                    <li><span class="hl-acid">Ácido de Arrhenius:</span> Sustancia que al disolverse en agua incrementa la concentración de iones hidrógeno ($H^+$ o $H_3O^+$).</li>
+                    <li><span class="hl-base">Base de Arrhenius:</span> Sustancia que al disolverse en agua incrementa la concentración de iones hidróxido ($OH^-$).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- TABLA 5.1 -->
+        <h4>Tabla 5.1. Ácidos y Bases Fuertes Más Comunes</h4>
+        <table>
+            
+            <thead>
+                <tr>
+                    <th style="background-color: #b91c1c;">Ácidos Fuertes (Disociación Completa)</th>
+                    <th style="background-color: #15803d;">Bases Fuertes (Disociación Completa)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$HClO_4$ (Ácido perclórico)</td>
+                    <td>$LiOH$ (Hidróxido de litio)</td>
+                </tr>
+                <tr>
+                    <td>$H_2SO_4$ (Ácido sulfúrico - 1ª disociación)</td>
+                    <td>$NaOH$ (Hidróxido sódico)</td>
+                </tr>
+                <tr>
+                    <td>$HI$ (Ácido yodhídrico)</td>
+                    <td>$KOH$ (Hidróxido potásico)</td>
+                </tr>
+                <tr>
+                    <td>$HBr$ (Ácido bromhídrico)</td>
+                    <td>$Ca(OH)_2$ (Hidróxido cálcico)</td>
+                </tr>
+                <tr>
+                    <td>$HCl$ (Ácido clorhídrico)</td>
+                    <td>$Sr(OH)_2$ (Hidróxido de estroncio)</td>
+                </tr>
+                <tr>
+                    <td>$HNO_3$ (Ácido nítrico)</td>
+                    <td>$Ba(OH)_2$ (Hidróxido de bario)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Teoría de Brønsted-Lowry (1923)</h4>
+        <p>Definición más amplia basada en la <strong>transferencia de protones</strong>, aplicable a fases no acuosas o gaseosas:</p>
+        <ul>
+            <li><span class="hl-acid">Ácido de Brønsted-Lowry:</span> Especie capaz de transferir/donar un protón ($H^+$) a otra. Debe poseer al menos un átomo de hidrógeno.</li>
+            <li><span class="hl-base">Base de Brønsted-Lowry:</span> Especie capaz de aceptar un protón ($H^+$). Debe poseer un par de electrones no compartido.</li>
+        </ul>
+
+        <div class="math-box">
+            $NH_{3(ac)} + H_2O_{(l)} \rightleftharpoons NH_{4(ac)}^+ + OH_{(ac)}^-$
+            <br>
+            <small style="color: #cbd5e1; font-size: 0.85rem;">Base + Ácido $\rightleftharpoons$ Ácido conjugado + Base conjugada</small>
+        </div>
+
+        <p>Un <strong>par ácido-base conjugado</strong> consta de dos especies que difieren únicamente por la pérdida o ganancia de un protón. Las especies que pueden comportarse como ácido en una reacción y como base en otra se denominan <span class="hl-purple">especies anfóteras o anfipróticas</span> (ejemplos: $H_2O$, $HCO_3^-$).</p>
+
+        <h4>Teoría Electrónica de Lewis (G. N. Lewis)</h4>
+        <p>Basada en la estructura electrónica y formación de enlaces covalentes coordinados:</p>
+        <ul>
+            <li><span class="hl-acid">Ácido de Lewis:</span> Especie aceptora de un par de electrones (posee orbitales vacíos, p. ej., $H^+$, $BF_3$, cationes metálicos).</li>
+            <li><span class="hl-base">Base de Lewis:</span> Especie donadora de un par de electrones (posee pares de electrones solitarios, p. ej., $NH_3$, $OH^-$, $F^-$).</li>
+        </ul>
+        <p>La reacción entre un ácido y una base de Lewis forma un <em>compuesto de adición</em> o un <strong>ión complejo</strong> mediante un enlace covalente coordinado.</p>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.1.2 Fuerza Relativa -->
+        <h3>5.1.2. Fuerza Relativa de los Ácidos y de las Bases</h3>
+        <p>La fuerza de un ácido o base reside en su capacidad para ceder o retener protones:</p>
+        <div class="callout callout-warning">
+            <div class="callout-title">Regra Fundamental de Conjugación</div>
+            <p>Cuanto más fuerte es un ácido, <strong>más débil es su base conjugada</strong>, y viceversa. Una reacción ácido-base transcurre siempre espontáneamente en el sentido de formar el <strong>ácido más débil y la base más débil</strong>.</p>
+        </div>
+
+        <h4>Tabla 5.2. Fuerza Relativa de Pares Ácido-Base Conjugados</h4>
+        <table style="width: 100%; table-layout: fixed;">
+        <thead>
+            <tr>
+            <th style="width: 35%;">Ácido</th>
+            <th style="width: 35%;">Base Conjugada</th>
+            <th style="width: 30%;">Fuerza Relativa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Fila 1 -->
+            <tr>
+            <td>$HClO_4$, $H_2SO_4$, $HI$, $HBr$, $HCl$, $HNO_3$</td>
+            <td>$ClO_4^-$, $HSO_4^-$, $I^-$, $Br^-$, $Cl^-$, $NO_3^-$</td>
+            <td><span class="hl-acid">Ácidos muy fuertes</span> $\rightarrow$ Bases extremadamente débiles</td>
+            </tr>
+            <!-- Fila 2 -->
+            <tr>
+            <td>$H_3O^+$</td>
+            <td>$H_2O$</td>
+            <td>Ácido de referencia en agua</td>
+            </tr>
+            <!-- Fila 3 (La que daba error) -->
+            <tr>
+            <td>
+                $HSO_4^-$, $H_2SO_3$, $H_3PO_4$, $HF$, $HC_2H_3O_2$, $H_2CO_3$, $H_2S$, $NH_4^+$, $HCN$, $HCO_3^-$
+            </td>
+            <td>
+                $SO_4^{2-}$, $HSO_3^-$, $H_2PO_4^-$, $F^-$, $C_2H_3O_2^-$, $HCO_3^-$, $HS^-$, $NH_3$, $CN^-$, $CO_3^{2-}$
+            </td>
+            <td><span class="hl-law">Ácidos débiles</span> $\rightarrow$ Bases débiles</td>
+            </tr>
+            <!-- Fila 4 -->
+            <tr>
+            <td>$H_2O$</td>
+            <td>$OH^-$</td>
+            <td>Base de referencia en agua</td>
+            </tr>
+        </tbody>
+        </table>        
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.1.3 Autoionización del agua -->
+        <h3>5.1.3. Autoionización del Agua</h3>
+        <p>El agua pura es un anfótero que sufre una pequeña autoionización:</p>
+        <div class="math-box">
+            $H_2O_{(l)} + H_2O_{(l)} \rightleftharpoons H_3O_{(ac)}^+ + OH_{(ac)}^-$
+            <br><br>
+            <span class="var">$K_w$</span>$ = [H_3O^+][OH^-] = $<strong>$1,0 \cdot 10^{-14}$</strong>$ \quad (\text{a } 25^\circ\text{C})$
+        </div>
+        <p>En agua pura: $[H_3O^+] = [OH^-] = 1,0 \cdot 10^{-7} \text{ M}$. Clasificación de soluciones acuosas a 25 °C:</p>
+        <ul>
+            <li><strong>Solución Neutra:</strong> $[H_3O^+] = [OH^-] = 1,0 \cdot 10^{-7} \text{ M}$</li>
+            <li><strong>Solución Ácida:</strong> $[H_3O^+] > 1,0 \cdot 10^{-7} \text{ M} \quad ([OH^-] < 1,0 \cdot 10^{-7} \text{ M})$</li>
+            <li><strong>Solución Básica:</strong> $[H_3O^+] < 1,0 \cdot 10^{-7} \text{ M} \quad ([OH^-] > 1,0 \cdot 10^{-7} \text{ M})$</li>
+        </ul>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.1.4 Soluciones de Ácidos y Bases Fuertes -->
+        <h3>5.1.4. Soluciones de Ácidos y Bases Fuertes</h3>
+        <p>Al disociarse totalmente (flecha única $\rightarrow$), la concentración del ión $H^+$ u $OH^-$ generada por la sustancia fuerte domina completamente la mezcla, pudiéndose <strong>despreciar la contribución procedente de la autoionización del agua</strong> (debido al principio de Le Chatelier).</p>
+        <p><em>Ejemplo:</em> En una solución 0,1 M de $HCl$, $[H^+] = 0,1 \text{ M}$. La concentración residual $[OH^-]$ se calcula con $K_w$: $[OH^-] = \frac{1,0 \cdot 10^{-14}}{0,1} = 1,0 \cdot 10^{-13} \text{ M}$.</p>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.1.5 pH -->
+        <h3>5.1.5. Concepto de pH de una Solución</h3>
+        <p>El <span class="hl-def">pH</span> se define como el logaritmo negativo de la concentración molar de $[H_3O^+]$:</p>
+        <div class="math-box">
+            <span class="var">pH</span>$ = -\log[H_3O^+] \qquad \text{y} \qquad $<span class="var">pOH</span>$ = -\log[OH^-]$
+            <br><br>
+            <span class="var">$pH + pOH = 14,00$</span>$ \quad (\text{a } 25^\circ\text{C})$
+        </div>
+
+        <h4>Tabla 5.3. Escala de pH a 25 °C</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Solución</th>
+                    <th>$[H^+]$ (M)</th>
+                    <th>$[OH^-]$ (M)</th>
+                    <th>pH</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="hl-acid">Ácida</span></td>
+                    <td>$> 1,0 \cdot 10^{-7}$</td>
+                    <td>$< 1,0 \cdot 10^{-7}$</td>
+                    <td><strong>$< 7,0$</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Neutra</strong></td>
+                    <td>$= 1,0 \cdot 10^{-7}$</td>
+                    <td>$= 1,0 \cdot 10^{-7}$</td>
+                    <td><strong>$= 7,0$</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="hl-base">Básica</span></td>
+                    <td>$< 1,0 \cdot 10^{-7}$</td>
+                    <td>$> 1,0 \cdot 10^{-7}$</td>
+                    <td><strong>$> 7,0$</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Determinación del pH:</strong> Se mide con precisión mediante instrumentos electrónicos (<em>pHmetros</em>) o aproximada con <em>indicadores ácido-base</em>. Un indicador es una especie orgánica débil que cambia de color según el pH al establecerse el equilibrio $HIn + H_2O \rightleftharpoons H_3O^+ + In^-$ (ej. la fenolftaleína pasa de incolora en medio ácido a rosa en medio básico).</p>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.1.6 Ácidos y Bases Débiles -->
+        <h3>5.1.6. Soluciones de Ácidos y Bases Débiles</h3>
+
+        <h4>5.1.6.1. Equilibrio de Ionización de Ácidos Débiles</h4>
+        <p>Para un ácido monoprótico débil $HA$:</p>
+        <div class="math-box">
+            $HA_{(ac)} \rightleftharpoons H_{(ac)}^+ + A_{(ac)}^-$
+            <br><br>
+            <span class="var">$K_a$</span>$ = \frac{[H^+][A^-]}{[HA]}$
+        </div>
+        <p>Cuanto mayor es $K_a$, más fuerte es el ácido débil. La hipótesis simplificativa usual supone que el ácido permanece prácticamente inalterado ($[HA]_{eq} \approx [HA]_0$). Esta aproximación se considera válida si el <strong>% de ionización es menor al 5%</strong>.</p>
+        
+        <div class="callout callout-purple">
+            <div class="callout-title">Efecto de la Dilución</div>
+            <p>El grado de ionización de un ácido o base débil <strong>aumenta con la dilución</strong> (al aumentar el volumen $V$, la fracción $1/V$ disminuye, forzando un desplazamiento hacia la formación de un mayor número de moles disociados para mantener $K_a$ constante).</p>
+        </div>
+
+        <h4>5.1.6.2. Ácidos Polipróticos</h4>
+        <p>Poseen dos o más hidrógenos ionizables en etapas sucesivas. Ejemplo del ácido sulfuroso ($H_2SO_3$):</p>
+        <div class="math-box">
+            1ª etapa: $H_2SO_{3(ac)} \rightleftharpoons H^+ + HSO_{3}^- \quad (K_{a1} = 1,7 \cdot 10^{-2})$
+            <br>
+            2ª etapa: $HSO_{3(ac)}^- \rightleftharpoons H^+ + SO_{3}^{2-} \quad (K_{a2} = 6,4 \cdot 10^{-8})$
+        </div>
+        <p>Siempre $K_{a1} \gg K_{a2} \gg K_{a3}$, porque resulta electrostáticamente más difícil arrancar un protón positivo de un anión cargado negativamente. En el caso del $H_2SO_4$, la primera ionización es fuerte (completa) y la segunda débil ($K_{a2} = 1,2 \cdot 10^{-2}$).</p>
+
+        <h4>5.1.6.3. Equilibrio de Ionización de Bases Débiles</h4>
+        <div class="math-box">
+            $B_{(ac)} + H_2O_{(l)} \rightleftharpoons BH_{(ac)}^+ + OH_{(ac)}^-$
+            <br><br>
+            <span class="var">$K_b$</span>$ = \frac{[BH^+][OH^-]}{[B]}$
+        </div>
+        <p>Se agrupan principalmente en:
+            <ol>
+                <li>Sustancias neutras con pares solitarios en N (amoniaco $NH_3$, aminas como $CH_3NH_2$).</li>
+                <li>Aniones procedentes de ácidos débiles (bases conjugadas, p. ej., $F^-$, $C_2H_3O_2^-$).</li>
+            </ol>
+        </p>
+
+        <h4>5.1.6.4. Relación Cuantitativa entre $K_a$ y $K_b$</h4>
+        <p>Para cualquier par ácido-base conjugado, la suma de sus reacciones da la autoionización del agua:</p>
+        <div class="math-box">
+            <span class="var">$K_a \cdot K_b = K_w = 1,0 \cdot 10^{-14}$</span>
+            <br><br>
+            <span class="var">$pK_a + pK_b = 14,00$</span>
+        </div>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.1.7 Hidrólisis de Sales -->
+        <h3>5.1.7. Propiedades Ácido-Base de las Soluciones de Sales (Hidrólisis)</h3>
+        <p>La <span class="hl-def">hidrólisis</span> es la reacción de los iones de una sal disuelta con el agua. El pH resultante depende del tipo de sal:</p>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: #64748b;">
+                <h4>1. Ácido Fuerte + Base Fuerte</h4>
+                <p><em>Ejemplo: $NaCl$</em></p>
+                <p>Ningún ión se hidroliza. Disolución <strong>NEUTRA (pH = 7)</strong>.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <h4>2. Ácido Débil + Base Fuerte</h4>
+                <p><em>Ejemplo: $NaCN, NaAc$</em></p>
+                <p>El anión se hidroliza liberando $OH^-$. Disolución <strong>BÁSICA (pH > 7)</strong>.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <h4>3. Ácido Fuerte + Base Débil</h4>
+                <p><em>Ejemplo: $NH_4Cl$</em></p>
+                <p>El catión se hidroliza liberando $H^+$. Disolución <strong>ÁCIDA (pH < 7)</strong>.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <h4>4. Ácido Débil + Base Débil</h4>
+                <p><em>Ejemplo: $NH_4CN$</em></p>
+                <p>Ambos iones se hidrolizan. El pH depende de la magnitud relativa: si $K_b(anión) > K_a(catión)$ es básica; si $K_a > K_b$ es ácida.</p>
+            </div>
+        </div>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.1.8 Ión Común -->
+        <h3>5.1.8. Efecto del Ión Común</h3>
+        <p>Es el desplazamiento del equilibrio de ionización causado por la adición de un soluto fuerte que aporta un ión ya presente en el equilibrio. Según el <strong>Principio de Le Chatelier</strong>, esto reduce significativamente el grado de disociación del electrólito débil.</p>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.1.9 Soluciones Amortiguadoras -->
+        <h3>5.1.9. Soluciones Amortiguadoras (Tampones o Buffers)</h3>
+        <p>Son disoluciones capaces de mantener el pH prácticamente constante ante la adición de pequeñas cantidades de ácidos o bases fuertes. Se componen de un <span class="hl-acid">ácido débil y su base conjugada</span> ($HAc / NaAc$) o una <span class="hl-base">base débil y su ácido conjugado</span> ($NH_3 / NH_4Cl$).</p>
+
+        <h4>Ecuación de Henderson-Hasselbalch:</h4>
+        <div class="math-box">
+            <span class="var">pH</span>$ = pK_a + \log \left( \frac{[\text{base conjugada}]_0}{[\text{ácido débil}]_0} \right)$
+        </div>
+        <ul>
+            <li><strong>Capacidad amortiguadora:</strong> Cantidad de ácido o base que el tampón puede neutralizar sin cambios drásticos de pH. A mayor concentración total de la pareja conjugada, mayor capacidad.</li>
+            <li><strong>Intervalo de regulación:</strong> Rango de pH útil, típicamente en la zona de $pK_a \pm 1$.</li>
+        </ul>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.1.10 Curvas de Titulación -->
+        <h3>5.1.10. Curvas de Titulación Ácido-Base</h3>
+        <p>Una <strong>titulación o valoración</strong> determina la concentración de un ácido o base adicionando volumen controlado de una disolución patrón de concentración conocida mediante una bureta hasta alcanzar el <span class="hl-def">punto de equivalencia</span>.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin: 20px 0;">
+            <div style="flex: 1; min-width: 280px;">
+                <ul>
+                    <li><strong>Ácido fuerte con Base fuerte ($HCl$ + $NaOH$):</strong> El punto de equivalencia está exactamente en <strong>pH = 7,00</strong>. Hay un salto de pH brusco (de pH 3 a 11).</li>
+                    <li><strong>Ácido débil con Base fuerte ($HAc$ + $NaOH$):</strong> El pH inicial es moderado. Antes del punto de equivalencia se genera una zona amortiguadora. En el punto de equivalencia el pH es <strong>básico (pH > 7)</strong> por hidrólisis del anión.</li>
+                    <li><strong>Base débil con Ácido fuerte ($NH_3$ + $HCl$):</strong> El punto de equivalencia ocurre a <strong>pH ácido (pH < 7)</strong>.</li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 280px; text-align: center;">
+                <svg class="curve-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="300" height="200" fill="#f8fafc" rx="8" />
+                    <!-- Axes -->
+                    <line x1="40" y1="170" x2="280" y2="170" stroke="#64748b" stroke-width="2" />
+                    <line x1="40" y1="20" x2="40" y2="170" stroke="#64748b" stroke-width="2" />
+                    <!-- Labels -->
+                    <text x="160" y="195" font-size="10" fill="#64748b" text-anchor="middle">Volumen de NaOH añadido</text>
+                    <text x="15" y="100" font-size="10" fill="#64748b" transform="rotate(-90 15 100)" text-anchor="middle">pH</text>
+                    <text x="30" y="173" font-size="9" fill="#64748b">0</text>
+                    <text x="30" y="98" font-size="9" fill="#64748b">7</text>
+                    <text x="25" y="25" font-size="9" fill="#64748b">14</text>
+                    <!-- Grid 7 -->
+                    <line x1="40" y1="95" x2="280" y2="95" stroke="#cbd5e1" stroke-dasharray="4" />
+                    <!-- Curve Strong-Strong -->
+                    <path d="M 40 155 Q 130 150 145 95 T 250 30" fill="none" stroke="#0284c7" stroke-width="3" />
+                    <!-- Equiv Point -->
+                    <circle cx="145" cy="95" r="4" fill="#dc2626" />
+                    <text x="155" y="90" font-size="9" fill="#dc2626" font-weight="bold">Punto equiv. (pH 7)</text>
+                </svg>
+                <small style="color: var(--text-muted);">Figura 5.1: Curva esquemática de titulación de un ácido fuerte con una base fuerte.</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 5.2: EQUILIBRIOS DE SOLUBILIDAD -->
+    <div class="section-card">
+        <h2 class="section-title t-amber">5.2. Equilibrios de Solubilidad</h2>
+
+        <!-- 5.2.1 Kps -->
+        <h3>5.2.1. La Constante del Producto de Solubilidad ($K_{ps}$)</h3>
+        <p>En una disolución saturada de un compuesto iónico ligeramente soluble, se establece un <strong>equilibrio heterogéneo</strong> entre el sólido no disuelto y sus iones disueltos.</p>
+        <p>Para la sal genérica $A_n B_{m (s)} \rightleftharpoons n A_{(ac)}^{m+} + m B_{(ac)}^{n-}$:</p>
+        <div class="math-box">
+            <span class="var">$K_{ps}$</span>$ = [A^{m+}]^n \cdot [B^{n-}]^m$
+        </div>
+        <p><em>Ejemplo:</em> Para el fosfato cálcico $Ca_3(PO_4)_{2(s)} \rightleftharpoons 3 Ca_{(ac)}^{2+} + 2 PO_{4(ac)}^{3-}$: <br>
+        $\mathbf{K_{ps} = [Ca^{2+}]^3 \cdot [PO_4^{3-}]^2}$.</p>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.2.2 Solubilidad y Kps -->
+        <h3>5.2.2. Relación entre Solubilidad y $K_{ps}$</h3>
+        <p>La <span class="hl-def">solubilidad ($s$)</span> es la cantidad de sustancia que se disuelve para formar un litro de disolución saturada ($g/L$ o solubilidad molar en $mol/L$).</p>
+        <p>Para una sal de estequiometría 1:1 ($AB \rightleftharpoons A^+ + B^-$): $K_{ps} = s^2 \implies s = \sqrt{K_{ps}}$.</p>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.2.3 Factores que afectan la solubilidad -->
+        <h3>5.2.3. Factores que Afectan a la Solubilidad</h3>
+
+        <h4>1. Efecto del Ión Común</h4>
+        <p>La presencia de un segundo soluto soluble que comparta un ión con el precipitado <strong>disminuye drásticamente su solubilidad</strong>, desplazando el equilibrio hacia el sólido según Le Chatelier.</p>
+
+        <h4>2. Solubilidad y pH</h4>
+        <p>Las sales e hidróxidos cuyos aniones son básicos ($S^{2-}, CO_3^{2-}, SO_3^{2-}, OH^-$) aumentan enormemente su solubilidad al **disminuir el pH** (añadir ácido). El $H^+$ reacciona con los aniones consumiéndolos y forzando la disolución de más sólido.</p>
+        <div class="math-box">
+            $CaCO_{3(s)} + 2 H_{(ac)}^+ \rightleftharpoons Ca_{(ac)}^{2+} + H_2O_{(l)} + CO_{2(g)} \uparrow$
+        </div>
+
+        <h4>3. Formación de Iones Complejos e Hidróxidos Anfóteros</h4>
+        <p>Un <span class="hl-purple">ión complejo</span> se compone de un catión metálico unido a bases de Lewis llamadas <em>ligandos</em>. La constante de formación $K_f$ suele ser sumamente elevada.</p>
+        <p><em>Ejemplo:</em> El $AgCl$ es insoluble en agua pero muy soluble en amoniaco acuoso debido a la formación del complejo estable $[Ag(NH_3)_2]^+$:</p>
+        <div class="math-box">
+            $AgCl_{(s)} + 2 NH_{3(ac)} \rightleftharpoons [Ag(NH_3)_2]_{(ac)}^+ + Cl_{(ac)}^- \qquad (K_{global} = K_{ps} \cdot K_f)$
+        </div>
+        <p>Los <strong>hidróxidos anfóteros</strong> (como los de $Al^{3+}, Cr^{3+}, Zn^{2+}, Sn^{2+}$) son solubles tanto en ácidos fuertes como en bases fuertes por formación de hidroxi-complejos (ej. $Zn(OH)_4^{2-}$).</p>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- 5.2.4 Precipitación y Separación -->
+        <h3>5.2.4. Precipitación y Separación de Iones</h3>
+        <p>Comparando el cociente de reacción iónico $Q$ con el producto de solubilidad $K_{ps}$:</p>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <h4>$Q < K_{ps}$</h4>
+                <p>Disolución insaturada. No se forma precipitado; el sólido se puede disolver.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4>$Q = K_{ps}$</h4>
+                <p>Disolución saturada en equilibrio exacto.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <h4>$Q > K_{ps}$</h4>
+                <p>Disolución sobresaturada. <strong>Precipita el sólido</strong> hasta restituir $Q = K_{ps}$.</p>
+            </div>
+        </div>
+
+        <h4>Precipitación Fraccionada</h4>
+        <p>Técnica de separación selectiva de iones en disolución mediante la adición paulatina de un reactivo común. Precipita primero el compuesto que requiera la menor concentración del ión precipitante. Se considera una <strong>separación completa si precipita el $\ge 99,9\%$</strong> del primer ión antes de que empiece a precipitar el segundo.</p>
+    </div>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN Y SOLUCIONES -->
+    <div class="section-card">
+        <h2 class="section-title t-green">📝 Ejercicios de Autoevaluación Resueltos</h2>
+
+        <!-- Ejercicio 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Indicar $[H^+]$, $[OH^-]$ y carácter de las soluciones: a) $HNO_3$ 0,125 M; b) $Ba(OH)_2$ 0,125 M.</div>
+            <div class="solution-box">
+                <p><span class="step-tag">a</span> $HNO_3$ es ácido fuerte (disociación total): <br>
+                $[H^+] = \mathbf{0,125 \text{ M}}$; $[OH^-] = \frac{10^{-14}}{0,125} = \mathbf{8,0 \cdot 10^{-14} \text{ M}}$; $pH = -\log(0,125) = \mathbf{0,90}$ $\rightarrow$ <span class="hl-acid">Solución Ácida</span>.</p>
+                <p><span class="step-tag">b</span> $Ba(OH)_2$ es base fuerte: $Ba(OH)_2 \rightarrow Ba^{2+} + 2 OH^-$ <br>
+                $[OH^-] = 2 \cdot (0,125) = \mathbf{0,250 \text{ M}}$; $[H^+] = \frac{10^{-14}}{0,250} = \mathbf{4,0 \cdot 10^{-14} \text{ M}}$; $pH = 13,39$ $\rightarrow$ <span class="hl-base">Solución Básica</span>.</p>
+            </div>
+        </div>
+
+        <!-- Ejercicio 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: Calcular el pH de una disolución acuosa 0,10 M de cloruro amónico ($NH_4Cl$). ($K_b(NH_3) = 1,8 \cdot 10^{-5}$).</div>
+            <div class="solution-box">
+                <p>El $NH_4Cl$ se disocia en $NH_4^+$ y $Cl^-$. El $NH_4^+$ sufre hidrólisis ácida: $NH_4^+ + H_2O \rightleftharpoons H_3O^+ + NH_3$.</p>
+                <p>$K_a = \frac{K_w}{K_b} = \frac{10^{-14}}{1,8 \cdot 10^{-5}} = 5,56 \cdot 10^{-10}$.</p>
+                <p>$K_a = \frac{x^2}{0,10 - x} \approx \frac{x^2}{0,10} \implies x = \sqrt{5,56 \cdot 10^{-11}} = 7,45 \cdot 10^{-6} \text{ M} = [H^+]$.</p>
+                <p>$\mathbf{pH = -\log(7,45 \cdot 10^{-6}) = 5,13}$ (Ácida).</p>
+            </div>
+        </div>
+
+        <!-- Ejercicio 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Calcular $K_a$ y el % de ionización del ácido láctico ($HC_3H_5O_3$) 0,10 M si tiene pH = 2,44.</div>
+            <div class="solution-box">
+                <p>$[H^+] = 10^{-2,44} = 3,63 \cdot 10^{-3} \text{ M} = x$.</p>
+                <p>$K_a = \frac{x^2}{0,10 - x} = \frac{(3,63 \cdot 10^{-3})^2}{0,10 - 0,00363} = \mathbf{1,37 \cdot 10^{-4}}$.</p>
+                <p>$\% \text{ ionización} = \frac{3,63 \cdot 10^{-3}}{0,10} \cdot 100 = \mathbf{3,63\%}$.</p>
+            </div>
+        </div>
+
+        <!-- Ejercicio 4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4: Variación de pH al añadir 0,01 mol de $HCl$ a un tampón con 0,05 mol de acetato y 0,05 mol de ácido acético en 1 L ($K_a = 1,8 \cdot 10^{-5}$).</div>
+            <div class="solution-box">
+                <p><strong>pH Inicial:</strong> $pH = pK_a + \log\left(\frac{0,05}{0,05}\right) = -\log(1,8 \cdot 10^{-5}) = 4,74$.</p>
+                <p><strong>Tras añadir $HCl$:</strong> El $H^+$ reacciona con la base conjugada: $Ac^- + H^+ \rightarrow HAc$.</p>
+                <p>Moles de $HAc = 0,05 + 0,01 = 0,06$; Moles de $Ac^- = 0,05 - 0,01 = 0,04$.</p>
+                <p><strong>pH Final:</strong> $pH = 4,74 + \log\left(\frac{0,04}{0,06}\right) = 4,74 - 0,18 = 4,56$.</p>
+                <p>$\mathbf{\Delta pH = 4,56 - 4,74 = -0,18}$. (El pH apenas varía).</p>
+            </div>
+        </div>
+
+        <!-- Ejercicio 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5: pH obtenido al mezclar 500 mL de $NH_3$ 0,10 M con 200 mL de $HCl$ 0,15 M ($K_b = 1,8 \cdot 10^{-5}$).</div>
+            <div class="solution-box">
+                <p>Moles $NH_3 = 0,500 \cdot 0,10 = 0,050 \text{ mol}$; Moles $HCl = 0,200 \cdot 0,15 = 0,030 \text{ mol}$.</p>
+                <p>Reacción: $NH_3 + HCl \rightarrow NH_4^+ + Cl^-$. Neutraliza 0,030 mol.</p>
+                <p>Quedan: $0,020 \text{ mol de } NH_3$ y se forman $0,030 \text{ mol de } NH_4^+$ en 700 mL (forma una solución tampón).</p>
+                <p>$pOH = pK_b + \log\left(\frac{[NH_4^+]}{[NH_3]}\right) = -\log(1,8 \cdot 10^{-5}) + \log\left(\frac{0,030}{0,020}\right) = 4,74 + 0,18 = 4,92$.</p>
+                <p>$\mathbf{pH = 14 - 4,92 = 9,08}$.</p>
+            </div>
+        </div>
+
+        <!-- Ejercicio 6 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 6: Calcular la solubilidad molar del $CaCO_3$ en agua ($K_{ps} = 3,8 \cdot 10^{-9}$).</div>
+            <div class="solution-box">
+                <p>$CaCO_{3(s)} \rightleftharpoons Ca^{2+} + CO_3^{2-}$.</p>
+                <p>$K_{ps} = s^2 \implies s = \sqrt{3,8 \cdot 10^{-9}} = \mathbf{6,16 \cdot 10^{-5} \text{ M}}$.</p>
+            </div>
+        </div>
+
+        <!-- Ejercicio 7 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 7: Solubilidad del $CaCO_3$ en disolución 0,10 M de $Na_2CO_3$.</div>
+            <div class="solution-box">
+                <p>Efecto del ión común $CO_3^{2-}$ ($[CO_3^{2-}] = 0,10 + s \approx 0,10 \text{ M}$).</p>
+                <p>$K_{ps} = [Ca^{2+}][CO_3^{2-}] = s \cdot (0,10) = 3,8 \cdot 10^{-9}$.</p>
+                <p>$\mathbf{s = 3,8 \cdot 10^{-8} \text{ M}}$. (Mucho menor que en agua pura por el ión común).</p>
+            </div>
+        </div>
+
+        <!-- Ejercicio 8 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 8: Comparar la solubilidad del $Cu(OH)_2$ a pH = 6 y pH = 7 ($K_{ps} = 1,6 \cdot 10^{-19}$).</div>
+            <div class="solution-box">
+                <p>$Cu(OH)_2 \rightleftharpoons Cu^{2+} + 2 OH^- \implies [Cu^{2+}] = \frac{K_{ps}}{[OH^-]^2} = \frac{K_{ps} \cdot [H^+]^2}{10^{-28}}$.</p>
+                <p>A pH = 6 ($[H^+] = 10^{-6}$ M): $[Cu^{2+}] = \frac{1,6 \cdot 10^{-19} \cdot 10^{-12}}{10^{-28}} = \mathbf{1,6 \cdot 10^{-3} \text{ mol/L}}$.</p>
+                <p>A pH = 7 ($[H^+] = 10^{-7}$ M): $[Cu^{2+}] = \frac{1,6 \cdot 10^{-19} \cdot 10^{-14}}{10^{-28}} = \mathbf{1,6 \cdot 10^{-5} \text{ mol/L}}$.</p>
+                <p>La solubilidad es <strong>100 veces mayor a pH = 6</strong> que a pH = 7.</p>
+            </div>
+        </div>
+
+        <!-- Ejercicio 9 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 9: Explicar la formación y redisolución del precipitado al añadir KOH a sulfato de aluminio.</div>
+            <div class="solution-box">
+                <p>Al añadir $KOH$ a $Al_2(SO_4)_3$, los iones $OH^-$ precipitan el hidróxido de aluminio poco soluble: <br>
+                $Al_{(ac)}^{3+} + 3 OH_{(ac)}^- \rightarrow Al(OH)_{3(s)} \downarrow$ (precipitado blanco).</p>
+                <p>Al seguir añadiendo exceso de $KOH$, como el $Al(OH)_3$ es un <strong>hidróxido anfótero</strong>, reacciona con el exceso de $OH^-$ formando el ión complejo soluble aluminato (o tetrahidroxoaluminato): <br>
+                $Al(OH)_{3(s)} + OH_{(ac)}^- \rightarrow [Al(OH)_4]_{(ac)}^-$ (solución transparente).</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

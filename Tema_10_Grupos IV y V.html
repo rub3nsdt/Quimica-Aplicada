@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 10: Elementos no metálicos de los grupos V A y IV A - Resumen Completo</title>
+    <!-- MathJax Configuration -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+          enableLineBreaking: true
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Banner Header */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #311b92 40%, #0284c7 80%, #0d9488 100%);
+            color: white;
+            padding: 45px 35px;
+            border-radius: 18px;
+            box-shadow: 0 12px 28px -5px rgba(15, 23, 42, 0.35);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.25);
+            color: #38bdf8;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #ffffff, #93c5fd, #67e8f9);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 900px;
+        }
+
+        .meta-info {
+            margin-top: 22px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            font-size: 0.92rem;
+            color: #94a3b8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 35px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.09);
+        }
+
+        .section-title {
+            font-size: 1.65rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 24px 0 14px 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h4 {
+            font-size: 1.08rem;
+            font-weight: 600;
+            margin: 18px 0 10px 0;
+            color: #334155;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* Color Concepts & Highlights */
+        .hl-def {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #bae6fd;
+        }
+
+        .hl-react {
+            background-color: #fef2f2;
+            color: #991b1b;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #fecaca;
+        }
+
+        .hl-green {
+            background-color: #f0fdf4;
+            color: #166534;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #bbf7d0;
+        }
+
+        .hl-amber {
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #fde68a;
+        }
+
+        .hl-purple {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #e9d5ff;
+        }
+
+        .hl-teal {
+            background-color: #ccfbf1;
+            color: #115e59;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #99f6e4;
+        }
+
+        /* Math & Formulas */
+        .math-box {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 18px 26px;
+            border-radius: 12px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.35);
+            border-left: 5px solid #38bdf8;
+            overflow-x: auto;
+        }
+
+        /* Callout Cards */
+        .callout {
+            border-left: 5px solid;
+            padding: 18px 22px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+            background-color: #f8fafc;
+        }
+
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.05rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 22px 0;
+            font-size: 0.92rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 11px 14px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 14px 0 18px 26px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
+        /* Badge Grid */
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin: 22px 0;
+        }
+
+        .badge-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 18px;
+            background: #ffffff;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        /* Exercises */
+        .exercise-card {
+            background-color: #fffbeb;
+            border: 1px solid #fef08a;
+            border-left: 6px solid var(--accent-amber);
+            border-radius: 10px;
+            padding: 22px;
+            margin-bottom: 25px;
+        }
+
+        .exercise-title {
+            font-weight: 700;
+            color: #854d0e;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .solution-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 12px;
+            font-size: 0.96rem;
+        }
+
+        .step-tag {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #334155;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .svg-container {
+            text-align: center;
+            margin: 25px 0;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER BANNER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 10: Elementos no metálicos de los grupos V A y IV A</h1>
+        <p>Resumen exhaustivo, riguroso y sistemático sobre las propiedades periódicas, métodos industriales de obtención, compuestos fundamentales ($NH_3$, $HNO_3$, $H_3PO_4$, $CO_2$, $Na_2CO_3$), impacto medioambiental y ejercicios resueltos.</p>
+        <div class="meta-info">
+            <span><strong>Autores:</strong> María José Caselles Pomares, Mariano Molero Meneses, María</span>
+            <span><strong>Editorial:</strong> UNED</span>
+            <span><strong>Asignatura:</strong> Química Aplicada a la Ingeniería</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS Y RESUMEN GENERAL -->
+    <div class="section-card">
+        <h2 class="section-title t-blue">🎯 Objetivos y Resumen General del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4 style="color: var(--accent-blue);">Grupo V A ($N, P$)</h4>
+                <p style="font-size: 0.9rem;">Estudiar la licuefacción-destilación del aire, la síntesis de Haber-Bosch para el $NH_3$, la producción de $HNO_3$ (proceso Ostwald), $H_3PO_4$, superfosfatos y el ciclo del nitrógeno.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <h4 style="color: var(--accent-teal);">Grupo IV A ($C$)</h4>
+                <p style="font-size: 0.9rem;">Analizar las formas alotrópicas del carbono (diamante y grafito), la fibra de carbono, sus óxidos ($CO$, $CO_2$), $CO_2$ supercrítico y la producción industrial de $Na_2CO_3$ (Proceso Solvay).</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <h4 style="color: var(--accent-red);">Medio Ambiente</h4>
+                <p style="font-size: 0.9rem;">Valorar la incidencia de los $NO_x$ en el smog y la lluvia ácida, la toxicidad del $CO$, el efecto invernadero del $CO_2$ y $N_2O$, y la eutrofización por fosfatos.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-info">
+            <div class="callout-title" style="color: var(--accent-blue);">📌 Resumen Ejecutivo</div>
+            <p>Este tema aborda el estudio de los elementos no metálicos de los grupos V A (familia del nitrógeno) y IV A (familia del carbono), centrándose prioritariamente en el <span class="hl-def">nitrógeno</span>, el <span class="hl-teal">fósforo</span> y el <span class="hl-amber">carbono</span>, dado que los miembros más pesados presentan carácter semimetálico o metálico. Se analiza el aire como fuente inagotable para la obtención de $N_2$ y $O_2$, las cadenas de síntesis industrial de compuestos clave ($NH_3$, $HNO_3$, $H_3PO_4$, $Na_2CO_3$), el comportamiento supercrítico del $CO_2$, así como las profundas implicaciones medioambientales derivadas de sus residuos y emisiones contaminantes.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 10.1: CARACTERÍSTICAS GENERALES GRUPO V A -->
+    <div class="section-card">
+        <h2 class="section-title t-blue">10.1. Características Generales de los Elementos del Grupo V A</h2>
+        <p>El grupo V A está formado por: <span class="hl-def">Nitrógeno ($N$)</span>, <span class="hl-teal">Fósforo ($P$)</span>, <span class="hl-amber">Arsénico ($As$)</span>, <span class="hl-purple">Antimonio ($Sb$)</span> y <span class="hl-react">Bismuto ($Bi$)</span>. Los dos primeros son no metales netos, el $As$ y $Sb$ son semimetales, y el $Bi$ es marcadamente metálico.</p>
+        
+        <p>Su configuración electrónica de la capa de valencia en estado fundamental es $\mathbf{n s^2 n p^3}$ (5 electrones: 1 par apareado en $s$ y 3 electrones desapareados en los orbitales $p$).</p>
+
+        <h4>Tabla 10.1. Propiedades periódicas de los elementos del Grupo V A</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Nitrógeno ($N$)</th>
+                    <th>Fósforo ($P$)</th>
+                    <th>Arsénico ($As$)</th>
+                    <th>Antimonio ($Sb$)</th>
+                    <th>Bismuto ($Bi$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Número atómico ($Z$)</strong></td>
+                    <td>7</td>
+                    <td>15</td>
+                    <td>33</td>
+                    <td>51</td>
+                    <td>83</td>
+                </tr>
+                <tr>
+                    <td><strong>Capa de valencia</strong></td>
+                    <td>$2s^2 2p^3$</td>
+                    <td>$3s^2 3p^3$</td>
+                    <td>$4s^2 4p^3$</td>
+                    <td>$5s^2 5p^3$</td>
+                    <td>$6s^2 6p^3$</td>
+                </tr>
+                <tr>
+                    <td><strong>Radio covalente (nm)</strong></td>
+                    <td>0,075</td>
+                    <td>0,106</td>
+                    <td>0,119</td>
+                    <td>0,138</td>
+                    <td>0,146</td>
+                </tr>
+                <tr>
+                    <td><strong>Radio iónico ($X^{3-}$, nm)</strong></td>
+                    <td>0,171</td>
+                    <td>0,212</td>
+                    <td>0,222</td>
+                    <td>0,245</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>Potencial de ionización (kJ/mol)</strong></td>
+                    <td>1.396</td>
+                    <td>1.060</td>
+                    <td>966</td>
+                    <td>832</td>
+                    <td>773</td>
+                </tr>
+                <tr>
+                    <td><strong>Afinidad electrónica (kJ/mol)</strong></td>
+                    <td>&lt; 10</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>Electronegatividad</strong></td>
+                    <td>3,0</td>
+                    <td>2,1</td>
+                    <td>2,0</td>
+                    <td>1,9</td>
+                    <td>1,9</td>
+                </tr>
+                <tr>
+                    <td><strong>Números de oxidación</strong></td>
+                    <td>-3 (+1, +2, +3, +4, +5)</td>
+                    <td>-3 (+1, +3, +4, +5)</td>
+                    <td>-3 (+3, +5)</td>
+                    <td>-3 (+3, +5)</td>
+                    <td>(+3, +5)</td>
+                </tr>
+                <tr>
+                    <td><strong>Punto de fusión (°C)</strong></td>
+                    <td>-210</td>
+                    <td>44</td>
+                    <td>816</td>
+                    <td>631</td>
+                    <td>271</td>
+                </tr>
+                <tr>
+                    <td><strong>Punto de ebullición (°C)</strong></td>
+                    <td>-196</td>
+                    <td>280</td>
+                    <td>1.380</td>
+                    <td>1.380</td>
+                    <td>1.560</td>
+                </tr>
+                <tr>
+                    <td><strong>Densidad en el P.f. (g/mL)</strong></td>
+                    <td>0,81</td>
+                    <td>1,82</td>
+                    <td>6,62</td>
+                    <td>6,62</td>
+                    <td>9,80</td>
+                </tr>
+                <tr>
+                    <td><strong>Potencial de reducción ($E^\circ$, V)</strong></td>
+                    <td>-0,27</td>
+                    <td>0,06</td>
+                    <td>-0,50</td>
+                    <td>-0,50</td>
+                    <td>0,32</td>
+                </tr>
+                <tr>
+                    <td><strong>Color</strong></td>
+                    <td>Incoloro</td>
+                    <td>Blanco-negro</td>
+                    <td>Gris</td>
+                    <td>Gris</td>
+                    <td>Gris</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">Diferencias clave entre el Nitrógeno y sus homólogos de grupo</div>
+            <ul>
+                <li><strong>Estados de oxidación e hidruros:</strong> Con elementos electropositivos actúan con número de oxidación <span class="hl-def">-3</span> forming hidruros: amoniaco ($NH_3$), fosfamina ($PH_3$), arsina ($H_3As$) y estibina ($H_3Sb$). Con elementos electronegativos actúan con <span class="hl-amber">+3 y +5</span>. El nitrógeno presenta además $+1$ ($N_2O$), $+2$ ($NO$) y $+4$ ($NO_2$).</li>
+                <li><strong>Estado de agregación:</strong> El nitrógeno es el único gas en condiciones normales, formado por moléculas biatómicas ($\mathbf{N_2}$) muy estables por un enlace triple. El resto son sólidos; el fósforo gaseoso forma moléculas $P_4$, $P_2$ o monoatómicas a alta temperatura.</li>
+                <li><strong>Ausencia de orbitales $d$ estables:</strong> El nitrógeno <span class="hl-react">carece de orbitales $d$ estables</span> en su capa de valencia, limitando su covalencia máxima o índice de coordinación a <strong>4</strong> (ej. ion amonio, $NH_4^+$). El $P, As, Sb$ y $Bi$ disponen de orbitales $d$ vacíos y forman compuestos pentacovalentes con índice de coordinación 5 (ej. $PCl_5$, mientras que el $NCl_5$ no existe).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 10.2: NITRÓGENO Y SU CICLO -->
+    <div class="section-card">
+        <h2 class="section-title t-teal">10.2. Nitrógeno: Estado Natural. Ciclo del Nitrógeno</h2>
+        <p>El nitrógeno constituye el <span class="hl-def">79% en volumen</span> de la atmósfera terrestre como $N_2$. En la corteza se encuentra en depósitos inorgánicos como el nitro de Chile ($NaNO_3$), salitre ($KNO_3$) y sales amónicas, e inmerso en la materia orgánica (aminas, amidas, aminoácidos, proteínas y ácidos nucleicos).</p>
+
+        <h4>Fijación del Nitrógeno Atmosférico y Barreras Termodinámicas/Cinéticas</h4>
+        <p>Las reacciones teóricas directas de fijación del $N_2$ en medio acuoso presentan serias restricciones:</p>
+
+        <div class="math-box">
+            $$\frac{1}{2}\text{N}_{2(g)} + \frac{5}{4}\text{O}_{2(g)} + \frac{1}{2}\text{H}_2\text{O}_{(l)} \rightleftharpoons \text{HNO}_{3(ac)} \qquad \Delta H^\circ = -65\text{ kJ/mol}$$
+        </div>
+        <p>Aunque es termodinámicamente factible ($\Delta H^\circ < 0$), <span class="hl-react">no se produce al estar impedida cinéticamente</span> debido a la enorme energía de enlace del triple enlace de la molécula de $N_2$.</p>
+
+        <div class="math-box">
+            $$\frac{1}{2}\text{N}_{2(g)} + \frac{3}{2}\text{H}_2\text{O}_{(l)} \rightleftharpoons \text{NH}_{3(ac)} + \frac{3}{4}\text{O}_{2(g)} \qquad \Delta H^\circ = +348\text{ kJ/mol}$$
+        </div>
+        <p>Esta reacción es energéticamente prohibitiva ($\Delta H^\circ \gg 0$). Sin embargo, las bacterias en nódulos de plantas leguminosas la ejecutan mediante la enzima <span class="hl-green">nitrogenasa</span>, que rompe el enlace $N\equiv N$ e incorpora el nitrógeno como sales amónicas consumiendo oxígeno en su metabolismo.</p>
+
+        <div class="callout callout-purple">
+            <div class="callout-title">El Ciclo del Nitrógeno en la Naturaleza</div>
+            <p>En la alta atmósfera, la energía fotoquímica y los relámpagos combinan el $N_2$ con $O_2$ dando $NO$, que se oxida a $NO_2$ y finalmente a $HNO_3$. Este reacciona con el amoniaco atmosférico formando $NH_4NO_3$, el cual cae con la lluvia y es absorbido por las plantas para sintetizar proteínas. Los animales consumen las plantas y, tras su metabolización y degradación orgánica, las <strong>bacterias desnitrificantes</strong> devuelven el nitrógeno molecular ($N_2$) a la atmósfera, cerrando un ciclo continuo entre litosfera, hidrosfera y atmósfera.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 10.3: SÍNTESIS INDUSTRIAL DEL NITRÓGENO -->
+    <div class="section-card">
+        <h2 class="section-title t-green">10.3. Síntesis Industrial del Nitrógeno: Licuefacción y Destilación del Aire</h2>
+        <p>A nivel industrial, el nitrógeno se obtiene a partir del aire atmosférico mediante dos etapas secuenciales: <span class="hl-def">Licuefacción</span> y <span class="hl-teal">Destilación/Rectificación</span>.</p>
+
+        <h3>10.3.1. Métodos de Licuefacción del Aire</h3>
+        <ul>
+            <li><strong>Compresión-Expansión Isentálpica ($\Delta H = 0$):</strong> El aire depurado y seco se comprime y se expande a través de una válvula hasta presión atmosférica. Sufre un enfriamiento a costa de la energía interna molecular denominado <span class="hl-amber">Efecto Joule-Thomson</span> (desarrollado por Linde en 1895).</li>
+            <li><strong>Compresión-Expansión Isentrópica ($\Delta S = 0$):</strong> El aire comprimido se expande en un cilindro con émbolo produciendo un trabajo mecánico externo mientras se enfría (desarrollado por Claude en 1902). Exige mayor equipamiento y acarrea problemas de lubricación a temperaturas extremas.</li>
+            <li><strong>Sistema Mixto Linde-Claude:</strong> Divide el aire comprimido en dos fracciones (una se expande isentrópicamente para enfriar y la otra isentálpicamente para licuar), reduciendo drásticamente el consumo energético global.</li>
+        </ul>
+
+        <h4>Análisis Termodinámico: Diagrama Temperatura ($T$) - Entropía ($S$)</h4>
+        <p>El comportamiento de fases del aire se distingue en el diagrama $T-S$ en tres zonas fundamentales:</p>
+        <ol>
+            <li><strong>Zona de Gas ($G$):</strong> Altas temperaturas y entropías.</li>
+            <li><strong>Zona de Líquido ($L$):</strong> Parte inferior izquierda, bajas temperaturas y entropías.</li>
+            <li><strong>Zona de Equilibrio Líquido-Gas ($G+L$):</strong> Interior de la campana de saturación.</li>
+        </ol>
+
+        <div class="svg-container">
+            <svg width="450" height="260" viewBox="0 0 450 260">
+                <rect width="100%" height="100%" fill="#ffffff"/>
+                <!-- Axes -->
+                <line x1="50" y1="220" x2="400" y2="220" stroke="#0f172a" stroke-width="2"/>
+                <line x1="50" y1="220" x2="50" y2="20" stroke="#0f172a" stroke-width="2"/>
+                <text x="410" y="225" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a">S</text>
+                <text x="45" y="15" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a">T</text>
+
+                <!-- Dome (Campana) -->
+                <path d="M 100 220 Q 200 60 300 220" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
+                <text x="185" y="150" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0284c7">G + L</text>
+                <text x="70" y="120" font-family="sans-serif" font-size="14" font-weight="bold" fill="#16a34a">L</text>
+                <text x="330" y="100" font-family="sans-serif" font-size="14" font-weight="bold" fill="#d97706">G</text>
+
+                <!-- Isobars & Points -->
+                <!-- Point A -->
+                <circle cx="350" cy="50" r="4" fill="#dc2626"/>
+                <text x="360" y="55" font-family="sans-serif" font-size="12" font-weight="bold">A (P1, T1)</text>
+
+                <!-- AB compression -->
+                <line x1="350" y1="50" x2="180" y2="50" stroke="#dc2626" stroke-width="2"/>
+                <circle cx="180" cy="50" r="4" fill="#dc2626"/>
+                <text x="175" y="40" font-family="sans-serif" font-size="12" font-weight="bold">B</text>
+
+                <!-- BC Isenthalpic -->
+                <path d="M 180 50 Q 210 120 230 180" fill="none" stroke="#9333ea" stroke-width="2" stroke-dasharray="3,3"/>
+                <circle cx="230" cy="180" r="4" fill="#9333ea"/>
+                <text x="240" y="185" font-family="sans-serif" font-size="12" font-weight="bold">C (Isentálpica)</text>
+
+                <!-- BD Isentropic -->
+                <line x1="180" y1="50" x2="180" y2="200" stroke="#16a34a" stroke-width="2"/>
+                <circle cx="180" cy="200" r="4" fill="#16a34a"/>
+                <text x="120" y="205" font-family="sans-serif" font-size="12" font-weight="bold">D (Isentrópica)</text>
+            </svg>
+            <p style="font-size:0.85rem; color:#64748b; margin-top:5px;">Figura 10.1. Esquema simplificado del Diagrama Temperatura (T) - Entropía (S) para el aire.</p>
+        </div>
+
+        <h3>10.3.2. Destilación o Rectificación del Aire Líquido</h3>
+        <p>La separación del aire licuado aprovecha la diferencia en los puntos de ebullición del <span class="hl-def">oxígeno (78 K)</span> y del <span class="hl-teal">nitrógeno (90 K)</span> (datos según texto original del PDF). En la columna de destilación de Linde:</p>
+        <ul>
+            <li>El aire comprimido se enfría en el intercambiador ($I$) y pasa por un serpentín en la base de la columna.</li>
+            <li>Se expande isentálpicamente licuando e introduciéndose en la columna ($C$).</li>
+            <li>El <strong>nitrógeno (más volátil)</strong> sale en fase gaseosa por la cabeza de la columna.</li>
+            <li>El <strong>oxígeno (menos volátil)</strong> se acumula como líquido en la base.</li>
+        </ul>
+
+        <div class="callout callout-danger">
+            <div class="callout-title">Relación entre Pureza y Coste Industrial</div>
+            <p>El coste de producción del nitrógeno y oxígeno varía de forma <strong>exponencial</strong> con el grado de pureza requerido. Para aplicaciones industriales comunes del $O_2$ basta con una riqueza del 60%, mientras que para la síntesis de amoniaco se exige nitrógeno de altísima pureza. Por ejemplo: producir 1 tonelada de $O_2$ con un 98% de pureza cuesta <em>menos de la mitad</em> que obtener $O_2$ al 99,8%.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 10.4: APLICACIONES DEL NITRÓGENO -->
+    <div class="section-card">
+        <h2 class="section-title t-amber">10.4. Aplicaciones del Nitrógeno</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4 style="color: var(--accent-blue);">Síntesis de Amoniaco</h4>
+                <p>Constituye el destino industrial mayoritario y prioritario del nitrógeno elemental.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <h4 style="color: var(--accent-teal);">Fertilizantes e Hidracina</h4>
+                <p>Obtención de cianamida cálcica (abono) e hidracina ($N_2H_4$, propelente de cohetes).</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <h4 style="color: var(--accent-purple);">Atmósferas Inertes y Criogenia</h4>
+                <p>Gas de relleno inerte en equipos, prevención de oxidación orgánica/inorgánica y conservación criogénica de alimentos con $N_2$ líquido.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 10.5: AMONIACO -->
+    <div class="section-card">
+        <h2 class="section-title t-purple">10.5. El Amoniaco: Estructura, Síntesis y Aplicaciones Industriales</h2>
+        <p>El amoniaco ($\mathbf{NH_3}$) es un gas incoloro de olor picante característico, fuertemente irritante. Su molécula presenta <span class="hl-def">estructura piramidal trigonal</span> con el nitrógeno en el vértice superior ($sp^3$, ángulos $107^\circ$). La disponibilidad del par solitario le confiere un marcado carácter básico.</p>
+
+        <p>En agua forma disoluciones acuosas alcalinas (hasta 15 M) denominadas hidróxido amónico ($NH_4OH$):</p>
+        <div class="math-box">
+            $$\text{NH}_4\text{OH}_{(ac)} \rightleftharpoons \text{NH}_4^+ + \text{OH}^- \qquad K_b = 1,5 \cdot 10^{-5}$$
+        </div>
+
+        <h3>10.5.1. Síntesis Industrial del Amoniaco (Proceso Haber-Bosch)</h3>
+        <p>Desarrollado por Fritz Haber en 1908, consiste en la combinación directa de sus elementos en fase gaseosa:</p>
+
+        <div class="math-box">
+            $$\text{N}_{2(g)} + 3\text{H}_{2(g)} \xrightarrow{\text{catalizador}} 2\text{NH}_{3(g)} \qquad \Delta H^\circ = -92,2\text{ kJ/mol}$$
+        </div>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">Compromiso Termodinámico-Cinético en Haber-Bosch</div>
+            <ul>
+                <li><strong>Termodinámica:</strong> Al ser exotérmica ($\Delta H^\circ < 0$) y con disminución de moles ($\Delta n < 0$), el principio de Le Chatelier dicta que el equilibrio se desplaza a la derecha a <span class="hl-def">bajas temperaturas</span> y <span class="hl-teal">altas presiones</span>.</li>
+                <li><strong>Cinética:</strong> A temperaturas bajas la velocidad de reacción es inviablemente lenta.</li>
+                <li><strong>Solución de Compromiso:</strong> Se opera a temperaturas de <span class="hl-amber">400 °C - 540 °C</span> y presiones de <span class="hl-amber">8.000 kPa - 35.000 kPa</span> (80 a 350 bar).</li>
+                <li><strong>Catalizador:</strong> Hierro activado (obtenido reduciendo $Fe_3O_4$ con $H_2$) con <span class="hl-purple">$KOH$ como promotor</span> sobre soporte de óxidos refractarios. Exige reactivos ultrapuros para evitar el envenenamiento del catalizador con $H_2S$ o $CO$.</li>
+            </ul>
+        </div>
+
+        <p><em>Método secundario:</em> Recuperación amoniacal como subproducto en la destilación seca del carbón (hulla bituminosa), tratando la disolución retenida con cal ($CaO$).</p>
+
+        <h3>10.5.2. Aplicaciones del Amoniaco y Riesgos</h3>
+        <ul>
+            <li><strong>Materia prima esencial:</strong> Para fabricar ácido nítrico ($HNO_3$), abonos (sulfato amónico, nitrato amónico, fosfatos amónicos y urea $CO(NH_2)_2$), polímeros y colorantes.</li>
+            <li><strong>Refrigerante industrial:</strong> Posee un elevado calor de vaporización ($1.369\text{ kJ/mol}$) y fácil licuefacción, sustituyendo a los freones.</li>
+            <li><strong>Peligrosidad explosiva:</strong> Forma mezclas explosivas con el aire entre el <span class="hl-react">16% y 25% en volumen de $NH_3$</span>. El $NH_4NO_3$ detona violentamente por compresión o impacto.</li>
+        </ul>
+    </div>
+
+    <!-- SECCIÓN 10.6: ÓXIDOS DE NITRÓGENO Y CONTAMINACIÓN -->
+    <div class="section-card">
+        <h2 class="section-title t-red">10.6. Óxidos de Nitrógeno ($NO_x$) y Contaminación Atmosférica</h2>
+        
+        <div class="badge-grid" style="display: flex; flex-wrap: wrap;">
+            <div class="badge-card" style="border-top-color: var(--accent-teal); flex: 1 1">
+                <h4 style="color: var(--accent-teal);">Óxido Nitroso ($N_2O$)</h4>
+                <p>Gas incoloro, dulce. Obtención por descomposición térmica de nitrato amónico:</p>
+                <p>$$\text{NH}_4\text{NO}_{3(s)} \xrightarrow{270\text{ }^\circ\text{C}} \text{N}_2\text{O}_{(g)} + 2\text{H}_2\text{O}_{(g)}$$</p>
+                <p>Inerte a Tª ambiente, comburente a alta Tª. Potente <strong>gas de efecto invernadero</strong> (230 veces más activo que el $CO_2$, vida media > 150 años).</p>
+            </div>
+
+            <div class="badge-card" style="border-top-color: var(--accent-blue); flex: 1 1">
+                <h4 style="color: var(--accent-blue);">Monóxido de Nitrógeno ($NO$)</h4>
+                <p>Gas incoloro, paramagnético y muy reactivo. Síntesis fuertemente endotérmica:</p>
+                <p>$$\frac{1}{2}\text{N}_{2(g)} + \frac{1}{2}\text{O}_{2(g)} \rightleftharpoons \text{NO}_{(g)} \quad \Delta G^\circ = +86,7\text{ kJ}$$</p>
+                <p>Exige $T > 2.000\text{ }^\circ\text{C}$ y un enfriamiento ultrarrápido (templado) para evitar su descomposición.</p>
+            </div>
+
+            <div class="badge-card" style="border-top-color: var(--accent-red); flex: 1 1">
+                <h4 style="color: var(--accent-red);">Dióxido de Nitrógeno ($NO_2$)</h4>
+                <p>Gas pardo, sofocante y altamente tóxico. Formado por oxidación del $NO$ o ataque de $HNO_3$ conc. a metales:</p>
+                <p>$$\text{Cu}_{(s)} + 4\text{HNO}_{3(ac)} \rightarrow \text{Cu(NO}_3)_2 + 2\text{NO}_{2(g)} + 2\text{H}_2\text{O}_{(l)}$$</p>
+            </div>
+        </div>
+
+        <div class="callout callout-danger">
+            <div class="callout-title">Impacto Ambiental de los $NO_x$</div>
+            <p>Los $NO_x$ ($NO$ y $NO_2$) son contaminantes primarios generados en la combustión a alta temperatura en centrales térmicas, motores de vehículos y turborreactores. Son responsables directos de la formación del <span class="hl-react">smog fotoquímico</span>, el <span class="hl-react">smog ácido</span>, la destrucción catalítica de la capa de <span class="hl-amber">ozono estratosférico</span> y el fenómeno de la <span class="hl-teal">lluvia ácida</span>.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 10.7: ÁCIDO NÍTRICO -->
+    <div class="section-card">
+        <h2 class="section-title t-pink">10.7. Ácido Nítrico: Síntesis y Aplicaciones Industriales</h2>
+        <p>El ácido nítrico ($\mathbf{HNO_3}$) puro es un líquido incoloro ($P.eb. = 83\text{ }^\circ\text{C}$) que se descompone con la luz adquiriendo un tono pardo:</p>
+        <div class="math-box">
+            $$4\text{HNO}_{3(l)} \longrightarrow 4\text{NO}_{2(g)} + \text{O}_{2(g)} + 2\text{H}_2\text{O}_{(l)}$$
+        </div>
+        <p>El ácido concentrado comercial es una disolución azeotrópica en agua al <strong>68,4% en peso</strong> ($\approx 16\text{ M}$, densidad $1,42\text{ g/mL}$).</p>
+
+        <h3>10.7.1. Síntesis Industrial (Método de Ostwald)</h3>
+        <p>Sustituyó al antiguo método de desplazamiento con sales ($NaNO_3 + H_2SO_4 \rightarrow HNO_3 + NaHSO_4$). Consta de tres etapas consecutivas:</p>
+
+        <ol>
+            <li><strong>Oxidación catalítica del amoniaco ($1.000\text{ }^\circ\text{C}$, malla de $Pt$):</strong>
+                $$\text{NH}_{3(g)} + \frac{5}{4}\text{O}_{2(g)} \longrightarrow \text{NO}_{(g)} + \frac{3}{2}\text{H}_2\text{O}_{(g)} \qquad \Delta H^\circ = -226,4\text{ kJ/mol}$$
+                <em>(Tiempo de residencia &lt; 0,01 s para evitar la descomposición del $NO$).</em>
+            </li>
+            <li><strong>Oxidación de $NO$ a $NO_2$ y absorción en agua en contracorriente:</strong>
+                $$\text{NO}_{(g)} + \frac{1}{2}\text{O}_{2(g)} \rightleftharpoons \text{NO}_{2(g)} \qquad \Delta H^\circ = -57,1\text{ kJ/mol}$$
+                $$3\text{NO}_{2(g)} + \text{H}_2\text{O}_{(l)} \rightleftharpoons 2\text{HNO}_{3(ac)} + \text{NO}_{(g)}$$
+            </li>
+        </ol>
+
+        <div class="math-box">
+            $$\text{Reacción Global de Ostwald:} \quad \text{NH}_{3(g)} + 2\text{O}_{2(g)} \longrightarrow \text{HNO}_{3(ac)} + \text{H}_2\text{O}_{(l)} \qquad \Delta H^\circ = -447\text{ kJ/mol}$$
+        </div>
+
+        <p>Se obtiene una concentración inicial del 60%, que se reconcentra destilando con ácido sulfúrico concentrado.</p>
+
+        <h3>10.7.2. Propiedades y Aplicaciones</h3>
+        <p>En disolución diluida es un ácido muy fuerte ($K_a \gg 1$). Concentrado es un <span class="hl-react">oxidante enérgico</span> capaz de reducirse a compuestos con número de oxidación desde $+4$ hasta $-3$. Se emplea en la fabricación de <strong>explosivos</strong> (TNT, nitroglicerina, pentaeritrita), <strong>fertilizantes</strong> ($NH_4NO_3$), pinturas, plásticos y decapado/pasivado de metales.</p>
+    </div>
+
+    <!-- SECCIÓN 10.8: FÓSFORO -->
+    <div class="section-card">
+        <h2 class="section-title t-teal">10.8. Fósforo: Métodos de Obtención, Propiedades y Aplicaciones</h2>
+        <p>Elemento muy reactivo, nunca libre en la naturaleza. Presente en esqueletos/dientes como fosfato cálcico y en minerales: <span class="hl-def">fosforita [$Ca_3(PO_4)_2$]</span>, <span class="hl-teal">fluorapatito [$Ca_5(PO_4)_3F$]</span> e <span class="hl-amber">hidroxiapatito [$Ca_5(PO_4)_3OH$]</span>.</p>
+
+        <h3>10.8.1. Síntesis Industrial (Método de Wöhler, 1806)</h3>
+        <p>Reducción de fosforita con sílice ($SiO_2$) y carbón de coque en horno de arco eléctrico ($1.300\text{ }^\circ\text{C} - 1.500\text{ }^\circ\text{C}$):</p>
+        <div class="math-box">
+            $$2\text{Ca}_3(\text{PO}_4)_{2(s)} + 6\text{SiO}_{2(s)} + 10\text{C}_{(s)} \longrightarrow 6\text{CaSiO}_{3(s)} + 10\text{CO}_{(g)} + \text{P}_{4(g)}$$
+        </div>
+        <p>Mecanismo en dos etapas: 1ª) Desplazamiento ácido-base: $Ca_3(PO_4)_2 + 6SiO_2 \rightarrow 6CaSiO_3 + 2P_2O_5$; 2ª) Reducción: $2P_2O_5 + 10C \rightarrow 10CO + P_4$. El vapor de fósforo condensado se conserva obligatoriamente bajo agua.</p>
+
+        <h3>10.8.2. Variedades Alotrópicas del Fósforo</h3>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <h4 style="color: var(--accent-red);">Fósforo Blanco ($\mathbf{P_4}$)</h4>
+                <p>Sólido ceroso formado por moléculas tetraédricas $P_4$ muy tensionadas (ángulos de $60^\circ$). Inestable, <span class="hl-react">arde espontáneamente al aire</span>.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <h4 style="color: var(--accent-amber);">Fósforo Rojo</h4>
+                <p>Obtenido al calentar fósforo blanco a $>250\text{ }^\circ\text{C}$ en ausencia de aire (catalizado por $I_2$). No arde espontáneamente; se inflama por fricción (empleado en cerillas).</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <h4 style="color: var(--accent-purple);">Fósforo Negro</h4>
+                <p>Obtenido a altas presiones y $\approx 200\text{ }^\circ\text{C}$. Estructura laminar, semiconductor con cierto carácter metálico y alta estabilidad.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 10.9: ÓXIDOS, OXIÁCIDOS Y FOSFATOS -->
+    <div class="section-card">
+        <h2 class="section-title t-green">10.9. Óxidos, Oxiácidos y Oxisales del Fósforo</h2>
+        <p>Existen tres óxidos dímeros principales: trióxido ($P_4O_6$), dióxido ($P_2O_4$) y <span class="hl-def">pentóxido de fósforo ($P_4O_{10}$)</span>. Este último se obtiene por combustión en exceso de aire y es un deshidratante extraordinariamente enérgico:</p>
+        <div class="math-box">
+            $$\text{P}_4\text{O}_{10(s)} + 2\text{H}_2\text{O} \longrightarrow 4\text{HPO}_{3(ac)} \quad \text{(Ácido metafosfórico)}$$
+            $$\text{P}_4\text{O}_{10(s)} + 6\text{H}_2\text{O} \longrightarrow 4\text{H}_3\text{PO}_{4(ac)} \quad \text{(Ácido ortofosfórico)}$$
+        </div>
+
+        <h3>10.9.1. Síntesis y Ionización del Ácido Fosfórico ($\mathbf{H_3PO_4}$)</h3>
+        <p>Se obtiene atacando la fosforita con ácido sulfúrico concentrado en caliente:</p>
+        <div class="math-box">
+            $$\text{Ca}_3(\text{PO}_4)_{2(s)} + 3\text{H}_2\text{SO}_{4(l)} \longrightarrow 3\text{CaSO}_{4(s)} + 2\text{H}_3\text{PO}_{4(l)}$$
+        </div>
+        <p>Es un ácido triprótico con tres constantes de ionización marcadamente escalonadas:</p>
+        <ul>
+            <li>$\text{H}_3\text{PO}_4 + \text{H}_2\text{O} \rightleftharpoons \text{H}_2\text{PO}_4^- + \text{H}_3\text{O}^+ \qquad K_1 = 8,0 \cdot 10^{-3}$ (Fuerza media-alta)</li>
+            <li>$\text{H}_2\text{PO}_4^- + \text{H}_2\text{O} \rightleftharpoons \text{HPO}_4^{2-} + \text{H}_3\text{O}^+ \qquad K_2 = 7,5 \cdot 10^{-8}$ (Débil)</li>
+            <li>$\text{HPO}_4^{2-} + \text{H}_2\text{O} \rightleftharpoons \text{PO}_4^{3-} + \text{H}_3\text{O}^+ \qquad K_3 = 1,2 \cdot 10^{-12}$ (Muy débil)</li>
+        </ul>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">Detergencia, Eutrofización y Fertilizantes Fosfatados</div>
+            <ul>
+                <li><strong>Detergentes y Eutrofización:</strong> El tripolifosfato sódico ($Na_5P_3O_{10}$) se usaba para ablandar el agua abatiendo dureza. Su vertido provoca <span class="hl-react">eutrofización</span>: sobrenutrición de algas que agotan el oxígeno disuelto y colapsan la vida acuática.</li>
+                <li><strong>Superfosfato simple (15-20% $P_2O_5$):</strong> Mezcla de fosfato monocálcico, dicálcico y $CaSO_4$, obtenido atacando fosforita con $H_2SO_4$ al 60-70%.</li>
+                <li><strong>Super triple (&gt;45% $P_2O_5$):</strong> Obtenido atacando la fosforita directamente con $H_3PO_4$. Altamente soluble.</li>
+                <li><strong>Relación N:P:K:</strong> Porcentaje comercial expresado como $\%N : \%P_2O_5 : \%K_2O$. Ej: un abono 12/18/28 contiene 12% N, 18% $P_2O_5$ y 28% $K_2O$.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 10.10: CARACTERÍSTICAS GENERALES GRUPO IV A -->
+    <div class="section-card">
+        <h2 class="section-title t-blue">10.10. Características Generales de los Elementos del Grupo IV A</h2>
+        <p>Formado por: <span class="hl-def">Carbono ($C$)</span>, <span class="hl-teal">Silicio ($Si$)</span>, <span class="hl-amber">Germanio ($Ge$)</span>, <span class="hl-purple">Estaño ($Sn$)</span> y <span class="hl-react">Plomo ($Pb$)</span>. Solamente el carbono es un no metal estricto. Configuración de valencia: $\mathbf{n s^2 n p^2}$.</p>
+
+        <h4>Tabla 10.2. Propiedades periódicas de los elementos del Grupo IV A</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Carbono ($C$)</th>
+                    <th>Silicio ($Si$)</th>
+                    <th>Germanio ($Ge$)</th>
+                    <th>Estaño ($Sn$)</th>
+                    <th>Plomo ($Pb$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Número atómico ($Z$)</strong></td>
+                    <td>6</td>
+                    <td>14</td>
+                    <td>32</td>
+                    <td>50</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <td><strong>Capa de valencia</strong></td>
+                    <td>$2s^2 2p^2$</td>
+                    <td>$3s^2 3p^2$</td>
+                    <td>$4s^2 4p^2$</td>
+                    <td>$5s^2 5p^2$</td>
+                    <td>$6s^2 6p^2$</td>
+                </tr>
+                <tr>
+                    <td><strong>Radio covalente (nm)</strong></td>
+                    <td>0,077</td>
+                    <td>0,110</td>
+                    <td>0,122</td>
+                    <td>0,141</td>
+                    <td>0,147</td>
+                </tr>
+                <tr>
+                    <td><strong>Radio iónico ($X^{4+}$, nm)</strong></td>
+                    <td>0,015</td>
+                    <td>0,041</td>
+                    <td>0,053</td>
+                    <td>0,071</td>
+                    <td>0,084</td>
+                </tr>
+                <tr>
+                    <td><strong>Potencial de ionización (kJ/mol)</strong></td>
+                    <td>1.087</td>
+                    <td>786</td>
+                    <td>782</td>
+                    <td>706</td>
+                    <td>714</td>
+                </tr>
+                <tr>
+                    <td><strong>Afinidad electrónica (kJ/mol)</strong></td>
+                    <td>&lt; 10</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>Electronegatividad</strong></td>
+                    <td>2,5</td>
+                    <td>1,8</td>
+                    <td>1,8</td>
+                    <td>1,8</td>
+                    <td>1,8</td>
+                </tr>
+                <tr>
+                    <td><strong>Números de oxidación</strong></td>
+                    <td>-4, +2, +4</td>
+                    <td>-4, +2, +4</td>
+                    <td>-4, +2, +4</td>
+                    <td>+2, +4</td>
+                    <td>+2, +4</td>
+                </tr>
+                <tr>
+                    <td><strong>Punto de fusión (°C)</strong></td>
+                    <td>3.727</td>
+                    <td>1.410</td>
+                    <td>937</td>
+                    <td>232</td>
+                    <td>327</td>
+                </tr>
+                <tr>
+                    <td><strong>Punto de ebullición (°C)</strong></td>
+                    <td>4.830</td>
+                    <td>2.680</td>
+                    <td>2.830</td>
+                    <td>2.270</td>
+                    <td>1.725</td>
+                </tr>
+                <tr>
+                    <td><strong>Densidad en el P.f. (g/mL)</strong></td>
+                    <td>2,26</td>
+                    <td>2,33</td>
+                    <td>5,32</td>
+                    <td>7,30</td>
+                    <td>11,40</td>
+                </tr>
+                <tr>
+                    <td><strong>Potencial de reducción ($E^\circ$, V)</strong></td>
+                    <td>0,13</td>
+                    <td>0,10</td>
+                    <td>—</td>
+                    <td>-0,14</td>
+                    <td>-0,13</td>
+                </tr>
+                <tr>
+                    <td><strong>Color</strong></td>
+                    <td>Negro</td>
+                    <td>Gris</td>
+                    <td>Gris</td>
+                    <td>Gris</td>
+                    <td>Gris</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>El carbono hibrida en orbitales $\mathbf{sp^3, sp^2\text{ y } sp}$, permitiendo la concatenación estable en cadenas y anillos, fundamento de la química orgánica.</p>
+    </div>
+
+    <!-- SECCIÓN 10.11: EL CARBONO EN LA NATURALEZA -->
+    <div class="section-card">
+        <h2 class="section-title t-amber">10.11. El Carbono en la Naturaleza: Diamante, Grafito y Fibra de Carbono</h2>
+        <p>A pesar de representar solo el 0,09% de la corteza, es la base de la vida. Se presenta en dos formas alotrópicas cristalinas puras: <span class="hl-def">Diamante</span> y <span class="hl-teal">Grafito</span>.</p>
+
+        <div class="math-box">
+            $$\text{C}_{(\text{diamante})} \longrightarrow \text{C}_{(\text{grafito})} \qquad \Delta G^\circ = -2,87\text{ kJ}$$
+        </div>
+        <p>A P y T ordinarias, el <span class="hl-teal">grafito es la fase termodinámicamente más estable</span>, pero la transformación del diamante es cinéticamente impedida. El diamante requiere $T > 3.000\text{ }^\circ\text{C}$ y $P > 2.000\text{ MPa}$ para sintetizarse.</p>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <h4 style="color: var(--accent-blue);">Estructura del Diamante</h4>
+                <p>Red tridimensional covalente $sp^3$, tetraédrica (ángulos de $109^\circ$, distancia $0,155\text{ nm}$). Aislante eléctrico perfecto, sustancia más dura conocida, $P.fusion = 4.830\text{ }^\circ\text{C}$.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <h4 style="color: var(--accent-teal);">Estructura del Grafito</h4>
+                <p>Planos hexagonales $sp^2$ (ángulos $120^\circ$, distancia intra-plano $0,142\text{ nm}$). Enlaces deslocalizados $\pi$ entre capas a $0,340\text{ nm}$. Deslizamiento fácil (lubricante) y semiconductor eléctrico.</p>
+            </div>
+        </div>
+
+        <h4>Fabricación de Fibra de Carbono</h4>
+        <p>Se parte de un polímero precursor (ej. poliacrilonitrilo) sometido a tres etapas térmicas: 1ª) <strong>Estabilización</strong> a $200\text{ }^\circ\text{C}$ con $O_2$; 2ª) <strong>Carbonización</strong> a $1.000 - 1.500\text{ }^\circ\text{C}$ en inerte (elimina H, O, N); 3ª) <strong>Grafitización</strong> a $>1.800\text{ }^\circ\text{C}$ para orientar los planos hexagonales y maximizar la resistencia mecánica.</p>
+    </div>
+
+    <!-- SECCIÓN 10.12: ÓXIDOS DEL CARBONO -->
+    <div class="section-card">
+        <h2 class="section-title t-purple">10.12. Óxidos del Carbono e Impacto Medioambiental</h2>
+        
+        <h3>10.12.1. Propiedades de los Óxidos</h3>
+        <ul>
+            <li><strong>Monóxido de Carbono ($CO$):</strong> Gas incoloro, inodoro y muy tóxico. Agente reductor metalúrgico a alta temperatura ($Fe_3O_4 + 4C \rightarrow 3Fe + 4CO$). Forma complejos carbonilo [$Ni(CO)_4$]. Materia prima para metanol ($CH_3OH$), fosgeno ($COCl_2$) y gasolina sintética (Fischer-Tropsch).</li>
+            <li><strong>Dióxido de Carbono ($CO_2$):</strong> Gas lineal apolar ($\Delta H_f^\circ = -393,5\text{ kJ/mol}$). Subproducto de combustión, descomposición de carbonatos y respiración animal ($C_6H_{12}O_6 + 6O_2 \rightarrow 6CO_2 + 6H_2O, \Delta G^\circ = -2.862\text{ kJ}$). Proceso inverso: Fotosíntesis ($\Delta G^\circ = +2.862\text{ kJ}$).</li>
+        </ul>
+
+        <div class="callout callout-purple">
+            <div class="callout-title">Aplicaciones del $CO_2$ Supercrítico</div>
+            <p>Por encima de su punto crítico ($T_c = 31\text{ }^\circ\text{C}$ y $P_c = 7,39\text{ MPa}$), el $CO_2$ actúa como un fluido denso apolar no tóxico. Se utiliza industrialmente para la <strong>descafeinación del café a $35\text{ }^\circ\text{C}$ y 10 MPa</strong>, y en emulsiones con agua/surfactantes para extraer biomoléculas complejas sin degradar su actividad biológica.</p>
+        </div>
+
+        <h3>10.12.2. Toxicidad y Efecto Invernadero</h3>
+        <ul>
+            <li><strong>Toxicidad del $CO$:</strong> Actúa como asfixiante químico al unirse al $Fe^{2+}$ de la hemoglobina formando <span class="hl-react">carboxihemoglobina ($HbCO$)</span>, la cual es <strong>200 veces más estable</strong> que la oxihemoglobina ($HbO_2$), bloqueando el transporte de $O_2$. Niveles &gt;1.000 ppm son letales.</li>
+            <li><strong>Efecto Invernadero del $CO_2$:</strong> Absorbe la radiación Infrarroja terrestre ($10^4 - 2\cdot 10^4\text{ nm}$). El aumento antropogénico de 285 ppm (siglo XX) a &gt;360 ppm amenaza con sobrecalentar el planeta ($1,5\text{ }^\circ\text{C} - 4,5\text{ }^\circ\text{C}$). Cumbre de Kioto (1997): compromiso de reducir un 12% las emisiones medias de $CO_2, CH_4$ y $N_2O$.</li>
+        </ul>
+    </div>
+
+    <!-- SECCIÓN 10.13: ÁCIDO CARBÓNICO Y SOLVAY -->
+    <div class="section-card">
+        <h2 class="section-title t-teal">10.13. Ácido Carbónico, Carbonatos y Proceso Solvay</h2>
+        <p>El $CO_2$ es moderadamente soluble en agua ($0,033\text{ M}$ a $20\text{ }^\circ\text{C}$ y $1\text{ atm}$); solo un 0,4% reacciona dando ácido carbónico ($\mathbf{H_2CO_3}$), un ácido dipróptico débil inestable:</p>
+        <div class="math-box">
+            $$\text{H}_2\text{CO}_{3(ac)} + \text{H}_2\text{O} \rightleftharpoons \text{HCO}_3^- + \text{H}_3\text{O}^+ \qquad K_1 = 4,2 \cdot 10^{-7}$$
+            $$\text{HCO}_3^- + \text{H}_2\text{O} \rightleftharpoons \text{CO}_3^{2-} + \text{H}_3\text{O}^+ \qquad K_2 = 4,8 \cdot 10^{-11}$$
+        </div>
+
+        <h3>10.13.1. Síntesis Industrial de Carbonato y Bicarbonato Sódico (Proceso Solvay)</h3>
+        <p>El proceso Solvay parte de sal común ($NaCl$), piedra caliza ($CaCO_3$) y amoniaco ($NH_3$, reactivo recirculado):</p>
+
+        <ol>
+            <li><strong>Calcación de la caliza:</strong> $\text{CaCO}_{3(s)} \xrightarrow{\text{calor}} \text{CO}_{2(g)} + \text{CaO}_{(s)}$</li>
+            <li><strong>Apagado de la cal:</strong> $\text{CaO}_{(s)} + \text{H}_2\text{O}_{(l)} \longrightarrow \text{Ca(OH)}_{2(ac)}$</li>
+            <li><strong>Carbonatación amoniacal (Precipitación de Bicarbonato):</strong>
+                $$2\text{NaCl}_{(ac)} + 2\text{NH}_{3(g)} + 2\text{H}_2\text{O}_{(l)} + 2\text{CO}_{2(g)} \longrightarrow 2\text{NaHCO}_{3(s)} \downarrow + 2\text{NH}_4\text{Cl}_{(ac)}$$
+            </li>
+            <li><strong>Calcinación del Bicarbonato a Carbonato Sódico:</strong>
+                $$2\text{NaHCO}_{3(s)} \xrightarrow{\text{calor}} \text{Na}_2\text{CO}_{3(s)} + \text{H}_2\text{O}_{(g)} + \text{CO}_{2(g)}$$
+            </li>
+            <li><strong>Recuperación del Amoniaco:</strong>
+                $$2\text{NH}_4\text{Cl}_{(ac)} + \text{Ca(OH)}_{2(ac)} \longrightarrow \text{CaCl}_{2(ac)} + 2\text{NH}_{3(g)} \uparrow + 2\text{H}_2\text{O}_{(l)}$$
+            </li>
+        </ol>
+
+        <div class="math-box">
+            $$\text{Reacción Global de Solvay:} \quad 2\text{NaCl}_{(ac)} + \text{CaCO}_{3(s)} \xrightarrow{\text{NH}_3} \text{Na}_2\text{CO}_{3(s)} + \text{CaCl}_{2(ac)}$$
+        </div>
+
+        <p><em>Aplicaciones:</em> Fabricación de vidrio, detergentes, neutralización industrial y obtención de hidróxido sódico por caustificación ($\text{Ca(OH)}_2 + \text{Na}_2\text{CO}_3 \rightarrow \text{CaCO}_3 \downarrow + 2\text{NaOH}$).</p>
+    </div>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN Y SOLUCIONES -->
+    <div class="section-card">
+        <h2 class="section-title t-amber">📝 Ejercicios de Autoevaluación Resueltos</h2>
+
+        <!-- Ejercicio 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1</div>
+            <p>Describa brevemente el método industrial de obtención de nitrógeno a partir de aire.</p>
+            <div class="solution-box">
+                <span class="step-tag">Solución</span>
+                Se basa en la licuefacción del aire seguida de su destilación fraccionada. La licuefacción combina compresión isotérmica con expansión isentálpica (efecto Joule-Thomson, Linde) e isentrópica (trabajo externo, Claude). El aire líquido se rectifica en la columna de destilación aprovechando la diferencia de puntos de ebullición entre el $N_2$ (90 K) y el $O_2$ (78 K - según texto PDF). El $N_2$ gas más volátil destila por la cabeza de la columna.
+            </div>
+        </div>
+
+        <!-- Ejercicio 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2</div>
+            <p>Discuta las condiciones termodinámicas y cinéticas del proceso Haber para la obtención de amoniaco.</p>
+            <div class="solution-box">
+                <span class="step-tag">Solución</span>
+                Reacción: $\text{N}_{2(g)} + 3\text{H}_{2(g)} \rightleftharpoons 2\text{NH}_{3(g)}, \Delta H^\circ = -92,2\text{ kJ/mol}$. Termodinámicamente se favorece a bajas temperaturas y altas presiones. Cinéticamente, a bajas temperaturas la reacción es extremadamente lenta. Se adopta una solución de compromiso: $400 - 540\text{ }^\circ\text{C}$, $8.000 - 35.000\text{ kPa}$, con catalizador de hierro activado ($KOH$) y recirculación de gases no reaccionados.
+            </div>
+        </div>
+
+        <!-- Ejercicio 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3</div>
+            <p>¿En qué se basan las aplicaciones del $CO_2$ como disolvente? Indique alguna.</p>
+            <div class="solution-box">
+                <span class="step-tag">Solución</span>
+                Se basa en sus moderadas constantes críticas ($T_c = 31\text{ }^\circ\text{C}, P_c = 7,39\text{ MPa}$). En estado supercrítico actúa como un fluido denso apolar atóxico que disuelve y extrae solutos sin degradar su estructura ni dejar residuos térmicos. Aplicación: extracción de cafeína del café a $35\text{ }^\circ\text{C}$ y 10 MPa.
+            </div>
+        </div>
+
+        <!-- Ejercicio 4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4</div>
+            <p>Calcular la energía libre en condiciones estándar de la reacción de descomposición del ozono por el óxido nítrico ($\text{NO}_{(g)} + \text{O}_{3(g)} \rightarrow \text{NO}_{2(g)} + \text{O}_{2(g)}$). Datos del PDF: $O_3$ ($\Delta H^\circ = 142,7; S^\circ = 238,9$), $O_2$ ($\Delta H^\circ = 0; S^\circ = 205,1$), $NO$ ($\Delta H^\circ = 90,2; S^\circ = 210,8$), $NO_2$ ($\Delta H^\circ = 33,2; S^\circ = 240,1$).</p>
+            <div class="solution-box">
+                <span class="step-tag">Solución Paso a Paso</span>
+                $$\Delta H^\circ = \Delta H_f^\circ(\text{productos}) - \Delta H_f^\circ(\text{reactivos}) = 33,2 + 0 - 90,2 - 142,7 = -199,7\text{ kJ/mol}$$
+                $$\Delta S^\circ = S^\circ(\text{productos}) - S^\circ(\text{reactivos}) = 205,1 + 240,1 - 210,8 - 238,9 = -4,5\text{ J/K}\cdot\text{mol}$$
+                $$T\Delta S^\circ = 298,16 \text{ K} \cdot (-4,5 \cdot 10^{-3}\text{ kJ/K}\cdot\text{mol}) = -1,34\text{ kJ/mol}$$
+                $$\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ = -199,7 - (-1,34) = \mathbf{-198,36\text{ kJ/mol}}$$
+            </div>
+        </div>
+
+        <!-- Ejercicio 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5</div>
+            <p>Estabilidad de $NO$ vs $NO_2$, $\Delta G^\circ$ de oxidación de $NO$ a $NO_2$ y temperatura de inversión.</p>
+            <div class="solution-box">
+                <span class="step-tag">Solución Paso a Paso</span>
+                <p><strong>1) Estabilidad relativa a 298 K:</strong></p>
+                $$\Delta G^\circ(NO) = 90,2 - 298,16 \cdot \left(210,8 - \frac{1}{2}205,1 - \frac{1}{2}191,5\right) \cdot 10^{-3} = 90,2 - 3,7 = \mathbf{86,5\text{ kJ/mol}}$$
+                $$\Delta G^\circ(NO_2) = 33,2 - 298,16 \cdot \left(240,1 - 205,1 - 95,7\right) \cdot 10^{-3} = 33,2 - (-18,1) = \mathbf{51,3\text{ kJ/mol}}$$
+                <em>El $NO_2$ es más estable que el $NO$ (menor valor de $\Delta G^\circ$).</em>
+
+                <p style="margin-top:10px;"><strong>2) Oxidación $\text{NO} + \frac{1}{2}\text{O}_2 \rightarrow \text{NO}_2$:</strong></p>
+                $$\Delta H^\circ = 33,2 - 90,2 = -57,0\text{ kJ/mol}$$
+                $$\Delta S^\circ = 240,1 - 210,8 - \frac{1}{2}(205,1) = -73,2\text{ J/K}\cdot\text{mol}$$
+                $$\Delta G^\circ = -57,0 - 298,16 \cdot (-73,2 \cdot 10^{-3}) = \mathbf{-35,16\text{ kJ/mol}}$$
+
+                <p style="margin-top:10px;"><strong>3) Temperatura de Inversión ($\Delta G^\circ = 0$):</strong></p>
+                $$T = \frac{\Delta H^\circ}{\Delta S^\circ} = \frac{-57.000\text{ J/mol}}{-73,2\text{ J/K}\cdot\text{mol}} = \mathbf{779\text{ K}} \quad (\mathbf{506\text{ }^\circ\text{C}})$$
+            </div>
+        </div>
+
+        <!-- Ejercicio 6 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 6</div>
+            <p>Reducción de fosforita [$Ca_3(PO_4)_2$] en horno eléctrico con carbón y sílice (Rendimiento 80%). Calcular: a) Reacción ajustada, b) Litros de $CO$ por kg de fosforita, c) Moles de $P_4$ por kg de carbón.</p>
+            <div class="solution-box">
+                <span class="step-tag">Solución Paso a Paso</span>
+                <p><strong>a) Reacción Redox ajustada:</strong></p>
+                $$2\text{Ca}_3(\text{PO}_4)_{2(s)} + 10\text{C}_{(s)} + 6\text{SiO}_{2(s)} \longrightarrow \text{P}_{4(g)} + 10\text{CO}_{(g)} + 6\text{CaSiO}_{3(s)}$$
+                
+                <p style="margin-top:10px;"><strong>b) Litros de $CO$ por kg de $Ca_3(PO_4)_2$ ($M = 310\text{ g/mol}$):</strong></p>
+                $$n_{\text{fosforita}} = \frac{1.000\text{ g}}{310\text{ g/mol}} = 3,225\text{ moles}$$
+                $$n_{CO} = 3,225 \cdot \left(\frac{10\text{ moles CO}}{2\text{ moles fosforita}}\right) \cdot 0,80 = 12,90\text{ moles de CO}$$
+                $$V_{CO} = 12,90\text{ moles} \cdot 22,4\text{ L/mol} = \mathbf{289\text{ Litros de CO}}$$
+
+                <p style="margin-top:10px;"><strong>c) Moles de $P_4$ por kg de carbón ($M_C = 12\text{ g/mol}$):</strong></p>
+                $$n_C = \frac{1.000\text{ g}}{12\text{ g/mol}} = 83,33\text{ moles de C}$$
+                $$n_{P_4} = 83,33 \cdot \left(\frac{1\text{ mol } P_4}{10\text{ moles C}}\right) \cdot 0,80 = \mathbf{6,67\text{ moles de } P_4}$$
+            </div>
+        </div>
+
+        <!-- Ejercicio 7 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 7</div>
+            <p>Calcular la relación $N:P:K$ para: a) Nitrato amónico al 97% con 3% $CaCO_3$, b) Monohidrógeno fosfato diamónico [$(NH_4)_2HPO_4$], c) Mezcla 60% $KNO_3$, 15% urea [$CO(NH_2)_2$] y 25% $NH_4H_2PO_4$.</p>
+            <div class="solution-box">
+                <span class="step-tag">Solución Paso a Paso</span>
+                <p><strong>a) Nitrato amónico ($NH_4NO_3$, $M = 80\text{ g/mol}$):</strong></p>
+                $$\%N = 0,97 \cdot \left(\frac{2 \cdot 14}{80}\right) \cdot 100 = 33,95\% \implies \mathbf{N:P:K = 33,95 : 0 : 0}$$
+
+                <p style="margin-top:10px;"><strong>b) Diamónico [$(NH_4)_2HPO_4$, $M = 132\text{ g/mol}$]:</strong></p>
+                $$\%N = 100 \cdot \left(\frac{2 \cdot 14}{132}\right) = 21,21\%$$
+                $$\%P_2O_5 = 100 \cdot \left(\frac{142}{2 \cdot 132}\right) = 53,79\% \implies \mathbf{N:P:K = 21,21 : 53,79 : 0}$$
+
+                <p style="margin-top:10px;"><strong>c) Mezcla ternaria:</strong></p>
+                $$\%N = \left(0,60 \cdot \frac{14}{101}\right) + \left(0,15 \cdot \frac{28}{60}\right) + \left(0,25 \cdot \frac{14}{115}\right) = 8,32\% + 7,00\% + 3,04\% = \mathbf{18,36\%}$$
+                $$\%P_2O_5 = 0,25 \cdot \left(\frac{142}{2 \cdot 115}\right) = \mathbf{15,43\%}$$
+                $$\%K_2O = 0,60 \cdot \left(\frac{94}{2 \cdot 101}\right) = \mathbf{27,92\%}$$
+                $$\mathbf{N:P:K = 18,36 : 15,43 : 27,92}$$
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

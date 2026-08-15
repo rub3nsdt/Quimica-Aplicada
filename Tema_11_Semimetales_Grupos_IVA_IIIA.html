@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 11: Elementos Semimetales de los Grupos IV A y III A - Resumen Completo</title>
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Banner Header */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0369a1 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            max-width: 850px;
+        }
+
+        .meta-info {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
+            color: #94a3b8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 1.55rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 22px 0 12px 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 16px 0 8px 0;
+            color: var(--primary-light);
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* Color Concepts & Highlights */
+        .hl-def {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-green {
+            background-color: #dcfce7;
+            color: #15803d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-red {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-amber {
+            background-color: #fef3c7;
+            color: #b45309;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-purple {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-pink {
+            background-color: #fce7f3;
+            color: #9d174d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-teal {
+            background-color: #ccfbf1;
+            color: #0f766e;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Vertical Fractions CSS */
+        .frac {
+            display: inline-flex;
+            flex-direction: column;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 0.88em;
+            line-height: 1.0;
+            padding: 0 3px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-weight: bold;
+        }
+
+        .frac .top {
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 1px;
+        }
+
+        .frac .bottom {
+            padding-top: 1px;
+        }
+
+        /* Math & Formulas Box */
+        .math-box {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 16px 24px;
+            border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8;
+            overflow-x: auto;
+        }
+
+        .math-box .var {
+            font-style: italic;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .math-inline {
+            font-family: 'Cambria', 'Georgia', serif;
+            font-style: italic;
+            font-weight: 600;
+            color: #0f172a;
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Callout Cards */
+        .callout {
+            border-left: 4px solid;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 18px 0;
+            background-color: #f8fafc;
+        }
+
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+        .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+        .callout-pink { border-color: var(--accent-pink); background-color: #fdf2f8; }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Tables */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 11px 14px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 12px 0 16px 24px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Badge Grid */
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .badge-card {
+            flex:1 1 300px;
+            max-width: 500px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            background: #ffffff;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Autoevaluación Solutions */
+        .exercise-card {
+            background-color: #fefce8;
+            border: 1px solid #fef08a;
+            border-left: 5px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 22px;
+        }
+
+        .exercise-title {
+            font-weight: 700;
+            color: #854d0e;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .solution-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        .solution-tag {
+            display: inline-block;
+            background-color: #dcfce7;
+            color: #166534;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        /* Visual Grids */
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .three-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .grid-box-1 {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .grid-box-2 {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .grid-box-3 {
+            background: #fdf4ff;
+            border: 1px solid #f0abfc;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        /* Diagram Box */
+        .diagram-box {
+            background: #f1f5f9;
+            border: 1px dashed #64748b;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .flow-steps {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .flow-step {
+            background: white;
+            border: 2px solid var(--accent-blue);
+            color: var(--accent-blue);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .flow-arrow {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7rem; }
+            .section-card { padding: 18px; }
+            .two-column-grid { grid-template-columns: 1fr; }
+            .three-column-grid { grid-template-columns: 1fr; }
+            .badge-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Aplicada a la Ingeniería</span>
+        <h1>Tema 11: Elementos Semimetales de los Grupos IV A y III A</h1>
+        <p>Resumen exhaustivo, visual y ordenado de la unidad didáctica: metaloides, el silicio y sus aplicaciones electrónicas, la sílice y los silicatos naturales, vidrios y materiales cerámicos, el boro y sus compuestos industriales, y resolución completa de la Autoevaluación.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED - Mª José Caselles Pomares, Mariano Molero Meneses, et al.</span>
+            <span>📍 <strong>Unidad Didáctica:</strong> Tema 11</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Propiedades periódicas:</strong> Conocer y relacionar las principales propiedades periódicas de los elementos semimetálicos de los grupos III A y IV A.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>El silicio:</strong> Descubrir la importancia del silicio en la naturaleza, sus fuentes, métodos de obtención y aplicaciones, en especial como semiconductor intrínseco y extrínseco en la industria electrónica.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>Sílice natural:</strong> Descubrir y valorar el interés de la sílice natural (dióxido de silicio) como materia prima en múltiples aplicaciones.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>Silicatos:</strong> Clasificar los diferentes tipos de silicatos naturales según su estructura y definir sus aplicaciones.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-red);">
+                <strong>Vidrios:</strong> Conocer la estructura y composición de los diferentes tipos de vidrios, sus métodos de fabricación y aplicaciones.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <strong>Materiales cerámicos:</strong> Descubrir la importancia de los materiales cerámicos, sus tipos, métodos de fabricación y aplicaciones.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-pink);">
+                <strong>El boro:</strong> Describir las fuentes, métodos de síntesis, propiedades y aplicaciones del boro y sus compuestos de interés industrial.
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN INTRODUCTORIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">📝 Resumen General de la Unidad</h2>
+        <p>Este tema aborda el estudio de las propiedades más importantes de los <span class="hl-def">elementos semimetálicos</span>, también conocidos como <span class="hl-def">metaloides</span>, que se caracterizan porque algunas de sus propiedades recuerdan a las de los metales.</p>
+        <p>Se trata con más detalle el <span class="hl-green">silicio</span>, segundo elemento más abundante de la corteza terrestre tras el oxígeno, que se encuentra en forma de sílice y silicatos, componentes básicos de rocas y minerales de aplicación industrial. Se estudian sus métodos de síntesis y sus aplicaciones en la industria electrónica, así como una serie de materiales ampliamente utilizados —<span class="hl-amber">vidrios</span> y <span class="hl-amber">materiales cerámicos</span>— que parten de la sílice como materia prima. Por último, se describen la estructura, síntesis y propiedades del <span class="hl-purple">boro</span> y de algunos de sus compuestos de mayor interés.</p>
+    </section>
+
+    <!-- 11.1 INTRODUCCIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">11.1. Introducción</h2>
+        <p>Los elementos semimetálicos, también llamados <strong>metaloides</strong>, tienen propiedades que se asemejan a las de los metales, aunque presentan también algunas propiedades típicas de los no metales. De las propiedades que más se acercan al comportamiento metálico destacan dos: su <span class="hl-def">brillo metálico</span> y, sobre todo, su <span class="hl-def">conductividad eléctrica</span> (mucho más baja que la de los metales, pero apreciable, sobre todo a temperaturas altas, ya que se comportan como <strong>semiconductores intrínsecos</strong>).</p>
+        <p>Estos elementos ocupan una franja diagonal del Sistema Periódico, situada entre el <strong>Grupo III A del 2.º Periodo</strong> y el <strong>Grupo VII A del 6.º Periodo</strong>, como se muestra en el siguiente esquema:</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr><th>Periodo / Grupo</th><th>III A</th><th>IV A</th><th>V A</th><th>VI A</th><th>VII A</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>2</strong></td><td style="background:#f3e8ff; font-weight:700;">B</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td><strong>3</strong></td><td></td><td style="background:#dcfce7; font-weight:700;">Si</td><td></td><td></td><td></td></tr>
+                    <tr><td><strong>4</strong></td><td></td><td style="background:#dcfce7; font-weight:700;">Ge</td><td style="background:#fef3c7; font-weight:700;">As</td><td style="background:#e0f2fe; font-weight:700;">Se</td><td></td></tr>
+                    <tr><td><strong>5</strong></td><td></td><td></td><td style="background:#fef3c7; font-weight:700;">Sb</td><td style="background:#e0f2fe; font-weight:700;">Te</td><td></td></tr>
+                    <tr><td><strong>6</strong></td><td></td><td></td><td></td><td></td><td style="background:#fee2e2; font-weight:700;">Po&nbsp;&nbsp;At</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-info">
+            <div class="callout-title">⚡ Límites difusos del carácter semimetálico</div>
+            <p>Los límites del comportamiento semimetálico son poco definidos: algunos elementos próximos a los bordes de la franja presentan, en alguna de sus variedades alotrópicas, carácter semiconductor. Es el caso de la variedad <strong>grafito</strong> del carbono. Solo el <strong>boro</strong> (Grupo III A) y el <strong>silicio</strong> (Grupo IV A) presentan interés técnico e industrial suficiente para ser estudiados con detalle; del resto de elementos se resumen únicamente sus propiedades generales.</p>
+        </div>
+    </section>
+
+    <!-- 11.2 CARACTERÍSTICAS GRUPO IVA -->
+    <section class="section-card">
+        <h2 class="section-title t-green">11.2. Características Generales de los Semimetales del Grupo IV A</h2>
+        <p>De todos los elementos del grupo IV A, únicamente el <span class="hl-green">silicio</span> y el <span class="hl-green">germanio</span> presentan carácter semimetálico (aparte del grafito ya mencionado). El resto se consideran metales (<strong>Sn</strong> y <strong>Pb</strong>) o no metales, como la variedad diamante del carbono.</p>
+        <p>Ambos elementos encuentran aplicación en la industria electrónica para la fabricación de <strong>semiconductores intrínsecos o extrínsecos</strong>. Además, el silicio y sus compuestos encuentran otras muchas aplicaciones potenciadas por su abundancia en la naturaleza. Al igual que el carbono, estos elementos presentan como número de oxidación más estable el <span class="hl-def">(+4)</span>, formando enlaces con un alto grado de carácter covalente.</p>
+    </section>
+
+    <!-- 11.3 SILICIO -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">11.3. Silicio: Métodos de Síntesis y Aplicaciones</h2>
+        <p>El silicio no se encuentra libre en la naturaleza; se encuentra combinado, en especial con el oxígeno. Es el <strong>segundo elemento más abundante</strong> de la corteza terrestre tras el oxígeno, con un <span class="hl-amber">26% en peso</span> (frente al 49,5% del oxígeno). Forma parte de las rocas, la arena y otros minerales constituidos por sílice (SiO<sub>2</sub>) amorfa o cristalina, o por silicatos —principalmente de metales alcalinos, alcalinotérreos y de aluminio, como la mica, el feldespato, el amianto, el caolín o las zeolitas.</p>
+
+        <div class="callout callout-teal">
+            <div class="callout-title">🔬 Propiedades físicas del silicio puro</div>
+            <p>Sólido frágil de brillo metálico que cristaliza en el <strong>sistema cúbico</strong>, con estructura similar a la del diamante pero con una densidad notablemente más baja: <strong>2,4 g/mL</strong> frente a los <strong>3,5 g/mL</strong> del diamante. Presenta una conductividad eléctrica baja que aumenta con la temperatura, como corresponde a un semiconductor.</p>
+        </div>
+
+        <h3>Síntesis del Silicio</h3>
+        <p>La fuente principal es la sílice, muy abundante en la naturaleza. El elemento se obtiene mediante la reducción de la sílice a altas temperaturas, empleando <strong>carbono</strong> como agente reductor:</p>
+        <div class="math-box">
+            SiO<sub>2(s)</sub> + 2C<sub>(s)</sub> → 2Si<sub>(s)</sub> + 2CO<sub>(g)</sub>
+        </div>
+        <p>El silicio así obtenido es bastante impuro, pero es válido para muchas aplicaciones, como la fabricación de aleaciones tipo <strong>ferrosilicio</strong>. Por ejemplo, para un ferrosilicio con relación atómica Si/Fe = 2/3 (proporción molar 4 SiO<sub>2</sub> : 3 Fe<sub>2</sub>O<sub>3</sub>):</p>
+        <div class="math-box">
+            4SiO<sub>2(s)</sub> + 17C<sub>(s)</sub> + 3Fe<sub>2</sub>O<sub>3(s)</sub> → Fe<sub>6</sub>Si<sub>4(s)</sub> + 17CO<sub>(g)</sub>
+        </div>
+
+        <h3>Purificación para la Industria Electrónica</h3>
+        <p>Para obtener silicio de mayor pureza, la sílice se transforma primero en <strong>tetracloruro de silicio (SiCl<sub>4</sub>)</strong>, calentándola con ácido clorhídrico concentrado (destila el SiCl<sub>4</sub>, quedando las impurezas en el lecho de reacción). Posteriormente se reduce con un metal activo (sodio o magnesio) o con hidrógeno:</p>
+        <div class="math-box">
+            <strong>1.ª etapa:</strong> SiO<sub>2(s)</sub> + 4HCl<sub>(ac.)</sub> → SiCl<sub>4(g)</sub> + 2H<sub>2</sub>O<sub>(l)</sub><br>
+            <strong>2.ª etapa (Mg):</strong> SiCl<sub>4(g)</sub> + 2Mg<sub>(s)</sub> → Si<sub>(s)</sub> + 2MgCl<sub>2(s)</sub><br>
+            <strong>2.ª etapa (H<sub>2</sub>):</strong> SiCl<sub>4(g)</sub> + 2H<sub>2(g)</sub> → Si<sub>(s)</sub> + 4HCl<sub>(g)</sub>
+        </div>
+        <p>El silicio se separa de los cloruros de sodio o magnesio, solubles en agua, mediante un simple lavado con agua caliente; en la reducción con H<sub>2</sub>, el HCl se desprende como gas.</p>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">☀️ Purificación por fusión de zonas</div>
+            <p>Para aplicaciones que exigen una pureza extrema —como las <strong>células solares</strong>, con impurezas inferiores a <strong>1 ppm</strong>— el silicio se somete al método de <strong>fusión por zonas</strong>: se desplaza lentamente una fuente de calor (horno de inducción) a lo largo de una barra del metal impuro. Al fundirse y recristalizar, las impurezas no pueden acomodarse a la red cristalina y se concentran en el metal fundido, desplazándose hasta el extremo de la barra. Repitiendo el proceso se alcanza el grado de pureza deseado.</p>
+            <div class="diagram-box">
+                <div class="flow-steps">
+                    <div class="flow-step" style="border-color:var(--accent-green); color:var(--accent-green);">Metal más puro</div>
+                    <span class="flow-arrow">←</span>
+                    <div class="flow-step" style="border-color:var(--accent-red); color:var(--accent-red);">Zona de fusión</div>
+                    <span class="flow-arrow">←</span>
+                    <div class="flow-step">Fuente de calor</div>
+                    <span class="flow-arrow">←</span>
+                    <div class="flow-step" style="border-color:var(--accent-amber); color:var(--accent-amber);">Concentración de impurezas</div>
+                </div>
+                <p style="margin-top:10px; margin-bottom:0; font-weight:400; font-size:0.9rem;">Figura 11.1. Esquema de un sistema de purificación por zonas.</p>
+            </div>
+        </div>
+
+        <h3>Propiedades Químicas: Diferencias con el Carbono</h3>
+        <p>Pese a compartir grupo, el silicio presenta notables diferencias con el carbono:</p>
+        <ol>
+            <li>El silicio <strong>no forma dobles enlaces</strong>.</li>
+            <li>El enlace <span class="math-inline">Si—Si</span> es poco estable, a menos que los átomos de silicio estén unidos a elementos muy electronegativos, como el oxígeno.</li>
+            <li>A partir del 3<sup>er</sup> periodo, el silicio presenta orbitales tipo <em>d</em> vacíos, por lo que puede aceptar pares de electrones expandiendo su capa de valencia.</li>
+            <li>Forma enlaces muy fuertes con el oxígeno: la energía de enlace <span class="math-inline">Si—O</span> es la más elevada de todas las que forma el silicio, lo que justifica la abundancia y estabilidad de la sílice y los silicatos en la naturaleza.</li>
+        </ol>
+
+        <h3>Halogenuros de Silicio y Carburo de Silicio</h3>
+        <p>Con el flúor y el cloro, el silicio forma respectivamente <strong>tetrafluoruro de silicio (SiF<sub>4</sub>)</strong> y <strong>tetracloruro de silicio (SiCl<sub>4</sub>)</strong>, compuestos muy volátiles y aptos como intermedios en la síntesis del silicio. Se forman al atacar la sílice con ácido fluorhídrico o clorhídrico; la reacción con HF se aplica en el <strong>grabado del vidrio</strong>:</p>
+        <div class="math-box">
+            SiO<sub>2(s)</sub> + 4HF<sub>(ac)</sub> → SiF<sub>4(g)</sub> + 2H<sub>2</sub>O<sub>(g)</sub>
+        </div>
+        <p>Otro compuesto de gran interés industrial, con dureza similar a la del diamante, es el <strong>carburo de silicio (SiC)</strong> o <em>carborundo</em>, empleado como abrasivo en lijado y pulido. Se obtiene por reacción estequiométrica de carbono y sílice a alta temperatura:</p>
+        <div class="math-box">
+            SiO<sub>2(s)</sub> + 3C<sub>(s)</sub> → 2CO<sub>(g)</sub> + SiC<sub>(s)</sub>
+        </div>
+    </section>
+
+    <!-- 11.4 DIOXIDO DE SILICIO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">11.4. Dióxido de Silicio: Preparación, Propiedades y Aplicaciones</h2>
+        <p>La sílice se presenta en dos variedades: una <strong>cristalina</strong>, con tres formas polimorfas —<span class="hl-def">cuarzo</span> (la más abundante), <span class="hl-def">tridimita</span> y <span class="hl-def">cristobalita</span>— y otra amorfa, la <span class="hl-def">sílice amorfa</span>. Todas responden a la fórmula polimérica (SiO<sub>2</sub>)<sub>n</sub>: cada átomo de silicio se une a cuatro átomos de oxígeno formando una <strong>estructura tetraédrica</strong> tridimensional; en las variedades cristalinas el silicio ocupa el centro del tetraedro regular y los oxígenos los vértices, compartidos a su vez con tetraedros adyacentes.</p>
+
+        <div class="callout callout-purple">
+            <div class="callout-title">💎 Piezoelectricidad y gemas de cuarzo</div>
+            <p>Debido a sus propiedades <strong>piezoeléctricas</strong> (generan un impulso eléctrico al someterse a presión), el cuarzo se emplea ampliamente en relojes de cuarzo y medidores de frecuencia, ya que su frecuencia de vibración se usa como estándar de frecuencias. Algunas gemas —<strong>amatista, ópalo, circón y ágata</strong>— son cristales de cuarzo con impurezas metálicas que les confieren su color característico.</p>
+        </div>
+
+        <h3>11.4.1. Sílice Fundida</h3>
+        <p>Cuando la sílice cristalina se funde y el fundido se enfría rápidamente, se obtiene un sólido amorfo con la estructura desordenada de un líquido pero la rigidez de un sólido: la <strong>sílice fundida</strong>. No absorbe radiaciones visibles ni ultravioletas y resiste bien los agentes químicos, por lo que se usa en instrumentos ópticos y de laboratorio. Para obtenerla sin burbujas se funde a <strong>1.900 °C</strong>, al vacío, vertiendo el líquido en un molde.</p>
+
+        <h3>11.4.2. Fibra de Vidrio de Sílice</h3>
+        <p>Se prepara por oxidación de tetracloruro de silicio con oxígeno, obtenido a su vez tratando sílice impura con ácido clorhídrico:</p>
+        <div class="math-box">
+            SiCl<sub>4(s)</sub> + O<sub>2(g)</sub> → SiO<sub>2(s)</sub> + 2Cl<sub>2(g)</sub>
+        </div>
+        <p>Se emplea en la fabricación de <strong>fibra óptica</strong>, capaz de transmitir luz (fotones) con pérdidas de potencia prácticamente nulas, sustituyendo a los cables metálicos de cobre en las comunicaciones. El método más novedoso es la <strong>Deposición Química de Vapor (DQV)</strong>: se oxida un compuesto de silicio gaseoso (SiF<sub>4</sub> o SiCl<sub>4</sub>) con oxígeno dentro de un tubo de vidrio; la sílice formada se deposita como fina capa en la cara interior del tubo, que luego se funde y estira para dar una fibra continua. El rendimiento fotónico de estas fibras es unas <strong>100 veces mayor</strong> que el de las obtenidas por estirado de sílice fundida.</p>
+
+        <h3>11.4.3. Humo de Sílice</h3>
+        <p>Por un procedimiento similar a la DQV, basado en la combustión del SiCl<sub>4</sub>, se obtiene el <strong>Humo de sílice</strong> o <strong>Sílice pirogénica</strong>:</p>
+        <div class="math-box">
+            SiCl<sub>4(g)</sub> + O<sub>2(g)</sub> + 2H<sub>2(g)</sub> <span class="frac"><span class="top">llama</span><span class="bottom">→</span></span> SiO<sub>2(s)</sub> + 4HCl<sub>(g)</sub>
+        </div>
+        <p>Es un polvo sólido amorfo de partículas esféricas de <strong>7 a 50 μm</strong> y densidad muy baja (0,03–0,06 g/cc), empleado como aditivo en resinas epoxi, siliconas y cauchos para composites, mejorando la dureza y resistencia a la tensión sin aumentar apenas la densidad.</p>
+
+        <h3>11.4.4. Gel de Sílice</h3>
+        <p>Se obtiene tratando la arena con hidróxido sódico concentrado (formando silicato sódico) y precipitando después el ácido silícico con ácido sulfúrico concentrado. El precipitado se filtra, lava, deshidrata y muele:</p>
+        <div class="math-box">
+            SiO<sub>2(s)</sub> + 4NaOH<sub>(ac)</sub> → Na<sub>4</sub>SiO<sub>4(ac)</sub> + 2H<sub>2</sub>O<sub>(l)</sub><br>
+            Na<sub>4</sub>SiO<sub>4(ac)</sub> + 2H<sub>2</sub>SO<sub>4(l)</sub> → H<sub>4</sub>SiO<sub>4(s)</sub> + Na<sub>2</sub>SO<sub>4(ac)</sub>
+        </div>
+        <p>Se usa como aislante térmico, pigmento para pinturas y cosmética, soporte de catalizadores y agente deshidratante. La estructura real del ácido silícico (H<sub>4</sub>SiO<sub>4</sub>) es más compleja, formando una estructura polimérica de ácidos meta, piro y orto silícicos.</p>
+    </section>
+
+    <!-- 11.5 SILICATOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">11.5. Silicatos Naturales: Propiedades y Aplicaciones</h2>
+        <p>Los silicatos son compuestos salinos derivados de los ácidos silícicos: <strong>metasilícico</strong> (H<sub>2</sub>SiO<sub>3</sub>), <strong>pirosilícico</strong> (H<sub>6</sub>Si<sub>2</sub>O<sub>7</sub>) y <strong>ortosilícico</strong> (H<sub>4</sub>SiO<sub>4</sub>), ácidos inestables que tienden a deshidratarse para dar sílice. Su unidad básica es el <span class="hl-purple">ión silicato [SiO<sub>4</sub>]<sup>4−</sup></span>, tetraédrico, con el silicio en el centro y el oxígeno en los vértices; los iones metálicos (Na<sup>+</sup>, K<sup>+</sup>, Ca<sup>2+</sup>, Mg<sup>2+</sup>, Al<sup>3+</sup>...) ocupan los espacios entre unidades. Según cómo se ordenen los tetraedros, se originan estructuras <strong>lineales, planas o espaciales</strong>.</p>
+
+        <div class="callout callout-info">
+            <div class="callout-title">💧 Zeolitas: ablandamiento del agua</div>
+            <p>Las zeolitas y arcillas son silicoaluminatos de metales alcalinos y alcalinotérreos. En las zeolitas, algunos átomos de silicio (Si<sup>4+</sup>) se sustituyen por aluminio (Al<sup>3+</sup>); para mantener la electroneutralidad se incorpora un ion alcalino (o media unidad de alcalinotérreo) por cada sustitución, débilmente unido y por tanto fácilmente intercambiable. Esto permite eliminar la dureza del agua intercambiando Ca<sup>2+</sup> y Mg<sup>2+</sup> por Na<sup>+</sup>, proceso reversible mediante regeneración con NaCl o NaOH concentrados:</p>
+            <div class="math-box">
+                Na<sub>2</sub>Z<sub>(s)</sub> + Ca<sup>2+</sup><sub>(ac)</sub> ⇄ 2Na<sup>+</sup><sub>(ac)</sub> + CaZ<sub>(s)</sub>
+            </div>
+            <p>Se emplean también como catalizadores ácidos, soportes de catalizadores metálicos y agentes desecantes, al retener fuertemente moléculas polares pequeñas como el agua. Una zeolita sintética típica para el ablandamiento del agua es la <strong>Zeolita-A</strong>: Na<sub>2</sub>[(AlO<sub>2</sub>)<sub>12</sub>(SiO<sub>2</sub>)<sub>12</sub>]·27H<sub>2</sub>O.</p>
+        </div>
+
+        <p>Las <strong>arcillas</strong> son minerales hidratados de origen secundario, formados por degradación mecánica y química de silicatos y aluminosilicatos primarios. Están formadas por partículas inferiores a <strong>4 μm</strong> con una superficie específica muy elevada, del orden de <strong>800 m²/g</strong>. Sus aplicaciones más importantes son: adsorbente de agua, resinas cambiadoras de iones y materia prima para loza, porcelanas, esmaltes, materiales refractarios y cerámicos.</p>
+    </section>
+
+    <!-- 11.6 VIDRIOS -->
+    <section class="section-card">
+        <h2 class="section-title t-red">11.6. Vidrios: Composición y Fabricación</h2>
+        <p>Los vidrios son materiales <strong>amorfos o vítreos</strong>, de baja cristalinidad, formados por sílice amorfa y/o silicatos alcalinos y alcalinotérreos junto con otros óxidos aditivos. Se originan por la imposibilidad de formar una red cristalina ordenada al enfriar la masa fundida.</p>
+
+        <h3>11.6.1. Vidrios Comerciales y Especiales</h3>
+        <p>Los vidrios ordinarios (ventanas, botellas) son soluciones sólidas de silicatos de calcio y sodio. La fabricación de vidrio de sílice fundida pura exige temperaturas superiores a <strong>2.770 K</strong>, además de una masa muy viscosa difícil de manipular. Por ello se añaden <strong>óxidos fundentes</strong>: óxido sódico (Na<sub>2</sub>O) y óxidos alcalinotérreos como CaO y MgO.</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr><th>Tipo</th><th>% SiO<sub>2</sub></th><th>% CaO</th><th>% Na<sub>2</sub>O</th><th>% Al<sub>2</sub>O<sub>3</sub></th><th>% Fe<sub>2</sub>O<sub>3</sub></th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Botella verde</strong></td><td>60-65</td><td>7-15</td><td>7-15</td><td>2-7</td><td>2</td></tr>
+                    <tr><td><strong>Botella blanca</strong></td><td>71-75</td><td>5-15</td><td>5-15</td><td>1-4</td><td>—</td></tr>
+                    <tr><td><strong>Laminado</strong></td><td>71-74</td><td>10-15</td><td>13-17</td><td>0,5</td><td>0,2</td></tr>
+                    <tr><td><strong>Bombilla</strong></td><td>72-75</td><td>10-12</td><td>12-15</td><td>0,1</td><td>—</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 11.1. Composición de algunos vidrios comerciales.</p>
+        </div>
+
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">SiO₂:</strong> a mayor contenido, mayor resistencia química, térmica y mecánica, pero mayor temperatura de trabajo necesaria.<br><br>
+                <strong style="color:var(--accent-amber);">Na₂O:</strong> menor viscosidad y temperatura de fusión, pero mayor solubilidad en agua del vidrio.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">CaO:</strong> menor solubilidad en agua, pero mayor tendencia a la desvitrificación (recristalización, con pérdida de propiedades vítreas: devitrita o wollastonita).<br><br>
+                <strong style="color:var(--accent-teal);">MgO:</strong> mismo efecto fundente que el CaO, pero evita la desvitrificación.
+            </div>
+        </div>
+
+        <p>Para vidrios especiales se añaden o sustituyen óxidos: <span class="hl-def">B<sub>2</sub>O<sub>3</sub></span> (mayor resistencia química y al choque térmico — vidrio <strong>Pyrex</strong>), <span class="hl-def">Al<sub>2</sub>O<sub>3</sub></span> (resistencia química, evita desvitrificación), <span class="hl-def">PbO</span> (mejora brillo, índice de refracción y dispersión), <span class="hl-def">K<sub>2</sub>O</span> (elevada resistencia óhmica, material eléctrico) y <span class="hl-def">ZnO</span> (aumenta la fluidez).</p>
+
+        <div class="callout callout-danger">
+            <div class="callout-title">🎨 Vidrios coloreados y opacos</div>
+            <p>Óxido ferroso (<strong>FeO</strong>) → verde; óxido férrico (<strong>Fe<sub>2</sub>O<sub>3</sub></strong>) → amarillo; óxido de cobalto (<strong>CoO</strong>) → azul; óxido de cobre (<strong>Cu<sub>2</sub>O</strong>) → rojo; dióxido de manganeso con peróxido de sodio (<strong>MnO<sub>2</sub> + Na<sub>2</sub>O<sub>2</sub></strong>) → violeta. Los vidrios opacos se obtienen añadiendo criolita, fluoruro sódico o cenizas de huesos.</p>
+        </div>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr><th>Tipo</th><th>% SiO<sub>2</sub></th><th>% CaO</th><th>% Na<sub>2</sub>O</th><th>% Al<sub>2</sub>O<sub>3</sub></th><th>% Varios</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Pyrex</strong></td><td>80,5</td><td>—</td><td>4-5</td><td>2,5</td><td>12 B₂O₃; 0,8 ZnO</td></tr>
+                    <tr><td><strong>Bohemia</strong></td><td>72-76</td><td>8-10</td><td>0-3</td><td>1</td><td>12-15 K₂O</td></tr>
+                    <tr><td><strong>Jena</strong></td><td>70-72</td><td>1-2</td><td>10-12</td><td>5</td><td>12 B₂O₃</td></tr>
+                    <tr><td><strong>Boro-silicato</strong></td><td>69,6</td><td>—</td><td>8</td><td>8</td><td>14 B₂O₃; 3 K₂O</td></tr>
+                    <tr><td><strong>Flint ligero</strong></td><td>60,6</td><td>—</td><td>—</td><td>—</td><td>PbO 22,5; K₂O 13,9; BaO 2,5</td></tr>
+                    <tr><td><strong>Flint pesado</strong></td><td>27,3</td><td>—</td><td>—</td><td>—</td><td>PbO 71</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 11.2. Composición porcentual de diversos vidrios especiales.</p>
+        </div>
+
+        <p>Para fibras de vidrio en materiales compuestos se emplean el <strong>vidrio E</strong> (52-56% SiO<sub>2</sub>, 12-16% Al<sub>2</sub>O<sub>3</sub>, 16-25% CaO, 8-13% B<sub>2</sub>O<sub>3</sub>) y el <strong>vidrio S</strong>, de mayor resistencia pero más caro (65% SiO<sub>2</sub>, 25% Al<sub>2</sub>O<sub>3</sub>, 10% MgO), que mejoran resistencia al calor, al frío, a la humedad, aislamiento eléctrico y resistencia mecánica de las matrices plásticas reforzadas.</p>
+
+        <h3>11.6.2. Fabricación de los Vidrios</h3>
+        <div class="diagram-box">
+            <div class="flow-steps">
+                <div class="flow-step">Dosificación</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Homogeneización</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-red); color:var(--accent-red);">Horno de Fusión</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-amber); color:var(--accent-amber);">Fase de Refino</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-green); color:var(--accent-green);">Moldeado</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-teal); color:var(--accent-teal);">Recocido</div>
+            </div>
+            <p style="margin-top:10px; margin-bottom:0; font-weight:400; font-size:0.9rem;">Figura 11.3. Esquema de la fabricación del vidrio.</p>
+        </div>
+        <ol>
+            <li><strong>Dosificación y homogeneización:</strong> se dosifican por pesada los compuestos (sílice como cuarzo/arena; CaO como carbonato cálcico; Na<sub>2</sub>O como carbonato o sulfato sódico), se muelen y mezclan.</li>
+            <li><strong>Fusión:</strong> en horno continuo entre <strong>1.300 y 1.500 °C</strong>, con desprendimiento de gases de descomposición.</li>
+            <li><strong>Refino:</strong> se sube la temperatura unos 100 °C y se añaden aditivos (vapor de agua, sulfato amónico) que forman grandes burbujas arrastrando a las pequeñas y a las partículas insolubles.</li>
+            <li><strong>Conformado:</strong> por soplado, colado o laminado, con la viscosidad del fundido entre <span class="frac"><span class="top">10²</span><span class="bottom">Pa·s</span></span> y <span class="frac"><span class="top">10⁷</span><span class="bottom">Pa·s</span></span>.</li>
+            <li><strong>Recocido:</strong> enfriamiento lento y posterior calentamiento (700 K para vidrios de plomo; 1.400 K para vidrios de sílice) para eliminar tensiones residuales. Ciertos objetos se templan por enfriamiento brusco para hacerlos «irrompibles», aunque un golpe puntual puede fracturarlos pulverizándolos (parabrisas). Los vidrios laminados reciben además un pulido final.</li>
+        </ol>
+    </section>
+
+    <!-- 11.7 CERAMICOS -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">11.7. Materiales Cerámicos y Refractarios</h2>
+        <p>Los materiales cerámicos derivan su nombre del griego <em>keramikos</em>, «cosa quemada», ya que sus propiedades se alcanzan tras un tratamiento térmico a alta temperatura. Son materiales de estructura compleja, con enlaces iónicos y covalentes: duros, con alta resistencia a la compresión pero frágiles, de punto de fusión elevado y baja conductividad térmica y eléctrica (salvo ciertas cerámicas especiales superconductoras a muy baja temperatura). Presentan elevada resistencia química y estabilidad térmica.</p>
+        <p>Se distinguen las <strong>cerámicas tradicionales</strong> (basadas en materiales arcillosos: alfarería, ladrillos, baldosas, azulejos, loza, refractarios, porcelanas) de los modernos <strong>materiales cerámicos avanzados</strong>, formados por compuestos puros o casi puros con impurezas controladas.</p>
+
+        <h3>11.7.1. Materiales Cerámicos Tradicionales</h3>
+        <p>Constan de tres componentes básicos: <span class="hl-def">sílice</span> (material de relleno barato que aumenta la dureza), <span class="hl-def">arcilla</span> —silicatos de aluminio hidratados o caolín, Al<sub>2</sub>O<sub>3</sub>·SiO<sub>2</sub>·nH<sub>2</sub>O, con pequeñas cantidades de TiO<sub>2</sub>, Fe<sub>2</sub>O<sub>3</sub>, MgO, CaO, Na<sub>2</sub>O y K<sub>2</sub>O— que favorece el moldeado por su plasticidad, y <span class="hl-def">feldespato</span> —aluminosilicato de sodio y potasio, (KNa)<sub>2</sub>Al<sub>2</sub>O<sub>3</sub>·6SiO<sub>2</sub>— que actúa de fundente en el tratamiento térmico.</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr><th>Tipo de cerámica</th><th>Caolín</th><th>Arcilla</th><th>Feldespato</th><th>Sílice</th><th>Otros</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Porcelana dura</strong></td><td>40</td><td>—</td><td>25</td><td>34</td><td>—</td></tr>
+                    <tr><td><strong>Aislantes eléctricos</strong></td><td>23</td><td>10</td><td>34</td><td>34</td><td>—</td></tr>
+                    <tr><td><strong>Sanitarios</strong></td><td>30</td><td>25</td><td>20</td><td>25</td><td>—</td></tr>
+                    <tr><td><strong>Porcelana fina</strong></td><td>23</td><td>—</td><td>30</td><td>25</td><td>22</td></tr>
+                    <tr><td><strong>Porcelana dental</strong></td><td>5</td><td>—</td><td>...</td><td>95</td><td>—</td></tr>
+                    <tr><td><strong>Porcelana inglesa</strong></td><td>25</td><td>10</td><td>...</td><td>15</td><td>38 (cenizas de hueso)</td></tr>
+                    <tr><td><strong>Loza</strong></td><td>31</td><td>25</td><td>...</td><td>22</td><td>2 (CaCO₃)</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 11.3. Composición de cerámicas de porcelana (en %).</p>
+        </div>
+
+        <h3>11.7.2. Materiales Refractarios</h3>
+        <p>Cerámicas con buena resistencia mecánica, capaces de soportar altas temperaturas, estables frente al choque térmico y con propiedades aislantes que mejoran con la porosidad (hasta el <strong>25%</strong> en algunos materiales). Según su comportamiento ácido-base se clasifican en <span class="hl-red">ácidos</span>, <span class="hl-green">básicos</span> y <span class="hl-amber">neutros</span>, y se emplean en el recubrimiento de hornos: afino de metales, fabricación de vidrio y cerámica, calderas de vapor, fabricación de cementos, etc.</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr><th>Tipo</th><th>% SiO<sub>2</sub></th><th>% Al<sub>2</sub>O<sub>3</sub></th><th>% MgO</th><th>% Fe<sub>2</sub>O<sub>3</sub></th><th>% Cr<sub>2</sub>O<sub>3</sub></th></tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="6" style="background:#fee2e2; font-weight:700;">Refractarios ácidos</td></tr>
+                    <tr><td>Sílice</td><td>95-97</td><td>1</td><td>1</td><td>—</td><td>—</td></tr>
+                    <tr><td>Sílice-alúmina</td><td>51-53</td><td>43-44</td><td>0-1</td><td>0-1</td><td>—</td></tr>
+                    <tr><td>Alúmina-sílice</td><td>10-45</td><td>50-90</td><td>0-1</td><td>0-1</td><td>—</td></tr>
+                    <tr><td colspan="6" style="background:#dcfce7; font-weight:700;">Refractarios básicos</td></tr>
+                    <tr><td>Magnesita</td><td>—</td><td>—</td><td>83-93</td><td>2-7</td><td>—</td></tr>
+                    <tr><td>Olivina</td><td>43</td><td>—</td><td>57</td><td>—</td><td>—</td></tr>
+                    <tr><td colspan="6" style="background:#fef3c7; font-weight:700;">Refractarios neutros</td></tr>
+                    <tr><td>Cromita</td><td>3-13</td><td>12-30</td><td>10-20</td><td>12-25</td><td>30-50</td></tr>
+                    <tr><td>Cromita-magnesio</td><td>2-8</td><td>20-24</td><td>30-39</td><td>9-12</td><td>30-50</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 11.4. Composición química de materiales refractarios (en %).</p>
+        </div>
+
+        <h3>11.7.3. Materiales Cerámicos Avanzados</h3>
+        <p>A diferencia de las cerámicas tradicionales (basadas en la arcilla), los materiales cerámicos avanzados están formados principalmente por <strong>óxidos, carburos, boruros y nitruros</strong> puros o casi puros, con puntos de fusión muy elevados: <strong>4.150 °C</strong> el carburo de hafnio (HfC), <strong>2.798 °C</strong> el óxido de magnesio (MgO), <strong>2.500 °C</strong> el carburo de silicio (SiC), <strong>2.450 °C</strong> el carburo de boro (B<sub>4</sub>C<sub>3</sub>), <strong>2.050 °C</strong> la alúmina (Al<sub>2</sub>O<sub>3</sub>), <strong>1.900 °C</strong> el nitruro de silicio (Si<sub>3</sub>N<sub>4</sub>), <strong>1.715 °C</strong> el dióxido de silicio (SiO<sub>2</sub>) y <strong>1.605 °C</strong> el dióxido de titanio (TiO<sub>2</sub>).</p>
+
+        <div class="three-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Alúmina sinterizada con MgO:</strong> aislante eléctrico de alta resistividad y bajas pérdidas dieléctricas; bujías de motores, tubos refractarios y crisoles de laboratorio.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Nitruro de silicio (Si₃N₄) + 2% MgO:</strong> material duro, no poroso y resistente; piezas para motores a reacción y cohetes.
+            </div>
+            <div class="grid-box-3">
+                <strong style="color:var(--accent-purple);">Carburo de silicio (SiC):</strong> abrasivo de elevada dureza, resiste la oxidación (la capa de SiO₂ superficial lo protege); recubrimiento de reactores y refuerzo fibroso de compuestos.
+            </div>
+        </div>
+
+        <p>Estos materiales se experimentan en motores de combustión interna, sistemas de generación de energía y vehículos espaciales, con notables ventajas sobre los metales convencionales: mayor resistencia al desgaste y a la corrosión, menores pérdidas por fricción, menor densidad (menor peso) y, sobre todo, capacidad de resistir mayores temperaturas de funcionamiento, aumentando el rendimiento termodinámico.</p>
+
+        <div class="callout callout-info">
+            <div class="callout-title">🔥 Vitrocerámicas</div>
+            <p>A medio camino entre vidrios y cerámicas: vidrios con <strong>desvitrificación controlada</strong> mediante un agente desvitrificante (normalmente TiO<sub>2</sub>) que induce la cristalización, dando un material policristalino. Composición típica: <strong>SiO<sub>2</sub> (70-72%), Al<sub>2</sub>O<sub>3</sub> (17-18%), Li<sub>2</sub>O (2-3%) y TiO<sub>2</sub> (4-5%)</strong> como agente de nucleación. Presentan bajos coeficientes de dilatación (buena resistencia al choque térmico), conductividad térmica relativamente elevada, alta resistencia mecánica y muy baja porosidad. Aplicaciones: placas de vitrocerámica de cocina y sustratos de circuitos integrados (por su alta resistencia eléctrica).</p>
+        </div>
+
+        <h3>11.7.4. Proceso de Fabricación de Materiales Cerámicos</h3>
+        <div class="diagram-box">
+            <div class="flow-steps">
+                <div class="flow-step">Materias Primas</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Molienda y Tamizado</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Dosificación y Homogeneización</div><span class="flow-arrow">→</span>
+                <div class="flow-step">Conformado y Moldeo</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-red); color:var(--accent-red);">Tratamientos Térmicos</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-green); color:var(--accent-green);">Cerámica</div>
+            </div>
+            <p style="margin-top:10px; margin-bottom:0; font-weight:400; font-size:0.9rem;">Figura 11.4. Esquema del proceso de fabricación de materiales cerámicos.</p>
+        </div>
+        <ol>
+            <li><strong>Acondicionamiento de materias primas:</strong> molienda y tamizado hasta un tamaño de grano adecuado (~100 μm en cerámicas «bastas», hasta ~0,01 μm en cerámicas avanzadas), procurando uniformidad.</li>
+            <li><strong>Dosificación y homogeneización:</strong> mezcla en seco o en húmedo (con agua para cerámicas comunes; en seco, con cimentadores y aditivos, para el resto).</li>
+            <li><strong>Conformado y moldeo:</strong> por <em>prensado en frío</em> sobre troquel (mezclas secas o con poca agua/pegamento orgánico), <em>compresión en caliente</em>, <em>moldeo en barbotina</em> (suspensión acuosa vertida en molde poroso de yeso que absorbe el agua dejando una capa sólida) para piezas huecas, o <em>moldeo por extrusión</em> (masa hidroplástica forzada por un orificio) para ladrillos, tuberías y bloques.</li>
+            <li><strong>Tratamientos térmicos:</strong>
+                <ul>
+                    <li><strong>Secado y eliminación del aglutinante:</strong> agua a menos de 100 °C; aglutinantes orgánicos entre 200 y 300 °C. El secado debe ser lento y uniforme para evitar defectos por contracción no uniforme.</li>
+                    <li><strong>Sinterización:</strong> las partículas se unen por difusión en estado sólido, a temperatura elevada pero inferior al punto de fusión (p. ej. alúmina de bujías: sinterizado a ~1.600 °C, fusión a 2.050 °C). Aumenta el tamaño de partícula y disminuye la porosidad.</li>
+                    <li><strong>Vitrificación:</strong> algunos componentes actúan de fundentes generando una fase líquida superficial que se convierte en sólido vítreo al enfriar, reduciendo o eliminando la porosidad.</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <!-- 11.8 GRUPO IIIA -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">11.8. Características Generales de los Elementos del Grupo III A</h2>
+        <p>El grupo III A lo forman <strong>boro, aluminio, galio, indio y talio</strong>. El único elemento con carácter semimetálico es el <span class="hl-pink">boro</span>; el resto se comportan como metales. Todos presentan puntos de ebullición relativamente elevados, pero destaca el bajo punto de fusión del <strong>galio (29 °C)</strong>, que junto con el mercurio son los dos únicos metales líquidos a temperatura ambiente. El galio mantiene el estado líquido en el intervalo de temperatura más amplio de todos los elementos (29 °C a 2.237 °C) y es, además del agua, el único elemento con mayor densidad en estado líquido que en estado sólido.</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr><th>Propiedad</th><th>B</th><th>Al</th><th>Ga</th><th>In</th><th>Tl</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Número atómico (Z)</strong></td><td>5</td><td>13</td><td>31</td><td>49</td><td>81</td></tr>
+                    <tr><td><strong>Configuración</strong></td><td>2s²2p¹</td><td>3s²3p¹</td><td>4s²4p¹</td><td>5s²5p¹</td><td>6s²6p¹</td></tr>
+                    <tr><td><strong>Radio covalente (nm)</strong></td><td>0,082</td><td>0,118</td><td>0,126</td><td>0,144</td><td>0,148</td></tr>
+                    <tr><td><strong>Radio iónico X³⁺ (nm)</strong></td><td>0,020</td><td>0,050</td><td>0,062</td><td>0,081</td><td>0,095</td></tr>
+                    <tr><td><strong>Potencial de ionización (kJ/mol)</strong></td><td>798</td><td>577</td><td>576</td><td>556</td><td>589</td></tr>
+                    <tr><td><strong>Afinidad electrónica (kJ/mol)</strong></td><td>10</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td><strong>Electronegatividad</strong></td><td>2,0</td><td>1,5</td><td>1,6</td><td>1,7</td><td>1,8</td></tr>
+                    <tr><td><strong>Números de oxidación</strong></td><td>3</td><td>3</td><td>3</td><td>3</td><td>(1;3)</td></tr>
+                    <tr><td><strong>Punto de fusión (°C)</strong></td><td>2.300</td><td>660</td><td>29</td><td>156</td><td>303</td></tr>
+                    <tr><td><strong>Punto de ebullición (°C)</strong></td><td>2.550</td><td>2.450</td><td>2.237</td><td>2.000</td><td>1.547</td></tr>
+                    <tr><td><strong>Densidad en el P.f. (g/mL)</strong></td><td>2,34</td><td>2,70</td><td>5,91</td><td>7,31</td><td>11,85</td></tr>
+                    <tr><td><strong>Potencial de reducción (E°, V)</strong></td><td>0,73</td><td>1,66</td><td>0,50</td><td>0,35</td><td>0,34</td></tr>
+                    <tr><td><strong>Color</strong></td><td>Blanco</td><td>Blanco/gris</td><td>Gris</td><td>Gris</td><td>Gris</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Tabla 11.5. Propiedades de los elementos del grupo III A.</p>
+        </div>
+    </section>
+
+    <!-- 11.9 BORO -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">11.9. Boro: Estructura, Síntesis y Aplicaciones</h2>
+        <p>Como todos los elementos de su grupo, el boro tiene en su estado fundamental 2 electrones en un orbital <em>s</em> y 1 en un orbital <em>p</em> de mayor energía, por lo que presenta un número de oxidación de <strong>(+3)</strong> (el talio presenta además el estado +1). Debido a la gran energía necesaria para formar iones trivalentes, sus compuestos tienen marcado carácter covalente: el boro <strong>nunca forma el ion B<sup>3+</sup> libre</strong>. En todos sus compuestos, el boro utiliza <strong>3 orbitales híbridos sp²</strong> idénticos, orientados a 120°, formados por combinación de los orbitales atómicos 2s y 2p.</p>
+
+        <p>El boro puro es un elemento de color blanco, aspecto cristalino y casi tan duro como el diamante. No es abundante en la naturaleza (<strong>0,0003%</strong> en masa de la corteza terrestre) y no se encuentra libre, sino combinado principalmente como <strong>tetraboratos</strong>: <strong>bórax</strong> (Na<sub>2</sub>B<sub>4</sub>O<sub>7</sub>·10H<sub>2</sub>O), <strong>kernita</strong> (Na<sub>2</sub>B<sub>4</sub>O<sub>7</sub>·4H<sub>2</sub>O) y la más rara <strong>colemanita</strong> (Ca<sub>2</sub>B<sub>6</sub>O<sub>11</sub>·5H<sub>2</sub>O).</p>
+
+        <div class="callout callout-teal">
+            <div class="callout-title">🔷 Estructura icosaédrica del boro</div>
+            <p>El boro elemental cristaliza en el <strong>sistema rómbico</strong>. Su celdilla unidad es un <strong>icosaedro</strong> (poliedro regular de veinte caras y doce vértices), con un átomo de boro en cada vértice, formando unidades B<sub>12</sub> que se unen para dar la red cristalina, en la que los átomos de boro de tres icosaedros adyacentes comparten 2 electrones (Figura 11.5).</p>
+        </div>
+
+        <h3>Síntesis del Boro</h3>
+        <p>El boro se obtiene por reducción del óxido bórico (B<sub>2</sub>O<sub>3</sub>) con magnesio metal. El óxido se obtiene por deshidratación del ácido bórico, que a su vez se obtiene tratando una disolución de bórax con ácido clorhídrico:</p>
+        <div class="math-box">
+            Na<sub>2</sub>B<sub>4</sub>O<sub>7(ac)</sub> + 2HCl<sub>(ac)</sub> + 5H<sub>2</sub>O → 4H<sub>3</sub>BO<sub>3(s)</sub> + 2NaCl<sub>(ac)</sub><br>
+            2H<sub>3</sub>BO<sub>3(s)</sub> <span class="frac"><span class="top">600 °C</span><span class="bottom">→</span></span> B<sub>2</sub>O<sub>3(s)</sub> + 3H<sub>2</sub>O<sub>(ac)</sub><br>
+            B<sub>2</sub>O<sub>3(s)</sub> + 3Mg<sub>(s)</sub> → 2B<sub>(s)</sub> + 3MgO<sub>(s)</sub>
+        </div>
+        <p>El óxido de magnesio se disuelve en ácido clorhídrico, quedando un residuo de boro más o menos impurificado con magnesio, válido para muchas aplicaciones.</p>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">🧵 Fibras de boro</div>
+            <p>Boro mucho más puro se obtiene por reducción del tricloruro de boro (BCl<sub>3</sub>) con hidrógeno, o por descomposición térmica del <strong>triyoduro de boro (BI<sub>3</sub>)</strong> sobre un hilo de wolframio. Este segundo método se usa para obtener <strong>fibras de boro</strong>: el hilo de W (~1 μm de espesor) actúa de sustrato sobre el que se deposita el boro, con diámetros finales entre <strong>2,5 y 20 μm</strong>. Se emplean como refuerzo en materiales compuestos de matriz polimérica (resinas epoxi), con aplicaciones en la industria aeroespacial.</p>
+            <div class="math-box">
+                2BCl<sub>3(g)</sub> + 3H<sub>2(g)</sub> <span class="frac"><span class="top">1.000-2.500 °C</span><span class="bottom">→</span></span> 2B<sub>(s)</sub> + 6HCl<sub>(g)</sub><br>
+                2BI<sub>3(g)</sub> <span class="frac"><span class="top">W, 1.000-2.500 °C</span><span class="bottom">→</span></span> 2B<sub>(s)</sub> + 3I<sub>2</sub>
+            </div>
+        </div>
+
+        <p>El boro se emplea sobre todo en la fabricación de <strong>aceros especiales</strong>, a los que confiere dureza y resistencia al impacto; en <strong>blindajes de reactores nucleares</strong>, por su propiedad de absorber neutrones; y en la fabricación de <strong>transistores extrínsecos</strong>, por sus propiedades semiconductoras.</p>
+    </section>
+
+    <!-- 11.10 COMPUESTOS DE BORO -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">11.10. Compuestos de Boro de Interés Industrial</h2>
+
+        <h3>Hidruros de Boro (Boranos)</h3>
+        <p>Combinaciones binarias de boro e hidrógeno. El más sencillo, BH<sub>3</sub>, no es estable y solo se observa como intermedio de reacción, ya que el boro queda rodeado de solo <strong>6 electrones</strong> en lugar de los 8 del octete. Tiende a formar el dímero estable <strong>diborano (B<sub>2</sub>H<sub>6</sub>)</strong>. Existen dos series generales: <span class="math-inline">B<sub>n</sub>H<sub>n+4</sub></span> (n = 2, 3, 4...), a la que pertenece el diborano, y <span class="math-inline">B<sub>n</sub>H<sub>n+6</sub></span> (n = 4, 5, 6...), cuyo representante es el <strong>hexaborano (B<sub>6</sub>H<sub>12</sub>)</strong>. Todos son inestables, se descomponen con el calor y se inflaman espontáneamente en el aire; se emplean como <strong>combustibles para cohetes</strong> y se obtienen por reacción de hidruros metálicos con ácidos fuertes:</p>
+        <div class="math-box">
+            Mg<sub>3</sub>B<sub>2(s)</sub> + 6HCl<sub>(g)</sub> → B<sub>2</sub>H<sub>6(g)</sub> + 3MgCl<sub>2(s)</sub>
+        </div>
+
+        <h3>Halogenuros de Boro</h3>
+        <p>Combinaciones del tipo <strong>BX<sub>3</sub></strong>, de marcado carácter covalente y con deficiencia electrónica, por lo que se comportan como <strong>ácidos de Lewis</strong>. Se obtienen por reacción directa entre el halógeno y el boro, y se hidrolizan fácilmente a ácido bórico:</p>
+        <div class="math-box">
+            3F<sub>2(g)</sub> + 2B<sub>(s)</sub> → 2BF<sub>3(g)</sub><br>
+            BF<sub>3(g)</sub> + 3H<sub>2</sub>O<sub>(l)</sub> → H<sub>3</sub>BO<sub>3(ac)</sub> + 3HF<sub>(ac)</sub>
+        </div>
+
+        <h3>Derivados No Metálicos: Carburo y Nitruro de Boro</h3>
+        <p>Entre los derivados no metálicos destacan el <strong>carburo de boro (B<sub>12</sub>C<sub>3</sub>)</strong> y sobre todo el <strong>nitruro de boro (BN)</strong>, ambos con dureza comparable a la del diamante. El BN es isoelectrónico del carbono y presenta al menos dos variedades alotrópicas:</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">BN-G:</strong> cristaliza en el sistema hexagonal, sólido blanco untuoso y resbaladizo, estructura similar al grafito (anillos con 3 N y 3 B alternados). Por la diferencia de electronegatividad entre N y B, los electrones no se deslocalizan como en el grafito, por lo que se comporta como <strong>aislante</strong>.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">BN-C (Borazol):</strong> estructura cúbica tipo diamante, dureza ligeramente inferior al diamante pero superior a otros abrasivos (carburo de boro, carburo de silicio). Muy resistente a la oxidación a alta temperatura. Se sintetiza fundiendo bórax anhidro con cloruro amónico. Se emplea en herramientas de corte y como abrasivo.
+            </div>
+        </div>
+
+        <h3>Óxidos, Oxiácidos y Oxisales</h3>
+        <p>El <strong>óxido bórico (B<sub>2</sub>O<sub>3</sub>)</strong> es el único óxido de boro de interés, obtenido como producto final de la deshidratación de los ácidos del boro; se emplea en vidrios borosilicatados de alta resistencia al calor, en la fabricación de lentes y en la preparación de herbicidas.</p>
+        <p>Se conocen tres oxiácidos del boro: <strong>ortobórico</strong> (H<sub>3</sub>BO<sub>3</sub>) —el más estable, obtenido de sus sales por tratamiento con ácido fuerte, con tendencia a polimerizarse—, <strong>metabórico</strong> (HBO<sub>2</sub>) y <strong>tetrabórico</strong> (H<sub>2</sub>B<sub>4</sub>O<sub>7</sub>, un tetrámero de estructura lineal).</p>
+        <div class="callout callout-purple">
+            <div class="callout-title">🧂 El bórax: la sal más importante</div>
+            <p>La sal sódica del ácido tetrabórico, el <strong>bórax</strong> (Na<sub>2</sub>B<sub>4</sub>O<sub>7</sub>·10H<sub>2</sub>O), es el compuesto de boro más importante industrialmente: se emplea para ablandar aguas duras, como detergente suave (baja alcalinidad), como fundente en numerosos procesos industriales y como decapante en el tratamiento de superficies metálicas. Muchos óxidos metálicos funden fácilmente con bórax dando colores característicos, propiedad aprovechada en la fabricación de vidrios, esmaltes y cerámicas coloreadas.</p>
+        </div>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">🧪 Ejercicios de Autoevaluación Resueltos Paso a Paso</h2>
+
+        <!-- EX 1 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Efectos de los Componentes en la Fabricación del Vidrio</div>
+            <p><strong>Enunciado:</strong> ¿Qué efectos específicos tienen los siguientes componentes: SiO<sub>2</sub>, CaO, Na<sub>2</sub>O, MgO, Al<sub>2</sub>O<sub>3</sub>, B<sub>2</sub>O<sub>3</sub>, PbO, ZnO y CoO, en el proceso de fabricación y/o sobre las propiedades finales del vidrio?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <ul>
+                    <li><strong>SiO₂:</strong> Componente principal de todos los vidrios. Confiere dureza y resistencia mecánica y química. Contenidos elevados aumentan el punto de fusión y favorecen la vitrificación, pero exigen temperaturas de procesado más elevadas.</li>
+                    <li><strong>Na₂O:</strong> Actúa de fundente, rebajando notablemente la temperatura de fusión y favoreciendo el procesado. Sin embargo, incrementa la solubilidad del vidrio en agua y rebaja su resistencia a los agentes químicos, sobre todo a los álcalis.</li>
+                    <li><strong>CaO:</strong> También fundente; rebaja la viscosidad del fundido favoreciendo el procesado. A diferencia del Na₂O, no aumenta la solubilidad del vidrio.</li>
+                    <li><strong>MgO:</strong> Fundente y agente vitrificante: dificulta la recristalización del vidrio, evitando el aumento de su fragilidad.</li>
+                    <li><strong>Al₂O₃:</strong> Aumenta la resistencia química del vidrio y evita la desvitrificación.</li>
+                    <li><strong>B₂O₃:</strong> Mejora las propiedades ópticas, y aumenta la resistencia química y la resistencia al choque mecánico y térmico.</li>
+                    <li><strong>PbO:</strong> Mejora las propiedades ópticas, aumenta la densidad y la resistencia a la penetración de radiaciones nucleares de alta energía.</li>
+                    <li><strong>ZnO:</strong> Aumenta la fluidez del vidrio y favorece su procesado.</li>
+                    <li><strong>CoO:</strong> Se emplea como colorante del vidrio, al que confiere color azul.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EX 2 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: Fabricación de Fibras de Boro</div>
+            <p><strong>Enunciado:</strong> Describa el método de fabricación de fibras de boro. ¿Qué utilidad tienen?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>El boro es un elemento de color blanco y aspecto cristalino, casi tan duro como el diamante, aunque presenta cierta fragilidad. Las fibras de boro se fabrican mediante <strong>descomposición térmica de sus halogenuros</strong>, en especial del <strong>triyoduro de boro (BI<sub>3</sub>)</strong>, sobre un hilo de wolframio de pequeño diámetro (alrededor de 1 μm), que actúa de guía o sustrato. De esta manera se obtienen fibras de boro del diámetro deseado, generalmente entre <strong>2,5 y 20 μm</strong>.</p>
+                <div class="math-box">
+                    2BI<sub>3(g)</sub> <span class="frac"><span class="top">W, 1.000-2.500 °C</span><span class="bottom">→</span></span> 2B<sub>(s)</sub> + 3I<sub>2</sub>
+                </div>
+                <p>Estas fibras se emplean como refuerzo en la fabricación de materiales compuestos de matriz polimérica, como las resinas epoxi. Estos materiales son más resistentes y duros que la matriz polimérica, encontrando numerosas aplicaciones en la industria aeroespacial.</p>
+            </div>
+        </div>
+
+        <!-- EX 3 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Compuestos Industriales Basados en la Sílice</div>
+            <p><strong>Enunciado:</strong> Indique los compuestos de interés industrial que tienen como base la sílice (SiO<sub>2</sub>).</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p><strong>Sílice cristalina:</strong> estado normal del SiO<sub>2</sub> en la naturaleza, en tres variedades (cuarzo —la más abundante y estable—, tridimita y cristobalita). Muy usadas por sus propiedades ópticas y piezoeléctricas en electrónica de precisión; ciertas variedades coloreadas por impurezas metálicas se aprecian en joyería.</p>
+                <p><strong>Sílice amorfa:</strong> menos frecuente en la naturaleza; se obtiene fundiendo la sílice cristalina y enfriando rápidamente la masa fundida (estructura desordenada de líquido, rigidez de sólido), recibiendo también el nombre de <em>sílice fundida</em>. Excelentes propiedades ópticas y buena resistencia química y térmica, por lo que se emplea en equipos de laboratorio e instrumentos ópticos. Con la misma estructura amorfa:</p>
+                <ul>
+                    <li><strong>a) Fibra óptica:</strong> fibra continua de muy pequeño diámetro obtenida a partir de SiO<sub>2</sub> amorfa de gran pureza, con elevado rendimiento en la transmisión de fotones; aplicación en las nuevas tecnologías de la comunicación.</li>
+                    <li><strong>b) Sílice pirogénica o Humo de sílice:</strong> sílice amorfa en partículas finamente divididas (7-50 μm), densidad aparente muy baja (~0,05 g/cm³); refuerzo de materiales de matriz polimérica, a los que confiere dureza con densidades relativamente bajas.</li>
+                    <li><strong>c) Sílica gel:</strong> se obtiene por precipitación de los ácidos silícicos a partir de disoluciones de silicatos alcalinos acidulados con ácido sulfúrico. Una vez seco y molido, se emplea como agente desecante, para pigmentos de pinturas y como aislante térmico en construcción.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EX 4 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4: Ablandamiento del Agua con Zeolita Sintética</div>
+            <p><strong>Enunciado:</strong> ¿Qué cantidad de una zeolita sintética por m³ de agua será necesaria para reducir la dureza de un agua al 10% de su dureza inicial, si esta es de 150 mg/L? Considere que la eficiencia de la zeolita es del 90% y su fórmula técnica es: Na<sub>12</sub>[(AlO<sub>2</sub>)<sub>12</sub>(SiO<sub>2</sub>)<sub>12</sub>]·27H<sub>2</sub>O.<br>
+            <em>Datos:</em> Masas atómicas H, O, Na, Al, Si: 1,0; 16,0; 23,0; 27,0 y 28,1 g/mol.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p>La dureza del agua se expresa en mg/L de CaCO<sub>3</sub>, lo que equivale, para este caso, a una concentración de Ca<sup>2+</sup> (fracción en masa del Ca en el CaCO<sub>3</sub>, $M=100$ g/mol):</p>
+                <p>$|\text{Ca}^{2+}| = 150 \cdot \frac{40}{100} = 60 \text{ mg/L}$</p>
+                <p>Como se elimina la dureza hasta reducirla al 10% (es decir, se retiene el 90%), la concentración retenida por la zeolita es:</p>
+                <p>$|\text{Ca}^{2+}|_{\text{retenido}} = 60 \cdot 0,9 = 54 \text{ mg/L} = 54 \text{ g/m}^3$</p>
+                <p>La reacción de intercambio iónico es:</p>
+                <div class="math-box">Na<sub>12</sub>Z + 6Ca<sup>2+</sup> → Ca<sub>6</sub>Z + 12Na<sup>+</sup></div>
+                <p>Masa molecular de la zeolita: $M(\text{Na}_{12}[(\text{AlO}_2)_{12}(\text{SiO}_2)_{12}]\cdot 27\text{H}_2\text{O}) = 2.190 \text{ g/mol}$</p>
+                <p>Un peso-fórmula de zeolita (2.190 g) intercambia 6 át-g de calcio (6 × 40 = 240 g). Para retener 54 g de Ca²⁺, y teniendo en cuenta el rendimiento del 90%, la cantidad de zeolita necesaria (x) será:</p>
+                <p>$x = 2.190 \text{ g} \cdot \frac{54}{240} \cdot \frac{100}{90} = \mathbf{547,5 \text{ g/m}^3}$</p>
+            </div>
+        </div>
+
+        <!-- EX 5 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 5: Semiconductor Si-P Dopado con Fósforo</div>
+            <p><strong>Enunciado:</strong> Un semiconductor Si-P se obtiene dopando el silicio puro con fósforo, con 10<sup>23</sup> átomos de P por m³ de material. Se pide: a) Cantidad en gramos de P que debe añadirse por gramo de Si. b) Relación atómica P/Si y relación en masa. c) Clasifique el semiconductor como tipo n o p.<br>
+            <em>Datos:</em> Densidad del silicio 2,33 g/cc; $N_0 = 6,023 \cdot 10^{23}$ átomos/mol; masas atómicas Si = 28,0 y P = 31,0 g/mol.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p>Al ser la cantidad de dopante muy pequeña respecto al Si, consideramos que la densidad del semiconductor es prácticamente la del silicio puro.</p>
+                <p><strong>a) Gramos de P por gramo de Si:</strong></p>
+                <p>Volumen que ocupa 1 g de silicio:</p>
+                <p>$v = \frac{1 \text{ g}}{2,33 \text{ g/cm}^3} = 0,43 \text{ cm}^3$</p>
+                <p>Gramos de P (a) que deben añadirse a dicho volumen:</p>
+                <p>$a = \left[4,3 \cdot 10^{-1} \text{ cm}^3 \cdot 10^{-6} \frac{\text{m}^3}{\text{cm}^3} \cdot 10^{23} \frac{\text{átomos}}{\text{m}^3}\right] \cdot \left[\frac{31 \text{ g/at-g}}{6,023 \cdot 10^{23} \text{ átomos/at-g}}\right]$</p>
+                <p>$a = \mathbf{2,2 \cdot 10^{-6} \text{ g de P por gramo de Si}}$</p>
+                <p><strong>b) Relación atómica y relación en masa P/Si:</strong></p>
+                <p>Átomos de silicio en 1 gramo de silicio:</p>
+                <p>$\frac{1}{28} \cdot 6,023 \cdot 10^{23} = 2,15 \cdot 10^{22} \text{ átomos}$</p>
+                <p>Número de átomos de P por gramo de Si:</p>
+                <p>$P = \frac{2,2 \cdot 10^{-6} \text{ g}}{31 \text{ g/at-g}} \cdot 6,023 \cdot 10^{23} \text{ átomos/at-g} = 1,32 \cdot 10^{18} \text{ átomos}$</p>
+                <p>Relación atómica:</p>
+                <p>$\left(\frac{P}{Si}\right)_{\text{atómica}} = \frac{1,32 \cdot 10^{18}}{5,12 \cdot 10^{22}} = \mathbf{2,58 \cdot 10^{-5}}$</p>
+                <p>Relación en masa (la ya indicada en el apartado a):</p>
+                <p>$\left(\frac{P}{Si}\right)_{\text{masa}} = \frac{2,2 \cdot 10^{-6}}{1} = \mathbf{2,2 \cdot 10^{-6}}$</p>
+                <p><strong>c) Tipo de semiconductor:</strong></p>
+                <p>Es un semiconductor <strong>tipo n</strong>. La conductividad se produce por los electrones en exceso que aporta el fósforo respecto al silicio.</p>
+            </div>
+        </div>
+
+        <!-- EX 6 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 6: Materias Primas para un Vidrio Pyrex</div>
+            <p><strong>Enunciado:</strong> Se quiere preparar un vidrio Pyrex con la siguiente composición: 12,9% B<sub>2</sub>O<sub>3</sub>, 2,2% Al<sub>2</sub>O<sub>3</sub>, 12% Na<sub>2</sub>O, 0,4% K<sub>2</sub>O y el resto SiO<sub>2</sub>. Materias primas: bórax (Na<sub>2</sub>B<sub>4</sub>O<sub>7</sub>·10H<sub>2</sub>O), bauxita (Al<sub>2</sub>O<sub>3</sub>·3H<sub>2</sub>O), carbonato sódico hidratado (Na<sub>2</sub>CO<sub>3</sub>·10H<sub>2</sub>O) y carbonato potásico anhidro (K<sub>2</sub>CO<sub>3</sub>). Calcular las cantidades de cada compuesto para obtener 5 kg de vidrio.<br>
+            <em>Datos:</em> Masas atómicas H, B, O, Na, Al, Si: 1,0; 10,8; 16,0; 23,0; 27,0 y 28,0 g/mol.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p><strong>Bórax</strong> — descomposición: $\text{Na}_2\text{B}_4\text{O}_7\cdot 10\text{H}_2\text{O} \rightarrow 2\text{B}_2\text{O}_3 + \text{Na}_2\text{O} + 10\text{H}_2\text{O}$ &nbsp;($M_{\text{bórax}}=381,2$; $M_{\text{B}_2\text{O}_3}=69,6$)</p>
+                <p>$m_{\text{bórax}} = 5 \text{ kg} \cdot 0,129 \cdot \frac{381,2}{2 \cdot 69,6} = \mathbf{1,776 \text{ kg}}$</p>
+                <p><strong>Bauxita</strong> — deshidratación: $\text{Al}_2\text{O}_3\cdot 3\text{H}_2\text{O} \rightarrow \text{Al}_2\text{O}_3 + 3\text{H}_2\text{O}$ &nbsp;($M_{\text{bauxita}}=156$; $M_{\text{Al}_2\text{O}_3}=102$)</p>
+                <p>$m_{\text{bauxita}} = 5 \text{ kg} \cdot 0,022 \cdot \frac{156}{102} = \mathbf{0,168 \text{ kg}}$</p>
+                <p><strong>Carbonato sódico:</strong> Na<sub>2</sub>O aportado por el bórax:</p>
+                <p>$(\text{Na}_2\text{O})_{\text{bórax}} = 1,776 \cdot \frac{62}{381,2} = 0,287 \text{ kg}$</p>
+                <p>Na<sub>2</sub>O total necesario: $5 \text{ kg} \cdot 0,12 = 0,6 \text{ kg}$. Falta aportar: $0,6 - 0,287 = 0,313 \text{ kg}$, mediante $\text{Na}_2\text{CO}_3\cdot 10\text{H}_2\text{O} \rightarrow \text{Na}_2\text{O} + \text{CO}_2 + 10\text{H}_2\text{O}$ ($M=286$):</p>
+                <p>$m_{\text{carb. sódico}} = 0,313 \cdot \frac{286}{62} = \mathbf{1,441 \text{ kg}}$</p>
+                <p><strong>Carbonato potásico:</strong> $\text{K}_2\text{CO}_3 \rightarrow \text{CO}_2 + \text{K}_2\text{O}$ ($M_{\text{K}_2\text{CO}_3}=138$; $M_{\text{K}_2\text{O}}=94$)</p>
+                <p>$m_{\text{carb. potásico}} = 5 \text{ kg} \cdot 0,004 \cdot \frac{138}{94} = \mathbf{0,029 \text{ kg}}$</p>
+                <p><strong>Sílice:</strong> $\%\text{SiO}_2 = 100 - 12,9 - 2,2 - 12 - 0,4 = 72,5\%$</p>
+                <p>$m_{\text{sílice}} = 5 \text{ kg} \cdot 0,725 = \mathbf{3,625 \text{ kg}}$</p>
+            </div>
+        </div>
+
+        <!-- EX 7 -->
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 7: Composición de una Cerámica y de una Arcilla Refractaria</div>
+            <p><strong>Enunciado:</strong> Para fabricar un material cerámico se mezclan 5 kg de CaO, 5 kg de SiO<sub>2</sub> y 2,5 kg de caolinita (Al<sub>2</sub>O<sub>3</sub>·2SiO<sub>2</sub>·2H<sub>2</sub>O) con agua, se moldea y se hornea a 1.300 °C. a) Composición final en % de los óxidos de la cerámica. b) ¿Cuánta caolinita/alúmina debería añadirse para obtener una arcilla refractaria con un contenido final de alúmina (Al<sub>2</sub>O<sub>3</sub>) del 30%?<br>
+            <em>Datos:</em> Masas atómicas H, O, Al, Si, Ca: 1,0; 16,0; 27,0; 28,0 y 40,0 g/mol.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución Paso a Paso:</span>
+                <p>Masa molecular de la caolinita: $M = 258 \text{ g/mol}$ (SiO<sub>2</sub>: $M=60$; Al<sub>2</sub>O<sub>3</sub>: $M=102$).</p>
+                <p>SiO<sub>2</sub> aportado por la caolinita: $m'_{\text{SiO}_2} = 2,5 \cdot 2 \cdot \frac{60}{258} = 1,163 \text{ kg}$ &nbsp;→&nbsp; SiO<sub>2</sub> total = $5 + 1,163 = 6,163 \text{ kg}$</p>
+                <p>Al<sub>2</sub>O<sub>3</sub> aportado por la caolinita: $m_{\text{alúmina}} = 2,5 \cdot \frac{102}{258} = 0,988 \text{ kg}$</p>
+                <p><strong>a) Composición porcentual de la cerámica</strong> (masa total = $5 + 6,163 + 0,988 = 12,151$ kg):</p>
+                <p>$\%\text{CaO} = \frac{5}{12,151}\cdot 100 = \mathbf{41,15\%}$ &nbsp;&nbsp; $\%\text{SiO}_2 = \frac{6,163}{12,151}\cdot 100 = \mathbf{50,72\%}$ &nbsp;&nbsp; $\%\text{Al}_2\text{O}_3 = \frac{0,988}{12,151}\cdot 100 = \mathbf{8,13\%}$</p>
+                <p><strong>b) Alúmina adicional para una arcilla refractaria al 30% de Al₂O₃:</strong></p>
+                <p>Balance de alúmina, siendo $x$ los kg de Al<sub>2</sub>O<sub>3</sub> a añadir:</p>
+                <p>$x + 0,988 = 0,30 \cdot (12,151 + x)$</p>
+                <p>$x + 0,988 = 3,645 + 0,30x \implies 0,70x = 2,657 \implies x = \mathbf{3,796 \text{ kg de Al}_2\text{O}_3}$</p>
+                <p>Composición final de la arcilla refractaria (masa total = 15,947 kg): $\%\text{CaO} = 31,36\%$; $\%\text{SiO}_2 = 38,65\%$; $\%\text{Al}_2\text{O}_3 = 30\%$.</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

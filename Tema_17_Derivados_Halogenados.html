@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 17: Derivados Halogenados - Resumen Completo</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-teal: #0d9488;
+            --accent-green: #16a34a;
+            --accent-red: #dc2626;
+            --accent-amber: #d97706;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #4c1d95 50%, #be185d 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%; right: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(219, 39, 119, 0.25) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+        .header-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #f0abfc);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header p { font-size: 1.05rem; color: #e2d9f3; max-width: 850px; }
+        .meta-info {
+            margin-top: 20px; padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem; color: #cbd5e1;
+            display: flex; flex-wrap: wrap; gap: 20px;
+        }
+        .meta-info span { display: flex; align-items: center; gap: 6px; }
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        .section-title {
+            font-size: 1.5rem; font-weight: 700;
+            margin-bottom: 20px; padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+        .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+        .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+        .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+        .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+        .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+        h3 {
+            font-size: 1.2rem; font-weight: 700;
+            margin: 22px 0 12px 0; color: var(--primary);
+            display: flex; align-items: center; gap: 8px;
+        }
+        h4 {
+            font-size: 1.05rem; font-weight: 600;
+            margin: 16px 0 8px 0; color: var(--primary-light);
+        }
+        p { margin-bottom: 14px; color: #334155; text-align: justify; }
+        .hl-def { background-color: #e0f2fe; color: #0369a1; padding: 2px 7px; border-radius: 4px; font-weight: 700; }
+        .hl-green { background-color: #dcfce7; color: #15803d; padding: 2px 7px; border-radius: 4px; font-weight: 700; }
+        .hl-red { background-color: #fee2e2; color: #b91c1c; padding: 2px 7px; border-radius: 4px; font-weight: 700; }
+        .hl-amber { background-color: #fef3c7; color: #b45309; padding: 2px 7px; border-radius: 4px; font-weight: 700; }
+        .hl-purple { background-color: #f3e8ff; color: #6b21a8; padding: 2px 7px; border-radius: 4px; font-weight: 700; }
+        .hl-pink { background-color: #fce7f3; color: #9d174d; padding: 2px 7px; border-radius: 4px; font-weight: 700; }
+        .hl-teal { background-color: #ccfbf1; color: #0f766e; padding: 2px 7px; border-radius: 4px; font-weight: 700; }
+        .frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.85em; line-height: 1.0; padding: 0 3px; font-family: 'Cambria','Georgia',serif; font-weight: bold; }
+        .frac .top { border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+        .frac .bottom { padding-top: 1px; }
+        .math-box {
+            background-color: #0f172a; color: #f8fafc;
+            padding: 16px 24px; border-radius: 10px;
+            font-family: 'Cambria','Georgia',serif; font-size: 1.05rem;
+            text-align: center; margin: 18px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            border-left: 5px solid #38bdf8; overflow-x: auto;
+        }
+        .formula-box {
+            background: #f1f5f9;
+            border: 2px dashed #94a3b8;
+            border-radius: 10px;
+            padding: 14px 20px;
+            text-align: center;
+            font-family: 'Cambria','Georgia',serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 14px 0;
+        }
+        .callout {
+            border-left: 5px solid; padding: 16px 20px;
+            border-radius: 0 10px 10px 0; margin: 18px 0;
+            background-color: #f8fafc;
+        }
+        .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+        .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+        .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+        .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+        .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+        .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+        .callout-pink { border-color: var(--accent-pink); background-color: #fdf2f8; }
+        .callout-title { font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .table-responsive { overflow-x: auto; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.92rem; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th { background-color: var(--primary); color: white; padding: 12px 14px; text-align: left; font-weight: 600; }
+        td { padding: 11px 14px; border-bottom: 1px solid var(--border-color); background-color: white; }
+        tr:nth-child(even) td { background-color: #f8fafc; }
+        tr:hover td { background-color: #f1f5f9; }
+        ul, ol { margin: 12px 0 16px 24px; color: #334155; }
+        li { margin-bottom: 8px; }
+        .badge-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 20px 0; }
+        .badge-card { flex: 1 1 200px; max-width: 500px; border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; background: #fff; border-top: 4px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .two-column-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .three-column-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .grid-box-1 { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 14px; }
+        .grid-box-2 { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px; }
+        .grid-box-3 { background: #fdf4ff; border: 1px solid #f0abfc; border-radius: 8px; padding: 14px; }
+        .flow-steps { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+        .flow-step { background: white; border: 2px solid var(--accent-purple); color: var(--accent-purple); border-radius: 8px; padding: 8px 14px; font-weight: 700; font-size: 0.9rem; }
+        .flow-arrow { color: var(--text-muted); font-size: 1.2rem; font-weight: 900; }
+        .exercise-card { background-color: #fefce8; border: 1px solid #fef08a; border-left: 5px solid var(--accent-amber); border-radius: 8px; padding: 20px; margin-bottom: 22px; }
+        .exercise-title { font-weight: 700; color: #854d0e; margin-bottom: 10px; font-size: 1.05rem; }
+        .solution-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px; margin-top: 12px; font-size: 0.95rem; }
+        .solution-tag { display: inline-block; background-color: #dcfce7; color: #166534; font-weight: 700; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; margin-bottom: 8px; }
+        figcaption { margin-top: 10px; font-weight: 400; font-size: 0.88rem; color: var(--text-muted); text-align:center; }
+        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+        .tag { background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        .mono { font-family: 'Cambria','Georgia',serif; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.6rem; }
+            .section-card { padding: 18px; }
+            .two-column-grid, .three-column-grid { grid-template-columns: 1fr; }
+            .badge-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Orgánica Industrial</span>
+        <h1>Tema 17: Derivados Halogenados</h1>
+        <p>Resumen visual y completo de la unidad didáctica: estructura, propiedades, síntesis y aplicaciones industriales de los halogenuros de alquilo, de arilo y de vinilo. Incluye los polímeros halogenados (PVC, Teflón, Neopreno) y los insecticidas organoclorados.</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> UNED — Química Aplicada a la Ingeniería</span>
+            <span>📍 <strong>Unidad:</strong> Tema 17 · Parte 2ª B</span>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">🎯 Objetivos del Tema</h2>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Estructura:</strong> Conocer los distintos tipos de derivados halogenados según el esqueleto hidrocarbonado y la naturaleza del halógeno.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>Propiedades:</strong> Justificar sus propiedades físicas y químicas en base a su estructura electrónica.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>Síntesis:</strong> Conocer los compuestos de primera generación de mayor interés industrial.
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>Aplicaciones:</strong> Conocer los productos terminales (plásticos, cauchos) y sus aplicaciones más importantes.
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN GENERAL -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">📝 Resumen General</h2>
+        <p>Los compuestos halogenados presentan un enlace <span class="hl-def">C — X</span> (X = F, Cl, Br, I) cuya polaridad, consecuencia de la diferencia de electronegatividad, crea un <span class="hl-amber">centro reactivo</span> en la molécula. Se estudian dos grandes familias según la hibridación del carbono que soporta el halógeno:</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Halogenuros de alquilo (sp³):</strong> el átomo de halógeno está unido a un carbono saturado. Son <span class="hl-green">muy reactivos</span>, ideales como intermedios de síntesis.
+            </div>
+            <div class="grid-box-3">
+                <strong style="color:var(--accent-purple);">Halogenuros de arilo y de vinilo (sp²):</strong> el halógeno está unido a un carbono insaturado (aromático o vinílico). Son <span class="hl-red">poco reactivos</span> frente a sustitución y eliminación.
+            </div>
+        </div>
+    </section>
+
+    <!-- 17.1 INTRODUCCIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-teal">17.1. Introducción</h2>
+        <p>Los <span class="hl-def">compuestos halogenados</span> son sustancias orgánicas que, además de carbono e hidrógeno, presentan átomos de halógeno (<strong>F, Cl, Br, I</strong>) de forma individual o colectiva en la molécula.</p>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Clasificación</th><th>Categorías</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Según nº de halógenos</strong></td><td>Monohalogenados, Dihalogenados, Trihalogenados, Polihalogenados (mismo o diferente halógeno)</td></tr>
+                    <tr><td><strong>Según esqueleto hidrocarbonado</strong></td><td><span class="hl-def">Alifáticos</span> (lineales o alicíclicos) y <span class="hl-purple">Aromáticos</span></td></tr>
+                    <tr><td><strong>Según hibridación del C</strong></td><td>Halogenuros de alquilo · Halogenuros de vinilo · Halogenuros de arilo</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 17.2 HALOGENUROS DE ALQUILO -->
+    <section class="section-card">
+        <h2 class="section-title t-amber">17.2. Halogenuros de Alquilo</h2>
+        <p>Compuestos en cuya molécula hay uno o varios átomos de halógeno unidos a átomos de carbono con <span class="hl-amber">hibridación sp³</span>. Se representan como <span class="mono"><strong>R — X</strong></span>. Representan uno de los grupos funcionales más interesantes por su utilidad práctica y su papel de intermedios básicos en síntesis orgánica.</p>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ No confundir</div>
+            <p>Los <strong>ácidos alquilsulfónicos</strong> (R—CH₂—SO₃H, el azufre unido al carbono) no son lo mismo que los <strong>sulfatos de alquilo</strong> (R—O—SO₃H, monoésteres del ácido sulfúrico, con el azufre unido al oxígeno).</p>
+        </div>
+
+        <h3>17.2.1. Clasificación y Nomenclatura</h3>
+        <p>Los halogenuros de alquilo se clasifican en <span class="hl-green">primarios</span>, <span class="hl-amber">secundarios</span> o <span class="hl-red">terciarios</span> según la naturaleza del carbono al que se une el halógeno.</p>
+
+        <div class="three-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-green);">Primario</strong>
+                <div class="formula-box">CH₃—CH₂—Br</div>
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-amber);">Secundario</strong>
+                <div class="formula-box">CH₃—CHI—CH₃</div>
+            </div>
+            <div class="grid-box-3">
+                <strong style="color:var(--accent-red);">Terciario</strong>
+                <div class="formula-box">(CH₃)₃C—Cl</div>
+            </div>
+        </div>
+
+        <p>También se clasifican según el nº de halógenos: <strong>mono, di, tri, tetra-halogenados.</strong></p>
+
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Denominación vulgar</th><th>Denominación IUPAC</th></tr></thead>
+                <tbody>
+                    <tr><td>Bromuro de metilo (CH₃Br)</td><td>Bromometano</td></tr>
+                    <tr><td>Yoduro de etilo (CH₃CH₂I)</td><td>Yodoetano</td></tr>
+                    <tr><td>Cloruro de bencilo</td><td>Clorometilbenceno</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">Se indica numéricamente la posición del halógeno: 1,2-dibromoetano, 1,1-dibromoetano...</p>
+        </div>
+
+        <div class="callout callout-teal">
+            <div class="callout-title">🧪 Nombres vulgares de polihalogenados frecuentes</div>
+            <p><strong>CHCl₃</strong> — cloroformo &nbsp;·&nbsp; <strong>CHBr₃</strong> — bromoformo &nbsp;·&nbsp; <strong>CHI₃</strong> — yodoformo &nbsp;·&nbsp; <strong>CCl₄</strong> — tetracloruro de carbono</p>
+        </div>
+
+        <h3>17.2.2. Propiedades Físicas</h3>
+        <ul>
+            <li>Generalmente <span class="hl-blue hl-def">líquidos</span>, con punto de ebullición <strong>superior</strong> al de alcanos con igual nº de átomos de carbono.</li>
+            <li>A igualdad de isómeros, la ramificación <span class="hl-amber">disminuye</span> el punto de ebullición.</li>
+            <li>La diferencia de electronegatividad C–X polariza el enlace → <strong>momento dipolar permanente ≠ 0</strong>.</li>
+            <li>El momento dipolar <strong>disminuye</strong> con la electronegatividad del halógeno: <span class="hl-def">yoduro &gt; bromuro &gt; cloruro &gt; fluoruro</span> de etilo.</li>
+            <li><span class="hl-red">Insolubles en agua</span> (no forman puentes de hidrógeno), pero muy solubles en disolventes orgánicos y son a su vez excelentes disolventes.</li>
+        </ul>
+
+        <h3>17.2.3. Propiedades Químicas</h3>
+        <p>El átomo de halógeno crea puntos vulnerables por desplazamiento electrónico. Los halogenuros de alquilo reaccionan por <span class="hl-green">sustitución</span> y por <span class="hl-amber">eliminación</span>, generando múltiples funciones orgánicas: alcanos, alcoholes, éteres, ésteres, aminas, nitrilos, alquenos, alquinos, cicloparafinas.</p>
+
+        <h3>17.2.4. Métodos de Obtención</h3>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong>De laboratorio</strong>
+                <p>Por procesos de <span class="hl-def">sustitución</span> (a partir de alcoholes con HX o PCl₅) o de <span class="hl-def">adición</span> (sobre alquenos/alquinos con X₂ o HX).</p>
+            </div>
+            <div class="grid-box-2">
+                <strong>Industrial</strong>
+                <p>Cloración del metano en fase vapor con Cl₂, controlando la proporción para obtener el derivado deseado:</p>
+            </div>
+        </div>
+
+        <div class="math-box">
+            CH₄ + Cl₂ → CH₃Cl (metano en exceso) &nbsp;|&nbsp; CH₄ + 4Cl₂ → CCl₄ (cloro en exceso)
+        </div>
+
+        <figure class="flow-steps" style="margin: 20px 0;">
+            <div class="flow-step">CH₄</div><span class="flow-arrow">→</span>
+            <div class="flow-step">CH₃Cl</div><span class="flow-arrow">→</span>
+            <div class="flow-step">CH₂Cl₂</div><span class="flow-arrow">→</span>
+            <div class="flow-step">CHCl₃</div><span class="flow-arrow">→</span>
+            <div class="flow-step" style="border-color:var(--accent-red); color:var(--accent-red);">CCl₄</div>
+        </figure>
+        <figcaption>Cloración progresiva del metano según la relación molar Cl₂/CH₄.</figcaption>
+
+        <h3>17.2.5. Productos de Interés Industrial</h3>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>Cloruro de metilo (CH₃Cl)</strong>
+                <p>Se obtiene por cloración del metano o con HCl sobre metanol (a 350 °C con alúmina). Uso: síntesis de metil-siliconas, plomo tetrametilo, metilcelulosa, disolvente de cauchos.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-teal);">
+                <strong>Cloruro de metileno (CH₂Cl₂)</strong>
+                <p>Decapante de pinturas, disolvente en reacciones Friedel-Krafts, desengrasante.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>Cloroformo (CHCl₃)</strong>
+                <p>Precursor de dicloro-difluorometano (fluido refrigerante) y del tetrafluoroetileno (monómero del <span class="hl-green">teflón</span>). Se oxida con luz a <span class="hl-red">fosgeno</span> (Cl₂CO), gas muy tóxico.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <strong>Tetracloruro de carbono (CCl₄)</strong>
+                <p>Obtenido también a partir de sulfuro de carbono. No arde ni es inflamable → agente extintor de incendios.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-info">
+            <div class="callout-title">🔗 Otros derivados de interés</div>
+            <p><strong>Cloruro de etilo</strong> (CH₃CH₂Cl): síntesis de plomotetraetilo. &nbsp;|&nbsp; <strong>1,2-dicloroetano</strong> (obtenido por adición de Cl₂ al etileno): precursor de <span class="hl-def">cloruro de vinilo</span> por deshidrohalogenación.</p>
+        </div>
+
+        <div class="callout callout-danger">
+            <div class="callout-title">🚨 Derivados fluorados y bromados</div>
+            <p><strong>Fluorados (freones):</strong> sustancias criogénicas, propulsores de aerosoles (en retroceso por dañar la capa de ozono), agentes espumantes de poliuretanos/poliestireno.</p>
+            <p><strong>Bromados:</strong> caros (Br elevado precio). <em>Bromuro de metilo</em>: biocida tóxico. <em>1,2-dibromoetano</em>: aditivo de gasolinas con plomo, evita depósitos de óxido de plomo.</p>
+        </div>
+
+        <h3>17.2.6. Antiignífugos</h3>
+        <p>Derivados <span class="hl-def">clorobromados y fluorobromados</span> con buenas propiedades extintoras (no mojan). Impiden el contacto oxígeno-llama e interfieren en el proceso de combustión. Se conocen como <strong>halones</strong>: se usan en extintores de aviones y automóviles, y como aditivos antiignífugos en materiales plásticos de construcción.</p>
+
+        <h3>17.2.7. Anestésicos y Transportadores de Oxígeno</h3>
+        <p>Derivados fluorados sustituyen al éter u óxido nitroso como <span class="hl-green">anestésicos</span> (mejor tolerancia, sin riesgo de explosión). Algunos <span class="hl-def">compuestos perfluorados</span>, buenos disolventes del oxígeno, se emplean en el tratamiento de anemias y hemorragias por su inocuidad fisiológica.</p>
+    </section>
+
+    <!-- 17.3 HALOGENUROS DE ARILO Y VINILO -->
+    <section class="section-card">
+        <h2 class="section-title t-purple">17.3. Halogenuros de Arilo. Halogenuros de Vinilo</h2>
+
+        <h3>17.3.1. Introducción</h3>
+        <p><span class="hl-purple">Halogenuros de arilo</span>: el halógeno está unido directamente a un <strong>anillo aromático</strong>. <span class="hl-pink">Halogenuros de vinilo</span>: el halógeno está unido a un radical vinilo. Ambos comparten la característica estructural de tener el halógeno unido a un <span class="hl-amber">carbono insaturado (sp²)</span>.</p>
+
+        <h3>17.3.2. Clasificación y Nomenclatura</h3>
+        <p>Se representan genéricamente como <span class="mono"><strong>Ar—X</strong></span> (arilo) y <span class="mono"><strong>R—CH=CHX</strong></span> (vinilo). Se nombran como halogenuros de arilo o como derivados halogenados del hidrocarburo correspondiente.</p>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Compuesto</th><th>Nombre</th></tr></thead>
+                <tbody>
+                    <tr><td>C₆H₅I</td><td>Yodobenceno / Yoduro de fenilo</td></tr>
+                    <tr><td>Br-C₆H₄-NO₂ (para)</td><td>p-bromonitrobenceno</td></tr>
+                    <tr><td>2-cloronaftaleno</td><td>Cloruro de 2-naftilo</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>17.3.3. Propiedades Físicas</h3>
+        <p>Guardan relación similar a la de los halogenuros de alquilo (punto de ebullición, solubilidad), pero destaca su <strong>bajo momento dipolar</strong> frente a los de alquilo, a pesar de la proximidad de la nube electrónica del enlace π al halógeno.</p>
+
+        <h3>17.3.4. Propiedades Químicas</h3>
+        <div class="callout callout-danger">
+            <div class="callout-title">🔒 Característica clave</div>
+            <p>Presentan <strong>falta de reactividad</strong> en las reacciones de sustitución y eliminación típicas de los halogenuros de alquilo. Sus reacciones se limitan a <span class="hl-def">SEA (sustitución electrófila aromática)</span>, donde el halógeno condiciona reactividad y orientación del grupo entrante. Igualmente la adición de HI al cloruro de vinilo es mucho más lenta que al etileno.</p>
+        </div>
+
+        <h3>17.3.5. Métodos de Obtención</h3>
+        <div class="math-box">
+            R—C≡C—R′ + HX ⎯→ R—CH=CX—R′ &nbsp;&nbsp; (adición sobre alquinos)
+        </div>
+        <p>Coinciden los métodos de laboratorio con los industriales.</p>
+
+        <h3>17.3.6. Productos de Interés Industrial</h3>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>17.3.6.1 Clorobenceno</strong>
+                <p>Cloración directa del benceno con Fe a 80 °C. Producto de partida para fenol, anilina, DDT y policlorobencenos.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-green);">
+                <strong>17.3.6.2 Cloruro de Vinilo (VC)</strong>
+                <p>Monómero del PVC. Métodos: hidrocloración del acetileno, <strong>oxicloración del etileno</strong> (proceso mayoritario), deshidrocloración.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-success">
+            <div class="callout-title">⚙️ Síntesis del Cloruro de Vinilo (proceso combinado)</div>
+            <p><strong>1)</strong> Cloración del etileno → 1,2-dicloroetano (DCE)</p>
+            <div class="math-box">CH₂=CH₂ + Cl₂ → CH₂Cl—CH₂Cl</div>
+            <p><strong>2)</strong> Deshidrohalogenación térmica (pirólisis)</p>
+            <div class="math-box">CH₂Cl—CH₂Cl → CH₂=CHCl + HCl</div>
+            <p><strong>3)</strong> Oxicloración: el HCl se reoxida a Cl₂ y reacciona con más etileno</p>
+            <div class="math-box">4HCl + 2CH₂=CH₂ + O₂ → 2CH₂Cl—CH₂Cl + 4H₂O</div>
+            <figure class="flow-steps" style="margin:16px 0;">
+                <div class="flow-step">Cloración</div><span class="flow-arrow">→</span>
+                <div class="flow-step">DCE</div><span class="flow-arrow">→</span>
+                <div class="flow-step" style="border-color:var(--accent-green); color:var(--accent-green);">Pirólisis → VC</div>
+                <span class="flow-arrow">↺</span>
+                <div class="flow-step">Oxicloración</div>
+            </figure>
+        </div>
+
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">Tricloroetileno y Tetracloroetileno</strong>
+                <p>Cl₂C=CHCl y Cl₂C=CCl₂: obtenidos por cloración/deshidrocloración térmica simultánea del 1,2-dicloroetano. Usos: <span class="hl-def">disolventes</span>, extracción de grasas y aceites (tricloroetileno), limpieza en seco de textiles (percloroetileno).</p>
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Cloropreno</strong>
+                <p>CH₂=CCl—CH=CH₂. Cloración del 1,3-butadieno (adición 1,2) seguida de deshidrocloración. Monómero exclusivo del <span class="hl-green">caucho neopreno</span>.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-purple">
+            <div class="callout-title">🧊 Tetrafluoroetileno (CF₂=CF₂)</div>
+            <p>Se obtiene por descomposición térmica del clorodifluormetano:</p>
+            <div class="math-box">2 ClCHF₂ → CF₂=CF₂ + HCl</div>
+            <p>Monómero fundamental para la fabricación del <strong>Teflón</strong> (poli-tetrafluoroetileno).</p>
+        </div>
+    </section>
+
+    <!-- POLÍMEROS HALOGENADOS -->
+    <section class="section-card">
+        <h2 class="section-title t-green">17.3.7. Polímeros Halogenados</h2>
+
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color: var(--accent-blue);">
+                <strong>🧱 17.3.7.1 Poli(cloruro de vinilo) — PVC</strong>
+                <p>Conocido desde 1835 (Regnault). Uno de los polímeros de <strong>mayor producción mundial</strong> (segundo tras el PE, 22 millones de toneladas en 1994). Polímero <span class="hl-def">lineal termoplástico</span>, resistente, químicamente inerte, no arde y se autoextingue.</p>
+                <p>Se descompone con luz/calor liberando <span class="hl-red">HCl</span>, por lo que necesita estabilizantes. La incorporación de <span class="hl-amber">plastificantes</span> permite obtener desde PVC rígido hasta muy flexible. Principal aplicación: <strong>construcción</strong> (tuberías, ventanas, pavimentos), además de envases, automoción, agricultura, medicina.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-purple);">
+                <strong>🍳 17.3.7.2 Poli(tetrafluoroetileno) — Teflón</strong>
+                <p>Comercializado desde 1934. Estructura muy compacta y simétrica → gran <span class="hl-def">resistencia mecánica, rigidez</span>, baja dureza. Resistente a productos químicos y muy estable térmicamente. Excelente <span class="hl-green">aislante eléctrico</span>, incombustible.</p>
+                <p>Característica principal: <strong>antiadherencia</strong> → menaje de cocina, juntas y rodamientos. Inconveniente: elevado precio.</p>
+            </div>
+            <div class="badge-card" style="border-top-color: var(--accent-amber);">
+                <strong>🛞 17.3.7.3 Neopreno</strong>
+                <p>Nombre comercial del caucho de <span class="hl-def">cloropreno</span>, fabricado desde 1932. Buenas propiedades mecánicas, resistente a disolventes hidrocarbonados y aceites minerales. Resistente al ozono; por el cloro presente, es <span class="hl-green">autoextinguible</span>. Buena resistencia a agentes ambientales.</p>
+                <p>Usos: cintas transportadoras, juntas de carreteras y de muro cortina, trajes deportivos (neopreno de buceo).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSECTICIDAS -->
+    <section class="section-card">
+        <h2 class="section-title t-red">17.3.8. Insecticidas Organoclorados</h2>
+        <p>Descubiertos en 1939 con la aplicación del <span class="hl-def">DDT</span> para combatir epidemias transmitidas por mosquitos (tifus, malaria). Muy apreciados por su <strong>persistencia</strong>, bajo coste y amplio espectro de acción.</p>
+
+        <div class="callout callout-danger">
+            <div class="callout-title">☠️ Problemas medioambientales</div>
+            <ul>
+                <li>Desequilibrios en el ecosistema (ataque a especies beneficiosas).</li>
+                <li>Carácter <strong>acumulativo y persistente</strong>: aumenta el efecto al ascender en la cadena alimentaria (bioamplificación).</li>
+                <li>Provocó la desaparición de algunas aves al debilitar la cáscara de sus huevos (impide la correcta asimilación del calcio).</li>
+                <li>Acumulación demostrada en la leche de mamíferos.</li>
+            </ul>
+            <p>Por ello se han dictado severas limitaciones de uso.</p>
+        </div>
+
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">DDT</strong>
+                <p>4,4'-dicloro-difenil-tricloroetano. Se transforma por acción enzimática en <strong>DDD</strong> por pérdida de una molécula de HCl.</p>
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">Lindano</strong>
+                <p>Obtenido por halogenación radicálica del benceno (3 Cl₂, con luz). Presenta <strong>8 isómeros geométricos</strong> posibles; solo <strong>uno</strong> de ellos posee actividad insecticida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EJERCICIOS DE AUTOEVALUACIÓN -->
+    <section class="section-card">
+        <h2 class="section-title t-pink">🧪 Ejercicios de Autoevaluación Resueltos</h2>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 1: Reacciones de cloración del metano</div>
+            <p><strong>Enunciado:</strong> Ajustar las reacciones de obtención de los cuatro derivados clorados del metano.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <div class="math-box">
+                    CH₄ + Cl₂ → CH₃Cl + HCl<br>
+                    CH₄ + 2Cl₂ → CH₂Cl₂ + 2HCl<br>
+                    CH₄ + 3Cl₂ → CHCl₃ + 3HCl<br>
+                    CH₄ + 4Cl₂ → CCl₄ + 4HCl
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 2: PVC rígido vs. flexible</div>
+            <p><strong>Enunciado:</strong> ¿Qué diferencia hay entre el poli(cloruro de vinilo) rígido y el flexible?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>La diferencia está en la <strong>cantidad de plastificante</strong> incorporado a la formulación: a mayor cantidad de plastificante, mayor flexibilidad del material.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 3: Caucho natural vs. Neopreno</div>
+            <p><strong>Enunciado:</strong> ¿Qué diferencia química existe entre el caucho natural y el caucho de neopreno?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>El caucho natural proviene de la polimerización del <strong>2-metil-1,3-butadieno (isopreno)</strong>, mientras que el caucho de neopreno proviene de la polimerización del <strong>2-cloro-1,3-butadieno (cloropreno)</strong>.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Ejercicio 4: Síntesis del lindano</div>
+            <p><strong>Enunciado:</strong> En la reacción de obtención del lindano, ¿qué otros productos se forman?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>El compuesto resultante posee <strong>8 isómeros geométricos</strong> posibles (según la disposición de cada pareja Cl/H respecto al plano medio de la molécula). De todos ellos, únicamente el isómero denominado <strong>lindano</strong> presenta actividad insecticida; el resto son isómeros geométricos inactivos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA CONCEPTUAL FINAL -->
+    <section class="section-card">
+        <h2 class="section-title t-blue">🗺️ Mapa Conceptual del Tema</h2>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <h4 style="color:var(--accent-blue);">🔵 Halogenuros de Alquilo (sp³)</h4>
+                <ul>
+                    <li>Muy reactivos: sustitución y eliminación</li>
+                    <li>Primarios / Secundarios / Terciarios</li>
+                    <li>CH₃Cl, CH₂Cl₂, CHCl₃, CCl₄</li>
+                    <li>Antiignífugos (halones)</li>
+                    <li>Anestésicos fluorados</li>
+                </ul>
+            </div>
+            <div class="grid-box-3">
+                <h4 style="color:var(--accent-purple);">🟣 Halogenuros de Arilo / Vinilo (sp²)</h4>
+                <ul>
+                    <li>Poco reactivos: solo SEA</li>
+                    <li>Clorobenceno → fenol, anilina, DDT</li>
+                    <li>Cloruro de vinilo → <strong>PVC</strong></li>
+                    <li>Tetrafluoroetileno → <strong>Teflón</strong></li>
+                    <li>Cloropreno → <strong>Neopreno</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tag-list" style="justify-content:center; margin-top: 16px;">
+            <span class="tag">PVC</span>
+            <span class="tag">Teflón</span>
+            <span class="tag">Neopreno</span>
+            <span class="tag">DDT</span>
+            <span class="tag">Lindano</span>
+            <span class="tag">Freones</span>
+            <span class="tag">Halones</span>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

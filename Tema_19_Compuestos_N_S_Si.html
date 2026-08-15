@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tema 19: Compuestos con Nitrógeno, Azufre y Silicio</title>
+<style>
+    :root {
+        --primary: #0f172a;
+        --primary-light: #1e293b;
+        --accent-blue: #0284c7;
+        --accent-teal: #0d9488;
+        --accent-green: #16a34a;
+        --accent-red: #dc2626;
+        --accent-amber: #d97706;
+        --accent-purple: #9333ea;
+        --accent-pink: #db2777;
+        --accent-indigo: #4f46e5;
+        --bg-body: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-color: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        background-color: var(--bg-body);
+        color: var(--text-main);
+        line-height: 1.65;
+        padding: 20px;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    header {
+        background: linear-gradient(135deg, #0f172a 0%, #312e81 50%, #7c2d12 100%);
+        color: white;
+        padding: 40px 30px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+        margin-bottom: 35px;
+        position: relative;
+        overflow: hidden;
+    }
+    header::before {
+        content: "";
+        position: absolute;
+        top: -50%; right: -10%;
+        width: 400px; height: 400px;
+        background: radial-gradient(circle, rgba(129, 140, 248, 0.25) 0%, rgba(255,255,255,0) 70%);
+        border-radius: 50%;
+    }
+    .header-tag {
+        display: inline-block;
+        background: rgba(129, 140, 248, 0.2);
+        color: #a5b4fc;
+        padding: 4px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        border: 1px solid rgba(129, 140, 248, 0.3);
+    }
+    header h1 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        background: linear-gradient(to right, #ffffff, #c7d2fe);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    header p { font-size: 1.05rem; color: #cbd5e1; max-width: 850px; }
+    .meta-info {
+        margin-top: 20px; padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        font-size: 0.9rem; color: #94a3b8;
+        display: flex; flex-wrap: wrap; gap: 20px;
+    }
+    .section-card {
+        background: var(--bg-card);
+        border-radius: 14px;
+        padding: 30px;
+        margin-bottom: 30px;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+    .section-title {
+        font-size: 1.5rem; font-weight: 700;
+        margin-bottom: 20px; padding-bottom: 10px;
+        border-bottom: 3px solid #e2e8f0;
+        display: flex; align-items: center; gap: 12px;
+    }
+    .t-blue { color: var(--accent-blue); border-color: var(--accent-blue); }
+    .t-teal { color: var(--accent-teal); border-color: var(--accent-teal); }
+    .t-green { color: var(--accent-green); border-color: var(--accent-green); }
+    .t-red { color: var(--accent-red); border-color: var(--accent-red); }
+    .t-amber { color: var(--accent-amber); border-color: var(--accent-amber); }
+    .t-purple { color: var(--accent-purple); border-color: var(--accent-purple); }
+    .t-pink { color: var(--accent-pink); border-color: var(--accent-pink); }
+    .t-indigo { color: var(--accent-indigo); border-color: var(--accent-indigo); }
+    h3 {
+        font-size: 1.15rem; font-weight: 700;
+        margin: 22px 0 12px 0; color: var(--primary);
+        display: flex; align-items: center; gap: 8px;
+    }
+    h4 { font-size: 1.02rem; font-weight: 600; margin: 16px 0 8px 0; color: var(--primary-light); }
+    p { margin-bottom: 12px; color: #334155; text-align: justify; }
+    .hl-def { background-color: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .hl-green { background-color: #dcfce7; color: #15803d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .hl-red { background-color: #fee2e2; color: #b91c1c; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .hl-amber { background-color: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .hl-purple { background-color: #f3e8ff; color: #6b21a8; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .hl-pink { background-color: #fce7f3; color: #9d174d; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .hl-teal { background-color: #ccfbf1; color: #0f766e; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .hl-indigo { background-color: #e0e7ff; color: #3730a3; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .formula-box {
+        background-color: #0f172a; color: #f8fafc;
+        padding: 14px 22px; border-radius: 10px;
+        font-family: 'Cambria', 'Georgia', serif; font-size: 1.02rem;
+        text-align: center; margin: 16px 0;
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        border-left: 5px solid #818cf8; overflow-x: auto;
+    }
+    .formula-box .arrow { color: #818cf8; font-weight: bold; margin: 0 8px; }
+    .formula-box small { color: #94a3b8; display:block; margin-top:6px; font-size:0.78rem; }
+    .callout {
+        border-left: 4px solid; padding: 14px 20px;
+        border-radius: 0 10px 10px 0; margin: 16px 0;
+        background-color: #f8fafc;
+    }
+    .callout-info { border-color: var(--accent-blue); background-color: #f0f9ff; }
+    .callout-success { border-color: var(--accent-green); background-color: #f0fdf4; }
+    .callout-warning { border-color: var(--accent-amber); background-color: #fffbeb; }
+    .callout-danger { border-color: var(--accent-red); background-color: #fef2f2; }
+    .callout-purple { border-color: var(--accent-purple); background-color: #faf5ff; }
+    .callout-teal { border-color: var(--accent-teal); background-color: #f0fdfa; }
+    .callout-pink { border-color: var(--accent-pink); background-color: #fdf2f8; }
+    .callout-indigo { border-color: var(--accent-indigo); background-color: #eef2ff; }
+    .callout-title { font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+    .table-responsive { overflow-x: auto; margin: 18px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    th { background-color: var(--primary); color: white; padding: 10px 12px; text-align: left; font-weight: 600; }
+    td { padding: 9px 12px; border-bottom: 1px solid var(--border-color); background-color: white; }
+    tr:nth-child(even) td { background-color: #f8fafc; }
+    ul, ol { margin: 10px 0 14px 22px; color: #334155; }
+    li { margin-bottom: 6px; }
+    .badge-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 18px 0; }
+    .badge-card { flex:1 1 300px; max-width: 500px; border: 1px solid var(--border-color); border-radius: 10px; padding: 15px; background: #ffffff; border-top: 4px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+    .two-column-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+    .three-column-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 14px 0; }
+    .grid-box-1 { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 13px; }
+    .grid-box-2 { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 13px; }
+    .grid-box-3 { background: #fdf4ff; border: 1px solid #f0abfc; border-radius: 8px; padding: 13px; }
+    .flow-steps { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; }
+    .flow-step { background: white; border: 2px solid var(--accent-blue); color: var(--accent-blue); border-radius: 8px; padding: 7px 12px; font-weight: 700; font-size: 0.85rem; }
+    .flow-arrow { color: var(--text-muted); font-size: 1.1rem; font-weight: 900; }
+    .exercise-card { background-color: #fefce8; border: 1px solid #fef08a; border-left: 5px solid var(--accent-amber); border-radius: 8px; padding: 18px; margin-bottom: 18px; }
+    .exercise-title { font-weight: 700; color: #854d0e; margin-bottom: 8px; font-size: 1rem; }
+    .solution-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 14px; margin-top: 10px; font-size: 0.92rem; }
+    .solution-tag { display: inline-block; background-color: #dcfce7; color: #166534; font-weight: 700; font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; margin-bottom: 8px; }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .toc a {
+        text-decoration: none; background: rgba(255,255,255,0.1); color: #e2e8f0;
+        padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; border: 1px solid rgba(255,255,255,0.2);
+        transition: 0.2s;
+    }
+    .toc a:hover { background: rgba(129,140,248,0.3); }
+    @media (max-width: 768px) {
+        header h1 { font-size: 1.5rem; }
+        .section-card { padding: 18px; }
+        .two-column-grid, .three-column-grid { grid-template-columns: 1fr; }
+        .badge-grid { grid-template-columns: 1fr; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <span class="header-tag">Química Orgánica de Interés Industrial</span>
+        <h1>🧬 Tema 19: Compuestos con Nitrógeno, Azufre y Silicio</h1>
+        <p>Resumen visual completo de las funciones orgánicas que incorporan heteroátomos N, S y Si: nitrocompuestos, aminas, sales de diazonio, colorantes azoicos, amidas, isocianatos, poliuretanos, nitrilos, materiales compuestos, compuestos de azufre, detergentes y compuestos de silicio (siliconas).</p>
+        <div class="meta-info">
+            <span>📚 <strong>Fuente:</strong> Química Aplicada a la Ingeniería - UNED</span>
+            <span>📍 <strong>Bloque:</strong> Compuestos Orgánicos con Heteroátomos</span>
+        </div>
+        <div class="toc">
+            <a href="#intro">Objetivos</a>
+            <a href="#nitro">19.1 Nitrocompuestos</a>
+            <a href="#aminas">19.2 Aminas</a>
+            <a href="#otros-n">19.3 Otros N</a>
+            <a href="#azufre">19.4 Azufre</a>
+            <a href="#silicio">19.5 Silicio</a>
+            <a href="#ejercicios">Ejercicios</a>
+        </div>
+    </header>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="section-card" id="intro">
+        <h2 class="section-title t-indigo">🎯 Objetivos y Visión General</h2>
+        <p>Este tema estudia las funciones orgánicas en las que participan uno o varios <span class="hl-indigo">heteroátomos</span> (N, S o Si), que originan sustancias de propiedades muy diferentes.</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong style="color:var(--accent-blue);">🅽 Nitrógeno:</strong> se estudia unido a C y O (<em>nitrocompuestos</em>), unido a C y H (<em>aminas</em>), unido mediante enlaces múltiples (<em>nitrilos, isocianatos</em>), y las amidas como derivados de ácidos carboxílicos. Productos terminales: fibras de <span class="hl-def">poliamida</span>, <span class="hl-def">poliacrilonitrilo</span> y espumas de <span class="hl-def">poliuretano</span>.
+            </div>
+            <div class="grid-box-2">
+                <strong style="color:var(--accent-green);">🆂 Azufre y 🆂🅸 Silicio:</strong> se establecen analogías estructurales con los compuestos de oxígeno (azufre) y de carbono (silicio). El azufre siempre está unido a un carbono de la cadena principal; el silicio forma cadenas Si–O–Si muy estables. Origen: azufre en recursos fósiles; silicio, de síntesis de laboratorio.
+            </div>
+        </div>
+    </section>
+
+    <!-- 19.1 NITROCOMPUESTOS -->
+    <section class="section-card" id="nitro">
+        <h2 class="section-title t-red">19.1. Nitrocompuestos</h2>
+        <p>Compuestos orgánicos con la agrupación <span class="hl-red">–NO₂</span>, con el nitrógeno unido <strong>directamente al carbono</strong>.</p>
+
+        <h3>🔹 Nomenclatura y Clasificación</h3>
+        <p>Se nombran anteponiendo el prefijo <em>nitro-</em> al hidrocarburo base, indicando la posición. Ej.: nitroetano, 2-nitro-3-metilpentano, 2,4,6-trinitrotolueno (TNT). Los alifáticos se clasifican en <span class="hl-def">primarios, secundarios o terciarios</span> según el carbono que soporta el grupo –NO₂.</p>
+
+        <h3>🔹 Propiedades Físicas y Químicas</h3>
+        <div class="callout callout-danger">
+            <p>Elevado <strong>momento dipolar</strong> → altos puntos de ebullición y fusión (atracciones dipolo-dipolo). <span class="hl-red">Insolubles en agua</span>. <strong>Tóxicos</strong> por inhalación y por vía cutánea. Reacción más importante: <span class="hl-def">reducción a aminas</span>.</p>
+        </div>
+
+        <h3>🔹 Métodos de Obtención</h3>
+        <div class="two-column-grid">
+            <div class="grid-box-1">
+                <strong>Alifáticos (laboratorio):</strong> reacción radicálica de alcanos con HNO₃ en fase vapor (da mezclas por rotura de cadena), o sustitución de halógeno por –NO₂ con AgNO₃.
+            </div>
+            <div class="grid-box-2">
+                <strong>Aromáticos:</strong> nitración directa con mezcla sulfonítrica (HNO₃ + H₂SO₄). La mononitración es controlable porque el grupo –NO₂ es <span class="hl-amber">desactivante</span> (dificulta un segundo SEA).
+            </div>
+        </div>
+        <p><strong>Industrial:</strong> alifáticos con HNO₃ a 500 °C; aromáticos con mezcla sulfonítrica.</p>
+
+        <h3>🔹 Compuestos de Interés Industrial</h3>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Compuesto</th><th>Aplicación</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Nitrometano</strong></td><td>Combustible en coches de carreras; síntesis de cloropicrina (antiparasitario)</td></tr>
+                    <tr><td><strong>Nitroetano</strong></td><td>Industria farmacéutica</td></tr>
+                    <tr><td><strong>2-nitropropano</strong></td><td>Disolvente de resinas, pinturas, barnices y tintas</td></tr>
+                    <tr><td><strong>Nitroglicerina</strong></td><td>Trinitrato de glicerina (no es nitrocompuesto). Explosivo muy potente, explota por choque</td></tr>
+                    <tr><td><strong>Trinitrofenol (ác. pícrico)</strong></td><td>Colorante de lana y seda, germicida; su sal amónica (picrato) es explosivo</td></tr>
+                    <tr><td><strong>Dinitrotolueno</strong></td><td>Síntesis de diisocianatos → espumas de poliuretano</td></tr>
+                    <tr><td><strong>TNT (trilita)</strong></td><td>Explosivo para voladura de minas y canteras</td></tr>
+                    <tr><td><strong>Nitrocelulosa</strong></td><td>Según grado de nitración: <span class="hl-red">alta</span> = algodón pólvora (explosivo); <span class="hl-amber">baja</span> = colodiones (adhesivos, esparadrapo); <span class="hl-teal">media</span> = celuloide (películas, con plastificantes)</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 19.2 AMINAS -->
+    <section class="section-card" id="aminas">
+        <h2 class="section-title t-blue">19.2. Aminas</h2>
+        <p>Derivadas del <span class="hl-def">amoniaco</span> por sustitución de 1, 2 o 3 hidrógenos por radicales hidrocarbonados (alifáticos o aromáticos).</p>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ Cuidado: clasificación diferente a los alcoholes</div>
+            <p>En aminas, primaria/secundaria/terciaria depende del <strong>número de radicales sobre el N</strong>. En alcoholes depende del carbono que soporta el –OH.</p>
+        </div>
+
+        <div class="three-column-grid">
+            <div class="grid-box-1"><strong>Primaria:</strong> R–NH₂</div>
+            <div class="grid-box-2"><strong>Secundaria:</strong> R–NH–R'</div>
+            <div class="grid-box-3"><strong>Terciaria:</strong> R–N(R')(R'')</div>
+        </div>
+        <p>Pueden existir varias funciones amino en una molécula: <span class="hl-def">diaminas, triaminas, poliaminas</span>. Con 4 sustituyentes, el N tiene carga positiva → <span class="hl-purple">sal de amonio cuaternaria</span> (soluble en agua).</p>
+
+        <h3>🔹 Nomenclatura</h3>
+        <p>Primarias: radical + sufijo <em>-amina</em> (metilamina, isopropilamina, fenilamina). Aromáticas con nombre propio: pirrol, piridina, p-toluidina. Secundarias/terciarias: radicales (con prefijo di-/tri- si son iguales) + amina.</p>
+
+        <h3>🔹 Propiedades Físicas y Químicas</h3>
+        <div class="callout callout-info">
+            <p>Carácter <strong>polar</strong>. Forman puentes de H <span class="hl-amber">más débiles</span> que los alcoholes → p. eb. intermedio entre alcanos y alcoholes. Las <strong>primarias y secundarias</strong> forman puentes H consigo mismas y con agua; las <strong>terciarias</strong> solo con agua (menor p. eb.). Solubles en agua hasta 6 carbonos. <span class="hl-red">Mal olor</span> (C1-C2 a amoniaco, C3-C6 a pescado). La anilina y aromáticas son <strong>tóxicas</strong> por vía cutánea.</p>
+        </div>
+        <div class="callout callout-purple">
+            <div class="callout-title">⚗️ Basicidad</div>
+            <p>Carácter <span class="hl-purple">básico</span> (par de electrones libre en N, bases de Lewis/nucleófilos). Más básicas que el agua, menos que OH⁻/RO⁻. Cuanto más localizado el par de electrones, más básica. Las alifáticas son más básicas que el NH₃ (<span class="hl-def">efecto I</span> de los alquilos); las secundarias más básicas que las primarias (doble efecto I).</p>
+        </div>
+
+        <h3>🔹 Métodos de Obtención</h3>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color:var(--accent-blue);">
+                <strong>Reducción de nitrocompuestos</strong><br>R–NO₂ + H₂ → R–NH₂
+            </div>
+            <div class="badge-card" style="border-top-color:var(--accent-green);">
+                <strong>Alquilación del amoniaco</strong><br>NH₃ + RX → aminas 1ª/2ª/3ª
+            </div>
+        </div>
+        <p><strong>Industrial:</strong> <span class="hl-def">metilaminas</span> (metanol + amoniaco, alúmina); aminas superiores vía amida → nitrilo → reducción; <span class="hl-def">hexametilendiamina</span> (hidrólisis del adiponitrilo, base del nylon 6,6); <span class="hl-def">hexametilentetramina / urotropina</span> (formaldehído + amoniaco — antiséptico urinario y entrecruzante de resinas fenólicas).</p>
+
+        <div class="callout callout-teal">
+            <div class="callout-title">🏭 Anilina</div>
+            <p>La amina de <strong>mayor producción industrial</strong>. Base de espumas de poliuretano, antioxidantes, aceleradores de curado de cauchos, colorantes azoicos, plaguicidas y medicamentos. Se obtiene por reducción del nitrobenceno, o por amonólisis de clorobenceno o de fenol.</p>
+        </div>
+    </section>
+
+    <!-- 19.3 OTROS COMPUESTOS NITROGENADOS -->
+    <section class="section-card" id="otros-n">
+        <h2 class="section-title t-purple">19.3. Otros Compuestos Nitrogenados</h2>
+
+        <h3>🔹 19.3.1 Sales de Diazonio</h3>
+        <p>Intermedios de reacción <strong>muy importantes</strong>, no aislables. Se forman en la <span class="hl-def">diazotación</span> (amina primaria aromática + ácido nitroso), dando la agrupación azo (–N=N–). Solo tienen interés industrial las <strong>aromáticas</strong>, en forma iónica soluble.</p>
+
+        <h3>🔹 19.3.2 Colorantes Azoicos</h3>
+        <div class="callout callout-pink">
+            <p>Portan el grupo cromóforo <span class="hl-pink">azo (–N=N–)</span>, descubierto por P. Griess (1858). Más de 1.000 colorantes azoicos actuales. Se forman en dos etapas: <strong>1)</strong> diazotación de la amina aromática (NaNO₂ + HCl) y <strong>2)</strong> copulación de la sal de diazonio con un compuesto aromático activado (fenol o amina), a baja temperatura. Son <span class="hl-def">solubles en agua</span> (iónicos), aptos para teñido textil en medio acuoso.</p>
+        </div>
+        <p><strong>Colorantes vs. pigmentos:</strong> un colorante debe ser <span class="hl-teal">soluble</span>; un pigmento (sustancia coloreada que mejora la apariencia de un sustrato) debe ser <span class="hl-amber">insoluble</span>.</p>
+
+        <h3>🔹 19.3.3 Amidas</h3>
+        <p>Acil-derivados de las aminas o del amoniaco (también vistas como amino-derivados de ácidos carboxílicos). Grupo funcional: <strong>–CO–NH₂</strong>. Se nombran: ácido + sufijo <em>-amida</em> (acetamida, benzamida). Con P₂O₅ se deshidratan a <span class="hl-def">nitrilos</span>.</p>
+
+        <h3>🔹 19.3.4 Amidas de Interés Industrial</h3>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>Acrilamida:</strong> monómero de la poli(acrilamida)</div>
+            <div class="grid-box-2"><strong>Urea:</strong> diamida del ácido carbónico; obtenida de NH₃ + CO₂ vía carbamato amónico. Fertilizante y base de amino-resinas</div>
+        </div>
+        <p>Urea + amoniaco a presión (catalizador sílice-alúmina) → <span class="hl-def">melamina</span>, compuesto clave en polímeros.</p>
+
+        <h3>🔹 19.3.5 Polímeros Nitrogenados</h3>
+        <div class="callout callout-info">
+            <div class="callout-title">🧵 Poli(acrilamida)</div>
+            <p>Termoplástico soluble en agua. <strong>Floculante</strong> en tratamiento de aguas y flotación de minerales; dispersante en pinturas y resinas. Entrecruzada forma hidrogeles (modificadores de terrenos de secano, cultivo de semillas).</p>
+        </div>
+
+        <h4>🧬 Poliamidas de síntesis (Nylon)</h4>
+        <p>Formadas por policondensación de una <span class="hl-def">diamina + un ácido dicarboxílico</span>. Se identifican por dos números (carbonos de la diamina, carbonos del diácido).</p>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Fibra</th><th>Origen</th><th>Detalle</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Nylon 6,6</strong></td><td>W. H. Carothers, 1929 (DuPont, comercializado 1930)</td><td>Ácido adípico + hexametilendiamina, 6 carbonos cada uno</td></tr>
+                    <tr><td><strong>Nylon 6 (Perlón)</strong></td><td>Polimerización por apertura de anillo</td><td>A partir de un único monómero: ε-caprolactama (lactama = amida cíclica)</td></tr>
+                    <tr><td><strong>Kevlar</strong></td><td>Poliamida totalmente aromática (aramida)</td><td>Grupos amino/carboxilo en posición <em>para</em>; mejores propiedades mecánicas</td></tr>
+                    <tr><td><strong>Nomex</strong></td><td>Poliamida totalmente aromática (aramida)</td><td>Posición <em>meta</em>; mayor resistencia a la llama (trajes de bombero, pilotos F1)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>El nylon 6,6 presenta gran <span class="hl-def">resistencia al impacto</span>, es tenaz, flexible y resistente a la abrasión: ruedas dentadas, aspas de ventilador, tuercas, rodamientos, fibras textiles. Kevlar y Nomex: fibras de refuerzo en neumáticos, resinas epoxi aeronáuticas, chalecos antibalas.</p>
+
+        <h4>🧱 Amino-resinas (Aminoplastos)</h4>
+        <div class="callout callout-amber" style="border-color:var(--accent-amber); background-color:#fffbeb;">
+            <p>Polímeros <strong>termofijos</strong>: <span class="hl-amber">resinas ureicas</span> (urea + formaldehído) y <span class="hl-amber">resinas melamínicas</span> (melamina + formaldehído). Se inician con metilolación en medio alcalino; al acidificar, policondensan (pierden agua) y curan/entrecruzan.</p>
+        </div>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>Resinas urea-formol:</strong> más baratas, inocuas con alimentos, buen aislante térmico</div>
+            <div class="grid-box-2"><strong>Resinas melamina-formol:</strong> más duras, menor absorción de agua, mejor resistencia al calor y manchas (menaje de cocina)</div>
+        </div>
+        <p>Ambas son incoloras (no amarillean) y aventajan a las fenólicas en resistencia a la tracción y dureza, desplazándolas en usos decorativos.</p>
+
+        <h4>⚗️ Isocianatos y Uretanos</h4>
+        <p>Los <span class="hl-def">isocianatos</span> (O=C=N–R) derivan del ácido isociánico y se obtienen con <strong>fosgeno</strong> + aminas primarias. El <strong>toluén diisocianato</strong> es el más usado para fabricar uretanos.</p>
+        <p>Los <span class="hl-def">uretanos</span> son ésteres del ácido carbámico (inestable); se obtienen por condensación de isocianatos + alcoholes. Interés: insecticidas, tranquilizantes, y sobre todo los <strong>poliuretanos</strong>.</p>
+
+        <div class="callout callout-purple">
+            <div class="callout-title">🛋️ Poliuretanos (PUR)</div>
+            <p>Sintetizados por primera vez por <strong>O. Bayer</strong> (Leverkusen, 1937); comercializados en Alemania en los años 40. Se forman por adición de un <span class="hl-purple">diisocianato + un dialcohol</span>. Pueden ser elastómeros (copolímeros a bloques con polioles) o <strong>espumas</strong>:</p>
+            <ul>
+                <li><strong>Espumas blandas (flexibles):</strong> agente espumante = CO₂ (isocianato + agua)</li>
+                <li><strong>Espumas duras (rígidas):</strong> agente expansivo volátil incorporado a la mezcla — aislantes térmicos en construcción</li>
+            </ul>
+            <p>Fibras de poliuretano muy elásticas → <strong>Lycra®</strong>.</p>
+        </div>
+
+        <h4>🔗 Nitrilos y Acrilonitrilo</h4>
+        <p>Compuestos con N unido a C por <span class="hl-def">triple enlace</span> (R–C≡N). Se nombran como el ácido de hidrólisis + sufijo <em>-nitrilo</em>.</p>
+        <div class="callout callout-teal">
+            <p><strong>Acrilonitrilo (AN):</strong> comonómero con butadieno → <span class="hl-teal">caucho nitrílico</span> (resistente a disolventes hidrocarbonados). Con estireno → cauchos <strong>ABS</strong> (Acrilonitrilo-Butadieno-Estireno). Como homopolímero (PAN) o copolímero → fibras <strong>Orlón, Dralón, Acrilán, Courtelle</strong> (no se arrugan, suaves, secado rápido, resistentes a luz y químicos).</p>
+        </div>
+        <p><strong>Fibra de carbono:</strong> se obtiene de la fibra de PAN mediante estabilización (200-220 °C) → carbonización (1.000-1.500 °C) → grafitización (1.800 °C). Síntesis industrial del AN: amonoxidación del propeno (propeno + NH₃ + O₂).</p>
+
+        <h4>🏗️ Materiales Compuestos de Matriz Orgánica</h4>
+        <p>Formados por <span class="hl-def">matriz</span> (cerámica, metálica o polimérica) + <span class="hl-def">refuerzo</span> (fibras o partículas) + <span class="hl-def">aditivos</span>.</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong>Matrices termofijas:</strong> mayor resistencia al calor; requieren curado. Destacan resinas fenólicas, viniléster y <span class="hl-def">epoxi</span> (las más usadas con fibra de carbono)</div>
+            <div class="grid-box-2"><strong>Matrices termoplásticas:</strong> polipropileno, nylon 6,6, policarbonatos, PAEK (PEK, PEEK) — gran interés aeroespacial por baja toxicidad e ignifugia</div>
+        </div>
+        <p><strong>Refuerzos:</strong> fibra de vidrio (barata, muy usada), fibra de carbono (mejor resistencia/rigidez/peso, cara), fibra de aramida/Kevlar (alta tenacidad). Pueden ser continuos, discontinuos o laminados.</p>
+        <div class="callout callout-info">
+            <div class="callout-title">🥪 Estructuras Sandwich</div>
+            <p>Laminados de capas alternas (superficie externa – núcleo tipo panal de abeja – superficie externa) unidas con adhesivo. Alta relación resistencia/peso y rigidez/peso, buen aislamiento. Uso en industria aeronáutica: mamparas, suelos, techos, alas.</p>
+        </div>
+    </section>
+
+    <!-- 19.4 AZUFRE -->
+    <section class="section-card" id="azufre">
+        <h2 class="section-title t-amber">19.4. Compuestos con Azufre</h2>
+        <p>Presentes en productos naturales (olor de ajos y cebollas: <span class="hl-amber">tioles</span>) y en recursos fósiles (heteroátomo más importante del petróleo, ligado a su densidad). Su presencia es <span class="hl-red">indeseable</span>: causa corrosión y descenso del octanaje. El azufre del gas natural (H₂S) se oxida a S elemental en refinerías.</p>
+        <p>Por la similitud estructural O–S y la existencia de <span class="hl-def">orbitales d vacíos</span> en el azufre, este forma más tipos de combinaciones que el oxígeno.</p>
+
+        <h3>🔹 Tipos de Compuestos</h3>
+        <div class="table-responsive">
+            <table>
+                <thead><tr><th>Compuesto</th><th>Fórmula</th></tr></thead>
+                <tbody>
+                    <tr><td>Tioles / mercaptanos</td><td>R–SH, Ar–SH</td></tr>
+                    <tr><td>Tioéteres / sulfuros</td><td>R–S–R', R–S–Ar, Ar–S–Ar</td></tr>
+                    <tr><td>Disulfuros</td><td>R–S–S–R'</td></tr>
+                    <tr><td>Sulfóxidos</td><td>R–S(=O)–R'</td></tr>
+                    <tr><td>Sulfonas</td><td>R–SO₂–R'</td></tr>
+                    <tr><td>Sales de sulfonio</td><td>(R)₃S⁺Cl⁻</td></tr>
+                    <tr><td>Ácidos sulfénicos / sulfínicos / sulfónicos</td><td>R–S–OH / R–SO–OH / R–SO₂–OH</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>🔹 Ácidos Sulfónicos</h3>
+        <div class="callout callout-warning">
+            <p>Grupo <span class="hl-amber">–SO₃H</span>. Representan el <strong>mayor estado de oxidación</strong> del azufre (comparables a los ácidos carboxílicos). <span class="hl-red">No confundir</span> con los sulfatos de alquilo (R–O–SO₃H, ésteres de alcoholes). Son <strong>más ácidos</strong> que los carboxílicos (acidez comparable al ácido sulfúrico) y solubles en agua.</p>
+        </div>
+        <div class="formula-box">
+            R–H + H₂SO₄ <span class="arrow">→</span> R–SO₃H + H₂O
+            <small>Sulfonación directa (obtención industrial de ácidos sulfónicos)</small>
+        </div>
+        <p>Mayor producción destinada a colorantes azoicos y <strong>detergentes</strong>.</p>
+
+        <h3>🔹 Sulfonamidas (Sulfamidas)</h3>
+        <div class="callout callout-teal">
+            <p>Amidas de los ácidos sulfónicos (R–SO₂–NH₂). <strong>Potentes antibacterianos</strong> ("drogas sulfa"): detienen el crecimiento bacteriano. La primera fue la <span class="hl-teal">sulfanilamida</span> (Schroeder, 1906); hoy existen ~5.000 con acción probada. La <strong>sacarina</strong> (sulfonamida cíclica) es un edulcorante ~300 veces más potente que el azúcar.</p>
+        </div>
+
+        <h3>🔹 Detergentes</h3>
+        <p>Sustancias <span class="hl-def">tensioactivas o surfactantes</span> con estructura <strong>anfipática</strong> (parte hidrófoba lipofílica + parte hidrófila lipofóbica), que forman micelas en agua y reducen la tensión superficial.</p>
+        <div class="callout callout-info">
+            <div class="callout-title">🧺 Etapas del lavado</div>
+            <ol>
+                <li>Humectación de la superficie/fibra</li>
+                <li>Adsorción del detergente en la interfase (rodea la mancha con su parte lipófila)</li>
+                <li>Dispersión de la mancha hacia el agua (mejora con agitación y temperatura)</li>
+                <li>Prevención de redeposición (buen aclarado)</li>
+            </ol>
+        </div>
+
+        <h4>📜 Historia de los Detergentes Sintéticos (Syndets)</h4>
+        <p>Iniciada en Alemania durante la <strong>I Guerra Mundial</strong> (Günter, 1917), sustituyendo grasas naturales. En 1928 se obtuvo el primer detergente sintético real (sulfonación de alcoholes de cadena larga). Comercialización masiva desde 1932 (empresa <strong>Henkel</strong>). Los jabones fueron desplazados desde <span class="hl-red">1950</span> por perder efectividad en aguas duras (Ca²⁺/Mg²⁺), problema que no afecta a los syndets.</p>
+
+        <h4>🧪 Clasificación de Tensioactivos Sintéticos</h4>
+        <div class="badge-grid">
+            <div class="badge-card" style="border-top-color:var(--accent-blue);">
+                <strong>Aniónicos</strong><br>Sulfatos/sulfonatos. Ej.: TPS (dodecilbencenosulfonato sódico, primer tensioactivo aniónico, poco biodegradable por ramificación) y LAS (alquilbencenosulfonatos lineales, biodegradables, vía Ziegler-Natta)
+            </div>
+            <div class="badge-card" style="border-top-color:var(--accent-purple);">
+                <strong>Catiónicos</strong><br>Sales de amonio cuaternarias. Suavizantes capilares/textiles; con cadena C12-C19, antimicrobianos
+            </div>
+            <div class="badge-card" style="border-top-color:var(--accent-green);">
+                <strong>No iónicos</strong><br>Hidrofilia por hidratación de grupos polares (hidroxi, éter, amino, amido). Ej.: etoxilatos (éteres de poli(etilenglicol)). Forman menos espuma → lavadoras/lavavajillas
+            </div>
+            <div class="badge-card" style="border-top-color:var(--accent-pink);">
+                <strong>Anfóteros</strong><br>Grupos aniónico y catiónico a la vez. Baja sensibilidad a aguas duras, buena compatibilidad con piel/mucosas. Caros, uso en cosmética
+            </div>
+        </div>
+
+        <h4>🧴 Formulación de un Detergente</h4>
+        <div class="callout callout-danger">
+            <p>Solo el <strong>20%</strong> es tensioactivo. El resto: controladores de espuma, coadyuvantes, antiincrustantes, blanqueantes (perboratos, acción oxidante), abrillantadores ópticos (fluorescencia UV→azul, pueden causar alergias), enzimas (proteasas/lipasas) y rellenos. Los <span class="hl-red">fosfatos</span> (para secuestrar Ca/Mg) causan eutrofización → sustituidos por zeolitas.</p>
+        </div>
+        <p>Distribución de uso: <strong>60%</strong> lavado de ropa, <strong>28%</strong> lavavajillas, <strong>10%</strong> limpieza del hogar.</p>
+    </section>
+
+    <!-- 19.5 SILICIO -->
+    <section class="section-card" id="silicio">
+        <h2 class="section-title t-green">19.5. Compuestos con Silicio</h2>
+        <p>El silicio pertenece al mismo grupo que el carbono, pero los enlaces <span class="hl-red">Si–Si y Si–H son más débiles</span> (cadenas Si–Si inestables). En cambio, los enlaces <span class="hl-green">Si–O–Si son muy fuertes</span>, permitiendo cadenas largas.</p>
+
+        <h3>🔹 Silanoles y Siloxanos</h3>
+        <p>Los <span class="hl-def">silanoles</span> (análogos a los alcoholes) se obtienen por hidrólisis de cloroalquilsilanos, pero se deshidratan rápidamente formando <span class="hl-def">siloxanos</span> de cadena larga (–Si–O–Si–O–). Se les llamó inicialmente "siliconas" por su parecido reactivo con las cetonas.</p>
+
+        <h3>🔹 Siliconas</h3>
+        <div class="callout callout-success">
+            <p>Polímeros cuya estructura es un siloxano (nombre técnico: <em>poliorganosiloxanos</em>). Son <strong>polímeros inorgánicos</strong> (cadena no hidrocarbonada) con sustituyentes orgánicos. Los más comunes son de <span class="hl-green">dimetilsiloxano</span>. Se comercializan como aceites, grasas, cauchos y resinas rígidas, según el contenido de cloro de los monómeros de partida (a mayor Cl, mayor entrecruzamiento).</p>
+        </div>
+        <p><strong>Propiedades:</strong> alta resistencia térmica, hidrófobas, elásticas, flexibles, alto peso molecular. La flexibilidad se debe a que los ángulos Si–O–Si y O–Si–O son distintos, facilitando la torsión de la cadena.</p>
+        <div class="two-column-grid">
+            <div class="grid-box-1"><strong style="color:var(--accent-teal);">Repelencia al agua:</strong> abrillantadores de carrocerías</div>
+            <div class="grid-box-2"><strong style="color:var(--accent-blue);">Biocompatibilidad:</strong> prótesis, implantes, lentillas blandas (permeables al O₂)</div>
+        </div>
+        <p>Primeros cauchos de silicona comercializados en <strong>1944 (EE. UU.)</strong>; se vulcanizan con <span class="hl-def">peróxidos</span> (no con azufre, al no poseer dobles enlaces). Se adicionan cargas (sílice amorfa, cuarzo, caolines). Rango de uso: <strong>−30 °C a 200 °C</strong> sin pérdida de propiedades; muy resistentes a intemperie, ozono y disolventes hidrocarbonados.</p>
+        <p>También se usan como <span class="hl-def">tensioactivos no iónicos</span> (grupos hidrofílicos de poli(óxido de alquenos) en los extremos): controladores de espuma, suavizantes de tejidos y cabello.</p>
+    </section>
+
+    <!-- EJERCICIOS -->
+    <section class="section-card" id="ejercicios">
+        <h2 class="section-title t-pink">🧪 Ejercicios de Autoevaluación Resueltos</h2>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 1: Nylon 6 vs. Nylon 6,6</div>
+            <p><strong>Enunciado:</strong> ¿Qué diferencia hay entre el nylon 6 y el nylon 6,6?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>El <strong>nylon 6</strong> se forma a partir de un <span class="hl-def">único monómero</span>, la ε-caprolactama. El <strong>nylon 6,6</strong> necesita <span class="hl-def">dos comonómeros</span> diferentes: hexametilendiamina y ácido adípico.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 2: Síntesis del nylon 4,10</div>
+            <p><strong>Enunciado:</strong> ¿A partir de qué sustancias sintetizaría el nylon 4,10?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>A partir de <strong>tetrametilendiamina</strong> [NH₂–(CH₂)₄–NH₂] y de <strong>ácido sebácico</strong> (ácido decanodicarboxílico) [HOOC–(CH₂)₈–COOH].</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 3: Kevlar vs. fibra de carbono</div>
+            <p><strong>Enunciado:</strong> A la fibra de Kevlar, ¿se la denomina fibra de carbono?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>No, son fibras de <strong>diferente naturaleza</strong>. El Kevlar es una <span class="hl-def">poliamida totalmente aromática</span> (aramida), mientras que la fibra de carbono está formada <span class="hl-red">exclusivamente por carbono</span>.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 4: Rigidez de espumas de poliuretano</div>
+            <p><strong>Enunciado:</strong> ¿De qué depende la rigidez o flexibilidad de una espuma de poliuretano?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Depende de la <strong>densidad de uniones (nudos)</strong> entre cadenas poliméricas. Para lograr elasticidad se necesitan cadenas intercaladas entre nudos de cierta longitud, usando <span class="hl-def">glicoles de cadena metilénica larga (polioles)</span> que aportan movilidad.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 5: Eliminación de mercaptanos en refinería</div>
+            <p><strong>Enunciado:</strong> ¿Qué proceso se sigue en las refinerías para eliminar los mercaptanos de las fracciones petrolíferas?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p><strong>Desulfuración</strong> por tratamiento con hidrógeno en presencia de níquel a 300-400 °C: R–SH + H₂ →(Ni)→ R–H + H₂S.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 6: Primer tensioactivo aniónico sintético</div>
+            <p><strong>Enunciado:</strong> Represente la fórmula del primer tensioactivo sintético aniónico industrial.</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Corresponde al <strong>dodecilbenceno sulfonato sódico (TPS)</strong>, obtenido por Friedel-Crafts entre benceno y tetrapropileno, seguido de sulfonación en posición "para" y salificación.</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 7: Parafinas sulfonadas vs. sulfatos de alquilo</div>
+            <p><strong>Enunciado:</strong> Las parafinas sulfonadas, ¿son los sulfatos de alquilo?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>No, son sustancias diferentes. Las <strong>parafinas sulfonadas</strong> son ácidos sulfónicos alquílicos (S unido a C: R–SO₃H). Los <strong>sulfatos de alquilo</strong> son ésteres del alcohol con ácido sulfúrico (S unido a O: R–O–SO₃H).</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 8: Blanqueante químico vs. óptico</div>
+            <p><strong>Enunciado:</strong> Para la limpieza de textiles, ¿es más interesante que el detergente posea un blanqueante químico o un blanqueante óptico?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Los <strong>blanqueantes químicos</strong> son realmente eficaces: eliminan el color parduzco del tejido. Los <strong>blanqueantes ópticos</strong> no limpian, solo "modifican" la radiación luminosa percibida (efecto de brillantez engañoso).</p>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">Pregunta 9: Entrecruzamiento de siliconas</div>
+            <p><strong>Enunciado:</strong> ¿Por qué no se pueden entrecruzar las siliconas con azufre?</p>
+            <div class="solution-box">
+                <span class="solution-tag">Solución:</span>
+                <p>Porque las siliconas <span class="hl-red">no poseen dobles enlaces</span> en la cadena hidrocarbonada de sus sustituyentes; deben vulcanizarse con <strong>peróxidos</strong>. Solo podrían entrecruzarse con azufre si la estructura tuviera insaturaciones.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>
